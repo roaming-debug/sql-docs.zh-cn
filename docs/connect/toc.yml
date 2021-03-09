@@ -2918,7 +2918,7 @@
           href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: 功能指南
           items:
-            - name: 连接字符串关键字和数据源名称 (DSN)
+            - name: 从 Linux 或 macOS 连接
               href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
             - name: Linux 和 macOS 上的 ODBC 驱动程序的数据访问跟踪
               href: ../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md

@@ -8,12 +8,12 @@ ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 652db6f752f8bf46ad2b7d4779063c79359e3a33
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 42638520dd0d7391a10217dc7f7fdd2ce708189f
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350943"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247495"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的性能最佳做法和配置指南
 
@@ -51,7 +51,7 @@ mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /de
 
 #### <a name="disk-partitioning-and-configuration-recommendations"></a>磁盘分区和配置建议
 
-对于 SQL Server，建议使用 RAID 配置。 部署的文件系统条带单元 (sunit) 和条带宽度应与 RAID 几何匹配。 下面是一个针对日志卷的基于 XFS 文件系统的示例。 
+对于 SQL Server，建议使用 RAID 配置。 部署的文件系统条带单元 (sunit) 和条带宽度应与 RAID 几何匹配。 下面是一个针对日志卷的基于 XFS 文件系统的示例。
 
 ```bash
 # Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
@@ -71,8 +71,9 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ```
 
 日志阵列是具有 64k 条带、6 个驱动器的 RAID-10。 正如你所见：
-   1. “sunit=16 blks”，16*4096 blk size= 64k，与条带大小匹配。 
-   2. “swidth = 48 blks”，swidth/sunit = 3，这是阵列中的数据驱动器数量，不包括奇偶校验驱动器。 
+
+- “sunit=16 blks”，16*4096 blk size= 64k，与条带大小匹配。
+- “swidth = 48 blks”，swidth/sunit = 3，这是阵列中的数据驱动器数量，不包括奇偶校验驱动器。
 
 #### <a name="file-system-configuration-recommendation"></a>文件系统配置建议
 
@@ -216,7 +217,7 @@ tuned-adm list
 | 设置 | 值 | 详细信息 |
 |---|---|---|
 | disk `readahead` | 4096 | 请参阅 `blockdev` 命令 |
-| sysctl 设置 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 1 | 请参阅 **sysctl** 命令 |
+| sysctl 设置 | kernel.sched_min_granularity_ns = 15000000<br/>kernel.sched_wakeup_granularity_ns = 2000000<br/>vm.dirty_ratio = 80<br/>vm.dirty_background_ratio = 3<br/>vm.swappiness = 1 | 请参阅 **sysctl** 命令 |
 
 **描述：**
 
@@ -274,117 +275,117 @@ tuned-adm profile mssql
 
 #### <a name="network-setting-recommendations"></a>网络设置建议
 
-与存储和 CPU 建议一样，下面也列出了特定于网络的建议，以供参考。 并非下面提到的所有设置都可在不同的 NIC 上使用。 有关每个选项的指导，请参阅文档并咨询 NIC 供应商。 在开发环境中对它们进行测试和配置，然后将其应用于生产环境。 下面所述的选项使用示例说明，所用的命令特定于 NIC 类型和供应商。 
+与存储和 CPU 建议一样，下面也列出了特定于网络的建议，以供参考。 并非下面提到的所有设置都可在不同的 NIC 上使用。 有关每个选项的指导，请参阅文档并咨询 NIC 供应商。 在开发环境中对它们进行测试和配置，然后将其应用于生产环境。 下面所述的选项使用示例说明，所用的命令特定于 NIC 类型和供应商。
 
 1. 配置网络端口缓冲区大小：在下面的示例中，NIC 的名称为“eth0”，它是基于 Intel 的 NIC。 对于基于 Intel 的 NIC，推荐的缓冲区大小为 4KB (4096)。 验证预先设置的最大值，然后使用下面所示的示例命令进行配置：
 
- ```bash
-         #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
-         ethtool -g eth0
-         #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
-         ethtool -G eth0 rx 4096 tx 4096
-         #command to check the value is properly configured is:
-         ethtool -g eth0
-  ```
+   ```bash
+            #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
+            ethtool -g eth0
+            #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
+            ethtool -G eth0 rx 4096 tx 4096
+            #command to check the value is properly configured is:
+            ethtool -g eth0
+   ```
 
 2. 启用 jumbo 帧：启用 jumbo 帧之前，验证客户端和 SQL Server 之间的所有网络交换机、路由器以及网络数据包路径所需的任何其他内容是否都支持 Jumbo 帧。 只有这样，启用 jumbo 帧才可以提高性能。 启用 jumbo 帧后，连接到 SQL Server 并使用 `sp_configure` 将网络数据包大小更改为 8060，如下所示：
 
-```bash
-         #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
-         ifconfig eth0 mtu 9014
-         #verify the setting using the command:
-         ip addr | grep 9014
-```
+   ```bash
+            #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
+            ifconfig eth0 mtu 9014
+            #verify the setting using the command:
+            ip addr | grep 9014
+   ```
 
-```sql
-         sp_configure 'network packet size' , '8060'
-         go
-         reconfigure with override
-         go
-```
+   ```sql
+            sp_configure 'network packet size' , '8060'
+            go
+            reconfigure with override
+            go
+   ```
 
 3. 默认情况下，我们建议设置端口以进行自适应 RX/TX IRQ 合并，这意味着将会调整中断传递，以在数据包速率较低时降低延迟，在数据包速率较高时提高吞吐量。 请注意，此设置可能不适用于所有不同的网络基础结构，因此请查看现有的网络基础结构并确认此设置受支持。 下面的示例针对名为“eth0”的 NIC，它是基于 Intel 的 NIC：
 
-```bash
-         #command to set the port for adaptive RX/TX IRQ coalescing
-         echtool -C eth0 adaptive-rx on
-         echtool -C eth0 adaptive-tx on
-         #confirm the setting using the command:
-         ethtool -c eth0
-```
+   ```bash
+            #command to set the port for adaptive RX/TX IRQ coalescing
+            echtool -C eth0 adaptive-rx on
+            echtool -C eth0 adaptive-tx on
+            #confirm the setting using the command:
+            ethtool -c eth0
+   ```
 
-> [!NOTE]
-> 为实现高性能环境（如用于基准测试的环境）的可预测行为，请禁用自适应 RX/TX IRQ 合并，然后专门设置 RX/TX 中断合并。 请参阅示例命令以禁用 RX/TX IRQ 合并，然后专门设置以下值：
+   > [!NOTE]
+   > 为实现高性能环境（如用于基准测试的环境）的可预测行为，请禁用自适应 RX/TX IRQ 合并，然后专门设置 RX/TX 中断合并。 请参阅示例命令以禁用 RX/TX IRQ 合并，然后专门设置以下值：
 
-```bash
-         #commands to disable adaptive RX/TX IRQ coalescing
-         echtool -C eth0 adaptive-rx off
-         echtool -C eth0 adaptive-tx off
-         #confirm the setting using the command:
-         ethtool -c eth0
-         #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
-         ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
-         #confirm the setting using the command:
-         ethtool -c eth0
-```
+   ```bash
+            #commands to disable adaptive RX/TX IRQ coalescing
+            echtool -C eth0 adaptive-rx off
+            echtool -C eth0 adaptive-tx off
+            #confirm the setting using the command:
+            ethtool -c eth0
+            #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
+            ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
+            #confirm the setting using the command:
+            ethtool -c eth0
+   ```
 
 4. 我们还建议启用 RSS（接收方缩放），并在默认情况下，将 RSS 队列的 rx 和 tx 端组合在一起。 在某些特定情况下，与 Microsoft 支持部门合作时，禁用 RSS 还会提高性能。 在生产环境中应用此设置之前，请先在测试环境中进行测试。 下面显示的示例命令适用于 Intel NIC。
 
-```bash
-         #command to get pre-set maximums
-         ethtool -l eth0 
-         #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
-         #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
-         ethtool -L eth0 combined 8
-         #you can verify the setting using the command below
-         ethtool -l eth0
-```
+   ```bash
+            #command to get pre-set maximums
+            ethtool -l eth0 
+            #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
+            #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
+            ethtool -L eth0 combined 8
+            #you can verify the setting using the command below
+            ethtool -l eth0
+   ```
 
 5. 使用 NIC 端口 IRQ 关联。 若要通过调整 IRQ 关联来实现预期的性能，请考虑几个重要参数，如 Linux 对服务器拓扑的处理、NIC 驱动程序堆栈、默认设置和 irqbalance 设置。 NIC 端口 IRQ 关联设置的优化是通过了解服务器拓扑，禁用 irqbalance，以及使用特定于 NIC 供应商的设置来实现的。 以下是特定于 Mellanox 的网络基础结构示例，用于帮助解释该配置。 请注意，这些命令将根据环境而改变。 请联系 NIC 供应商以获取进一步指导：
 
-```bash
-         #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
-         systemctl disable irqbalance.service
-         #or
-         irqbalance --oneshot
+   ```bash
+            #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
+            systemctl disable irqbalance.service
+            #or
+            irqbalance --oneshot
 
-         #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
-         tar -xvf mlnx_tuning_scripts.tar.gz
-         # be sure, common_irq_affinity.sh is executable. if not, 
-         # chmod +x common_irq_affinity.sh       
+            #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
+            tar -xvf mlnx_tuning_scripts.tar.gz
+            # be sure, common_irq_affinity.sh is executable. if not, 
+            # chmod +x common_irq_affinity.sh       
 
-         #display IRQ affinity for Mellanox NIC port; e.g eth0
-         ./show_irq_affinity.sh eth0
+            #display IRQ affinity for Mellanox NIC port; e.g eth0
+            ./show_irq_affinity.sh eth0
 
-         #optimize for best throughput performance
-         ./mlnx_tune -p HIGH_THROUGHPUT
+            #optimize for best throughput performance
+            ./mlnx_tune -p HIGH_THROUGHPUT
 
-         #set hardware affinity to the NUMA node hosting physically the NIC and its port
-         ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
+            #set hardware affinity to the NUMA node hosting physically the NIC and its port
+            ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
 
-         #verify IRQ affinity
-         ./show_irq_affinity.sh eth0
+            #verify IRQ affinity
+            ./show_irq_affinity.sh eth0
 
-         #add IRQ coalescing optimizations
-         ethtool -C eth0 adaptive-rx off
-         ethtool -C eth0 adaptive-tx off
-         ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
+            #add IRQ coalescing optimizations
+            ethtool -C eth0 adaptive-rx off
+            ethtool -C eth0 adaptive-tx off
+            ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
 
-         #verify the settings
-         ethtool -c eth0
-```
+            #verify the settings
+            ethtool -c eth0
+   ```
 
 6. 完成上述更改后，请使用以下命令验证 NIC 的速度，以确保其符合预期：
 
-```bash
-         ethtool eth0 | grep -i Speed
-```
+   ```bash
+            ethtool eth0 | grep -i Speed
+   ```
 
 #### <a name="additional-advanced-kernelos-configuration"></a>其他高级内核/OS 配置
 
-1. 为获得最佳存储 IO 性能，建议使用适用于块设备的 Linux multiqueue 计划。 这使得块层性能可以很好地随高速固态硬盘 (SSD) 和多核系统一起缩放。 如果你的 Linux 发行版中默认启用了文档，请查看该文档。 在其他大多数情况下，使用 scsi_mod.use_blk_mq=y 启动内核将会启用此功能，即使正在使用的 Linux 分发版的文档对其提供了其他指导。 这与上游 Linux 内核一致。
+- 为获得最佳存储 IO 性能，建议使用适用于块设备的 Linux multiqueue 计划。 这使得块层性能可以很好地随高速固态硬盘 (SSD) 和多核系统一起缩放。 如果你的 Linux 发行版中默认启用了文档，请查看该文档。 在其他大多数情况下，使用 scsi_mod.use_blk_mq=y 启动内核将会启用此功能，即使正在使用的 Linux 分发版的文档对其提供了其他指导。 这与上游 Linux 内核一致。
 
-1. 因为 SQL Server 部署中常使用多路径 IO，所以还应启用 dm_mod 内核启动选项，将设备映射器 (DM) 多路径目标配置为使用 `blk-mq` 基础结构。 默认值为 `n`（已禁用）。 当底层 SCSI 设备使用 `blk-mq` 时，此设置会在 DM 层降低锁定开销。 请参阅使用中 Linux 发行版的文档，以获取有关如何配置它的其他指导。
+- 因为 SQL Server 部署中常使用多路径 IO，所以还应启用 dm_mod 内核启动选项，将设备映射器 (DM) 多路径目标配置为使用 `blk-mq` 基础结构。 默认值为 `n`（已禁用）。 当底层 SCSI 设备使用 `blk-mq` 时，此设置会在 DM 层降低锁定开销。 请参阅使用中 Linux 发行版的文档，以获取有关如何配置它的其他指导。
 
 #### <a name="configure-swapfile"></a>配置交换文件
 

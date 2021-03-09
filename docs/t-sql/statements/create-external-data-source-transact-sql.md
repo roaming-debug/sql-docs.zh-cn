@@ -2,7 +2,7 @@
 description: CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/26/2020
+ms.date: 03/05/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 807994f4a6e1f3c7b426c3a7c47ecdf7c152ea3b
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 4f503a3382f0ae4ec8ea7fb8f43e91254551e73c
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100070668"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247361"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -71,7 +71,7 @@ ms.locfileid: "100070668"
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
-    [ [ , ] CONNECTION_OPTIONS = '<name_value_pairs>']
+    [ [ , ] CONNECTION_OPTIONS = '<key_value_pairs>'[,...]]
     [ [ , ] CREDENTIAL = <credential_name> ]
     [ [ , ] PUSHDOWN = { ON | OFF } ]
     [ [ , ] TYPE = { HADOOP | BLOB_STORAGE } ]
@@ -127,9 +127,14 @@ WITH
 通过 `ODBC` 连接到外部数据源时指定其他选项。 若要使用多个连接选项，请用分号分隔它们。
 
 
-驱动程序的名称是必需的（最基本的要求），但设置其他选项（例如 `APP='<your_application_name>'` 或 `ApplicationIntent= ReadOnly|ReadWrite`）也很有用，可以帮助进行故障排除。
+适用于通用 `ODBC` 连接以及适用于 SQL Server、Oracle、Teradata、MongoDB 和 CosmosDB 的内置 `ODBC` 连接器。
 
-请参阅 `ODBC` 产品文档，获取允许的 [CONNECTION_OPTIONS][connection_options] 列表
+`key_value_pair` 是特定连接选项的关键字和值。 可用的关键字和值取决于外部数据源类型。驱动程序的名称是必需的（最基本的要求），但设置其他选项（例如 `APP='<your_application_name>'` 或 `ApplicationIntent= ReadOnly|ReadWrite`）也很有用，可以帮助进行故障排除。
+
+有关其他信息，请参阅：
+
+- [使用连接字符串关键字][connection_options]
+- [ODBC 驱动程序连接字符串关键字][connection_option_keyword]
 
 ### <a name="pushdown--on--off"></a>PUSHDOWN = 打开 | 关闭
 
@@ -316,7 +321,9 @@ WITH
 
 ### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. 创建外部数据源以通过 PolyBase 连接引用 SQL Server 命名实例 ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
-要创建引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例的外部数据源，可以使用 CONNECTION_OPTIONS 指定实例名称。 在下面的示例中，`WINSQL2019` 是主机名，而 `SQL2019` 是实例名。
+要创建引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命名实例的外部数据源，请使用 `CONNECTION_OPTIONS` 指定实例名称。 
+
+在下面的示例中，`WINSQL2019` 是主机名，`SQL2019` 是实例名。 `'Server=%s\SQL2019'` 是键值对。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
@@ -1154,6 +1161,7 @@ WITH
 [mongodb_pb]: ../../relational-databases/polybase/polybase-configure-mongodb.md
 [connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
 [connection_options]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+[connection_option_keyword]: ../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md#odbc-driver-connection-string-keywords
 [hint_pb]: ../../relational-databases/polybase/polybase-pushdown-computation.md#force-pushdown
 <!-- Elastic Query Docs -->
 [intro_eq]: /azure/azure-sql/database/elastic-query-overview

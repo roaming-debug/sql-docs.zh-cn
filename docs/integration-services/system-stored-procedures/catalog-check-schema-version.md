@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe36fbd5d5a49889fb7a0a02c82f7ade489f2570
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: aa47e5107551ec2d4ded0832ff52922ffb4bfd55
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100339216"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247522"
 ---
 # <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
 
@@ -41,9 +41,22 @@ catalog.check_schema_version [ @use32bitruntime = ] use32bitruntime
  [ @use32bitruntime= ] *use32bitruntime*  
  当此参数设置为 1 时，将调用 32 位版本的 dtexec。 use32bitruntime 为 int。  
   
+ 
+## <a name="return-code-value"></a>返回代码值 
+返回 0 表示成功。 
+
 ## <a name="result-set"></a>结果集  
- 无  
-  
+
+返回具有以下格式的表：
+
+| 列名称 | 数据类型 | 说明 |
+|---|---|---|
+| SERVER_BUILD | **decimal** | SQL Server 版本。 例如，运行 SQL Server 2014 的服务器为 `14.0.3335.7`。 |
+| SCHEMA_VERSION | **tinyint** | SQL Server 版本号。 例如，SQL Server 2017 和 2019 分别为 `6` 和 `7`。|
+| SCHEMA_BUILD | **string** | 架构内部版本。 |
+| ASSEMBLY_BUILD | **string** | 程序集内部版本。 |
+| SHARED_COMPONENT_VERSION | **string** | 共享组件版本。 | 
+
 ## <a name="permissions"></a>权限  
  此存储过程需要以下权限：  
   

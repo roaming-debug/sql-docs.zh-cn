@@ -1,5 +1,5 @@
 ---
-title: 使用 ODBC 进行连接
+title: 从 Linux 或 macOS 连接
 description: 了解如何使用 Microsoft ODBC Driver for SQL Server 建立从 Linux 或 macOS 到数据库的连接。
 ms.custom: ''
 ms.date: 09/10/2020
@@ -9,20 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
-- data source names
-- connection string keywords
-- DSNs
+- connect to linux
+- configure odbc.ini
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d1bdbcbb34be9cbfa075ead7e1cd03ec813a5d9d
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727428"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247301"
 ---
-# <a name="connecting-to-sql-server"></a>连接到 SQL Server
+# <a name="connecting-from-linux-or-macos"></a>从 Linux 或 macOS 连接
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -79,7 +78,7 @@ Server = tcp:localhost,1433
 
 有关更多信息，请参阅[加密连接到 SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) 和[使用未经验证的加密](../../../relational-databases/native-client/features/using-encryption-without-validation.md)。
 
-无论 **Encrypt** 和 **TrustServerCertificate**的设置如何，服务器登录凭据（用户名和密码）都始终处于加密状态。 下表显示了 **Encrypt** 和 **TrustServerCertificate** 设置的效果。  
+无论 **Encrypt** 和 **TrustServerCertificate** 的设置如何，服务器登录凭据（用户名和密码）都始终处于加密状态。 下表显示了 **Encrypt** 和 **TrustServerCertificate** 设置的效果。  
 
 ||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
