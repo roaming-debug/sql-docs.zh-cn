@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2fa2b5a3e9b7f996866ae1fca16c32ff1e1ba39e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3c018c3882f5a74bb55a3b4cb5fc23881b0daec8
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039149"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514854"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>在大数据群集中配置 Apache Spark 和 Apache Hadoop
 
@@ -31,7 +31,7 @@ ms.locfileid: "100039149"
 
 例如，服务 `hdfs` 中的所有配置都属于类别 `hdfs`。 请注意，所有 Hadoop（核心站点）、HDFS 和 Zookeeper 配置都属于 `hdfs` 类别；所有 Livy、Spark、Yarn、Hive 元存储配置都属于 `spark` 类别。 
 
-[支持的配置](reference-config-spark-hadoop.md#supported-configurations)列出了 Apache Spark 和 Hadoop 属性，你可以在部署 SQL Server 大数据群集时配置这些属性。
+[支持的配置](reference-config-spark-hadoop.md)列出了 Apache Spark 和 Hadoop 属性，你可以在部署 SQL Server 大数据群集时配置这些属性。
 
 以下部分列出了无法在群集中修改的属性：
 
