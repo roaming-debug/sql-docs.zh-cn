@@ -4,16 +4,16 @@ description: 手动更新 `AZDATA_PASSWORD`
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 03/01/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 062e574772c2a44b78772da4a979c81ed3deb959
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 71fe901915b533c4af25e98c3573aaaa00b82d53
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836244"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247384"
 ---
 # <a name="manually-update-azdata_password"></a>手动更新 `AZDATA_PASSWORD`
 
@@ -34,7 +34,7 @@ ms.locfileid: "101836244"
    ```
 
    b. 对密码执行 Base64 解码：
-   
+
    ```bash
    echo <password from kubectl command>  | base64 --decode && echo
    ```
@@ -95,18 +95,18 @@ ms.locfileid: "101836244"
 请按照以下选项手动更新 [Grafana](app-monitor.md) 密码。
 
 1. htpasswd 实用程序是必备组件。 可以在任何客户端计算机上安装它。
-    
-    #### <a name="for-ubuntu"></a>[对于 Ubuntu](#tab/ubuntu)： 
-    ```bash
-    sudo apt install apache2-utils
-    ```
-    
-    #### <a name="for-rhel"></a>[对于 RHEL](#tab/rhel)： 
-    ```bash
-    sudo yum install httpd-tools
-    ```
-    
-    ---
+  
+### <a name="for-ubuntu"></a>[对于 Ubuntu](#tab/for-ubuntu)
+在 Ubuntu Linux 上，可以使用以下各项：
+```bash
+sudo apt install apache2-utils
+```
+### <a name="for-rhel"></a>[对于 RHEL](#tab/for-rhel)
+在 Red Hat Enterprise Linux 上，可以使用以下各项：
+```bash
+sudo yum install httpd-tools
+```
+---
 
 2. 生成新密码。 
     
@@ -154,23 +154,19 @@ ms.locfileid: "101836244"
      
     如有必要，请确定 mgmtproxy prod 的名称。
     
-    #### <a name="for-windows"></a>[对于 Windows](#tab/windows)： 
-    在 Windows 服务器上，可以使用以下各项：
-    
-    ```bash 
+    ### <a name="for-windows"></a>[对于 Windows](#tab/for-windows)
+     在 Windows 服务器上，可以使用以下各项：
+    ```bash
     kubectl get pods -n <namespace> -l app=mgmtproxy
     ```
-    
-    #### <a name="for-linux"></a>[对于 Linux](#tab/linux)： 
-    在 Linux 上，可以使用以下各项：
-    
+    ### <a name="for-linux"></a>[对于 Linux](#tab/for-linux)
+     在 Linux 上，可以使用以下各项：
     ```bash
     kubectl get pods -n <namespace> | grep 'mgmtproxy'
     ```
-    
     ---
-    
-    删除 mgmtproxy pod：
+
+     删除 mgmtproxy pod：
     ```bash
     kubectl delete pod mgmtproxy-xxxxx -n mssql-clutser
     ```
@@ -178,13 +174,15 @@ ms.locfileid: "101836244"
 7. 等待 mgmtproxy pod 进入联机状态和 Grafana 仪表板启动。  
  
     等待不会太久，pod 应在几秒内进入联机状态。 若要检查 pod 的状态，可以使用上一步中使用的相同 `get pods` 命令。 
-    如果看到 mgmtproxy pod 立即恢复到“就绪”状态，请使用 kubectl 来描述 pod：
-    
+
+    如果看到 mgmtproxy pod 立即恢复到“就绪”状态，请使用 kubectl 来描述 pod： 
+
     ```bash
     kubectl describe pods mgmtproxy-xxxxx  -n <namespace>
-    ```
+    ```   
     
-    为了排除故障和进一步收集日志，请使用 Azure Data CLI `[azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md)` 命令。
+    为了排除故障和进一步收集日志，请使用 Azure Data CLI [azdata bdc debug copy-logs](../azdata/reference/reference-azdata-bdc-debug.md) 命令。   
+
     
 8. 现在使用新密码登录到 Grafana。 
 
@@ -198,7 +196,7 @@ ms.locfileid: "101836244"
 
 1. 打开 Kibana URL。
     
-    可以从 [Azure Data Studio](manage-with-controller-dashboard#controller-dashboard) 内查找 Kibana 服务终结点 URL，或使用以下 azdata 命令：
+    可以从 [Azure Data Studio](manage-with-controller-dashboard.md#controller-dashboard) 内查找 Kibana 服务终结点 URL，或使用以下 azdata 命令：
     
     ```azurecli
     azdata login
@@ -228,8 +226,8 @@ ms.locfileid: "101836244"
 > [!Note]
 > 使用新密码登录后，如果在 Kibana 中看到空白页，请使用右上角的注销选项手动注销，然后再次登录。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-* [azdata bdc (Azure Data CLI)](../../sql/azdata/reference/reference-azdata-bdc.md) 
-* [使用 azdata 和 Grafana 仪表板监视应用程序](app-monitor.md)  
-* [使用 Kibana 仪表板签出群集日志](cluster-logging-kibana.md)  
+* [azdata bdc (Azure Data CLI)](../azdata/reference/reference-azdata-bdc.md)  
+* [使用 azdata 和 Grafana 仪表板监视应用程序](app-monitor.md)   
+* [使用 Kibana 仪表板签出群集日志](cluster-logging-kibana.md)   

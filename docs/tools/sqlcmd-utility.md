@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/24/2021
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 1b7d902064ef7a083b706af08730e91319be312f
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 928936a4b4ad6524e4d0817b94696353cb8427e9
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836829"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186584"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 实用工具
 
@@ -180,7 +180,8 @@ sqlcmd
 
 > [!IMPORTANT]
 > `-G` 选项仅适用于 Azure SQL 数据库和 Azure Synapse Analytics。
-> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确[配置的 Kerberos 环境](../connect/odbc/linux-mac/using-integrated-authentication#configure-kerberos)。
+> Linux 或 macOS 目前不支持 AAD 交互式身份验证。 AAD 集成身份验证需要 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本，以及正确[配置的 Kerberos 环境](../connect/odbc/linux-mac/using-integrated-authentication.md)。
+
 
 - **Azure Active Directory 用户名和密码：** 
 
@@ -199,7 +200,7 @@ sqlcmd
 - **Azure Active Directory 集成**
 
    要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码。
-   AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确[配置的 Kerberos 环境](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos)。
+   AAD 集成身份验证要求 [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) 版本 17.6.1 或更高版本以及正确[配置的 Kerberos 环境](../connect/odbc/linux-mac/using-integrated-authentication.md)。
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -467,11 +468,10 @@ sqlcmd 会话。
   
 - **图像**  
   
-> [!NOTE]  
->  根据实现，UDT 可以使用固定的长度。 如果此固定长度 UDT 的长度比 *display_width* 短，则返回的 UDT 值将不受影响。 但是，如果此长度比 *display_width* 长，则输出会被截断。  
-   
+> [!NOTE]
+> 根据实现，UDT 可以使用固定的长度。 如果此固定长度 UDT 的长度比 *display_width* 短，则返回的 UDT 值将不受影响。 但是，如果此长度比 *display_width* 长，则输出会被截断。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  使用 **-y 0** 选项时要特别注意，因为根据返回的数据量大小，此选项可能导致服务器和网络上出现严重性能问题。  
   
  -Y fixed_length_type_display_width  
@@ -514,7 +514,7 @@ sqlcmd 会话。
  列出本地配置的服务器计算机和在网络上播发的服务器计算机的名称。 此参数不能与其他参数结合使用。 可以列出的服务器的最大数目是 3000。 如果服务器列表由于缓冲区大小而被截断，则会显示错误消息。  
   
 > [!NOTE]  
->  鉴于网络广播的特点， **sqlcmd** 不可能及时接收来自所有服务器的响应。 因此，每次调用该选项所返回的服务器列表都可能不同。  
+> 鉴于网络广播的特点， **sqlcmd** 不可能及时接收来自所有服务器的响应。 因此，每次调用该选项所返回的服务器列表都可能不同。  
   
  如果指定了可选参数 c，输出就不会包含 Servers: 标题行，且列出的每个服务器行都没有前导空格。 此演示文稿被称为清除输出。 清除输出可以提高脚本语言的处理性能。  
   
