@@ -272,7 +272,7 @@
                   href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
                 - name: 将 Azure Key Vault 与 Always Encrypted 结合使用
                   href: ado-net/sql/azure-key-vault-example.md
-                - name: 将 Azure Key Vault 与具有安全 Enclave 的 Always Encrypted 结合使用
+                - name: 将 Azure Key Vault 与具有安全 enclave 的 Always Encrypted 结合使用
                   href: ado-net/sql/azure-key-vault-enclave-example.md
             - name: SqlClient 中的数据发现和分类
               href: ../connect/ado-net/sql/data-classification.md
@@ -313,7 +313,7 @@
         - name: 查找其他信息
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: 常见问题 (FAQ)
-          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.yml
         - name: 功能依赖关系
           href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
     - name: API 参考
@@ -2941,7 +2941,7 @@
         - name: 已知问题
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: 常见问题 (FAQ)
-          href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
+          href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.yml
     - name: Windows
       items:
         - name: Microsoft ODBC Driver for SQL Server（Windows 平台）
@@ -5735,7 +5735,7 @@
           href: ../connect/php/logging-activity.md
         - name: 在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted
           href: ../connect/php/using-always-encrypted-php-drivers.md
-        - name: 适用于 SQL Server 的 PHP 驱动程序中具有安全 Enclave 的 Always Encrypted
+        - name: 适用于 SQL Server 的 PHP 驱动程序中具有安全 enclave 的 Always Encrypted
           href: ../connect/php/always-encrypted-secure-enclaves.md
         - name: 非系统区域设置
           href: ../connect/php/non-system-locale-settings.md
