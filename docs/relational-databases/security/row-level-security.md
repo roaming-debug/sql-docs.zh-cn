@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f54ca9be0a75912c716f12b56c8b3848b151358
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.openlocfilehash: 7376b50196b543b162cae6d0800980990651ee45
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247537"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514904"
 ---
 # <a name="row-level-security"></a>行级安全性
 
@@ -159,7 +159,7 @@ RLS 支持两种类型的安全谓词。
   
 - **Filestream：** RLS 与 Filestream 不兼容。  
   
-- **PolyBase：** 在 Azure Synapse 中的外部表和 SQL Server 2019 CU1 或更高版本中，支持 RLS。 
+- PolyBase：在 Azure Synapse 中的外部表和 SQL Server 2019 CU7 或更高版本中，支持 RLS。 
 
 - **内存优化表：** 必须使用 `WITH NATIVE_COMPILATION` 选项定义在内存优化表中用作安全谓词的内联表值函数。 使用此选项时，内存优化表不支持的语言功能将被禁止，并在创建时发出相应的错误。 有关详细信息，请参阅 **内存优化表简介** 中的 [内存优化表中的行级别安全性](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)部分。  
   

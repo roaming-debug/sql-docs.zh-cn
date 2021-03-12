@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6ed1f27444b86ba79fd6c3178bc0029624b05d2
+ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630821"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102474891"
 ---
 # <a name="database-snapshots-sql-server"></a>数据库快照 (SQL Server)
 
@@ -137,7 +137,7 @@ ms.locfileid: "85630821"
   
 -   不能将源数据库配置为可缩放共享数据库。  
 
--   源数据库不得包含 MEMORY_OPTIMIZED_DATA 文件组。  有关详细信息，请参阅 [内存中 OLTP 不支持的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
+-   在 SQL Server 2019 之前，源数据库不得包含 MEMORY_OPTIMIZED_DATA 文件组。 SQL Server 2019 中添加了对内存数据库快照的支持。
   
 > [!NOTE]  
 >  所有恢复模式都支持数据库快照。  
@@ -167,7 +167,7 @@ ms.locfileid: "85630821"
   
 -   快照为只读。 由于它们为只读，所以无法升级。 因此，可以知道数据库快照在升级后会不可用。  
   
--   禁止对 **model**数据库、 **master**数据库和 **tempdb** 数据库创建快照。  
+-   禁止对 **model** 数据库、 **master** 数据库和 **tempdb** 数据库创建快照。  
   
 -   不能更改数据库快照文件的任何规范。  
   

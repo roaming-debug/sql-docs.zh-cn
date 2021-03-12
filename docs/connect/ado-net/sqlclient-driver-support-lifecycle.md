@@ -1,7 +1,7 @@
 ---
 title: SqlClient 驱动程序支持生命周期
 description: 包含产品支持生命周期信息的页面。
-ms.date: 02/26/2021
+ms.date: 03/03/2021
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: d0fc4a58dbd8375bd988fbee851cab68368b28d1
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 998fc5eecfa0e8840111b1ee9bf1d9e653ac5687
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836984"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464728"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>SqlClient 驱动程序支持生命周期
 
@@ -36,7 +36,7 @@ Microsoft.Data.SqlClient 库遵循适用于所有版本的最新 .NET Core 支�
 
 | 版本 | 正式发布日期 | 最新修补程序版本 | 修补程序发布日期 | 支持级别  | 支持结束日期 |
 | -- | -- | -- | -- | -- | -- |
-| 2.1 | 2020 年 11 月 19 日 | 2.1.1 | 2020 年 12 月 18 日 | LTS | 2023 年 11 月 20 日 |
+| 2.1 | 2020 年 11 月 19 日 | 2.1.2 | 2021 年 3 月 3 日 | LTS | 2023 年 11 月 20 日 |
 | 1.1 | 2019 年 11 月 20 日 | 1.1.3 | 2020 年 5 月 15 日 | LTS | 2022 年 11 月 21 日 |
 
 ### <a name="out-of-support-releases"></a>不支持的版本
@@ -46,13 +46,27 @@ Microsoft.Data.SqlClient 库遵循适用于所有版本的最新 .NET Core 支�
 | 2.0 | 2020 年 6 月 16 日 | 2.0.1 | 2020 年 8 月 25 日 |
 | 1.0 | 2019 年 9 月 26 日 | 1.0.19269.1 | 2020 年 2 月 20 日 |
 
-### <a name="long-term-support-lts-releases"></a>长期支持 (LTS) 版本
+
+## <a name="azure-key-vault-provider-release-cadence"></a>Azure Key Vault 提供程序的发布频率
+
+添加新功能后，将按需发布 `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` 的新稳定 (GA) 版本。 利益干系人和维护人员将根据一些资格和客户响应来选择长期支持 (LTS) 版本。
+
+### <a name="actively-supported-releases"></a>主动支持的版本
+
+| 版本 | 正式发布日期 | 最新修补程序版本 | 修补程序发布日期 | 支持级别  | 支持结束日期 |
+| -- | -- | -- | -- | -- | -- |
+| 2.x | 2021 年 3 月 3 日 | 2.0.0 | 2021 年 3 月 3 日 | LTS | 2024 年 3 月 4 日 |
+| 1.x | 2019 年 11 月 19 日 | 1.2.0 | 2020 年 12 月 1 日 | LTS | 2022 年 11 月 21 日 |
+
+
+## <a name="long-term-support-lts-releases"></a>长期支持 (LTS) 版本
 
 LTS 版本在首次发布后的三年内受支持。
 
-### <a name="current-releases"></a>当前版本
+## <a name="current-releases"></a>当前版本
 
 当前版本在后续的当前版本或 LTS 版本发布后的三个月内受支持。
+
 
 ## <a name="sql-version-compatibility-with-microsoftdatasqlclient"></a>SQL 与 Microsoft.Data.SqlClient 的版本兼容性
 

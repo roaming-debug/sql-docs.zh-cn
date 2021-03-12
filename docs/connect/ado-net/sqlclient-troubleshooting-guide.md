@@ -1,7 +1,7 @@
 ---
 title: SqlClient 故障排除指南
 description: 提供常见问题解决方案的页面。
-ms.date: 11/27/2020
+ms.date: 03/03/2021
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 6cad6278eb6ac7b170ee108c1a3510db956ecb22
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 725d1522f98e721f581a7d4b7614181fd2632962
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96468080"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464800"
 ---
 # <a name="sqlclient-troubleshooting-guide"></a>SqlClient 故障排除指南
 
@@ -171,6 +171,12 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 - 没有使用 SHA-256 或更高版本签名的 TLS/SSL 证书。
 
   建议的解决方案：为服务器生成新的 TLS/SSL 证书，其哈希至少使用 SHA-256 哈希算法进行签名。
+
+- Linux 上通过 .NET 5+ 严格限制的密码套件
+
+  .NET 5 引入了针对 Linux 客户端的中断性变更，即默认情况下使用严格限制的允许密码套件列表。 你可能需要通过指定 `CipherSuitePolicy` 值或更改 OpenSSL 配置文件来扩展默认密码套件列表，才能接受旧客户端（或联系旧服务器）。
+  
+  有关建议操作的详细信息，请参阅 [Linux 上适用于 .NET 的默认 TLS 密码套件](/dotnet/core/compatibility/cryptography/5.0/default-cipher-suites-for-tls-on-linux)。
 
 ### <a name="connection-pool-exhaustion-errors"></a>连接池耗尽错误
 

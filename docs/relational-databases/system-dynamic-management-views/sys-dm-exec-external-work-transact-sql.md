@@ -2,7 +2,7 @@
 description: sys.dm_exec_external_work (Transact-SQL)
 title: sys.dm_exec_external_work (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 03/10/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,19 +23,19 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10f7f8ae36a35a39a303d9548b828768282df3f9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ba2068fa58bdf711deecf90612ee4bf1e47d374b
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159983"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622876"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
-  返回有关每个计算节点上每个工作负荷的工作负荷的信息。  
+返回有关每个计算节点上每个工作负荷的工作负荷的信息。  
   
- 查询 sys.dm_exec_external_work 标识与外部数据 (源（如 Hadoop 或外部 SQL Server) ）进行通信的工作。  
+查询 `sys.dm_exec_external_work` 用于标识与外部数据源进行通信的工作（例如，Hadoop 或 MongoDB) ） (。  
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
@@ -43,17 +43,18 @@ ms.locfileid: "99159983"
 |step_index|`int`|此工作线程正在执行的请求。|请参阅 [sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)中的 *step_index* 。|  
 |dms_step_index|`int`|此工作线程正在执行的 DMS 计划的步骤。|请参阅 [&#40;transact-sql&#41;sys.dm_exec_dms_workers ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
 |compute_node_id|`int`|正在运行辅助角色的节点。|请参阅 [&#40;transact-sql&#41;sys.dm_exec_compute_nodes ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|type|`nvarchar(60)`|外部工作的类型。|"文件拆分"|  
+|类型|`nvarchar(60)`|外部工作的类型。|Hadoop 和 Azure 存储的 "文件拆分" () <br/><br/>其他外部数据源的 "ODBC 数据拆分" ()  |  
 |work_id|`int`|实际拆分的 ID。|大于或等于0。|  
-|input_name|`nvarchar(4000)`|要读取的输入的名称|使用 Hadoop 时的文件名。|  
-|read_location|`bigint`|偏移或读取位置。|要读取的文件的偏移量。|  
-|bytes_processed|`bigint`|此辅助进程分配用于处理数据的总字节数。 这不一定表示查询返回的总数据 |大于或等于0。|  
-|length|`bigint`|Hadoop 或 HDFS 块的长度（如果为 Hadoop）|用户可定义的。 默认值为 Ed-64m|  
+|input_name|`nvarchar(4000)`|要读取的输入的名称|使用 Hadoop 或 Azure 存储时，使用路径)  (文件名。 对于其他外部数据源，它是外部数据源位置和外部表位置的连接： `scheme://DataSourceHostname[:port]/[DatabaseName.][SchemaName.]TableName`|  
+|read_location|`bigint`|读取位置的偏移量。| `0` 文件中的字节数减1。<br/><br/>`NULL` 适用于非 Hadoop 或非 Azure 存储。 |  
+|read_command|`nvarchar(4000)`|发送到外部数据源的查询。 已在 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 中引入。|表示查询的文本。 对于 Hadoop 和 Azure 存储空间，返回 `NULL` 。|
+|bytes_processed|`bigint`|此辅助进程分配用于处理数据的总字节数。 此值不一定表示查询返回的总数据 |大于或等于0。|  
+|length|`bigint`|Split 的长度或 Hadoop 的 HDFS 块的长度|用户可定义的。 默认值为 Ed-64m|  
 |status|`nvarchar(32)`|辅助进程的状态|挂起，处理，已完成，失败，已中止|  
 |start_time|`datetime`|工作开始||  
 |end_time|`datetime`|工作结束||  
 |total_elapsed_time|`int`|总时间（毫秒）||
-|compute_pool_id|`int`|池的唯一标识符。|
+|compute_pool_id|`int`|运行辅助进程的池的唯一标识符。 仅适用于 SQL Server 大数据群集。 请参阅 [ (transact-sql) sys.dm_exec_compute_pools ](sys-dm-exec-compute-pools.md)。|`0` [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 在 Windows 和 Linux 上返回。|
 
 ## <a name="see-also"></a>另请参阅  
  [通过动态管理视图进行 PolyBase 故障排除](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   

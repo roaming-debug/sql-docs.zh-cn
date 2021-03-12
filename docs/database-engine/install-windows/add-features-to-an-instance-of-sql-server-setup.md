@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: b8b520e3c5f44342970881e3e67b3dbf95ce9853
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 40f6618c8564f0d264076316038274b401fb650a
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837567"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514894"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
 
@@ -145,6 +145,11 @@ ms.locfileid: "101837567"
 25. 安装完成后，“完成”页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 SQL Server 安装过程，请选择“关闭”。
 
 26. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。
+
+> [!CAUTION]
+> 应用服务更新
+>
+> 通过在现有 SQL Server 安装中添加这些功能，即可在安装介质的版本级别安装这项功能，这个版本级别可能低于 SQL Server 其他功能的版本级别。 这可能会导致意外行为或错误。 在安装新功能之后，务必要将新功能引入相同的版本级别。 根据需要安装服务包 (SP)、累积更新 (CU) 和/或常规分发版本 (GDR)。 要确定服务器和新功能的版本，请参阅[确定 SQL Server 及其组件的版本、版本类别和更新级别](/troubleshoot/sql/general/determine-version-edition-update-level)。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 729fcb2bdd1feccfb80d7b591fe96eeb38c23933
+ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475938"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532349"
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -110,7 +110,7 @@ distrib [-?]
  包含订阅的初始快照的文件夹路径。  
   
  **-BcpBatchSize** _bcp_batch_size_  
- 在一次大容量复制操作中发送的行数。 执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 bcp 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 **1000** 。  
+ 在一次大容量复制操作中发送的行数。  执行 **bcp in** 操作时，批的大小为要作为一个事务发送到服务器的行数，并且也是分发代理记录 bcp 进度消息之前必须发送的行数。 当执行 **bcp out** 操作时，将使用固定批大小 **1000** 。  
   
  **-CommitBatchSize** _commit_batch_size_  
  发出 COMMIT 语句前要发给订阅服务器的事务数。 默认值为 100，最大值为 10000。
@@ -208,7 +208,9 @@ distrib [-?]
   
  如果源上没有可用的已复制事务，代理将向分发服务器报告无事务消息。 此选项可指定代理在报告另一条无事务消息前将等待多长时间。 在上次处理已复制事务后，如果代理在源上没有检测到任何可用的事务，则总是会报告一条无事务消息。 默认值为 60 秒。  
 
--MultiSubnetFailover 指定是否启用 MultiSubnetFailover 属性。 如果你的应用程序要连接到不同子网上的 AlwaysOn 可用性组 (AG)，则设置 MultiSubnetFailover=true 会加快检测（当前）活动服务器以及与服务器的连接。
+-MultiSubnetFailover 指定是否启用 MultiSubnetFailover 属性。 如果你的应用程序要连接到不同子网上的 AlwaysOn 可用性组 (AG)，则设置 MultiSubnetFailover=true 会加快检测（当前）活动服务器以及与服务器的连接。   
+  适用范围：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（从 [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] 开始）。  
+
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  指定二进制大型对象数据的最小大小（按字节计），如果超过此大小，数据将作为流进行绑定。 必须将 -UseOledbStreaming 指定为使用此参数。 值可以介于 400 个字节到 1048576 个字节之间，默认值为 16384 个字节。  

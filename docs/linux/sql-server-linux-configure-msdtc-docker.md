@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e0d007379d7213e1d455a7bac675c4df7cf3c343
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f6cc1ad3c66ae7f4ec1817af3bcaa3934a1858ef
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349136"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622885"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>如何在 Docker 上使用 SQL Server 的分布式事务
 
@@ -27,8 +27,8 @@ SQL Server 容器映像可以使用支持分布式事务所需的 Microsoft 分�
 
 若要启用 Docker 容器中的 MSDTC 事务，则必须设置两个新的环境变量：
 
-- MSSQL_RPC_PORT：RPC 端点映射程序服务绑定和侦听的 TCP 端口  。  
-- MSSQL_DTC_TCP_PORT：配置 MSDTC 服务侦听的端口  。
+- MSSQL_RPC_PORT：RPC 端点映射程序服务绑定和侦听的 TCP 端口。  
+- MSSQL_DTC_TCP_PORT：配置 MSDTC 服务侦听的端口。
 
 ### <a name="pull-and-run"></a>请求并运行
 
@@ -80,7 +80,7 @@ docker run `
 > [!IMPORTANT]
 > 前一命令仅适用于在 Linux 上运行的 Docker。 对于 Windows 上的 Docker，Windows 主机已侦听 135 端口。 可以在 Windows 上删除 Docker 的 `-p 135:135` 参数，但该操作存在一些限制。 生成的容器则不能用于涉及主机的分布式事务，只能参与主机上 Docker 容器之间的分布式事务。
 
-在此命令中，RPC 端点映射程序服务已绑定到 135 端口，并且 MSDTC 服务已绑定到 Docker 虚拟网络中的 51000 端口   。 SQL Server TDS 通信发生在 Docker 虚拟网络中的 1433 端口。 这些端口已对外公开给主机，即 TDS 51433 端口、RPC 终结点映射器 135 端口和 MSDTC 51000 端口。
+在此命令中，RPC 端点映射程序服务已绑定到 135 端口，并且 MSDTC 服务已绑定到 Docker 虚拟网络中的 51000 端口。 SQL Server TDS 通信发生在 Docker 虚拟网络中的 1433 端口。 这些端口已对外公开给主机，即 TDS 51433 端口、RPC 终结点映射器 135 端口和 MSDTC 51000 端口。
 
 > [!NOTE]
 > RPC 端点映射程序和 MSDTC 端口在主机和容器上不必相同。 因此，若 RPC 端点映射程序端口在容器上配置为 135，它可能会映射到 13501 端口或主机服务器上的任何其他可用端口。
@@ -100,8 +100,8 @@ sudo ufw allow from any to any port 135 proto tcp
 以下示例演示如何在 Red Hat Enterprise Linux (RHEL) 上完成此操作：
 
 ```bash
-sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=51433/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=51000/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```

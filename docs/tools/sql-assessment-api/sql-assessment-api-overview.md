@@ -8,15 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 3/5/2021
-ms.openlocfilehash: 37e31834df74bf91fcf31004973c1556b8f34552
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.date: 3/10/2021
+ms.openlocfilehash: 34a7ff8c9380a88bb285a6d2e51e57e652f0310d
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247467"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622801"
 ---
 # <a name="sql-assessment-api"></a>SQL 评估 API
+
+[!INCLUDE [SQL Server 2012, ASMI, SQL Server on Azure VM, SQL on Linux](../../includes/applies-to-version/sql-asmi-sqlavm-sql-linux.md)]
 
 SQL 评估 API 提供了一种机制来评估 SQL Server 的配置，以获得最佳做法。 该 API 附带一个规则集，其中包含 SQL Server 团队建议的最佳做法规则。 随着新版本的发布，此规则集得到了增强，但同时，此 API 旨在提供高度可自定义且可扩展的解决方案。 这样用户便可以优化默认规则并创建自己的规则。
 

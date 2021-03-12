@@ -2,7 +2,7 @@
 title: SQL Server 安装指南
 description: 内容索引，可帮助你使用安装向导、命令提示符或 sysprep 等选项安装 SQL Server 和关联组件。
 ms.custom: ''
-ms.date: 11/14/2019
+ms.date: 03/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 8f123235f263abd05878e7be422c13fcf84825e8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4e433c16ba070d59c963589c8bceec371238ca38
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353089"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464244"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server 安装指南
 
@@ -39,9 +39,9 @@ ms.locfileid: "100353089"
 ## <a name="getting-started"></a>入门
   
 * **版本和功能**：查看不同版本 SQL Server 支持的功能，以确定最适合你业务需求的功能。 
-    - [[!INCLUDE[ss2019](../../includes/sssql19-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md)：  
-    - [[!INCLUDE[ss2017](../../includes/sssql17-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md)：  
-    - [[!INCLUDE[ss2016](../../includes/sssql16-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)：  
+    - [[!INCLUDE[ss2019](../../includes/sssql19-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md).  
+    - [[!INCLUDE[ss2017](../../includes/sssql17-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+    - [[!INCLUDE[ss2016](../../includes/sssql16-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
     - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://docs.microsoft.com/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 *  **要求**：查看 [SQL Server 2016 和 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 或 [Linux 上的 SQL Server](../../linux/sql-server-linux-setup.md) 的硬件和软件安装要求，以及系统配置检查和 [规划 SQL Server 安装中](../../sql-server/install/planning-a-sql-server-installation.md)的安全注意事项 
@@ -58,11 +58,11 @@ ms.locfileid: "100353089"
 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的下载位置由版本决定：
 
 * “SQL Server Enterprise、Standard 和 Express Edition”已获授权，可供生产之用。 对于企业版和标准版，请联系软件供应商获取安装媒体。 可以在 [Microsoft 许可页面](https://www.microsoft.com/licensing/product-licensing/sql-server)上找到采购信息和 Microsoft 合作伙伴目录。
-* [免费版本 - 最新](https://www.microsoft.com/sql-server/sql-server-downloads)
-* [免费版本 - 其他](https://www.microsoft.com/evalcenter/evaluate-sql-server)
+* 如果拥有批量许可协议（例如[企业协议](https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise)），则可以从[批量许可服务中心 (VLSC)](https://www.microsoft.com/licensing/servicecenter/default.aspx) 下载软件。
+* [免费版本 - 最新](https://www.microsoft.com/sql-server/sql-server-downloads)。
+* [免费版本 - 其他](https://www.microsoft.com/evalcenter/evaluate-sql-server)。
 
-
-可在此处找到其他 SQL Server 组件： 
+可在此处找到其他 SQL Server 组件：
 
 * [所有累积更新](https://sqlserverbuilds.blogspot.com/)
 * [SQL Server Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122)。 

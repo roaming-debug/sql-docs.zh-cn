@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c394eaeb6ec8361dd429b944b128d19a0cf33319
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: b308bd441b063592a39dae710c782aaf826c3071
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837524"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464785"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 发行说明
 
@@ -34,7 +34,7 @@ ms.locfileid: "101837524"
 对于 zip 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40a)  
 对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40a)  
 
-### <a name="compliance"></a>合规性
+### <a name="92-compliance"></a>9.2 合规性
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
@@ -43,7 +43,7 @@ ms.locfileid: "101837524"
 | 与 Java 开发工具包 (JDK) 版本 15.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 9.2 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 15.0 兼容。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>版本
+### <a name="92-releases"></a>9.2 版本
 
 版本号：9.2.1  
 发布日期：2021 年 3 月 2 日
@@ -66,29 +66,32 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 9.2 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 15.0 兼容。
 
 ### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>添加了对 Azure Active Directory 交互式身份验证的支持
+
 | 添加身份验证类型 | 详细信息 |
 | :---------- | :------ |
 | Microsoft JDBC Driver 9.2 for SQL Server 现支持通过交互式身份验证向 Azure Key Vault 进行身份验证。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>添加了对 Azure Active Directory 服务主体身份验证的支持
+
 | 添加身份验证类型 | 详细信息 |
 | :---------- | :------ |
 | Microsoft JDBC Driver 9.2 for SQL Server 现在支持使用服务主体标识的客户端 ID 和密码来向 Azure Key Vault 进行身份验证。 | 请参阅[使用 Azure Active Directory 身份验证进行连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>更新 Azure Key Vault 库以使用新式 Azure Key Vault 库
+
 | Azure Key Vault 的库更改 | 详细信息 |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 9.2 从上一代的 Azure Key Vault 库和 ADAL 库迁移到了更新式的 Azure Key Vault 和 Azure Identity 等效项。 | DEPENDENCY CHANGE 如果利用 Azure Active Directory 身份验证或 Azure Key Vault，请确保更新应用程序依赖项。 [使用 Azure Key Vault 提供程序](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider)或 [Azure Active Directory 身份验证](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication)时，请参阅依赖项要求 |
 | &nbsp; | &nbsp; |
 
 ### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>为非 Azure Synapse Analytics 服务器启用了 useBulkCopyForBatchInsert
+
 | 非 Azure Synapse Analytics 服务器的 useBulkCopyForBatchInsert 更改 | 详细信息 |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 9.2 现在允许大容量复制 API 针对 Azure Synapse Analytics 服务器进行批量插入操作。 | 请参阅[将大容量复制 API 用于批量插入操作](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)。 |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="previous-releases"></a>以前的版本
 
@@ -104,7 +107,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 对于 zip 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
 对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
 
-### <a name="compliance"></a>合规性
+### <a name="84-compliance"></a>8.4 合规性
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
@@ -113,7 +116,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 | 与 Java 开发工具包 (JDK) 版本 14.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.4 for SQL Server 现在还与 Java 开发工具包 (JDK) 版本 14.0 兼容。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>版本
+### <a name="84-releases"></a>8.4 版本
 
 版本号：8.4.1  
 发布日期：2020 年 8 月 27 日  
@@ -175,7 +178,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 对于 zip 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)  
 对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)  
 
-### <a name="compliance"></a>合规性
+### <a name="82-compliance"></a>8.2 合规性
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
@@ -184,7 +187,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 | 与 Java 开发工具包 (JDK) 版本 13.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 8.2 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 13.0 兼容。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>版本
+### <a name="82-releases"></a>8.2 版本
 
 版本号：8.2.2  
 发布日期：2020 年 3 月 24 日  
@@ -210,7 +213,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 | Always Encrypted 更改 | 详细信息 |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server 现在支持具有安全 Enclave 的 Always Encrypted。 此处提供了更多详细信息：具有安全 Enclave 的 Always Encrypted。 |
-| 更多详细信息和示例代码。 | 请参阅[包含安全 Enclave 的 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)。 |
+| 更多详细信息和示例代码。 | 请参阅[具有安全 Enclave 的 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>提高了从 SQL Server 检索临时数据类型时的性能 <sup>1</sup>
@@ -231,7 +234,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 | DLL 已被上传到 Maven 存储库，以便更轻松地进行访问。 | 请参阅[本页](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>已知问题
+### <a name="82-known-issues"></a>8.2 已知问题
 
 | 已知问题 | 详细信息 |
 | :----------- | :------ |
@@ -250,7 +253,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40a)  
 对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40a)  
 
-### <a name="compliance"></a>合规性
+### <a name="74-compliance"></a>7.4 合规性
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
@@ -259,7 +262,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 | 与 Java 开发工具包 (JDK) 版本 12.0、11.0 和 1.8 兼容。 | 除 JDK 11.0 和 1.8 外，Microsoft JDBC Driver 7.4 for SQL Server 现在还与 JDK 开发工具包 (JDK) 版本 12.0 兼容。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>版本
+### <a name="74-releases"></a>7.4 版本
 
 版本号：7.4.1  
 发布日期：2019 年 8 月 2 日  
@@ -299,7 +302,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 | 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>已知问题
+### <a name="74-known-issues"></a>7.4 已知问题
 
 | 已知问题 | 详细信息 |
 | :----------- | :------ |
@@ -319,7 +322,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 对于 self-extracting exe 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40a)  
 对于 tar.gz 文件中的驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40a)  
 
-### <a name="compliance"></a>合规性
+### <a name="72-compliance"></a>7.2 合规性
 
 | 符合性更改 | 详细信息 |
 | :---------------- | :------ |
@@ -328,7 +331,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 | 除 Java 开发工具包 (JDK) 版本 1.8 外，还与 JDK 11.0 兼容。 | 除 Java 开发工具包 (JDK) 版本 1.8 外，Microsoft JDBC Driver 7.2 for SQL Server 现在还与 JDK 11.0 兼容。 |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>版本
+### <a name="72-releases"></a>7.2 版本
 
 版本号：7.2.2  
 发布日期：2019 年 4 月 16 日  
@@ -387,7 +390,7 @@ Tar.gz 文件：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=215
 | 其他详细信息。 | 请参阅 [Microsoft JDBC Driver for SQL Server 的功能依赖项](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>已知问题
+### <a name="72-known-issues"></a>7.2 已知问题
 
 | 已知问题 | 详细信息 |
 | :----------- | :------ |
@@ -504,7 +507,7 @@ Microsoft JDBC Driver 6.4 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。
 
 JDBC 驱动程序现在支持要用于 SQL Server 的 `sql_variant` 数据类型。 TVP 和大容量复制等功能也支持 `sql_variant` 数据类型，但具有以下限制：
 
-* **对于日期值**：
+- **对于日期值**：
 
   当使用 TVP 填充包含存储在 `sql_variant` 列中的 `datetime`、`smalldatetime` 或 `date` 值的表时，对结果集调用 `getDateTime()`、`getSmallDateTime()` 或 `getDate()` 方法不起作用并引发以下异常：
 
@@ -512,7 +515,7 @@ JDBC 驱动程序现在支持要用于 SQL Server 的 `sql_variant` 数据类型
 
   作为一种解决办法，可改为使用 `getString()` 或 `getObject()` 方法。
 
-* **对 null 值结合使用 TVP 和 sql_variant**：
+- **对 null 值结合使用 TVP 和 sql_variant**：
   
   如果使用 TVP 填充一个表，并将 NULL 值发送给 `sql_variant` 列类型，则会引发异常。 当前不支持将 NULL 值插入 TVP 中的列类型 `sql_variant`。
 
@@ -542,7 +545,7 @@ JDBC 驱动程序已将“用于 Java 的 Microsoft Azure Active Directory 身�
 
 Microsoft JDBC Driver 6.2 for SQL Server 完全符合 JDBC 规范 4.1 和 4.2。 根据 Java 版本兼容性命名 6.2 包中的 jar。 例如，建议将 6.2 包中的 mssql-jdbc-6.2.2.jre8.jar 文件与 Java 8 配合使用。
 
-### <a name="releases"></a>版本
+### <a name="62-releases"></a>6.2 版本
 
 版本号：6.2.2  
 发布日期：2017 年 10 月 3 日  
@@ -578,16 +581,16 @@ JDBC 驱动程序现可在以符合美国联邦信息处理标准 (FIPS) 140 的
 
 JDBC 驱动程序现在具有以下支持：
 
-* Kerberos 配置无法修改或无法检索新令牌或 keytab 的应用程序的主体/密码方法。 此方法可用于对仅允许 Kerberos 身份验证的 SQL Server 实例进行身份验证。
-* 跨领域身份验证，方法是使用 Kerberos 集成身份验证，而无需明确设置服务器 SPN。 驱动程序现在会自动计算领域，即使未提供领域也是如此。
-* Kerberos 约束委派，方法是通过数据源接受被模拟用户凭据作为 GSS 凭据对象。 然后，此模拟凭据用于建立 Kerberos 连接。
+- Kerberos 配置无法修改或无法检索新令牌或 keytab 的应用程序的主体/密码方法。 此方法可用于对仅允许 Kerberos 身份验证的 SQL Server 实例进行身份验证。
+- 跨领域身份验证，方法是使用 Kerberos 集成身份验证，而无需明确设置服务器 SPN。 驱动程序现在会自动计算领域，即使未提供领域也是如此。
+- Kerberos 约束委派，方法是通过数据源接受被模拟用户凭据作为 GSS 凭据对象。 然后，此模拟凭据用于建立 Kerberos 连接。
 
 ### <a name="added-timeouts"></a>添加了超时
 
 JDBC 驱动程序现在支持以下可配置超时。 可以根据应用程序的需要进行更改。
 
-* 查询超时用于控制在运行查询时发生超时之前等待的秒数。
-* 套接字超时用于指定在读取或接受套接字时发生超时之前等待的毫秒数。
+- 查询超时用于控制在运行查询时发生超时之前等待的秒数。
+- 套接字超时用于指定在读取或接受套接字时发生超时之前等待的毫秒数。
 
 ## <a name="61"></a>6.1
 

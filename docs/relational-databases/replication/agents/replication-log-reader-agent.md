@@ -17,12 +17,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: f5e716be586d7fb152a3c229cc016e349d57c99b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 58e9ed82d9518d423001342fa288e2c7aba1f5bf
+ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467348"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532333"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -142,7 +142,8 @@ logread [-?]
   
  如果源上没有可用的已复制事务，代理将向分发服务器报告无事务消息。 此选项可指定代理在报告另一条无事务消息前将等待多长时间。 在上次处理已复制事务后，如果代理在源上没有检测到任何可用的事务，则总是会报告一条无事务消息。 默认值为 60 秒。  
  
- -MultiSubnetFailover [0\|1] 指定是否启用 MultiSubnetFailover 属性。 如果你的应用程序要连接到不同子网上的 AlwaysOn 可用性组 (AG)，则将 MultiSubnetFailover 设置为 1 (true) 会加快检测（当前）活动服务器以及与服务器的连接。
+ -MultiSubnetFailover [0\|1] 指定是否启用 MultiSubnetFailover 属性。 如果你的应用程序要连接到不同子网上的 AlwaysOn 可用性组 (AG)，则将 MultiSubnetFailover 设置为 1 (true) 会加快检测（当前）活动服务器以及与服务器的连接。   
+   适用范围：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（从 [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] 开始）。  
   
  **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  

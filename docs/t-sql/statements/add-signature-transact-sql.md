@@ -18,12 +18,12 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 95bfeb321f43fb860bbbeecb32ac18ec221e5067
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 86513345502531da670b870b5ecf70de9270f18f
+ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99194685"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102474901"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
@@ -83,7 +83,7 @@ module_class
 > [!CAUTION]
 > 模块签名只应用于授予权限，不应用于拒绝或撤消权限。  
   
- 无法对数据定义语言 (DDL) 触发器和内联标识函数进行签名。  
+ 无法对数据定义语言 (DDL) 触发器和内联表值函数进行签名。  
   
  可以在 sys.crypt_properties 目录视图中看到有关签名的信息。  
   
@@ -93,15 +93,15 @@ module_class
 ## <a name="countersignatures"></a>副署  
  当执行签名的模块时，签名将临时添加到 SQL 标记中，但如果该模块执行其他模块或该模块终止执行，则会丢失签名。 副署是一种特殊形式的签名。 副署本身并不授予任何权限，但它允许在对副署的对象进行调用的期间保留同一证书或非对称密钥创建的签名。  
   
- 例如，假设用户 Alice 调用过程 ProcSelectT1ForAlice，此过程将调用过程 procSelectT1，而后者从表 T1 中进行选择。 Alice 对 ProcSelectT1ForAlice 和 procSelectT1 具有 EXECUTE 权限，但它对于 T1 不具备 SELECT 权限，并且在此整个链中不涉及任何所有权链。 Alice 无法访问表 T1，无论是直接访问，还是通过使用 ProcSelectT1ForAlice 和 procSelectT1。 因为我们希望 Alice 始终使用 ProcSelectT1ForAlice 进行访问，所以我们不希望授予其执行 procSelectT1 的权限。 如何实现呢？  
+ 例如，假设用户 Alice 调用过程 ProcForAlice，此过程将调用过程 ProcSelectT1，而后者从表 T1 中进行选择。 Alice 对 ProcForAlice 和 ProcSelectT1 具有 EXECUTE 权限，但它对于 T1 不具备 SELECT 权限，并且在此整个链中不涉及任何所有权链。 Alice 无法访问表 T1，无论是直接访问，还是通过使用 ProcForAlice 和 ProcSelectT1 访问。 因为我们希望 Alice 始终使用 ProcForAlice 进行访问，所以我们不希望授予其执行 ProcSelectT1 的权限。 如何实现呢？  
   
--   如果我们对 procSelectT1 进行签名，以便 procSelectT1 可以访问 T1，则 Alice 可以直接调用 procSelectT1，而不必调用 ProcSelectT1ForAlice。  
+-   如果我们对 ProcSelectT1 进行签名，以便 ProcSelectT1 可以访问 T1，则 Alice 可以直接调用 ProcSelectT1，而不必调用 ProcForAlice。  
   
--   我们可以对 Alice 拒绝授予针对 procSelectT1 的 EXECUTE 权限，但是，Alice 也无法通过 ProcSelectT1ForAlice 调用 procSelectT1。
+-   我们可以拒绝授予 Alice 对 ProcSelectT1 的 EXECUTE 权限，但 Alice 便无法通过 ProcForAlice 调用 ProcSelectT1。
   
--   对 ProcSelectT1ForAlice 签名本身也不会起作用，因为此签名在调用 procSelectT1 时将丢失。  
+-   对 ProcForAlice 进行签名本身并不会起作用，因为在调用 ProcSelectT1 时，此签名将丢失。  
   
-然而，通过使用用于对 ProcSelectT1ForAlice 进行签名的相同证书来副署 procSelectT1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在整个调用链中保留此签名，并允许访问 T1。 如果 Alice 试图直接调用 procSelectT1，她将无法访问 T1，因为副署不授予任何权限。 下面的示例 C 显示了此示例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+然而，通过使用用于对 ProcForAlice 进行签名的相同证书来对 ProcSelectT1进行副署，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在整个调用链中保留此签名，并允许访问 T1。 如果 Alice 试图直接调用 ProcSelectT1，她将无法访问 T1，因为副署不授予任何权限。 下面的示例 C 显示了此示例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 ## <a name="permissions"></a>权限  
 
@@ -211,42 +211,42 @@ BEGIN
     SELECT * FROM T1;  
 END;  
 GO  
-GRANT EXECUTE ON procSelectT1 to public;  
+GRANT EXECUTE ON ProcSelectT1 to public;  
   
 -- Create special procedure for accessing T1  
-CREATE PROCEDURE  procSelectT1ForAlice AS  
+CREATE PROCEDURE  ProcForAlice AS  
 BEGIN  
    IF USER_ID() <> USER_ID('Alice')  
     BEGIN  
         PRINT 'Only Alice can use this.';  
         RETURN  
     END  
-   EXEC procSelectT1;  
+   EXEC ProcSelectT1;  
 END;  
 GO;  
-GRANT EXECUTE ON procSelectT1ForAlice TO PUBLIC;  
+GRANT EXECUTE ON ProcForAlice TO PUBLIC;  
   
 -- Verify procedure works for a sysadmin user  
-EXEC procSelectT1ForAlice;  
+EXEC ProcForAlice;  
   
 -- Alice still can't use the procedure yet  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
+    EXEC ProcForAlice;  
 REVERT;  
   
 -- Sign procedure to grant it SELECT permission  
-ADD SIGNATURE TO procSelectT1ForAlice BY CERTIFICATE csSelectT   
+ADD SIGNATURE TO ProcForAlice BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
--- Counter sign proc_select_t, to make this work  
-ADD COUNTER SIGNATURE TO procSelectT1 BY CERTIFICATE csSelectT   
+-- Counter sign ProcSelectT1, to make this work  
+ADD COUNTER SIGNATURE TO ProcSelectT1 BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
 -- Now the proc works.   
--- Note that calling procSelectT1 directly still doesn't work  
+-- Note that calling ProcSelectT1 directly still doesn't work  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
-    EXEC procSelectT1;  
+    EXEC ProcForAlice;  
+    EXEC ProcSelectT1;  
 REVERT;  
   
 -- Cleanup  

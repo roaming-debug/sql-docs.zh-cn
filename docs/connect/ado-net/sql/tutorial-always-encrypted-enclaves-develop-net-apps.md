@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 735d0b552843a95ea388b91e2ed1da3fcfec2790
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: b2dd15961615ef4bff9c7e5e99f91844956b1895
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837004"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464911"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序
 
@@ -67,7 +67,7 @@ ms.locfileid: "101837004"
 
 应用程序将连接到[教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) 或 - [教程：在 Azure SQL 数据库中开始使用具有安全 enclave 的 Always Encrypted](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) 中的 ContosoHR 数据库，它运行包含 SSN 列上 `LIKE` 谓词和 Salary 列上范围比较的查询。
 
-1. 将 Program.cs 文件（由 Visual Studio 生成）的内容替换为以下代码。 
+1. 将 Program.cs 文件（由 Visual Studio 生成）的内容替换为以下代码。
 
     ```cs
     using System;
@@ -140,4 +140,4 @@ ms.locfileid: "101837004"
 
 - [结合使用 Always Encrypted 和 Microsoft .NET Data Provider for SQL Server](sqlclient-support-always-encrypted.md)
 - [展示结合使用 Azure Key Vault 提供程序和 Always Encrypted 的示例](azure-key-vault-example.md)
-- [展示如何结合使用 Azure Key Vault 提供程序和已启用安全 Enclave 的 Always Encrypted 的示例](azure-key-vault-enclave-example.md)
+- [展示如何将 Azure Key Vault 提供程序与通过安全 enclave 启用的 Always Encrypted 结合使用的示例](azure-key-vault-enclave-example.md)

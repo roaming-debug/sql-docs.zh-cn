@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP 系统要求
 description: Microsoft Drivers for PHP for SQL Server 支持各种 PHP 版本、操作系统和 SQL Server 版本。
 ms.custom: ''
-ms.date: 01/29/2021
+ms.date: 03/09/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06824f62740653eddeee6d3484e7eb8914404110
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: b52bb4597b76ca831b94899e040a814b11b2a903
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076439"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622653"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 系统要求
 
@@ -51,7 +51,7 @@ ms.locfileid: "99076439"
 |ODBC 驱动程序 17+ |是|是|是|是|是|   |   |   |
 |ODBC 驱动程序 13.1|是|是|是|是|是|是|是|   |
 |ODBC 驱动程序 13  |   |   |   |   |   |   |是|   |
-|ODBC 驱动程序 11  |是|是|是|是|是|是|是|是|
+|ODBC 驱动程序 11  |   |是|是|是|是|是|是|是|
 
 如果使用的是 SQLSRV 驱动程序，[sqlsrv_client_info](sqlsrv-client-info.md) 将返回有关 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 正在使用哪个版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server 的信息。 如果使用的是 PDO_SQLSRV 驱动程序，可以使用 [PDO::getAttribute](pdo-getattribute.md) 来发现版本。
 
