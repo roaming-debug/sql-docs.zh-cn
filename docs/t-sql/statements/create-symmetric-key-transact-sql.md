@@ -23,21 +23,24 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7f007d4ae9ca1c742061ce5b11297ccace11ffb
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest
+ms.openlocfilehash: 1bdfcae4b6d7ef8461cb5ddec4bb1133a92d6d93
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99232906"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421881"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中生成对称密钥并指定其属性。  
   
  此功能与使用数据层应用程序框架 (DACFx) 的数据库导出不兼容。 必须在导出之前删除所有对称密钥。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)] 
   
 ## <a name="syntax"></a>语法  
   

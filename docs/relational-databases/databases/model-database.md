@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 01d5e44a93776560b5e89c0dc03a36b780f7ab8d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9ef6744fa152bfb5c66cc82ba71de62bc5bfb1a9
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637692"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421969"
 ---
 # <a name="model-database"></a>model 数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,37 +90,23 @@ ms.locfileid: "97637692"
 ## <a name="restrictions"></a>限制  
  不能在 **model** 数据库中执行下列操作：  
   
--   添加文件或文件组。  
-  
--   更改排序规则。 默认排序规则为服务器排序规则。  
-  
--   更改数据库所有者。 **模型** 的所有者是 **sa**。  
-  
--   删除数据库。  
-  
--   从数据库中删除 **guest** 用户。  
-  
--   启用变更数据捕获。  
-  
--   参与数据库镜像。  
-  
--   删除主文件组、主数据文件或日志文件。  
-  
--   重命名数据库或主文件组。  
-  
--   将数据库设置为 OFFLINE。  
-  
--   将主文件组设置为 READ_ONLY。  
-  
--   使用 WITH ENCRYPTION 选项创建过程、视图或触发器。 加密密钥与在其中创建对象的数据库绑定在一起。 在 **model** 数据库中创建的加密对象只能用于 **model** 中。  
+- 添加文件或文件组。  
+- 更改排序规则。 默认排序规则为服务器排序规则。  
+- 更改数据库所有者。 **模型** 的所有者是 **sa**。  
+- 删除数据库。  
+- 从数据库中删除 **guest** 用户。  
+- 启用变更数据捕获。  
+- 参与数据库镜像。  
+- 删除主文件组、主数据文件或日志文件。  
+- 重命名数据库或主文件组。  
+- 将数据库设置为 OFFLINE。  
+- 将主文件组设置为 READ_ONLY。  
+- 使用 WITH ENCRYPTION 选项创建过程、视图或触发器。 加密密钥与在其中创建对象的数据库绑定在一起。 在 **model** 数据库中创建的加密对象只能用于 **model** 中。  
   
 ## <a name="related-content"></a>相关内容  
- [系统数据库](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
+- [系统数据库](../../relational-databases/databases/system-databases.md)  
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
   
   

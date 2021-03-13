@@ -1,8 +1,8 @@
 ---
 description: sys.dm_xtp_transaction_stats (Transact-SQL)
-title: sys.dm_xtp_transaction_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_xtp_transaction_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 03/12/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -16,15 +16,14 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
-ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e5216c988f93d2186bc36964b086f82e1995c176
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 37a98ee4a73e7bcc0ce06cef44d3a142e7fba772
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99126420"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421859"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "99126420"
 |total_count|**bigint**|内存中 OLTP 数据库引擎中已运行的事务总数。|  
 |read_only_count|**bigint**|只读事务数。|  
 |total_aborts|**bigint**|通过用户或系统中止而中止的事务总数。|  
-|user_aborts|**bigint**|系统启动的中止数。 例如，原因为写入冲突、验证失败或依赖关系失败。|  
+|system_aborts|**bigint**|系统启动的中止数。 例如，原因为写入冲突、验证失败或依赖关系失败。|  
 |validation_failures|**bigint**|因验证失败造成的事务中止的次数。|  
 |dependencies_taken|**bigint**|仅限内部使用。|  
 |dependencies_failed|**bigint**|因所依赖的事务中止的事务中止次数。|  

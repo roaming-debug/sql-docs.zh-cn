@@ -18,19 +18,22 @@ helpviewer_keywords:
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dde6b49c05c1d0e7b45b5eee851bd094423fe3aa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017||= azure-sqldw-latest
+ms.openlocfilehash: c0c2b21dc6c54ecba5d533aa8dc441758f2857cb
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159630"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421999"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT 非对称密钥权限 (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   授予对非对称密钥的权限。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/\synapse-analytics-od-unsupported-syntax.md)]  
   
 ## <a name="syntax"></a>语法  
   

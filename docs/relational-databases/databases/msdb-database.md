@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 80ada8fcce7fe1480dca5e22d4a5b8be3e73b617
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88471187"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421979"
 ---
 # <a name="msdb-database"></a>msdb 数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,34 +86,21 @@ ms.locfileid: "88471187"
  不能在 **msdb** 数据库中执行下列操作：  
   
 -   更改排序规则。 默认排序规则为服务器排序规则。  
-  
 -   删除数据库。  
-  
 -   从数据库中删除 **guest** 用户。  
-  
 -   启用变更数据捕获。  
-  
 -   参与数据库镜像。  
-  
 -   删除主文件组、主数据文件或日志文件。  
-  
 -   重命名数据库或主文件组。  
-  
 -   将数据库设置为 OFFLINE。  
-  
 -   将主文件组设置为 READ_ONLY。  
   
 ## <a name="related-content"></a>相关内容  
- [系统数据库](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
-  
- [数据库邮件](../../relational-databases/database-mail/database-mail.md)  
-  
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
+- [系统数据库](../../relational-databases/databases/system-databases.md)  
+- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
+- [数据库邮件](../../relational-databases/database-mail/database-mail.md)  
+- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

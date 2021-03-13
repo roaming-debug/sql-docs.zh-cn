@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c074add532e55209c8fc304a98da686cec60aab
-ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
+ms.openlocfilehash: 8c4b69dd5f196cf44f7fedfefbe45df6714aba20
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100636717"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421982"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 
@@ -126,7 +126,7 @@ ms.locfileid: "100636717"
    |`MIN`, `MAX`|`UNION`、`EXCEPT` 或 `INTERSECT` 运算符|`TABLESAMPLE`|
    |表变量|`OUTER APPLY` 或 `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |稀疏列集|内联 (TVF) 或多语句表值函数 (MSTVF)|`OFFSET`|
-   |`CHECKSUM_AGG`|||
+   |`CHECKSUM_AGG`|`STRING_AGG`|||
 
    <sup>1</sup> 索引视图可以包含 float 列；但聚集索引键中不能包含此类列。
 

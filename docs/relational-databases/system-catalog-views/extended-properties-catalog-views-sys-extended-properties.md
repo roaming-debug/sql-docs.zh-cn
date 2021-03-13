@@ -21,12 +21,12 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b269b7838a5b1d87eab8e615a88d8fa353bdea7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f127b6ee96f95c0f51b4ce41a101348d7fce5c42
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203514"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421912"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>扩展属性目录视图-sys.extended_properties
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "99203514"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|class|**tinyint**|标识其上存在属性的项类。 可以是以下其中一个值：<br /><br /> 0 = 数据库<br /><br /> 1 = 对象或列<br /><br /> 2 = 参数<br /><br /> 3 = 架构<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引<br /><br /> 10 = XML 架构集合<br /><br /> 15 = 消息类型<br /><br /> 16 = 服务约定<br /><br /> 17 = 服务<br /><br /> 18 = 远程服务绑定<br /><br /> 19 = 路由<br /><br /> 20 = 数据空间（文件组或分区方案）<br /><br /> 21 = 分区函数<br /><br /> 22 = 数据库文件<br /><br /> 27 = 计划指南|  
-|class_desc|**nvarchar(60)**|其上存在扩展属性的类的说明。 可以是以下其中一个值：<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> 参数<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
+|class|**tinyint**|标识其上存在属性的项类。 可以是以下值之一：<br /><br /> 0 = 数据库<br /><br /> 1 = 对象或列<br /><br /> 2 = 参数<br /><br /> 3 = 架构<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引<br /><br /> 8 = 用户定义的表类型列<br /><br /> 10 = XML 架构集合<br /><br /> 15 = 消息类型<br /><br /> 16 = 服务约定<br /><br /> 17 = 服务<br /><br /> 18 = 远程服务绑定<br /><br /> 19 = 路由<br /><br /> 20 = 数据空间（文件组或分区方案）<br /><br /> 21 = 分区函数<br /><br /> 22 = 数据库文件<br /><br /> 27 = 计划指南|  
+|class_desc|**nvarchar(60)**|其上存在扩展属性的类的说明。 可以是以下值之一：<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> 参数<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|其上存在扩展属性的项的 ID，根据项类进行解释。 对于大多数项，该 ID 适用于类所表示的项。 下列是非标准主 ID 的解释：<br /><br /> 如果 class 为 0，则 major_id 始终为 0。<br /><br /> 如果 class 为 1、2 或 7，则 major_id 为 object_id。|  
 |minor_id|**int**|其上存在扩展属性的项的辅助 ID，根据项类进行解释。 对于大多数项，ID 为 0；否则，ID 为下列值之一：<br /><br /> 如果 class = 1，则 minor_id 在项为列的情况下等于 column_id，在项为对象的情况下等于 0。<br /><br /> 如果 class = 2，则 minor_id 为 parameter_id。<br /><br /> 如果 class = 7，则 minor _id 为 index_id。|  
 |name|**sysname**|属性名，其 class、major_id 和 minor_id 是唯一的。|  
-|value|**sql_variant**|扩展属性的值。|  
+|值|**sql_variant**|扩展属性的值。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
