@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 92cca7d688f954fc8e832f4bc0e68f105c024202
-ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
+ms.openlocfilehash: d78e229bcbf2a088d42431abdf02bec3f9e51eab
+ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102474881"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231495"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>在 OpenShift 本地和 Azure Red Hat OpenShift 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -73,7 +73,7 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
 4. 将自定义 SCC 分配给部署 BDC 的命名空间中用户的服务帐户：
 
    ```console
-  oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
+   oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
    ```
 
 5. 向部署 BDC 的用户分配适当的权限。 执行下列操作之一： 
