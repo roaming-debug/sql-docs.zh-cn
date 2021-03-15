@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4d3d5cb280f20deb3d683d962be986d7df38ed61
-ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.openlocfilehash: e2c384a012603af0fd8875071b33813050218c65
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100549373"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622723"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -207,7 +207,7 @@ ms.locfileid: "100549373"
 |**11068**|使用针对列存储索引插入操作配置了最大并行度 (MAXDOP) 值的服务器、数据库或资源池。 有关替代并行度的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism)。<br /><br />**重要提示：** 只有同时启用跟踪标志 11064，此跟踪标志才有效。<br /><br />**重要提示：** 优先选择更快的数据加载而不是维护 [列存储段](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment)的质量时，请使用此跟踪标志。 例如，如果在并行模式下执行插入操作，则在将 1,048,577 个行加载到列存储时，使用此跟踪标志可能会导致多个压缩行组。 如果不使用此跟踪标志，插入操作会生成一个压缩行组。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] 及更高内部版本。<br /><br />**作用域**：仅全局|
 |**11631**| “ALTER INDEX ...REORGANIZE”仅当已从某个列存储索引行组中删除某个阈值的行数时，才会清理该行组中已删除的行。 默认阈值为最大行数限值的 10%（1 百万行），即 100,000 行。 此跟踪标志将阈值更改为列存储行组中当前行总数的 10%。 例如，如果行组包含 20,000 行，则阈值是 2,000 行删除的行，达到该阈值时，REORGANIZE 才会对此行组执行清理操作。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/5000895)<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 及更高内部版本。<br /><br />**作用域**：仅全局|
 |**11634**| “ALTER INDEX ...REORGANIZE”仅当已从某个列存储索引行组中删除某个阈值的行数时，才会清理该行组中已删除的行。 默认阈值为最大行数限值的 10%（1 百万行），即 100,000 行。 此跟踪标志将阈值更改为列存储行组中行数的 1%。 如果与跟踪标志 11631 一起启用，则阈值为行组中当前行数的 1%，而不是 1 百万行的 1%。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/help/5000895)<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 及更高内部版本。<br /><br />**作用域**：仅全局|
-
+|**13116**|禁用 bug [13685819](https://support.microsoft.com/en-us/topic/kb5000645-cumulative-update-16-for-sql-server-2016-sp2-a3997fa9-ec49-4df0-bcc3-12dd58b78265#bkmk_13685819) 的修补程序。 如果在应用 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16 后遇到以下问题，则使用此跟踪标志：使用并行计划的 DML（插入/更新/删除）查询不能完成任何执行；以及遇到 HP_SPOOL_BARRIER 等待。 <br /><br />注意：此跟踪标志适用于 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16。<br /><br />**作用域**：仅全局| 
   
 ## <a name="examples"></a>示例  
  以下示例使用 DBCC TRACEON 针对服务器级别的所有会话将跟踪标志 3205 设置为开。  

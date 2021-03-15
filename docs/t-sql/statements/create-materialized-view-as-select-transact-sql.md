@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 60f460c06c89d1d9b01ed5f19f705cec745dce09
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.openlocfilehash: 81073d458d69e28ee145c1bb1dd38f3474800b35
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247357"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770535"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -145,13 +145,23 @@ CREATE MATERIALIZED VIEW AS SELECT 不支持 APPROX_COUNT_DISTINCT。
 
 可以通过 DROP VIEW 删除具体化视图。  可以使用 ALTER MATERIALIZED VIEW 禁用或重新生成具体化视图。   
 
+具体化视图是一种自动查询优化机制。  用户不需要直接查询具体化视图。  提交用户查询后，引擎将检查用户对查询对象的权限，如果用户没有访问查询中的表或普通视图的权限，引擎将使查询在未执行的情况下失败。  如果用户的权限已经过验证，优化器将自动使用匹配的具体化视图来执行查询，以提高性能。  无论通过查询基表还是查询具体化视图来执行查询，用户都将获得相同的返回数据。  
+
 SQL Server Management Studio 中的 EXPLAIN 计划和图形估计执行计划可以显示查询优化器是否考虑将具体化视图用于查询执行。 SQL Server Management Studio 中的图形估计执行计划可以显示查询优化器是否考虑将具体化视图用于查询执行。
 
 若要了解 SQL 语句是否可以从新的具体化视图受益，请运行 `EXPLAIN` 命令和 `WITH_RECOMMENDATIONS`。  有关详细信息，请参阅 [EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)。
 
-## <a name="permissions"></a>权限
+## <a name="ownership"></a>所有权
+- 如果基表和要创建的具体化视图的所有者不相同，则无法创建具体化视图。
+- 具体化视图及其基表可以位于不同的架构中。 创建具体化视图后，视图的架构所有者将自动成为具体化视图的所有者，并且此视图所有权无法更改。     
 
-要求 1) 具有 REFERENCES 和 CREATE VIEW 权限，或 2) 具有在其中创建视图的架构的 CONTROL 权限。 
+## <a name="permissions"></a>权限
+除了满足对象所有权要求外，用户还需要具有以下权限才能创建具体化视图： 
+1) 数据库中的 CREATE VIEW 权限
+2) 对具体化视图的基表的 SELECT 权限
+3) 对包含基表的架构的 REFERENCES 权限
+4) 对包含具体化视图的架构的 ALTER 权限 
+
 
 ## <a name="example"></a>示例
 A. 此示例显示 Synapse SQL 优化器如何自动使用具体化视图来执行查询，以获得更好的性能，即使该查询使用的是 CREATE MATERIALIZED VIEW 不支持的函数（例如 COUNT(DISTINCT expression)）也是如此。 过去需要几秒钟才能完成的查询现在不到一秒就能完成，而且无需对用户查询进行任何更改。   
@@ -196,60 +206,49 @@ select DATEDIFF(ms,@timerstart,@timerend);
 
 ```
 
-B. 在此示例中，User_B 在表 T1 和 T2 上创建具体化视图。  视图和两个表均由其他用户 User_A 所有。
-
+B. 在此示例中，User2 在 User1 拥有的表上创建具体化视图。  具体化视图由 User1 拥有。
 ```sql
-
--- Create the users 
-CREATE USER User_A WITHOUT LOGIN ;  
-CREATE USER User_B WITHOUT LOGIN ;  
+/****************************************************************
+Setup:
+SchemaX owner = DBO
+SchemaX.T1 owner = User1
+SchemaX.T2 owner = User1
+SchemaY owner = User1
+*****************************************************************/
+CREATE USER User1 WITHOUT LOGIN ;
+CREATE USER User2 WITHOUT LOGIN ;
+CREATE SCHEMA SchemaX;  
+CREATE SCHEMA SchemaY AUTHORIZATION User1;
 GO
-CREATE SCHEMA User_A authorization User_A;
+CREATE TABLE [SchemaX].[T1] (   [vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL, [puYear] [int] NULL );
+CREATE TABLE [SchemaX].[T2] (   [vendorID] [varchar](255) Not NULL, [totalAmount] [float] Not NULL, [puYear] [int] NULL);
 GO
+ALTER AUTHORIZATION ON OBJECT::SchemaX.[T1] TO User1;
+ALTER AUTHORIZATION ON OBJECT::SchemaX.[T2] TO User1;
 
--- User_A creates two tables
-
-GRANT CREATE TABLE to User_A;
+/*****************************************************************************
+For user2 to create a MV in SchemaY on SchemaX.T1 and SchemaX.T2, user2 needs:
+1. CREATE VIEW permission in the database
+2. REFERENCES permission on the schema1
+3. SELECT permission on base table T1, T2  
+4. ALTER permission on SchemaY
+******************************************************************************/
+GRANT CREATE VIEW to User2;
+GRANT REFERENCES ON SCHEMA::SchemaX to User2;  
+GRANT SELECT ON OBJECT::SchemaX.T1 to User2; 
+GRANT SELECT ON OBJECT::SchemaX.T2 to User2;
+GRANT ALTER ON SCHEMA::SchemaY to User2; 
 GO
-EXECUTE AS USER = 'User_A';  
-SELECT USER_NAME();  
-Go
-CREATE TABLE [User_A].[T1]
-(
-    [vendorID] [varchar](255) Not NULL,
-    [totalAmount] [float] Not NULL,
-    [puYear] [int] NULL
-)
+EXECUTE AS USER = 'User2';  
 GO
-CREATE TABLE [User_A].[T2]
-(
-    [vendorID] [varchar](255) Not NULL,
-    [totalAmount] [float] Not NULL,
-    [puYear] [int] NULL
-)
-GO
-REVERT;
-
--- Grant User_B the required permissions to create a materialized view for User_A on T1 and T2 owned by User_A
-GRANT CREATE VIEW to User_B;
-GRANT Control ON SCHEMA::User_A to User_B;
-GRANT REFERENCES ON OBJECT::User_A.T1 to User_B;
-GRANT REFERENCES ON OBJECT::User_A.T2 to User_B;
-
--- User_B creates a materialized view.  Both the view and the base tables are owned by User_A.
-EXECUTE AS USER = 'User_B';  
-SELECT USER_NAME(); 
-GO
-
-CREATE materialized VIEW [User_A].MV_CreatedBy_UserB with(distribution=round_robin) 
+CREATE materialized VIEW [SchemaY].MV_by_User2 with(distribution=round_robin) 
 as 
         select A.vendorID, sum(A.totalamount) as S, Count_Big(*) as T 
-        from [User_A].[T1] A
-        inner join [User_A].[T2] B
-        on A.vendorID = B.vendorID
-        group by A.vendorID ;
+        from [SchemaX].[T1] A
+        inner join [SchemaX].[T2] B on A.vendorID = B.vendorID group by A.vendorID ;
 GO
 revert;
+GO
 ```
 
 ## <a name="see-also"></a>另请参阅

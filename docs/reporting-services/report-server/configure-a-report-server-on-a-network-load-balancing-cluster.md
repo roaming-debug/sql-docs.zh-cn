@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 12/11/2019
-ms.openlocfilehash: 9e7a7b0dce01b21fcb746fdfdcbd5adfa7c7483d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 03/09/2021
+ms.openlocfilehash: 8d56f26c6661587cb13ff2962221a4a41c7da2ba
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067203"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622673"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
 
@@ -55,7 +55,7 @@ ms.locfileid: "100067203"
   
  若要解决此问题，可以生成一个任意验证密钥来支持视图状态验证功能，然后将每个报表服务器节点手动配置为使用同一密钥。 可以使用随机生成的十六进制序列。 十六进制序列的长度由验证算法（如 SHA1）确定。  
 
-::: moniker range="=sql-server-2016"
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
 
 1. 通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 <`machineKey`> 条目，以便将该条目粘贴到扩展部署中每个报表服务器实例的 Web.config 文件中。  
   
@@ -65,17 +65,16 @@ ms.locfileid: "100067203"
     <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. 打开报表服务器的 Web.config 文件，并在 <`system.web`> 部分粘贴所生成的 <`machineKey`> 元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config 中。  
+2. 打开报表服务器的 Web.config 文件，并在 <`system.web`> 部分粘贴所生成的 <`machineKey`> 元素。 默认情况下，Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config。  
   
 3. 保存文件。  
   
 4. 对扩展部署中的每个报表服务器重复上述步骤。  
   
-5. 确保 \Reporting Services\Reportserver 文件夹中所有 Web.Config 文件的 <`system.web`> 部分都包含相同的 <`machineKey`> 元素。  
+5. 确保扩展部署中所有报表服务器的所有 Web.Config 文件的 <`system.web`> 部分都包含相同的 <`machineKey`> 元素。  
 
-::: moniker-end
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-::: moniker range=">=sql-server-2017"
 
 1. 通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 \<**MachineKey**> 条目，以便将该条目粘贴到横向扩展部署中每个报表服务器实例的 RSReportServer.config 文件中。
 
@@ -85,13 +84,13 @@ ms.locfileid: "100067203"
     <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
-2. 保存文件。
+2. 打开报表服务器的 RSReportServer.config 文件，并在 <`Configuration`> 部分粘贴所生成的 \<**MachineKey**> 元素。 默认情况下，对于 Reporting Services 和 Power BI 报表服务器，RSReportServer.config 文件分别位于 \Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\RSReportServer.config 和 \Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer\RSReportServer.config。  
 
-3. 对扩展部署中的每个报表服务器重复上述步骤。  
+3. 保存文件。
 
-4. 确保 \Reporting Services\Report Server 文件夹中所有 RSReportServer.Config 文件都包含相同的 \<**MachineKey**> 元素。
+4. 对扩展部署中的每个报表服务器重复上述步骤。  
 
-::: moniker-end
+5. 确保扩展部署中所有报表服务器的所有 RSReportServer.config 文件的 <`Configuration`> 部分都包含相同的 \<**MachineKey**> 元素。
 
 ## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> 如何配置 Hostname 和 UrlRoot
 

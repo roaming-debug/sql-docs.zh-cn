@@ -12,12 +12,12 @@ ms.reviewer: v-daenge
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2c7ea508a6f0f79a000de1ae42f5e7eb3de09f5a
-ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+ms.openlocfilehash: 172ed1eea6bc616fe4e61162167e45bd1369cf79
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102464765"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770472"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver for SQL Server 发行说明
 
@@ -43,6 +43,25 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="1772"></a>17.7.2
+
+![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2156851)  
+![下载](../../../ssms/media/download-icon.png)[下载 x86 安装程序](https://go.microsoft.com/fwlink/?linkid=2156749)  
+
+版本号：17.7.2.1  
+发布日期：2021 年 3 月 10 日  
+
+如果想要安装的语言版本不包含在检测到的语言中，可以使用以下直接链接。  
+对于 x64 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2156851&clcid=0x40a)  
+对于 x86 驱动程序：[中文（简体）](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2156749&clcid=0x40a)  
+
+| 新增功能 | 详细信息 |
+| :------- | :------ |
+| bug 修复。 | [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>以前的版本
+
 ## <a name="177"></a>17.7
 
 ![下载](../../../ssms/media/download-icon.png)[下载 x64 安装程序](https://go.microsoft.com/fwlink/?linkid=2153471)  
@@ -62,8 +81,6 @@ GeneMi (and CraigG).  2019/03/30.
 | 能够插入已加密的 money 和 smallmoney 列 | 请参阅[使用 Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md)。 |
 | bug 修复。 | [bug 修复](../bug-fixes.md)。 |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>以前的版本
 
 ## <a name="176"></a>17.6
 

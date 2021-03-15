@@ -14,16 +14,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f1072f51349952be373a69a04ac556b38e3f25f
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 1816f1a8255041d6211931ffc41963acc460e15d
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837484"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770465"
 ---
 # <a name="list-of-bugs-fixed"></a>已修复的 bug 列表
 
 此页列出了自 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 起每个发行版中修复的缺陷。
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-1772-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
+
+- 修复使用托管服务标识身份验证时出现“404 未找到”错误的问题
+- 修复高多线程负载下的间断性“不支持加密”错误
+- 修复高线程负载下的间歇性故障
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-177-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 bug 修复
 

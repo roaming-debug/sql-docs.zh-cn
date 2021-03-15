@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-tutorial
-ms.openlocfilehash: 74f98ad652a58f70cd75ef60556bf0464fd5d7c7
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: 3e5e8536c135244288d022879764d021c53e67ca
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186330"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770475"
 ---
 # <a name="tutorial-to-perform-your-first-code-translation-with-azure-synapse-pathway-preview"></a>使用 Azure Synapse Pathway 预览版执行首次代码转换的教程
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -62,6 +62,18 @@ Azure Synapse Pathway 预览版引入了对将 Netezza、Snowflake 和 Microsoft
 1. 它包含可轻松提交到 GitHub 存储库的项目结构。
   
 1. 包含错误和警告列表的结果文件将被上传到相同的输出目录中。
+
+## <a name="run-the-translation-using-command-line"></a>使用命令行运行转换
+1. 安装时，AspCmd.exe 将位于 C:\Program Files (x86)\Azure Synapse 路径（预览版）
+1. 启动命令提示符并转到文件位置 
+1. 键入 aspcmd.exe --help 获取命令列表
+
+  ![Azure Synapse 评估命令行 help 命令。](./media/synapse-pathway-assessment/command-line-help.png)
+
+
+4. 可以使用命令行开始运行转换
+
+ ![使用命令行的 Azure Synapse 评估。](./media/synapse-pathway-assessment/command-line-assessment.png)
 
 ## <a name="next-steps"></a>后续步骤
 

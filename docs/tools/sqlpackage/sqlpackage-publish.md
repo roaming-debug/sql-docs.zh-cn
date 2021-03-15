@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: 84fdd99b00de38b88b1a21963c4565e5c3b27ea7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 364849c03150839ce38c4764c788bb8b813b9d53
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081448"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622603"
 ---
 # <a name="sqlpackage-publish-parameters-properties-and-sqlcmd-variables"></a>SqlPackage 发布参数、属性和 SQLCMD 变量
 SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源数据库的结构。 如果发布包含所有表或表子集的用户数据的部署包，则会更新架构和表数据。 数据部署覆盖目标数据库的现有表中的架构和数据。 对于未包含在部署包中的表，数据部署将不会更改目标数据库中的现有架构或数据。  
@@ -73,7 +73,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-publish-action"></a>特定于 Publish 操作的属性
 
-|properties|值|说明|
+|properties|“值”|说明|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|为部署参与者指定其他部署参与者参数。 这应该是用分号分隔的值列表。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定应在部署 dacpac 时运行的其他部署参与者。 这应该是以分号分隔的完全限定的生成参与者名称或 ID 列表。|
@@ -81,6 +81,11 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|SqlClr 部署使用此属性以导致阻塞程序集作为部署计划的组成部分被删除。 默认情况下，如果需要删除引用程序集，则任何阻塞或引用程序集将阻止程序集更新。|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|指定是否尝试操作，而不管存在的不兼容 SQL Server 平台。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|如果此属性设置为 true，则不阻止具有行级别安全性的表上的数据运动。 默认值为 false。|
+|**/p:**|AzureSharedAccessSignatureToken=(STRING)|Azure 共享访问签名 (SAS) 令牌，请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish)。|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure blob 存储终结点，请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish)。|
+|**/p:**|AzureStorageContainer=(STRING)|Azure blob 存储容器，请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish)。|
+|**/p:**|AzureStorageKey=(STRING)|Azure 存储帐户密钥，请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish)。|
+|**/p:**|AzureStorageRootPath=(STRING)|容器中的存储根路径。 如果没有此属性，路径将默认为 `servername/databasename/timestamp/`。 请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish)。|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|在部署任何更改之前，备份数据库。|
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| 指定在产生的架构更改可能会导致数据丢失（包括由于数据精度降低，或由于需要强制转换操作的数据类型更改）的情况下，将在架构验证步骤期间终止操作。 默认值 (`True`) 会导致操作终止，而无论目标数据库是否包含数据。  如果目标中存在无法转换为新列类型的数据，则将 `False` 设为 BlockOnPossibleDataLoss 的值来执行操作仍可能会在执行部署计划期间失败。 |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|指定是否阻止更新其架构与其注册不再匹配或已取消注册的数据库。|

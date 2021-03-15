@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: cecc6de89a9e8f82a64942acb08af7ddee48c5be
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 94ddccc0789f01f3d7d6ac6675ec9c54405972a1
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081458"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622623"
 ---
 # <a name="sqlpackage-import-parameters-and-properties"></a>SqlPackage 导入参数和属性
 SqlPackage.exe 导入操作将架构和表数据从 BACPAC 包（.bacpac 文件）导入 SQL Server 或 Azure SQL 数据库中的新数据库或空白数据库。 对现有数据库执行导入操作时，目标数据库无法包含任何用户定义的架构对象。  
@@ -53,17 +53,19 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-import-action"></a>特定于导入操作的属性
 
-|属性|值|说明|
+|属性|“值”|说明|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|定义 Azure SQL 数据库的版本。|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| 指定针对 SQLServer 执行查询时的数据库锁超时（以秒为单位）。 使用 -1 表示无限期等待。|
 |**/p:**|DatabaseMaximumSize=(INT32)|定义 Azure SQL 数据库的大小上限（以 GB 为单位）。|
 |**/p:**|DatabaseServiceObjective=(STRING)|定义 Azure SQL 数据库的性能级别，如“P0”或“S1”。|
+|**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|在将数据导入 SQL Server 之前禁用索引。|
 |**/p:**|ImportContributorArguments=(STRING)|为部署参与者指定部署参与者参数。 这应该是用分号分隔的值列表。|
 |**/p:**|ImportContributors=(STRING)|指定应在导入 dacpac 时运行的部署参与者。 这应该是以分号分隔的完全限定的生成参与者名称或 ID 列表。|
 |**/p:**|ImportContributorPaths=(STRING)|指定用于加载其他部署参与者的路径。 这应该是用分号分隔的值列表。 |
 |**/p:**|LongRunningCommandTimeout=(INT32)| 指定针对 SQL Server 执行查询时的长时间运行命令超时（以秒为单位）。 使用 0 表示无限期等待。|
+|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|在将数据导入 SQL Server 后脱机重新生成索引。|
 |**/p:**|Storage=({File&#124;Memory})|指定在生成数据库模型时如何存储元素。 出于性能原因，默认值为 InMemory。 对于大型数据库，需要备份了文件的存储。|
   
 

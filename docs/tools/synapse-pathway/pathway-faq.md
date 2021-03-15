@@ -9,12 +9,12 @@ ms.prod: sql
 ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: 8352fb6a70c54ede61d544a147f970237404c9f5
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: e97425f682a3f6b9f2f4e955d8476d40d6cf4312
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186314"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770499"
 ---
 # <a name="azure-synapse-pathway-preview-faq"></a>Azure Synapse Pathway 预览版常见问题解答
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -44,8 +44,15 @@ A. 在此预览版本的 Synapse Pathway 中，以下数据仓库作为源提供
 
 ### <a name="q-what-is-included-as-part-of-the-code-conversion"></a>Q. 代码转换包括哪些内容？
 
-A. Synapse Pathway 支持对表、架构、视图和存储过程进行代码转换。
+A. Synapse Pathway 预览版支持对表、架构和视图进行代码转换。
 
+| 源平台| 支持的语句类型 | 
+|:-------------------:|:------------------|
+| IBM Netezza  | Create/Alter/Drop Database<br /> Create/Alter/Drop Schema <br /> Create/Alter/Drop Table |
+|Microsoft SQL Server  | Create/Alter/Drop Database<br /> Create/Alter/Drop Schema <br /> Create/Alter/Drop Table | 
+| Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop Schema <br /> Create/Alter/Drop Table |                       
+
+  
 ### <a name="q-can-it-also-scan-my-environment-and-provide-an-assessment-report-of-all-the-objects-that-need-to-be-convertedtranslated"></a>Q. 它是否还可以扫描环境，并提供需要转换的所有对象的评估报告？
 
 A. 在此预览版本的 Synapse Pathway 中，必须提供指向需要转换的 DDL/DML 脚本的链接。 Synapse Pathway 不会扫描当前环境以确定需要转换的对象。

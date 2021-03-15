@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: fa78eb8ef2da01514e161c58b05146b1699c93f7
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: 7bbd8aee97ccd31649661032c76729ad89b7fe5a
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151263"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622743"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server 连接器维护与故障排除
 
@@ -176,6 +176,12 @@ SQL Server 连接器需要哪些终结点的访问权限？
 
 **如何通过 HTTP(S) 代理服务器连接到 Azure Key Vault？**
 连接器使用 Internet Explorer 的代理配置设置。 这些设置可通过[组策略](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available)或注册表控制，但需要注意的是，这些设置不是系统范围的设置，而是针对运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户。 如果数据库管理员在 Internet Explorer 中查看或编辑设置，则它们只会影响数据库管理员的帐户，而不会影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎。 不建议使用服务帐户以交互的方式登录到服务器，并且在许多安全环境中都会阻止该方式。 对配置的代理设置进行更改可能需要重启 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例才能生效，因为当连接器首次尝试连接到 Key Vault 时，将缓存这些设置。
+
+SQL Server 连接器支持 Azure Key Vault 中的哪些密钥大小？
+最新版本的 SQL Server 连接器支持大小为 2048 和 3072 的 Azure Key Vault 密钥。
+  
+ > [!NOTE] 
+ > 即使使用的密钥大小为 3072，“sys.asymmetric_keys”视图也会将密钥大小报告为 2048。 这是此视图的已知漏洞，SQL Server 产品团队将在未来版本中解决此问题。
 
 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中每个配置步骤所需的最低权限级别是什么？**  
  尽管你可以使用 sysadmin 固定服务器角色成员的身份执行所有配置步骤，但 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议你尽量使用最少的权限。 以下列表定义了每个操作的最小权限级别。  

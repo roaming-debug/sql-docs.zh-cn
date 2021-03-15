@@ -25,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b41bf1941bb12bf7560563d0b00fad7b88a75f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8ba376927810521381a3c1a838e7438cdd7acdac
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99208850"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622854"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,20 +44,20 @@ ms.locfileid: "99208850"
 ## <a name="syntax"></a>语法  
   
 ```syntaxsql
-SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
+SWITCHOFFSET ( datetimeoffset_expression, timezoneoffset_expression )   
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- DATETIMEOFFSET  
+ datetimeoffset_expression  
  是一个可以解析为 datetimeoffset(n) 值的表达式。  
   
- time_zone  
- 是一个格式为 [+|-]TZH:TZM 的字符串，或是一个表示时区偏移量的带符号的整数（分钟数），假定它能够感知夏时制并作出相应的调整。  
+ timezoneoffset_expression  
+ 是一个格式为 [+|-]TZH:TZM 的表达式，或是一个表示时区偏移量的带符号整数（分钟数），假定它能够感知夏时制并作出相应调整。  
   
 ## <a name="return-type"></a>返回类型  
- 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset。  
+ 具有 datetimeoffset_expression 参数的小数精度的 datetimeoffset。  
   
 ## <a name="remarks"></a>注解  
  使用 SWITCHOFFSET 可选择与最初存储的时区偏移量不同的时区偏移量的 datetimeoffset 值。 SWITCHOFFSET 不会更新存储的 time_zone 值。  

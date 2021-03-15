@@ -2,25 +2,72 @@
 title: DacFx 和 SqlPackage 发行说明
 description: Microsoft sqlpackage 的发行说明。
 ms.custom: tools|sos
-ms.date: 02/02/2019
+ms.date: 03/10/2021
 ms.prod: sql
-ms.reviewer: alayu; sstein
+ms.reviewer: llali; sstein
 ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 1b93c290596cf9af23e4963912efff652e9c80ee
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3a5d63b5c727508473fe83c1de3668b5b3df85c0
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100061042"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622543"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
 [下载最新版本](sqlpackage-download.md) 
 
 本文列出了 SqlPackage.exe 的已发布版本提供的功能和修补程序。
+
+## <a name="187-sqlpackage"></a>18.7 sqlpackage
+
+|平台|下载|发布日期|版本|构建
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2157201)|2021 年 3 月 10 日|18.7|15.0.5084.2|
+|macOS .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2157203)|2021 年 3 月 10 日| 18.7|15.0.5084.2|
+|Linux .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2157202)|2021 年 3 月 10 日| 18.7|15.0.5084.2|
+|Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2157302)|2021 年 3 月 10 日| 18.7|15.0.5084.2|
+
+### <a name="features"></a>功能
+| 功能 | 详细信息 |
+| :------ | :------ |
+| 部署 | 从 Azure 存储提取或向其中发布大数据。 有关详细信息，请参阅 [SqlPackage for Big Data](sqlpackage-for-azure-synapse-analytics.md) |
+| Azure Synapse Analytics | 行级别安全性支持（内联表值函数、安全策略、安全谓词）  |
+| Azure Synapse Analytics | 工作负荷分类支持 |
+| Azure SQL Edge | 外部流式处理作业支持 |
+| Azure SQL Edge | 针对数据保留添加了表和数据库选项。 |
+| 导入 | 针对导入操作添加了 2 个新索引选项属性。 DisableIndexesForDataPhase（在将数据导入 SQL Server 之前禁用索引，默认值为 true）和 RebuildIndexesOfflineForDataPhase（在将数据导入 SQL Server 之后脱机重新生成索引，默认值为 false）  |
+| Logging | 添加了用于所有操作的属性 (HashObjectNamesInLogs)，该属性会将日志消息中的所有对象名称转换为哈希字符串。 |
+| 性能 | 改进了导入和导出性能，包括其他日志记录，以帮助确定更多瓶颈。 |
+| SQLCMD | 添加了用于部署和架构比较的属性 (DoNotEvaluateSqlCmdVariables)，该属性指定是否将 SQLCMD 变量替换为值。 |
+
+
+
+### <a name="fixes"></a>修复项
+| Feature | 详细信息 |
+| :------ | :------ | 
+| 部署 | 将 [Azure SQL](https://techcommunity.microsoft.com/t5/azure-sql/changing-default-maxdop-in-azure-sql-database/ba-p/1538528) 的默认 MAXDOP 从 0 更改为 8，同时更新 DacFx 中的架构模型默认值 | 
+| 架构比较 | 使用 OUT 和 OUTPUT 关键字的存储过程作为差异被忽略 |
+| 部署 | 针对大数据令牌的其他验证 |
+| 生成/部署 | 对临时外部表进行完整架构模型清理，以实现最终的 dacpac 一致性。  |
+| 生成/部署 | 添加错误处理和修复非 Edge 150 RE。 |
+| 导入/部署 | 部署期间还原序列值 |
+| 部署 | 修复了更改聚集索引的压缩选项时导致重新创建表而不是 alter index 的问题。 |
+| 部署 | 修复了在表列更改时删除并重新创建聚集列存储索引的问题。 |
+| 部署 | 修复了在部署过程中删除和重新创建外部用户的问题。 |
+| 架构比较 | 修复了外部流式处理作业的架构比较问题。 |
+| 导入 | 启用环境设置 ReliableDdlEnabled 为部署报告编写脚本时引发空引用异常。|
+| 部署 | 修复了按错误顺序创建包含系统版本控制的部署步骤的问题。 |
+| 部署 | 修复了由于目标包含时态表而导致架构比较更新或 dacpac 部署失败的问题。 |
+| 部署 | 基于目标之前的最后一个值进行部署后，重新设定标识种子值。 |
+
+### <a name="known-issues"></a>已知问题
+| 功能 | 详细信息 |
+| :------ | :------ |
+| 部署 | 目前尚不支持 Azure Synapse Analytics 工作负荷管理功能（工作负荷组和工作负荷分类器） | 
 
 ## <a name="186-sqlpackage"></a>18.6 sqlpackage
 
@@ -32,7 +79,7 @@ ms.locfileid: "100061042"
 |Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2143496)|2020 年 9 月 18 日| 18.6|15.0.4897.1|
 
 ### <a name="features"></a>功能
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 平台 | 已将 sqlpackage .NET Core 版本更新为 .NET Core 3.1 |
 | Always Encrypted | 添加了对 SQL Server 2019 的安全 enclave 导入和导出的支持 |
@@ -53,7 +100,7 @@ ms.locfileid: "100061042"
 | 部署 | 修复了在具体化视图中验证 Azure Synapse Analytics 时不区分大小写的问题 | 
 
 ### <a name="known-issues"></a>已知问题
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 | 目前尚不支持 Azure Synapse Analytics 工作负荷管理功能（工作负荷组和工作负荷分类器） | 
 
@@ -81,7 +128,7 @@ ms.locfileid: "100061042"
 |Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2128143)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
 
 ### <a name="features"></a>功能
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 | 现在 SQL Server 2008 及更高版本、Azure SQL 数据库和 Azure Synapse Analytics 支持数据敏感度分类 |
 | 部署 | 针对表约束添加 Azure Synapse Analytics 支持 |
@@ -110,7 +157,7 @@ ms.locfileid: "100061042"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 |  18.5 中引入了一个倒退，在将 dacpac（具有使用外部登录名的用户）导入或部署到本地时出现“"type" 附近的语法不正确”错误。 使用 sqlpackag 18.4 可暂时避开此问题，将在下一个 sqlpackag 版本中进行修复。 | 
 | .NET Core | 由于 Microsoft.Data.SqlClient 中的这个[已知问题](https://github.com/dotnet/SqlClient/issues/559)，导入具有敏感度分类的 bacpacs 失败，并显示“重大内部连接错误”消息。 此问题将在下一个 sqlpackage 版本中修复。 |
@@ -133,7 +180,7 @@ ms.locfileid: "100061042"
 
 ### <a name="known-issues"></a>已知问题 
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 |  在 18.4.1 中引入了一个退行性问题，导致“对象引用未设置为对象的实例”。 作为具有外部登录名的用户部署 dacpac 或导入 bacpac 时出错。 使用 sqlpackag 18.4 可暂时避开此问题，将在下一个 sqlpackag 版本中进行修复。 | 
 | &nbsp; | &nbsp; |
@@ -149,7 +196,7 @@ ms.locfileid: "100061042"
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 | 添加对部署到 Azure Synapse Analytics (GA) 的支持。 | 
 | 平台 | 适用于 macOS、Linux 和 Windows 的 sqlpackage .NET Core GA。 | 
@@ -161,7 +208,7 @@ ms.locfileid: "100061042"
 
 ### <a name="known-issues"></a>已知问题 
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | ScriptDom |  ScriptDom 分析回归在 18.3.1 中引入，其中“重命名”被错误地视为顶级令牌，导致分析失败。 此问题将在下一个 sqlpackage 版本中修复。 | 
 | &nbsp; | &nbsp; |
@@ -188,7 +235,7 @@ ms.locfileid: "100061042"
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 | 添加对部署到 Azure Synapse Analytics（预览版）的支持。 | 
 | 部署 | 将 /p:DatabaseLockTimeout=(INT32 '60') 参数添加到 sqlpackage。 | 
@@ -223,7 +270,7 @@ ms.locfileid: "100061042"
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 图形 | 添加了对边缘约束和边缘约束子句的图形表支持。 |
 | 部署 | 启用了模型验证规则以支持 SQL Server 2016 及更高版本的索引键的 32 个列。 |
@@ -248,7 +295,7 @@ ms.locfileid: "100061042"
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 | 添加了对 UTF8 排序规则的支持。 |
 | 部署 | 对索引视图启用了非聚集列存储索引。 |
@@ -275,7 +322,7 @@ ms.locfileid: "100061042"
 | :---------- | :------ |
 | 部署 | 对于 .NET Core，不支持生成和部署参与者。 | 
 | 部署 | 对于 .NET Core，不支持使用 json 数据序列化的较旧 .dacpac 和 .bacpac 文件。 | 
-| 部署 | 对于 .NET Core，由于区分大小写的文件系统出现问题，因此可能无法解析引用的 .dacpacs（例如 master.dacpac）。 | 一种解决方法是大写引用文件的名称（例如 MASTER.BACPAC）。 |
+| 部署 | 对于 .NET Core，由于区分大小写的文件系统出现问题，因此可能无法解析引用的 .dacpacs（例如 master.dacpac）。 一种解决方法是大写引用文件的名称（例如 MASTER.BACPAC）。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="180-sqlpackage"></a>18.0 sqlpackage
@@ -285,7 +332,7 @@ ms.locfileid: "100061042"
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 | 添加了对数据库兼容级别 150 的支持。 | 
 | 部署 | 添加了对托管实例的支持。 | 
@@ -312,7 +359,7 @@ ms.locfileid: "100061042"
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 诊断 | 改进了连接失败的错误消息，包括 SqlClient 异常消息。 |
 | 部署 | 支持对单分区索引进行索引压缩以便导入/导出。 |
@@ -333,7 +380,7 @@ ms.locfileid: "100061042"
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 导入/导出 | 添加了 ThreadMaxStackSize 命令行参数以分析具有大量嵌套语句的 Transact-SQL。 |
 | 部署 | 数据库目录排序规则支持。 | 
@@ -355,7 +402,7 @@ ms.locfileid: "100061042"
 
 ### <a name="features"></a>功能
 
-| Feature | 详细信息 |
+| 功能 | 详细信息 |
 | :------ | :------ |
 | 部署 |  添加了对 SQL 2017+ 和 Azure SQL 数据库上的时态保留策略  的支持。 | 
 | 诊断 | 添加了 /DiagnosticsFile:"C:\Temp\sqlpackage.log" 命令行参数以指定用于保存诊断信息的文件路径。 | 

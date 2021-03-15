@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: 1303473c79558629ee0009f9c07bf8d28ffbd704
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 84405eb4d5ac63f287f2696dcef0a1e3ddc09cc4
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100060972"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622655"
 ---
 # <a name="sqlpackage-extract-parameters-and-properties"></a>SqlPackage 提取的参数和属性
 SqlPackage.exe 的 Extract 操作会在 DACPAC 文件 (.dacpac) 中创建连接的数据库的架构。 默认情况下，.dacpac 文件中不包含数据。 若要包括数据，请使用[导出操作](sqlpackage-export.md)或使用 Extract 属性 ExtractAllTableData/TableData 。 
@@ -57,8 +57,12 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-extract-action"></a>特定于 Extract 操作的属性
 
-|properties|值|说明|
+|properties|“值”|说明|
 |---|---|---|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure blob 存储终结点，请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract)。|
+|**/p:**|AzureStorageContainer=(STRING)|Azure blob 存储容器，请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract)。|
+|**/p:**|AzureStorageKey=(STRING)|Azure 存储帐户密钥，请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract)。|
+|**/p:**|AzureStorageRootPath=(STRING)|容器中的存储根路径。 如果没有此属性，路径将默认为 `servername/databasename/timestamp/`。 请参阅 [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract)。|
 |**/p:**|CommandTimeout=(INT32 '60')|指定针对 SQL Server 执行查询时的命令超时（以秒为单位）。|
 |**/p:**|DacApplicationDescription=(STRING)|定义要存储在 DACPAC 元数据中的应用程序说明。|
 |**/p:**|DacApplicationName=(STRING)|定义要存储在 DACPAC 元数据中的应用程序名称。 默认值为数据库名称。|
