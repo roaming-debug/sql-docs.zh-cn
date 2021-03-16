@@ -25,12 +25,12 @@ ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b3b48adf60f4898a72e3476aa66530728c9a24
-ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
+ms.openlocfilehash: 63dc3c4dbb16716a2d936be7e8d7661e912917d1
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/10/2021
-ms.locfileid: "102532359"
+ms.locfileid: "102622777"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ TODATETIMEOFFSET ( datetime_expression , timezoneoffset_expression )
 >  如果表达式是字符串，其格式必须为 {+|-}TZH:THM。  
   
 ## <a name="return-type"></a>返回类型  
- datetimeoffset。 小数精度与 datetime 参数相同。  
+ datetimeoffset。 小数精度与 datetime_expression 参数相同。  
   
 ## <a name="examples"></a>示例  
   

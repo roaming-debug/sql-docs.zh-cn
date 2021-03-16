@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 478ecc9888bbd3c8f51ee96c6c796856472f93d5
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 06b01a8fba30178cf8c8eb5842750de4baff1c82
+ms.sourcegitcommit: e2d25f265556af92afcc0acde662929e654bf841
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343916"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103489468"
 ---
 # <a name="how-to-configure-bdc-settings-post-deployment"></a>如何配置 BDC 设置后期部署
 
@@ -45,14 +45,14 @@ Spark 服务
 将 Spark 服务的默认核心数更新为 2，将默认内存更新为 7424m。
 
 ```bash
-azdata bdc spark settings set spark-defaults-conf.spark.driver.cores=2, spark-defaults-conf.spark.driver.memory=7424m
+azdata bdc spark settings set --settings spark-defaults-conf.spark.driver.cores=2,spark-defaults-conf.spark.driver.memory=7424m
 ```
 
 ### <a name="change-the-default-number-of-cores-and-memory-for-the-spark-executors-in-the-storage-pool"></a>更改存储池中 Spark 执行程序的默认核心数和内存
 将存储池的执行程序默认核心数更新为 4。
 
 ```bash
-azdata bdc spark settings set spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
+azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
 ```
 
 ### <a name="view-the-pending-settings-changes-staged-in-the-bdc"></a>查看 BDC 中暂存的挂起设置更改
