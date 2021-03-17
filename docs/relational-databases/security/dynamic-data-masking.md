@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a05c7af0bc8b8846e3b4ab5c1e3472249350e7b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 61e964106acc57899b334e21592e3c6a3f57192b
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344390"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103574997"
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -120,73 +120,93 @@ WHERE Salary > 99999 and Salary < 100001;
  以下示例创建的表使用三种不同类型的动态数据屏蔽。 该示例会对表进行填充，在执行选择操作后即可显示结果。  
   
 ```sql
-CREATE TABLE Membership  
-  (MemberID int IDENTITY PRIMARY KEY,  
-   FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
-   LastName varchar(100) NOT NULL,  
-   Phone varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
-   Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL);  
-  
-INSERT Membership (FirstName, LastName, Phone, Email) VALUES   
-('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com'),  
-('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co'),  
-('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net');  
-SELECT * FROM Membership;  
+
+-- schema to contain user tables
+CREATE SCHEMA Data
+GO
+
+-- table with masked columns
+CREATE TABLE Data.Membership(
+    MemberID        int IDENTITY(1,1) NOT NULL PRIMARY KEY CLUSTERED,
+    FirstName       varchar(100) MASKED WITH (FUNCTION = 'partial(1, "xxxxx", 1)') NULL,
+    LastName        varchar(100) NOT NULL,
+    Phone           varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,
+    Email           varchar(100) MASKED WITH (FUNCTION = 'email()') NOT NULL,
+    DiscountCode    smallint MASKED WITH (FUNCTION = 'random(1, 100)') NULL
+    )
+
+-- inserting sample data
+INSERT INTO Data.Membership (FirstName, LastName, Phone, Email, DiscountCode)
+VALUES   
+('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com', 10),  
+('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co', 5),  
+('Shakti', 'Menon', '555.123.4570', 'SMenon@contoso.net', 50),  
+('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net', 40);  
+
 ```  
   
- 创建了一个新用户并向其授予了对表的 **SELECT** 权限。 执行查询后， `TestUser` 看到的是经过屏蔽的数据。  
+ 创建了一个新用户，并向其授予了对表驻留的架构的 SELECT 权限。 执行查询后， `MaskingTestUser` 看到的是经过屏蔽的数据。  
   
 ```sql 
-CREATE USER TestUser WITHOUT LOGIN;  
-GRANT SELECT ON Membership TO TestUser;  
+CREATE USER MaskingTestUser WITHOUT LOGIN;  
+
+GRANT SELECT ON SCHEMA::Data TO MaskingTestUser;  
   
-EXECUTE AS USER = 'TestUser';  
-SELECT * FROM Membership;  
+  -- impersonate for testing:
+EXECUTE AS USER = 'MaskingTestUser';  
+
+SELECT * FROM Data.Membership;  
+
 REVERT;  
 ```  
   
  结果表明对数据进行了屏蔽，即数据已从  
   
- `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com`  
+ `1    Roberto     Tamburello    555.123.4567    RTamburello@contoso.com    10`  
   
  更改为  
   
- `1    RXXXXXXX    Tamburello    xxxx            RXXX@XXXX.com`  
+ `1    Rxxxxxo    Tamburello    xxxx            RXXX@XXXX.com            91`
+ 
+ 其中，DiscountCode 中的数字是每个查询结果的随机数字
   
 ### <a name="adding-or-editing-a-mask-on-an-existing-column"></a>添加或编辑对现有列的屏蔽  
  使用 **ALTER TABLE** 语句可以添加对表中现有列的屏蔽，或者对该列的屏蔽进行编辑。  
 以下示例向 `LastName` 列添加了一个屏蔽函数：  
   
 ```sql  
-ALTER TABLE Membership  
-ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
+ALTER TABLE Data.Membership  
+ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"xxxx",0)');  
 ```  
   
  以下示例更改了 `LastName` 列的屏蔽函数：  
 
 ```sql  
-ALTER TABLE Membership  
+ALTER TABLE Data.Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
   
 ### <a name="granting-permissions-to-view-unmasked-data"></a>授权查看未经屏蔽数据的权限  
- 授予 **UNMASK** 权限即可让 `TestUser` 查看未经屏蔽的数据。  
+ 授予 **UNMASK** 权限即可让 `MaskingTestUser` 查看未经屏蔽的数据。  
   
 ```sql
-GRANT UNMASK TO TestUser;  
-EXECUTE AS USER = 'TestUser';  
-SELECT * FROM Membership;  
-REVERT;   
+GRANT UNMASK TO MaskingTestUser;  
+
+EXECUTE AS USER = 'MaskingTestUser';  
+
+SELECT * FROM Data.Membership;  
+
+REVERT;    
   
 -- Removing the UNMASK permission  
-REVOKE UNMASK TO TestUser;  
+REVOKE UNMASK TO MaskingTestUser;  
 ```  
   
 ### <a name="dropping-a-dynamic-data-mask"></a>删除动态数据屏蔽  
  以下语句将删除上述示例中创建的针对 `LastName` 列的屏蔽：  
   
 ```sql  
-ALTER TABLE Membership   
+ALTER TABLE Data.Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
   

@@ -25,12 +25,12 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc701408345b9067a2519c30570bc668b5db06b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 17527e5489d0d868334d86d0e257791939a37e35
+ms.sourcegitcommit: 2cc2e4e17ce88ef47cda32a60a02d929e617738e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190355"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103473228"
 ---
 # <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +88,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
         DELETE
     :::column-end:::
     :::column:::
-        OPEN
+        MERGE
     :::column-end:::
     :::column:::
         UPDATE
@@ -99,6 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
         DROP
     :::column-end:::
     :::column:::
+        OPEN
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -255,7 +256,7 @@ GO
  [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
- [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)   
+ [MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md) [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)   
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   

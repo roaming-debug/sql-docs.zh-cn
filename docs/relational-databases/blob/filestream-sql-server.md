@@ -16,12 +16,12 @@ ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: 58b68bdf2996446ed08a37297e0c9776c2274832
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 515010fc6727a64607402316b4c8911fd7f22fb0
+ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483659"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231505"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only.md)]
@@ -148,6 +148,62 @@ FILESTREAM 文件系统访问通过使用文件打开和关闭来构建 [!INCLUD
 对 FILESTREAM 数据的远程文件系统访问是通过 Server Message Block (SMB) 协议启用的。 如果客户端为远程客户端，则客户端不对任何写入操作进行缓存。 写入操作将始终发送到服务器。 服务器端可对数据进行缓存。 建议运行在远程客户端上的应用程序合并小型写入操作，以减小使用较大数据大小的写入操作数量。  
 
 不支持通过使用 FILESTREAM 句柄创建内存映射视图（内存映射 I/O）。 如果内存映射用于 FILESTREAM 数据，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将无法保证数据的一致性和持久性或数据库的完整性。  
+
+## <a name="recommendations-and-guidelines-for-improving-filestream-performance"></a>有关提升 FILESTREAM 性能的建议和指导
+
+借助 SQL Server FILESTREAM 功能，可将 varbinary(max) 二进制大对象数据以文件的形式存储在文件系统中。 如果你在 FILESTREAM 容器中拥有大量的行，而这些容器是 FILESTREAM 列和 FileTable 的基础存储区，那么你会得到一个文件系统卷，其中包含大量文件。 为了在处理数据库和文件系统中的集成数据时获得最佳性能，必须确保文件系统已得到最佳优化。 下面是从文件系统的角度来说可进行的一些优化：
+
+- 对 SQL Server FILESTREAM 筛选器驱动程序的高度检查 [例如 rsfx0100.sys]。 对于与采用 FILESTREAM 功能存储文件的卷关联的存储堆栈，评估为其加载的所有筛选器驱动程序，并确保 rsfx 驱动程序位于堆栈的底部。 可使用 FLTMC.EXE 控制程序来枚举特定卷的筛选器驱动程序。 下面是来自 FLTMC 实用工具的示例输出：`C:\Windows\System32>fltMC.exe` 筛选器
+
+    |筛选器名称|实例数|海拔高度|Frame|
+    |---|---|---|---|
+    |Sftredir|1|406000|0|
+    |MpFilter|9|328000|0|
+    |luafv|1|135000|0|
+    |FileInfo|9|45000|0|
+    |RsFx0103|1|41001.03|0|
+    ||||
+
+- 检查服务器是否对文件禁用了“上次访问时间”属性。 该文件系统属性是在注册表中进行维护的：  
+键名称：`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+名称：NtfsDisableLastAccessUpdate  
+键入：REG_DWORD  
+值：1
+
+- 检查服务器是否已禁用 8.3 命名。 该文件系统属性是在注册表中进行维护的：  
+键名称：`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+名称：NtfsDisable8dot3NameCreation  
+键入：REG_DWORD  
+值：1
+
+- 检查 FILESTREAM 目录容器是否未启用文件系统加密或文件系统压缩，未加密或未压缩会导致在访问这些文件时产生一定的开销。
+
+- 从提升的命令提示符处运行 fltmc 实例，并确保没有筛选器驱动程序附加到你尝试还原的卷。
+
+- 检查 FILESTREAM 目录容器中的文件数不超过 300,000 个。 可使用 `sys.database_files` 目录视图中的信息来确定文件系统的哪些目录在存储 `FILESTREAM-related` 文件。 可通过使用多个容器来防止出现这种情况。 （有关详细信息，请查看下一项目符号项。）
+
+- 如果只有一个 FILESTREAM 文件组，则所有数据文件都是在同一文件夹下创建的。 对超大量的文件进行创建可能会受到大型 NTFS 索引的影响，这也可能会造成碎片化。
+
+  - 有多个文件组通常有助于这种情况（应用程序使用分区或具有多个表，每个表放入其自己的文件组中）。
+
+  - 使用 SQL Server 2012 及更高版本时，你可在一个 FILESTREAM 文件组下具有多个容器或文件，而且将采用轮询分配方案。 因此，每个目录的 NTFS 文件数会小得多。
+
+- 如果使用存储容器的多个卷，那么由于有多个 FILESTREAM 容器，备份和还原的速度会更快。
+
+    SQL Server 2012 支持每个文件组有多个容器，它可使操作变得更简单。 无需使用复杂的分区方案来管理更多数量的文件。
+
+- NTFS MFT 可能会被碎片化，这可能会导致性能问题。 MFT 预留大小的确由卷大小而定，因此不确定你是否会遇到这种情况。
+
+  - 可通过 `defrag /A /V C:` 检查 MFT 碎片化（将 C: 更改为实际的卷名称）。
+
+  - 可使用 fsutil behavior 将 mftzone 设置为 2，预留更多的 MFT 空间。
+
+  - 应从防病毒软件扫描中排除 FILESTREAM 数据文件。
+
+    > [!NOTE]
+    > Windows Server 2016 会自动启用 Windows Defender。 请确保已将 Windows Defender 配置为排除 Filestream 文件。 如果不这样做，可能会导致备份和还原操作的性能下降。
+  
+    有关详细信息，请查看[为 Windows Defender 防病毒扫描配置和验证排除项](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus)。
 
 ## <a name="related-tasks"></a>Related Tasks
 

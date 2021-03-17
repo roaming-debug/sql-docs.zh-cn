@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c05da95541e728d981745d43f4da864c2e8b07a8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: da3071f14be97a4bbbd9ac909926f210c49504d4
+ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100343551"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231515"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "100343551"
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] 中的配置步骤相同。
 
-在分布式事务中，客户端应用程序和 Microsoft 分布式事务处理协调器（MS DTC 或 DTC）共同配合来确保多个数据源之间的事务一致性。 DTC 是在基于 Windows Server 的受支持操作系统上提供的服务。 DTC 充当分布式事务的“事务处理协调器”  。 SQL Server 实例通常充当“资源管理器”  。 当数据库位于可用性组中时，每个数据库需为其自身的资源管理器。 
+在分布式事务中，客户端应用程序和 Microsoft 分布式事务处理协调器（MS DTC 或 DTC）共同配合来确保多个数据源之间的事务一致性。 DTC 是在基于 Windows Server 的受支持操作系统上提供的服务。 DTC 充当分布式事务的“事务处理协调器”。 SQL Server 实例通常充当“资源管理器”。 当数据库位于可用性组中时，每个数据库需为其自身的资源管理器。 
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 不能阻止可用性组中数据库的分布式事务 - 即使不为分布式事务配置可用性组也是如此。 但是，如果不为分布式事务配置可用性组，在某些情况下故障转移可能不会成功。 具体而言，新主要副本 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例可能无法从 DTC 获取事务结果。 若要启用 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例，以在故障转移后从 DTC 获取未决事务的结果，请为分布式事务配置可用性组。 
 
-除非数据库也是故障转移群集的成员，否则可用性组处理不会涉及 DTC。 在可用性组中，副本间的一致性由可用性组逻辑维持：主副本不会完成提交并向调用方确认提交，直到辅助副本确认已将日志记录保留在持久存储中。 此时主副本才声明该事务完成。 在异步模式下，我们不会等待辅助副本确认，此模式下明显有丢失少量数据的可能性。
+除非数据库也是故障转移群集的成员，否则可用性组处理不会涉及 DTC。 在可用性组中，副本之间的一致性是靠可用性组逻辑维护的：主副本将不完成提交，也不确认提交，直到辅助副本确认它已在持久存储中保留日志记录为止。 此时主副本才声明该事务完成。 在异步模式下，我们不会等待辅助副本确认，此模式下明显有丢失少量数据的可能性。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -142,6 +142,11 @@ ALTER AVAILABILITY GROUP MyaAG
 
 当数据库位于可用性组中时，数据库的读写副本或主要副本可能移动到 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的另一个实例上。 若要在此移动过程中支持分布式事务，每个数据库都应充当单独的资源管理器，并且必须具有唯一的 RMID。 当可用性组具有 `DTC_SUPPORT = PER_DB` 时，[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 将为每个数据库创建资源管理器，并且使用唯一的 RMID 将它们向 DTC 注册。 在此配置中，数据库充当于 DTC 事务的资源管理器。
 
+>[!IMPORTANT]
+>请注意，每个分布式事务的 DTC 不超过 32 个登记。 由于可用性组中的每个数据库会单独使用 DTC 进行登记，因此如果你的事务涉及到 32 个以上的数据库，则在 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 尝试登记第 33 个数据库时，你可能会遇到以下错误：
+>
+>`Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.`
+
 有关 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 中的分布式事务的详细信息，请参阅[分布式事务](#distTran)
 
 ## <a name="manage-unresolved-transactions"></a>管理未解决的事务
@@ -205,4 +210,4 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [支持 XA 事务](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753563(v=ws.10))
 
-[工作原理：会话/SPID (-2) 的 DTC 事务](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions)
+[工作原理：会话/SPID (– 2) 的 DTC 事务](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions)

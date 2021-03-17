@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 238940e3e6519be1b4758e794cf391869f057986
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 021cea9426fd6fb1c6e14c450fa37e69ef0048a6
+ms.sourcegitcommit: 2cc2e4e17ce88ef47cda32a60a02d929e617738e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99177725"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103473213"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 对象权限 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ PRIVILEGES
  指定表、视图或表值函数中要对其拒绝权限的列的名称。 需要使用括号 **( )** 。 仅可以拒绝对列的 SELECT、REFERENCES 和 UPDATE 权限。 可以在权限子句中或在安全对象名之后指定 column。  
   
 > [!CAUTION]  
->  表级 DENY 并不优先于列级 GRANT。 保留了权限层次结构中的这种不一致性以保持向后兼容。  
+>  表级 DENY 并不优先于列级 GRANT。 保留了权限层次结构中的这种不一致性以保持向后兼容。 在 SQL Server 中，如果服务器配置为与[启用了符合通用准则的服务器配置](/../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)一起运行，则此行为会有所不同。 但是，这通常只能谨慎使用，不能用作一般做法。
   
  ON [ OBJECT :: ] [ schema_name ] . *object_name*  
  指定要对其拒绝权限的对象。 如果指定了 schema_name，则 OBJECT 短语是可选的。 如果使用了 OBJECT 短语，则需要使用作用域限定符 ( **::** )。 如果未指定 schema_name，则使用默认架构。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)。  

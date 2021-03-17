@@ -26,12 +26,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
-ms.openlocfilehash: c7b388649cf7ca535d5d81eb2d05cf4f0a27d373
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 96461f56445562b444ca775b24320d3c34661687
+ms.sourcegitcommit: e2d25f265556af92afcc0acde662929e654bf841
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101838955"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103489743"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -233,7 +233,7 @@ DEFAULT VALUES
 
 \<graph search pattern>  
 指定图匹配模式。 有关此子句的参数的详细信息，请参阅 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
-  
+   
 ## <a name="remarks"></a>备注
 >[!NOTE]
 > 在 Azure Synapse Analytics 中，MERGE 命令（预览）与 SQL Server 和 Azure SQL 数据库相比具有以下差异。  
@@ -248,15 +248,18 @@ DEFAULT VALUES
 >|**NOT MATCHED BY SOURCE**|所有分发类型|所有分发类型|||  
 
 >[!IMPORTANT]
+> 预览功能仅用于测试，不应用于生产实例或生产数据。 如果数据很重要，还请保留测试数据的副本。
+>
 > 在 Azure Synapse Analytics 中，MERGE 命令目前处于预览状态，可能会在某些情况下，使目标表处于不一致状态，其中的行置于错误分布中，在某些情况下会导致以后的查询返回错误结果。 当满足以下两个条件时，可能会出现此问题：
 >
-> - 已对 Azure Synapse SQL 数据库中的 HASH 分布式 TARGET 表执行 MERGE T-SQL 语句。
+> - 已对 Azure Synapse SQL 数据库中的 HASH 分布式 TARGET 表执行 MERGE T-SQL 语句，并且
 > - 合并的 TARGET 表具有辅助索引或 UNIQUE 约束。
 >
-> 在提供修补程序之前，请避免对具有辅助索引或 UNIQUE 约束的 HASH 分布式 TARGET 表使用 MERGE 命令。  对于具有带 UNIQUE 约束或辅助索引的 HASH 分布式表的数据库，也可能暂时禁用 MERGE 功能支持。      
->
-> 重要提示，预览功能仅用于测试，不应用于生产实例或生产数据。 如果数据很重要，还请保留测试数据的副本。
-> 
+> 此问题已在 Synapse SQL 版本 10.0.15563.0 和更高版本中得到解决。    
+> - 若要检查，请通过 SQL Server Management Studio (SSMS) 连接到 Synapse SQL 数据库，并运行 ```SELECT @@VERSION```。  如果尚未应用此修补程序，请手动暂停并恢复 Synapse SQL 池以获取修补程序。 
+> - 在确定已将修补程序应用到 Synapse SQL 池之前，请避免对具有辅助索引或 UNIQUE 约束的 HASH 分布式 TARGET 表使用 MERGE 命令。
+> - 此修补程序不修复已受 MERGE 问题影响的表。  使用以下脚本手动标识和修复任何受影响的表。
+
 > 要检查数据库中哪个分布式哈希表由于此问题而不能执行 MERGE，请运行以下语句
 >```sql
 > select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
