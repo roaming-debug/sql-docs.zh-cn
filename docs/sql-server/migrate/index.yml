@@ -10,14 +10,14 @@ metadata:
   ms.author: mathoma
   ms.date: 12/09/2019
   ms.reviewer: rajpo
-  ms.openlocfilehash: b9e8d290eb4f10598fb9160c4c0a28ae5d0ade8c
-  ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+  ms.openlocfilehash: 09fcfee61f5aec4d10d1f5b9ac0dfa15446c5355
+  ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 02/10/2021
-  ms.locfileid: "100080328"
+  ms.lasthandoff: 03/16/2021
+  ms.locfileid: "103575203"
 landingContent:
-- title: SQL 到 SQL Server
+- title: SQL Server 到 SQL Server
   linkLists:
   - linkListType: overview
     links:
@@ -49,11 +49,11 @@ landingContent:
       url: ../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
     - text: 从 Sybase
       url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
-- title: 从 SQL 到 Azure SQL
+- title: SQL Server 到 Azure SQL
   linkLists:
   - linkListType: overview
     links:
-    - text: Azure SQL Database
+    - text: Azure SQL 数据库
       url: /azure/sql-database/sql-database-technical-overview
     - text: Azure SQL Server 虚拟机
       url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview

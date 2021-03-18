@@ -477,7 +477,7 @@ items:
             items:
               - name: 部署配置文件
                 href: big-data-cluster/reference-deployment-config.md
-          - name: 配置
+          - name: Configuration
             items:
               - name: 概述
                 href: big-data-cluster/reference-config-bdc-overview.md
@@ -4920,6 +4920,8 @@ items:
     items:
       - name: 迁移文档
         href: sql-server/migrate/index.yml
+      - name: 比较迁移工具
+        href: sql-server/migrate/dma-azure-migrate-compare-migration-tools.md
       - name: SQL Server Integration Services (SSIS) >
         href: ./integration-services/sql-server-integration-services.md
       - name: 大容量复制实用工具 (bcp)
@@ -4929,8 +4931,16 @@ items:
         href: /azure/dms/dms-overview
       - name: 迁移指南
         items:
+          - name: 从 Access
+            href: sql-server/migrate/guides/access-to-sql-server.md
           - name: 从 DB2
             href: sql-server/migrate/guides/db2-to-sql-server.md
+          - name: 从 MySQL
+            href: sql-server/migrate/guides/mysql-to-sql-server.md
+          - name: 从 Oracle
+            href: sql-server/migrate/guides/oracle-to-sql-server.md
+          - name: 从 SAP ASE
+            href: sql-server/migrate/guides/sap-ase-to-sql-server.md
       - name: Data Quality Services (DQS)
         items:
           - name: 概述

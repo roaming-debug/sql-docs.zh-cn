@@ -23,13 +23,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 12/17/2020
-ms.openlocfilehash: d88ccb88da94ba714904658fba034639c6ec2cd4
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/16/2021
+ms.openlocfilehash: 8656f414608fc6c1c088b0142265d27fcbd70044
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351681"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575317"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 
@@ -38,6 +38,9 @@ ms.locfileid: "100351681"
 SQL Server Management Studio (SSMS) 是一种集成环境，用于管理从 SQL Server 到 Azure SQL 数据库的任何 SQL 基础结构。 SSMS 提供用于配置、监视和管理 SQL Server 和数据库实例的工具。 使用 SSMS 部署、监视和升级应用程序使用的数据层组件，以及生成查询和脚本。
 
 使用 SSMS 在本地计算机或云端查询、设计和管理数据库及数据仓库，无论它们位于何处。
+
+> [!NOTE]
+> 完成下列反馈调查，塑造你正在使用的 Azure SQL 产品的未来： https://aka.ms/AzureSQLSurvey
 
 ## <a name="download-ssms"></a>下载 SSMS
 
@@ -57,8 +60,6 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18
 
-> [!Note]
-> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本]()。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
 
 ## <a name="available-languages"></a>可用语言
 
@@ -66,6 +67,10 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 
 SQL Server Management Studio 18.8：  
 [中文（简体）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40a)
+
+
+> [!TIP]
+> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本](https://aka.ms/downloadssmsusenglish)。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
 
 > [!NOTE]
 > SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](../powershell/download-sql-server-ps-module.md)。
