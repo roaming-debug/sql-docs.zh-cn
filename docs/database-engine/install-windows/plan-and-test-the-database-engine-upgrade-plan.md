@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 7a6311f79aa87d93ee980cf4d0c8d00352b14687
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 38044ef31208fa5a84c7aa4335c48408425b45a4
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353051"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610951"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>计划并测试数据库引擎升级计划
 
@@ -49,24 +49,21 @@ ms.locfileid: "100353051"
   
        -   TLS 安全更新程序  
 
-   >[!NOTE]
-   >前面的列表也适用于 [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)]。
-  
 -   第三方组件：确定第三方组件（如集成备份）的兼容性。  
   
 -   目标环境：验证目标环境是否符合硬件和软件要求，以及是否能够支持原始系统的要求。 例如，升级可能涉及将多个 SQL Server 实例合并为单个新 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例，或将你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境虚拟化为一个私有或公有云。  
   
--   版本：确定升级的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 适当版本，并确定升级的有效升级路径。 有关详细信息，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。 在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。  
+-   版本：确定升级的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 适当版本，并确定升级的有效升级路径。 有关详细信息，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。 在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某一版本升级到另一版本之前，请验证要升级到的版本是否支持当前使用的功能。  
   
     > [!NOTE]  
-    >  在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版的之前版本升级到 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 时，请在“Enterprise Edition：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+    >  在从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版的之前版本升级到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 时，请在“Enterprise Edition：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
--   后向兼容性：查看 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 数据库引擎后向兼容性文章，了解 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 和要从其开始升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间的行为变化。 请参阅 [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md)。  
+-   后向兼容性：查看 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 数据库引擎后向兼容性文章，了解 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和要从其开始升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间的行为变化。 请参阅 [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md)。  
   
 -   数据迁移助手：运行数据迁移助手，以帮助诊断可能会阻止升级过程或由于重大更改而需要修改现有脚本或应用程序的问题。
     可在[此处](https://aka.ms/get-dma)下载数据迁移助手。  
   
--   系统配置检查器：运行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 系统配置检查器 (SCC) 以确定 SQL Server 安装程序是否在你计划升级以前检测到任何阻塞问题。 有关详细信息，请参阅 [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)。  
+-   系统配置检查器：运行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 系统配置检查器 (SCC) 以确定 SQL Server 安装程序是否在你计划升级以前检测到任何阻塞问题。 有关详细信息，请参阅 [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)。  
   
 -   升级内存优化表：将包含内存优化表的 SQL Server 2014 数据库实例升级到 SQL Server 2016 时，升级进程将需要更多时间以将内存优化表转换为新的磁盘上格式（进行这些步骤时，数据库将处于脱机状态）。   时间量取决于内存优化表的大小和 I/O 子系统的速度。 针对就地和新安装升级，升级需要三个数据操作（滚动升级不需要进行步骤 1，但需要进行步骤 2 和步骤 3）：  
   

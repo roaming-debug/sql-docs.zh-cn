@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 91e51eeb0f2f3b39eba6c183c04f144d42e49579
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5f7bbccc12c8d3f522703421542ba6188e826ea1
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353132"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610975"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
 
@@ -79,10 +79,10 @@ ms.locfileid: "100353132"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     有关 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中不同命令行参数选项的用法的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](./install-sql-server-from-the-command-prompt.md)。  
+     有关 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中不同命令行参数选项的用法的详细信息，请参阅 [从命令提示符安装 SQL Server 2016](./install-sql-server-from-the-command-prompt.md)。  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>操作系统注意事项（SMB 协议与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）  
- 不同的 Windows 操作系统具有不同的 SMB 协议版本，并且 SMB 协议版本对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言是透明的。 您可以就 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]而言发现不同 SMB 协议版本的好处。  
+ 不同的 Windows 操作系统具有不同的 SMB 协议版本，并且 SMB 协议版本对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言是透明的。 您可以就 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]而言发现不同 SMB 协议版本的好处。  
   
 |操作系统|SMB2 协议版本|优势 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
@@ -111,7 +111,7 @@ ms.locfileid: "100353132"
   
 ## <a name="known-issues"></a>已知问题  
   
--   在您分离网络连接的存储设备上的某一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库后，如果尝试重新连接该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则可能会遇到数据库权限问题。 有关详细信息，请参阅[错误 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md)。
+-   在您分离网络连接的存储设备上的某一 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 数据库后，如果尝试重新连接该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则可能会遇到数据库权限问题。 有关详细信息，请参阅[错误 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md)。
   
 -   如果将 SMB 文件共享作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]群集实例的存储选项，默认情况下无法将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集诊断日志写入该文件共享，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源 DLL 缺乏对该文件共享的读/写权限。 若要解决此问题，请尝试使用以下方法之一：  
   

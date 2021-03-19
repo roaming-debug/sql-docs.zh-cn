@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 3/10/2021
-ms.openlocfilehash: 34a7ff8c9380a88bb285a6d2e51e57e652f0310d
-ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
+ms.openlocfilehash: 998e410eba1da7dcac3071170671c192f809a89c
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102622801"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611055"
 ---
 # <a name="sql-assessment-api"></a>SQL 评估 API
 
@@ -37,7 +37,7 @@ API 可用于访问：
 API 也用于面向 Azure Data Studio (ADS) 的 SQL Server 评估扩展。
 
 >[!NOTE]
->SQL 评估 API 提供了对各种领域的评估，但它并没有深入探讨安全性。 建议使用 [SQL 漏洞评估](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)来主动提高数据库的安全性。
+>SQL 评估 API 提供了对各种领域的评估，但它并没有深入探讨安全性。 建议使用 [SQL 漏洞评估](../../relational-databases/security/sql-vulnerability-assessment.md)来主动提高数据库的安全性。
 
 ## <a name="rules"></a>规则
 
@@ -168,4 +168,4 @@ SqlServer 和 RegisteredServer 对象是可交换的，因此可以将任何对�
 
 * [SQL Server 管理对象 (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md)
 * [PowerShell](../../powershell/download-sql-server-ps-module.md)
-* [SQL 漏洞评估](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)
+* [SQL 漏洞评估](../../relational-databases/security/sql-vulnerability-assessment.md)

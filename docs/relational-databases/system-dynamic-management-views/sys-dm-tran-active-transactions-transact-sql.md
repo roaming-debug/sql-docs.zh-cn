@@ -21,12 +21,12 @@ ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 443a0bc032b687c012327a976a91d1597c885a66
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 7fb50e96cba3ff7cf9dfc3ab98c1808f1569f051
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839118"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610891"
 ---
 # <a name="sysdm_tran_active_transactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,28 @@ ms.locfileid: "101839118"
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+
+
+## <a name="examples"></a>示例  
   
+### <a name="a-using-sysdm_tran_active_transactions-with-other-dmvs-to-find-information-about-active-transactions"></a>A. 将 sys.dm_tran_active_transactions 与其他 Dmv 结合使用来查找有关活动事务的信息
+ 下面的示例显示系统上的所有活动事务，并提供有关事务、用户会话、提交的应用程序的详细信息，以及启动该事务的查询和许多其他事务。  
+  
+```sql  
+select
+  getdate() as now,
+  DATEDIFF(SECOND, transaction_begin_time, GETDATE()) as tran_elapsed_time_seconds,
+  *
+FROM
+  sys.dm_tran_active_transactions at
+  JOIN sys.dm_tran_session_transactions st ON st.transaction_id = at.transaction_id
+  INNER JOIN sys.sysprocesses sp ON st.session_id = sp.spid 
+    CROSS APPLY sys.dm_exec_sql_text(sql_handle) txt
+order by
+  tran_elapsed_time_seconds desc
+```
+
+
 ## <a name="see-also"></a>另请参阅  
  [sys.dm_tran_session_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [sys.dm_tran_database_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   

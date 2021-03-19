@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: c9a4b07a3e6db3da84845f4689ecd373b30e7306
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8921ce4bc3ba2317e2d8ed5324d26d1dfba52b3e
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353840"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611123"
 ---
 # <a name="compatibility-certification"></a>兼容性认证
 
@@ -37,7 +37,7 @@ ms.locfileid: "100353840"
 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个新版本，默认兼容性级别将设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的版本。 但会保留以前版本的兼容性级别，以持续兼容现有应用程序。 此兼容性矩阵可在[此处](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats)查看。
 因此，经认证可与给定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本一起使用的应用程序实际上经过了认证，可在该版本的默认兼容性级别工作。
 
-例如，数据库兼容性级别 130 是 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 的默认兼容性级别。 由于兼容性级别强制执行特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和查询优化行为，因此在数据库兼容性级别 130 上隐式认证了经认证可在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 上工作的数据库。 只要数据库兼容性级别保持为 130，此数据库就可以像在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本（如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]）中工作。 
+例如，数据库兼容性级别 130 是 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 的默认兼容性级别。 由于兼容性级别强制执行特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和查询优化行为，因此在数据库兼容性级别 130 上隐式认证了经认证可在 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 上工作的数据库。 只要数据库兼容性级别保持为 130，此数据库就可以像在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本（如 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 和 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]）中工作。
 
 这是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 持续集成操作模型的基本原则。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 在 Azure 中持续改进和升级，但由于现有数据库保持其当前兼容性级别，因此即使在升级到基础 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 数据库后，它们仍将继续按设计的形式工作。 
 
@@ -95,7 +95,7 @@ SharePoint Server 2016 和 SharePoint Server 2019 也通过这种方式在 [!INC
 可以使用 [Microsoft 数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595) 工具 (DMA) 轻松完成此操作。 DMA 工具输出中没有关于缺失或不兼容功能的错误，可保护应用程序免受新目标版本上的任何功能回归影响。 如果需要进行更改以确保数据库可在新版本中工作，可使用 DMA 确定需要更改的位置以及可用的解决方法。 有关详细信息，请参阅[数据迁移助手概述](../../dma/dma-overview.md)。   
 
 > [!TIP]
-> 将数据库从旧版本（例如 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]的新版本时，此功能验证尤为重要，因为你的应用程序代码可能使用不受数据库兼容性级别保护的已弃用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 但从较新版本（如 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]）迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]时，则无需担心已弃用的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 有关已弃用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
+> 将数据库从旧版本（例如 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]）移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]的新版本时，此功能验证尤为重要，因为你的应用程序代码可能使用不受数据库兼容性级别保护的已弃用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 但从较新版本（如 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]）迁移到 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]时，则无需担心已弃用的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 有关已弃用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的详细信息，请参阅[使用兼容性级别实现后向兼容性](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#backwardCompat)。
 
 > [!NOTE]
 > DMA 支持数据库兼容性级别 100 及更高级别。 排除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 作为源版本。   

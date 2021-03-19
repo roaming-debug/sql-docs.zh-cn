@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 40f6618c8564f0d264076316038274b401fb650a
-ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
+ms.openlocfilehash: 70ca3fb64d5672cd4b734b49ac124f1e4e333f32
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102514894"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611015"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>向 SQL Server 的实例添加功能（安装程序）
 
@@ -40,15 +40,15 @@ ms.locfileid: "102514894"
 > 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 SQL Server，则必须使用对远程共享具有读取权限的域帐户。  
   
 > [!NOTE]
-> 在向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例中添加功能时，现有的使用情况报告设置将应用于新添加的功能。 若要更改这些设置，请使用 SQL Server“配置工具”菜单上的“SQL Server 错误和使用情况报告”工具。
+> 在向 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的实例中添加功能时，现有的使用情况报告设置将应用于新添加的功能。 若要更改这些设置，请使用 SQL Server“配置工具”菜单上的“SQL Server 错误和使用情况报告”工具。
 
 ## <a name="procedures"></a>过程
 
-#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>若要从命令提示符向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+#### <a name="to-add-features-to-an-instance-of-ssnoversion"></a>若要从命令提示符向 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
 
-1. 插入 SQL Server 安装介质。 然后双击根文件夹中的 setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 setup.exe。 如果出现“[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装”对话框，请选择“确定”安装必备组件，然后选择“取消”退出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装。  
+1. 插入 SQL Server 安装介质。 然后双击根文件夹中的 setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 setup.exe。 如果出现“[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装”对话框，请选择“确定”安装必备组件，然后选择“取消”退出 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装。  
 
-2. 安装向导将启动 SQL Server 安装中心。 若要向现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加新功能，请在左侧导航区域中选择“安装”，然后选择“全新 SQL Server 独立安装或向现有安装添加功能”。
+2. 安装向导将启动 SQL Server 安装中心。 若要向现有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 实例添加新功能，请在左侧导航区域中选择“安装”，然后选择“全新 SQL Server 独立安装或向现有安装添加功能”。
 
 3. 系统配置检查器将在您的计算机上运行发现操作。 若要查看验证详细信息，请选择“查看详细信息”。 若要继续操作，请选择“确定”。
 
@@ -58,7 +58,7 @@ ms.locfileid: "102514894"
 
 6. 系统配置检查器将在安装继续之前检验计算机的系统状态。  
 
-7. 在“安装类型”页上，选择“向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的现有实例中添加功能”选项，然后选择要更新的实例。
+7. 在“安装类型”页上，选择“向 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的现有实例中添加功能”选项，然后选择要更新的实例。
 
 8. 在“功能选择”页上，选择要安装的组件。 选择功能名称后，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2017 各个版本及其支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)和 [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)。 每个组件都只能在给定的 SQL Server 实例上安装一次。 若要安装多个组件，则必须安装其他的 SQL Server 实例。
 

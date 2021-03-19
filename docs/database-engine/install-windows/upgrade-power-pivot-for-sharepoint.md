@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 2f034ac2223b15a3b66883a3ce3dbc434bcf07db
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 971c23cfe9b49ad052c3808deca6e6221acb38e5
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813251"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610934"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升级 Power Pivot for SharePoint
 
@@ -68,20 +68,20 @@ ms.locfileid: "98813251"
   
  **SQL Server：**  
   
--   如果现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，则必须安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，则必须安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) 才能升级到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
--   如果现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，则必须安装 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果现有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安装是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，则必须安装 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) 才能升级到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
  **SharePoint 2010：**  
   
--   如果现有安装运行的是 SharePoint 2010，则必须安装 SharePoint 2010 Service Pack 2 才能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 有关详细信息，请参阅 [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672)。 使用 PowerShell 命令 `(Get-SPfarm).BuildVersion.ToString()` 验证版本。 若要引用发布日期之前的内部版本，请参阅 [SharePoint 2010 内部版本号](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)。  
+-   如果现有安装运行的是 SharePoint 2010，则必须安装 SharePoint 2010 Service Pack 2 才能升级到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 有关详细信息，请参阅 [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672)。 使用 PowerShell 命令 `(Get-SPfarm).BuildVersion.ToString()` 验证版本。 若要引用发布日期之前的内部版本，请参阅 [SharePoint 2010 内部版本号](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224)。  
   
 ##  <a name="upgrade-an-existing-sharepoint-2013-farm"></a><a name="bkmk_uprgade_sharepoint2013"></a> 升级现有的 SharePoint 2013 场  
  若要升级在 SharePoint 2013 中部署的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ，请执行以下操作：  
   
  ![PowerPivot for SharePoint 2013 升级](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "PowerPivot for SharePoint 2013 升级")  
   
-1.  在以 SharePoint 模式运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的后端服务器上运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安装程序。 如果服务器承载 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的多个实例，请至少升级 **POWERPIVOT** 实例。 以下列表概述了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 升级相关的安装向导步骤：  
+1.  在以 SharePoint 模式运行 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的后端服务器上运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安装程序。 如果服务器承载 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的多个实例，请至少升级 **POWERPIVOT** 实例。 以下列表概述了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 升级相关的安装向导步骤：  
   
     1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中单击 **“安装”** 。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "98813251"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  在运行 **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows 服务的第一台 SharePoint 应用程序服务器上 **运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装程序**，以升级 POWERPIVOT 实例。 在 SQL Server 安装向导的“安装”页上选择升级选项。 有关详细信息，请参阅 [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
+5.  在运行 **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows 服务的第一台 SharePoint 应用程序服务器上 **运行[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]安装程序**，以升级 POWERPIVOT 实例。 在 SQL Server 安装向导的“安装”页上选择升级选项。 有关详细信息，请参阅 [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
 6.  在运行配置工具前 **重新启动服务器** 。 此步骤可确保 SQL Server 安装程序安装的所有更新或必备组件在系统上得到完全配置。  
   
@@ -248,7 +248,7 @@ ms.locfileid: "98813251"
 Get-PowerPivotSystemService  
 ```  
   
- 验证 **CurrentSolutionVersion**。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 为版本 13.0.\<major build>.\<minor build>  
+ 验证 **CurrentSolutionVersion**。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 为版本 13.0.\<major build>.\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>验证 Analysis Services Windows 服务的版本  
  如果您只升级了 SharePoint 2010 场中的某些 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，则未升级服务器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例可能比场中预期的版本旧。 您需要将所有的服务器升级到相同的版本，以便它们可以使用。 使用以下方法之一验证每台计算机上 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Windows 服务的版本。  
@@ -261,7 +261,7 @@ Get-PowerPivotSystemService
   
 3.  单击“详细信息”。  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文件版本应为 13.00.\<major build>.\<minor build>。  
+4.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 文件版本应为 13.00.\<major build>.\<minor build>。  
   
 5.  验证此版本号是否与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案和系统服务版本相同。  
   

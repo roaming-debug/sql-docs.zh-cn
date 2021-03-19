@@ -1,8 +1,8 @@
 ---
 description: sys.dm_exec_plan_attributes (Transact-SQL)
-title: sys.dm_exec_plan_attributes (Transact-sql) |Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-SQL)
 ms.custom: ''
-ms.date: 10/20/2017
+ms.date: 02/24/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -16,15 +16,14 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
-ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: fad7df36aabbebf6ad41752c741069465adafac4
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 7ac93d0225cde8b2b24647f6de672fcfeba2f31f
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101839277"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611036"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "101839277"
 >  通过此函数返回的某些信息映射到 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 后向兼容性视图。
 
 ## <a name="syntax"></a>语法  
-```  
+```syntaxsql
 sys.dm_exec_plan_attributes ( plan_handle )  
 ```  
   
@@ -53,7 +52,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 在上表中， **属性** 可具有以下值：
 
-|属性|数据类型|说明|  
+|特性|数据类型|说明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指示编译计划所使用的选项值。|  
 |objectid|**int**|用于在缓存中查找对象的主键之一。 这是存储在数据库对象的 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 对象中的对象 ID (过程、视图、触发器等) 上。 对于类型为“即席”或“已准备好”的计划，它是批处理文本的内部哈希。|  
@@ -63,9 +62,17 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |language_id|**smallint**|创建缓存对象的连接的语言 ID。 有关详细信息，请参阅 [ &#40;transact-sql&#41;sys.sys语言 ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |date_format|**smallint**|创建缓存对象的连接的日期格式。 有关详细信息，请参阅 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|第一个日期值。 有关详细信息，请参阅 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
+|compat_level|**tinyint**|表示在其上下文已编译查询计划的数据库中设置的兼容级别。 返回的兼容级别是用于即席语句的当前数据库上下文的兼容级别，并不受查询提示 [QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n](../../t-sql/queries/hints-transact-sql-query.md)的影响。 对于存储过程或函数中包含的语句，它对应于在其中创建存储过程或函数的数据库的兼容级别。| 
 |状态|**int**|缓存查找密钥中的内部状态位。|  
 |required_cursor_options|**int**|用户指定的游标选项，例如游标类型。|  
 |acceptable_cursor_options|**int**|为了支持语句的执行，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以隐式转换采用的游标选项。 例如，用户可能指定一个动态游标，但允许查询优化器将此游标类型转换为静态游标。|  
+|merge_action_type|**smallint**|用作 MERGE 语句结果的触发器执行计划的类型。<br /><br /> 0 表示非触发器计划，或者不会作为 MERGE 语句结果来执行的触发器计划，或者作为仅指定 DELETE 操作的 MERGE 语句结果执行的触发器计划。<br /><br /> 1 表示作为 MERGE 语句结果运行的 INSERT 触发器计划。<br /><br /> 2 表示作为 MERGE 语句结果运行的 UPDATE 触发器计划。<br /><br /> 3 表示一个作为包含对应的 INSERT 或 UPDATE 操作的 MERGE 语句结果运行的 DELETE 触发器计划。<br /><br /> 对于由级联操作运行的嵌套触发器，此值是导致级联的 MERGE 语句的操作。|  
+|is_replication_specific|**int**|表示从中编译此计划的会话是使用未记录的连接属性连接到 SQL Server 实例的会话，该连接属性允许服务器将会话标识为复制组件创建的会话，以便根据此类复制组件的预期更改服务器的某些功能方面的行为。| 
+|optional_spid|**smallint**|连接 session_id (spid) 会成为缓存密钥的一部分，以便减少重新编译的次数。 这可以防止单一会话重复使用涉及非动态绑定临时表的计划的重新编译。|
+|optional_clr_trigger_dbid|**int**|仅在 CLR DML 触发器的情况下填充。 包含实体的数据库的 ID。 <BR><BR>对于任何其他对象类型，将返回零。 | 
+|optional_clr_trigger_objid|**int** |仅在 CLR DML 触发器的情况下填充。 存储在 [sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的对象 ID。<BR><BR>对于任何其他对象类型，将返回零。| 
+|parent_plan_handle|**varbinary(64)**|始终为 NULL。| 
+|is_azure_user_plan|**tinyint** | 1表示从用户启动的会话中在中执行的查询 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。 <BR><BR>对于从不是由最终用户启动的会话执行的查询，以及从 Azure 基础结构中运行的应用程序（用于收集遥测数据或执行管理任务的其他目的），为0。 Is_azure_user_plan = 0 的查询所使用的资源不会对客户收费。<BR><BR>**[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]** 仅供参考.|
 |inuse_exec_context|**int**|使用查询计划并且当前正在执行的批处理的数目。|  
 |free_exec_context|**int**|当前未使用的查询计划的缓存执行上下文数目。|  
 |hits_exec_context|**int**|从计划缓存获取执行上下文并重用从而节省 SQL 语句编译开销的次数。 该值是目前所有批处理执行的聚合。|  
@@ -77,12 +84,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |misses_cursors|**int**|无法在缓存中找到不活动游标的次数。|  
 |removed_cursors|**int**|由于缓存计划的内存压力而删除的游标数。|  
 |sql_handle|**varbinary** (64) |批处理的 SQL 句柄。|  
-|merge_action_type|**smallint**|用作 MERGE 语句结果的触发器执行计划的类型。<br /><br /> 0 表示非触发器计划，或者不会作为 MERGE 语句结果来执行的触发器计划，或者作为仅指定 DELETE 操作的 MERGE 语句结果执行的触发器计划。<br /><br /> 1 表示作为 MERGE 语句结果运行的 INSERT 触发器计划。<br /><br /> 2 表示作为 MERGE 语句结果运行的 UPDATE 触发器计划。<br /><br /> 3 表示一个作为包含对应的 INSERT 或 UPDATE 操作的 MERGE 语句结果运行的 DELETE 触发器计划。<br /><br /> 对于由级联操作运行的嵌套触发器，此值是导致级联的 MERGE 语句的操作。|  
-  
+
 ## <a name="permissions"></a>权限  
 
-在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
-在 SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。
+
+在 Azure SQL 数据库的基本、S0 和 S1 服务目标上，对于弹性池中的数据库， [服务器管理员](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) 帐户或 [Azure Active Directory 管理员](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) 帐户是必需的。 对于所有其他 SQL 数据库服务目标， `VIEW DATABASE STATE` 数据库中需要该权限。   
 
 ## <a name="remarks"></a>备注  
   
@@ -148,7 +155,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
-SELECT attribute, value, is_cache_key  
+SELECT attribute, [value], is_cache_key  
 FROM sys.dm_exec_plan_attributes(<plan_handle>);  
 GO  
 ```  

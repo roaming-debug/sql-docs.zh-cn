@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 205de7d5b4f1edce2dcc31bd8a1f362c2cc674ef
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5ceba605fc11adad95a720be8122bf995ec458f1
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348381"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611084"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 
@@ -59,16 +59,16 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
 |Distributed Replay 控制器|否||  
 |Distributed Replay 客户端|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
 |SQL 客户端连接 SDK|是||  
-|Microsoft Sync Framework|是|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
+|Microsoft Sync Framework|是|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|否||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|否||  
   
 ## <a name="supported-scenarios"></a>支持的方案  
- 下表显示在 Server Core 上安装 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 时支持的方案矩阵。  
+ 下表显示在 Server Core 上安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 时支持的方案矩阵。  
   
 | 安装 | 有效目标 |  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的 64 位版本 |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|所有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的 64 位版本 |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言|所有语言|  
 |操作系统语言/区域设置（组合）上的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言|JPN（日语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> GER（德语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> CHS（中文 - 中国）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ARA（阿拉伯语 (SA)）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> THA（泰语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> TRK（土耳其语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> pt-PT（葡萄牙语 - 葡萄牙）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ENG（英语）Windows 上的 ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Windows 版本|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
@@ -77,7 +77,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
  在 Server Core 安装上，支持从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级到 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 。  
   
 ## <a name="install"></a>安装  
- [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 不支持在 Server Core 操作系统上使用安装向导进行安装。 在 Server Core 上进行安装时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)。  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 不支持在 Server Core 操作系统上使用安装向导进行安装。 在 Server Core 上进行安装时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）。 有关详细信息，请参阅 [从命令提示符安装 SQL Server](./install-sql-server-from-the-command-prompt.md)。  
   
  无论使用哪种安装方法，您都需要作为个人或代表实体确认接受软件许可条款，除非您对于软件的使用受单独的协议（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可协议或与 ISV 或 OEM 之间的第三方协议）管辖。  
   
@@ -113,7 +113,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
 
   
 ### <a name="installation-options"></a>安装选项  
- 在 Server Core 操作系统上安装 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 时，安装程序支持以下安装选项：  
+ 在 Server Core 操作系统上安装 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 时，安装程序支持以下安装选项：  
   
 1.  **从命令行安装**  
   
@@ -187,7 +187,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
     -   安装所有支持的功能  
   
-        以下示例说明如何在 Server Core 上安装所有支持的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 功能：  
+        以下示例说明如何在 Server Core 上安装所有支持的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 功能：  
   
         ```console
         ; SQL Server Configuration File  
@@ -260,7 +260,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
          如果 DefaultSetup.ini 文件不存在，您可以创建该文件并将其复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源介质根级别的 \x86 和 \x64 文件夹中。  
   
 ## <a name="configure-remote-access-of-ssnoversion-on-server-core"></a>配置在 Server Core 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的远程访问  
- 执行下述操作以配置在 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 服务器核心上运行的实例的远程访问。  
+ 执行下述操作以配置在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 服务器核心上运行的实例的远程访问。  
   
 ### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的远程连接  
 
@@ -305,7 +305,7 @@ $Tcp
   
 ## <a name="uninstall"></a>卸载
 
- 登录到运行 Server Core 的计算机后，将拥有一个带有管理员命令提示符的受限制桌面环境。 可以使用此命令提示符启动卸载 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的操作。 若要卸载 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]实例，请从命令提示符以完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）启动卸载。 /QS 参数将通过用户界面显示进度，但是不接受任何输入。 /Q 在没有任何用户界面的情况下以静默模式运行。  
+ 登录到运行 Server Core 的计算机后，将拥有一个带有管理员命令提示符的受限制桌面环境。 可以使用此命令提示符启动卸载 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的操作。 若要卸载 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]实例，请从命令提示符以完全静默模式（通过使用 /Q 参数）或简单静默模式（通过使用 /QS 参数）启动卸载。 /QS 参数将通过用户界面显示进度，但是不接受任何输入。 /Q 在没有任何用户界面的情况下以静默模式运行。  
   
  卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的现有实例：  
   

@@ -22,12 +22,12 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: a9aabbb180e01dcfec95d87861fc43dd0a1aca51
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2e24d74b8c2d2d3e661ab5169ae800e99af42f68
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99125942"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610789"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "99125942"
   在当前数据库中更改用户创建对象的名称。 此对象可以是表、索引、列、别名数据类型或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 用户定义类型。  
   
 > [!NOTE]
-> 在中 [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] ，sp_rename 处于 **预览阶段** ，只能用于重命名用户对象中的列。
+> 在中 [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] ，sp_rename 处于 **预览阶段** ，只能用于重命名 **dbo** 架构中用户对象的列。
 
 > [!CAUTION]  
 >  更改对象名的任一部分都可能破坏脚本和存储过程。 我们建议您不要使用此语句来重命名存储过程、触发器、用户定义函数或视图；而是删除该对象，然后使用新名称重新创建该对象。  
@@ -223,7 +223,10 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
 
 ## <a name="examples-sssdwfull"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 ### <a name="g-renaming-a-column"></a>G. 重命名列  
- 下面的示例将 `c1` 表中的列重命名 `table1` 为 `col1` 。  
+ 下面的示例将 `c1` 表中的列重命名 `table1` 为 `col1` 。 
+
+> [!NOTE]
+> 此 [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] 功能仍处于预览阶段，当前仅可用于 **dbo** 架构中的对象。 
   
 ```sql  
 CREATE TABLE table1 (c1 INT, c2 INT);

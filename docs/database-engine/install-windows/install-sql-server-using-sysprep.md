@@ -11,12 +11,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 8bbb1d668efb9a8531d6a93b084a7315e99072ff
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 385c1efc0dd11813b2aeb94fa087891b1496cffd
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348310"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611004"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安装 SQL Server
 
@@ -104,7 +104,7 @@ ms.locfileid: "100348310"
   
     |安装|组件|  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> 全文功能<br /><br /> 数据库引擎服务<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
+    |[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> 全文功能<br /><br /> 数据库引擎服务<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下的<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可再发行的功能<br /><br /> 共享功能|  
   
      突出显示功能名称时，右侧窗格中会显示每个组件组的说明。 您可以选中任意一些复选框。 有关详细信息，请参阅 [SQL Server 2017 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)和 [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md)
   
@@ -296,7 +296,7 @@ ms.locfileid: "100348310"
   
 9. 在 **“完成”** 页上可以查看操作的完成状态。 单击 **“关闭”** 以退出安装向导。 
   
-10. 重复步骤 1 到 9，直到删除所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件。 
+10. 重复步骤 1 到 9，直到删除所有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 组件。 
   
 ##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a> 修改或卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已完成实例。 
  添加或删除功能或者卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已完成实例的过程类似于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已安装实例的过程。 有关详细信息，请参阅以下文章：  

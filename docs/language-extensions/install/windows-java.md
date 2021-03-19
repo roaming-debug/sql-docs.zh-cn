@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: f45e4265425562ef5efca8766be84f774b45b3a5
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a3f7e3efb0037aa9bb4e18467142eb03fa9658f2
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100070774"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611145"
 ---
 # <a name="install-sql-server-java-language-extension-on-windows"></a>在 Windows 上安装 SQL Server Java 语言扩展
 
@@ -150,7 +150,7 @@ ms.locfileid: "100070774"
 1. 授予 AppContainer 权限
 
     ```cmd
-    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
+    icacls "<PATH to JRE>" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
     > [!NOTE]

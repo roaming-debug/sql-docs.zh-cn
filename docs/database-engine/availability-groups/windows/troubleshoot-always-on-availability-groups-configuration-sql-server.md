@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7b7c6a5df1bcef7e8438c01910233c2c3a38d070
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: dfc19004d430ad70abaadbb33fd337a587e68d0d
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100337936"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611197"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>AlwaysOn 可用性组配置疑难解答 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "100337936"
 |[端点访问（SQL Server 错误 1418）](#Msg1418)|包含有关此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息的信息。|  
 |[联接数据库失败（SQL Server 错误 35250）](#JoinDbFails)|介绍由于与主副本的连接处于非活动状态而导致未能将辅助数据库联接到可用性组的可能原因和解决方法。|  
 |[只读路由未正确工作](#ROR)||  
-|[相关任务](#RelatedTasks)|包含 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 联机丛书中专门针对排除可用性组配置问题的面向任务的主题列表。|  
+|[相关任务](#RelatedTasks)|包含 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 联机丛书中专门针对排除可用性组配置问题的面向任务的主题列表。|  
 |[相关内容](#RelatedContent)|包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书以外的相关资源的列表。|  
   
 ##  <a name="always-on-availability-groups-is-not-enabled"></a><a name="IsHadrEnabled"></a> 未启用 AlwaysOn 可用性组  
- 必须在每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上启用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
+ 必须在每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上启用 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]功能。 有关详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="accounts"></a><a name="Accounts"></a> 帐户  
  必须正确配置运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所用的帐户。  
