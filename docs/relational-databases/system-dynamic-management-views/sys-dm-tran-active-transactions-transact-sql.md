@@ -1,8 +1,8 @@
 ---
 description: sys.dm_tran_active_transactions (Transact-SQL)
-title: sys.dm_tran_active_transactions (Transact-sql) |Microsoft Docs
+title: 'sys.dm_tran_active_transactions (Transact-SQL) '
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 03/18/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_tran_active_transactions dynamic management view
-ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fb50e96cba3ff7cf9dfc3ab98c1808f1569f051
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.openlocfilehash: 0be6bf11c6cff757cab4d948b1882a02c609e3a2
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/19/2021
-ms.locfileid: "104610891"
+ms.locfileid: "104673989"
 ---
 # <a name="sysdm_tran_active_transactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,17 +63,20 @@ ms.locfileid: "104610891"
  下面的示例显示系统上的所有活动事务，并提供有关事务、用户会话、提交的应用程序的详细信息，以及启动该事务的查询和许多其他事务。  
   
 ```sql  
-select
-  getdate() as now,
+SELECT
+  GETDATE() as now,
   DATEDIFF(SECOND, transaction_begin_time, GETDATE()) as tran_elapsed_time_seconds,
+  st.session_id,
+  txt.text, 
   *
 FROM
   sys.dm_tran_active_transactions at
-  JOIN sys.dm_tran_session_transactions st ON st.transaction_id = at.transaction_id
-  INNER JOIN sys.sysprocesses sp ON st.session_id = sp.spid 
-    CROSS APPLY sys.dm_exec_sql_text(sql_handle) txt
-order by
-  tran_elapsed_time_seconds desc
+  INNER JOIN sys.dm_tran_session_transactions st ON st.transaction_id = at.transaction_id
+  LEFT OUTER JOIN sys.dm_exec_sessions sess ON st.session_id = sess.session_id
+  LEFT OUTER JOIN sys.dm_exec_connections conn ON conn.session_id = sess.session_id
+    OUTER APPLY sys.dm_exec_sql_text(conn.most_recent_sql_handle)  AS txt
+ORDER BY
+  tran_elapsed_time_seconds DESC;
 ```
 
 

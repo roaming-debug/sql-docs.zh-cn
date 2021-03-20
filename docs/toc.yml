@@ -477,7 +477,7 @@ items:
             items:
               - name: 部署配置文件
                 href: big-data-cluster/reference-deployment-config.md
-          - name: Configuration
+          - name: 配置
             items:
               - name: 概述
                 href: big-data-cluster/reference-config-bdc-overview.md
@@ -4750,8 +4750,6 @@ items:
                 href: database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md
               - name: PH 超时
                 href: database-engine/configure-windows/ph-timeout-server-configuration-option.md
-              - name: 预计算等级
-                href: database-engine/configure-windows/precompute-rank-server-configuration-option.md
               - name: 配置优先级提升
                 href: database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md
               - name: 配置查询调控器开销限制

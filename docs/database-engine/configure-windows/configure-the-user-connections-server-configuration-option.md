@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34595b6b5fb3f0b493ebc08d65a862d1e657d7e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5a6e6b2a47151a967980b6e75766bdec39e88ae
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729427"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673462"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>配置 user connections 服务器配置选项
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user connections [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user connections** 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上允许同时建立的最大用户连接数。 实际允许的用户连接数还取决于正使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本以及应用程序和硬件的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许的最大用户连接数为 32767。 由于 **user connections** 是动态（自动配置）选项， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据需要自动调整最大用户连接数，最大不超过允许的最大值。 例如，如果仅有 10 个用户登录，则要分配 10 个用户连接对象。 在大多数情况下，没有必要更改此选项的值。 默认值为 0，表示允许的最多用户连接数为 (32,767) 。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中设置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user connections [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user connections** 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上允许同时建立的最大用户连接数。 实际允许的用户连接数还取决于正使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本以及应用程序和硬件的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许的最大用户连接数为 32767。 由于 **user connections** 是动态（自动配置）选项， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将根据需要自动调整最大用户连接数，最大不超过允许的最大值。 例如，如果仅有 10 个用户登录，则要分配 10 个用户连接对象。 在大多数情况下，没有必要更改此选项的值。 默认值为 0，表示允许的最多用户连接数为 (32,767) 。  
   
  若要确定系统允许的最大用户连接数，可以执行 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 或查询 [sys.configuration](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 目录视图。  
   
