@@ -4,7 +4,7 @@ description: 字段终止符和行终止符对读取数据文件的程序指示�
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -18,12 +18,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88b25ab93d2baf680464d70b08bf6962b6aafb4c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3208393d25df19d980da6b66c78dc3711f428ecd
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407557"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752277"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

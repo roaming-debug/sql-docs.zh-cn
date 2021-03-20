@@ -4,7 +4,7 @@ description: 了解旧的 OLE DB Provider for SQL Server 与新的 OLE DB Driver
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b531dbde34faab6995a3e4765156ccaa71f4324e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: a6acf12dd61b4d772139811b9ead823ded0b635c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860660"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751207"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>将应用程序从 MDAC 更新到适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

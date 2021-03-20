@@ -3,7 +3,7 @@ title: 使用 Unicode 字符格式导入和导出数据
 description: 从 SQL Server 实例导出数据时，Unicode 字符数据格式允许使用与客户端不同的代码页。
 ms.date: 09/30/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8999c3a94d65ee29d496f891068e158f5f178814
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8e763f88431b2ac605a39c7bd5d43b3d51176d2a
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465568"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751457"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

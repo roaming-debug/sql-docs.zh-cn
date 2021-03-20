@@ -4,7 +4,7 @@ description: 了解 SQL Server Native Client OLE DB 支持的返回代码，包�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -24,12 +24,12 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64111973f8e1c753a3d342c395d2f457ad1b3401
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d665e65d8dae3a6b114486e77161077ad8c74e6b
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97433632"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104738617"
 ---
 # <a name="return-codes-native-client-ole-db-provider"></a>返回代码 (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

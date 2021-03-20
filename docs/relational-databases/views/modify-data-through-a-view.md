@@ -4,7 +4,7 @@ title: 通过视图修改数据 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/05/2016
 ms.prod: sql
-ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d606d4a6cad0668f3692af38a1ec7d2f2a1f1db6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6707fcb9068b5d42c8fc4651a27ed00779c057e2
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484399"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104744917"
 ---
 # <a name="modify-data-through-a-view"></a>通过视图修改数据
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -3,7 +3,7 @@ title: 使用 bcp 指定文件存储类型
 description: 使用 bcp 将数据作为其数据库表类型、以字符表示形式或作为支持隐式转换的数据类型导出到文件中。
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 86c5e6c9edb33147979c7df34386dc474529b18f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ffcde703125ecc798177461343b98da6077c534f
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97407553"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752267"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>使用 bcp 指定文件存储类型 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

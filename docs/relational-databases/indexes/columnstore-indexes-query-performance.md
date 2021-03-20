@@ -4,7 +4,7 @@ title: 列存储索引 - 查询性能 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6501f3148ab906c8ac719407a489db6a4be1e62b
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: f2fa166f15ebe07ad476a845af35b759b0d30bde
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236706"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104744277"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列存储索引 - 查询性能
 

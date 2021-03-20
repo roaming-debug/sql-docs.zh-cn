@@ -4,7 +4,7 @@ description: 使用本指南选择加密算法来帮助保护 SQL Server 的实�
 ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
@@ -17,12 +17,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: acb57d952832f5ae4d8fbfea0ee037170a854839
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 1a7f465b26ade58803d8087a78304241ef48a3fc
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236632"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751307"
 ---
 # <a name="choose-an-encryption-algorithm"></a>选择加密算法
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

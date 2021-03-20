@@ -4,7 +4,7 @@ title: sys.dm_db_session_space_usage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ceac9206718f406916a1039329c9eff05815a5
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 950578293e02f0c8425f29849614eaf7bfd20309
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101838949"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104739287"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "101838949"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|功能|Relationship|  
+|从|功能|关系|  
 |----------|--------|------------------|  
 |dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|一对一|  
   

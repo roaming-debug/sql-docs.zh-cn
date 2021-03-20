@@ -3,7 +3,7 @@ title: 在批量导入期间保留 Null 或默认值
 description: 为了在 SQL Server 中进行批量导入，bcp 和 BULK INSERT 都加载默认值来替换 null 值。 对于这两者，可以选择保留 null 值。
 ms.date: 09/20/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 18a1e26d8e89f5e9913c3d1d645e98d7c7c988af
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 724b8c0df07cac555158661db6d00ccf98e7134c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473938"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752537"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或默认值 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

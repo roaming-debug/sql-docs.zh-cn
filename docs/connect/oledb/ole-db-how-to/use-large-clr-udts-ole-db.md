@@ -4,18 +4,18 @@ description: 通过此示例了解如何从 OLE DB Driver for SQL Server 的结�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dda2e8221c825ee9ca5aad3d14eba14c6d7315f2
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 63a4f24ff7e9ae02da729088a28c960f7ac85128
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862312"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104744367"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
