@@ -4,7 +4,7 @@ description: 查看 SQL Server 中的一些基本的安全概念，了解典型�
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: security
 ms.topic: quickstart
@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a65e01d5d4e43e25d122c614508f8f9c1c05bf39
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 51e1253eb44d49285a30e8a0ec77ddf6caae7cba
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236186"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750427"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>数据库引擎权限入门
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

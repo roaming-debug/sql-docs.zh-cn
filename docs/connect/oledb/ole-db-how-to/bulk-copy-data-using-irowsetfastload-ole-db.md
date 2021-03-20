@@ -4,7 +4,7 @@ description: 使用 OLE DB Driver for SQL Server 的 IRowsetFastLoad 接口将�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96e80fe8d0c30c217a4f3bbe324c7ebccbca6b3b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: fafb0177bca0f9d46deb39ffabe67db63ca7abf7
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727142"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104741647"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad (OLE DB) 大容量复制数据
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

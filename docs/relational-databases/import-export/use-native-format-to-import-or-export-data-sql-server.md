@@ -3,7 +3,7 @@ title: 使用本机格式导入和导出数据
 description: 在 SQL Server 导入或导出中，本机格式维护数据库的本机数据类型，以便在 SQL Server 表之间进行高速数据传输。
 ms.date: 09/30/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a1802cc2bcd64141c35dcc1e15f4609848e7c79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 30b9d8f332c1dbb8147b836309724f2216cb9de1
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465548"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750397"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

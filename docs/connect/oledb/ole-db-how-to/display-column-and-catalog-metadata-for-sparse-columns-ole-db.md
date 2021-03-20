@@ -4,18 +4,18 @@ description: 了解如何在此示例中显示 OLE DB Driver for SQL Server 中�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e47803f6c4dc61c1a13135f3fd4b0bafc91e9646
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: d7f19e13f76b80806a3732d9e38b6fa48f7d1def
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861395"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104741607"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>显示稀疏列的列和目录元数据 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

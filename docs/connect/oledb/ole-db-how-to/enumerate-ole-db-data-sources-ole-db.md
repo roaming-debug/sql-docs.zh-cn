@@ -4,7 +4,7 @@ description: 了解如何使用 MSOLEDBSQL 枚举器列出此示例中提供的 
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 327a4ca587a577bdca3fe8f42748998f29060146
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: e2ae8d7557e347ee65bc591e968a0801678e9b18
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727131"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104741527"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "91727131"
 6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据  。  
   
 ## <a name="example"></a>示例  
- 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
+ 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包括含有 msoledbsql.h 的目录。  
   
 ```  
 // compile with: ole32.lib  
