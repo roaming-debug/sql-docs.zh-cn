@@ -4,7 +4,7 @@ title: sys.database_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a488dcf39ecf3ab0fa6e82264245d38f163f8ed6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4896a671fd9dd0cf28829b57a1ec7a4f85ad2a1f
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209478"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750057"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "99209478"
 |**grantor_principal_id**|**int**|这些权限的授权者的数据库主体 ID。|  
 |type |**char (4)**|数据库权限类型。 有关权限类型的列表，请参阅下一个表。|  
 |**permission_name**|**nvarchar(128)**|权限名称。|  
-|**state**|**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = 带授权选项的授权|  
+|State |**char(1)**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = 带授权选项的授权|  
 |**state_desc**|**nvarchar(60)**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>数据库权限   
@@ -110,7 +110,7 @@ ms.locfileid: "99209478"
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|删除|DATABASE、OBJECT、SCHEMA|  
+|DL|DELETE|DATABASE、OBJECT、SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|EXECUTE|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|USER|  

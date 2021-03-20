@@ -3,7 +3,7 @@ description: SQL Server 早期版本的新日期和时间功能 (OLE DB)
 title: 以前 SQL Server 版本的日期和时间 OLE DB 功能
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80cc09a529a1ec59354270dc7b33de3043abcd41
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 55a7e519f22bb10a472a8c76bb88bb003ab7ad21
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97433388"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755907"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "97433388"
   
 |OLE DB 客户端类型|SQL Server 2005 类型|SQL Server 2008 (或更高版本) 类型|结果转换（服务器到客户端）|参数转换（客户端到服务器）|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|datetime|Date|OK|OK|  
+|DBTYPE_DBDATE|datetime|日期|确定|确定|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零，则 IRowsetChange 将因字符串截断而失败。|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|确定|确定|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零，IRowsetChange 将失败，原因是字符串截断。<br /><br /> 日期将被忽略。|  
-|DBTYPE_DBTIME||Time(7)|失败-时间文本无效。|OK|  
-|DBTYPE_DBTIMESTAMP|||失败-时间文本无效。|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3) |OK|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7) |OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
+|DBTYPE_DBTIME||Time(7)|失败-时间文本无效。|确定|  
+|DBTYPE_DBTIMESTAMP|||失败-时间文本无效。|确定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3) |确定|确定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7) |确定|确定|  
+|DBTYPE_DBDATE|Smalldatetime|日期|确定|确定|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零，则 IRowsetChange 将因字符串截断而失败。|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|确定|确定|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零，IRowsetChange 将失败，原因是字符串截断。<br /><br /> 日期将被忽略。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|确定|确定|  
   
  “可以”表示如果已适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，应继续适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）。  
   

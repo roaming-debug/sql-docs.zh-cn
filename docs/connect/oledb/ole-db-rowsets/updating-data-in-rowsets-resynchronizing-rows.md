@@ -4,7 +4,7 @@ description: 为了更新行集中的数据，OLE DB Driver for SQL Server 只�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65ae67a91fc7fb5f3caaa341dbfcb00dc2e5d796
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: f1553c5f077f41212583bbfb47d0fad4a73621c6
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859967"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755967"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新行集中的数据 - 重新同步行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

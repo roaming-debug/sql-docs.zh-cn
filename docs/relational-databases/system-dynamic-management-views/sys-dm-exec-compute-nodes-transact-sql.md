@@ -4,7 +4,7 @@ title: sys.dm_exec_compute_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -23,12 +23,12 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 223878cdbfacd3c8bc754126b291b5d6750ccb93
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a843499d82a2b5cb87e73ad270a61668b9257e4a
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160070"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750227"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "99160070"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|与节点关联的唯一数字 id。 此视图的键。|在扩展群集中唯一，而不考虑类型。|  
-|type|**nvarchar(32)**|节点的类型。|"COMPUTE"、"HEAD"|  
+|类型|**nvarchar(32)**|节点的类型。|"COMPUTE"、"HEAD"|  
 |name|**nvarchar(32)**|节点的逻辑名称。|任何适当长度的字符串。|  
 |address|**nvarchar(32)**|此节点的 IP 地址。|IP 地址范围|  
   

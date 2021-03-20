@@ -4,7 +4,7 @@ title: " (Native Client OLE DB 提供程序生成多行集结果的命令) |Micr
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f88f345a7c30ca240acdacd35cb0e015a4699f16
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0cff167a88007d52d19ed89400eebe60497351de
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439891"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104737268"
 ---
 # <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>SQL Server Native Client 生成 Multiple-Rowset 结果的命令
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

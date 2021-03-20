@@ -4,7 +4,7 @@ description: 了解 OLE DB Driver for SQL Server 在使用者更新包含该数�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 40bb8663cd2d49ceaeda2305797fb42bdacc4324
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 3a9bb3a04af6f75eda05a46da655a971bd60cc71
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859955"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755767"
 ---
 # <a name="updating-data-in-rowsets"></a>更新行集中的数据
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
