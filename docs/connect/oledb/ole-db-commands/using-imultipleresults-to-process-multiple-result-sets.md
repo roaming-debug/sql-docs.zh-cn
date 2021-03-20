@@ -4,7 +4,7 @@ description: 了解使用者如何使用 IMultipleResults 接口处理执行 OLE
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple-rowset results
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 50849c89b72d1d5d823c707b2ddbf82ef98301e3
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: e5c9c73e56b257251b59dbfb611ce15058d78602
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862412"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104735405"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>使用 IMultipleResults 处理多个结果集
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

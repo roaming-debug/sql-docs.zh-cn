@@ -3,7 +3,7 @@ title: 批量导入数据时保留标识值
 description: 当将包含标识符值的数据批量导入到 SQL Server 实例时，默认情况下，它将分配新值。 可以选择保留原始值。
 ms.date: 09/21/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d523fcf6649b51432b994e6c941169616bb123a8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: aa721f4597836068c07e5ee969c1eeb97dd20670
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473918"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752527"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>大容量导入数据时保留标识值 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

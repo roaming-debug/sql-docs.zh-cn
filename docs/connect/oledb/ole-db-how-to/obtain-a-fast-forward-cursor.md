@@ -4,7 +4,7 @@ description: 了解如何结合使用 OLE DB Driver for SQL Server 和此示例�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de4b4d600e6b83d1c2eede7ed7ef3d5970b6ac74
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4c0a53204f57f698106e743210e64f192e7c5393
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727092"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104753867"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>获取 FAST_FORWARD 游标
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
