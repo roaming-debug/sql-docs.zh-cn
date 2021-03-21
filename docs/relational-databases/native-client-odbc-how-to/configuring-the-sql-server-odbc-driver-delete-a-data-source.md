@@ -4,7 +4,7 @@ description: 在将 ODBC 应用程序用于 SQL Server 2005 或更高版本之�
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -14,12 +14,12 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56b013873ef8060101e28d9b2c4609fa41c0c798
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1dff34d1e0ce2554cd13fb5e261ad35ced8f378c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467808"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752557"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>配置 SQL Server ODBC 驱动程序 - 删除数据源
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

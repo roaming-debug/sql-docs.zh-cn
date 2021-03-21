@@ -4,7 +4,7 @@ description: 了解 OLE DB Driver for SQL Server 识别的命令语法，以及�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - stored procedures [OLE DB], command syntax
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 604afa24a9daff22e74138f363b8bb66bccbdab3
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: a8210c1131d928da03bb6b580a5f6218cbfd97af
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862447"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751917"
 ---
 # <a name="command-syntax"></a>命令语法
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

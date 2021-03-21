@@ -4,7 +4,7 @@ description: 了解不同 SQL Server 版本的公共语言运行时中用户定�
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9fdc52df9307bbe4ce3e826ca682d787e1c11506
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 5b1256b7511fcbf62e976e3734349a8941a38cce
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861464"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104742517"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 用户定义类型
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

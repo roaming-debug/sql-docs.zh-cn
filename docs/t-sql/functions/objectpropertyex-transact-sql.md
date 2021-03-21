@@ -4,7 +4,7 @@ title: OBJECTPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -23,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 611d0f17ae0ed8cd0e7679d149b186563f802ba4
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: e0802ac92d900b3ef4ddacaf714e377ce95a85b8
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237477"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754447"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -175,7 +175,7 @@ OBJECTPROPERTYEX ( id , property )
   
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 OBJECTPROPERTYEX）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="remarks"></a>注解  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 假定 object_id 位于当前数据库上下文中。 引用另一个数据库中的 object_id 的查询将返回 NULL 或返回不正确的结果。 例如，在下面的查询中，当前数据库上下文为 master 数据库。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将尝试从该数据库（而不是在查询中指定的数据库）中返回指定的 object_id 的属性值。 由于 `vEmployee` 视图不在 master 数据库中，该查询将返回不正确的结果。  
   
 ```sql  

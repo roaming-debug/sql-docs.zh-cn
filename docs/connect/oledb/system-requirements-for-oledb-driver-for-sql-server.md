@@ -4,7 +4,7 @@ description: 了解在 OLE DB Driver for SQL Server 中使用 SQL Server 的数�
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: aa46b5a4db292b5ac4ee5df71aa18abeb74c5559
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127968"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104744867"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的系统要求
 
@@ -42,7 +42,7 @@ ms.locfileid: "96127968"
 
 ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory 身份验证要求  
 
-将 Azure Active Directory 身份验证方法与低于*_ OLE DB Driver for SQL Server 18.3 的版本一起使用时，请确保已安装[适用于 SQL Server 的 Active Directory 身份验证库](https://go.microsoft.com/fwlink/?LinkID=513072)。 （版本 18.3 将依赖项作为其安装程序包的一部分包含在内。）其他身份验证方法或 OLE DB 操作不需要 ADAL。 有关详细信息，请参阅：[使用 Azure Active Directory](features/using-azure-active-directory.md)。
+将 Active Directory 身份验证方法与低于 OLE DB Driver for SQL Server 18.3 的版本一起使用时，请确保已安装[适用于 SQL Server 的 Active Directory 身份验证库](https://go.microsoft.com/fwlink/?LinkID=513072)。 （版本 18.3 将依赖项作为其安装程序包的一部分包含在内。）其他身份验证方法或 OLE DB 操作不需要 ADAL。 有关详细信息，请参阅：[使用 Azure Active Directory](features/using-azure-active-directory.md)。
 
 ## <a name="sql-server-requirements"></a>SQL Server 要求  
 
@@ -56,7 +56,7 @@ ms.locfileid: "96127968"
 
 对于升级：  
 
-_ 英文版本的 OLE DB Driver for SQL Server 可以升级到 OLE DB Driver for SQL Server 的任何本地化版本。  
+* 英文版本的 OLE DB Driver for SQL Server 可以升级到 OLE DB Driver for SQL Server 的任何本地化版本。  
 * OLE DB Driver for SQL Server 的本地化版本可以升级到同一语言的 OLE DB Driver for SQL Server 的本地化版本。  
 * OLE DB Driver for SQL Server 的本地化版本可以升级到英文版本的 OLE DB Driver for SQL Server。  
 * OLE DB Driver for SQL Server 的本地化版本无法升级到不同本地化语言的 OLE DB Driver for SQL Server 的本地化版本。  

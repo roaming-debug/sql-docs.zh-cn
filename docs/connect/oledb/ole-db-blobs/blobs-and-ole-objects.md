@@ -4,7 +4,7 @@ description: 了解 ISequentialStream 接口如何支持使用者访问作为 OL
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 50c19527b536da0a61d8aa6c7c76ec34010ea268
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 80c1c1eff66c19b009dcfdd9164129734f6c4362
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861412"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749177"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "88861412"
 
  有关演示此功能的示例，请参阅[设置大型数据 (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
- 当使用者在数据修改绑定的取值函数中提供接口指针时，适用于 SQL Server 的 OLE DB 驱动程序可以使用由使用者实现的 IStorage 接口****。  
+ 当使用者在数据修改绑定的取值函数中提供接口指针时，适用于 SQL Server 的 OLE DB 驱动程序可以使用由使用者实现的 IStorage 接口。  
   
- 对于大值数据类型，适用于 SQL Server 的 OLE DB 驱动程序检查 IRowset 和 DDL 接口中的类型大小假设。 具有 varchar、nvarchar 和 varbinary 数据类型且最大大小设置为无限制的列将通过架构行集和返回列数据类型的接口表示为 ISLONG************。  
+ 对于大值数据类型，适用于 SQL Server 的 OLE DB 驱动程序检查 IRowset 和 DDL 接口中的类型大小假设。 具有 varchar、nvarchar 和 varbinary 数据类型且最大大小设置为无限制的列将通过架构行集和返回列数据类型的接口表示为 ISLONG。  
   
  适用于 SQL Server 的 OLE DB 驱动程序将 varchar(max)、varbinary(max) 和 nvarchar(max) 类型分别公开为 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR  。  
   

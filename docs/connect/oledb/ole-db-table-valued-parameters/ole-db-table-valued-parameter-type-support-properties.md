@@ -4,7 +4,7 @@ description: 了解与 OLE DB Driver for SQL Server 表值参数行集对象相�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24a7c544bc713a571c22d137dcd0554ff01cc864
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 7dc83e9b9cadf8d0569e1a26e852c7b4525e56c6
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859883"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750827"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 表值参数类型支持（属性）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

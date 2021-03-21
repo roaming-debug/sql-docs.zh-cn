@@ -3,7 +3,7 @@ title: CAST 和 CONVERT (Transact-SQL) | Microsoft Docs
 description: CAST 和 CONVERT Transact-SQL 函数的参考。 这些函数将表达式由一种数据类型转换为另一种数据类型。
 ms.date: 08/23/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 468775663e93981a134dd87cfe38d1f5bc960947
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a0742f3c81e1b98d206bb04a8fa3a38850e77e98
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100342625"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751267"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,8 +102,8 @@ style
 |**14**|**114**|-|hh:mi:ss:mmm（24 小时制）|  
 |-|20 或 120 (<sup>2</sup>) |ODBC 规范|yyyy-mm-dd hh:mi:ss（24 小时制）|  
 |-|21、25 或 121   (<sup>2</sup>)|time、date、datetime2 和 datetimeoffset 的 ODBC 规范（带毫秒）默认值|yyyy-mm-dd hh:mi:ss.mmm（24 小时制）|  
-|22|-|美国| mm/dd/yy hh:mi:ss AM（或 PM）|
-|-|23|ISO8601|yyyy-mm-dd|
+|22 |-|美国| mm/dd/yy hh:mi:ss AM（或 PM）|
+|-|23 |ISO8601|yyyy-mm-dd|
 |-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm（无空格）<br /><br /> **注意：** 毫秒 (mmm) 值为 0 时，不会显示毫秒小数部分的值。 例如，值“2012-11-07T18:26:20.000”显示为“2012-11-07T18:26:20”。| 
 |-|**127**(<sup>6, 7</sup>)|带时区 Z 的 ISO8601。|yyyy-MM-ddThh:mm:ss.fffZ（不带空格）<br /><br /> **注意：** 毫秒 (mmm) 值为 0 时，不会显示毫秒小数值。 例如，值“2012-11-07T18:26:20.000”显示为“2012-11-07T18:26:20”。|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|回历 (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> 在此样式中，mon 表示完整月份名称的多标记回历 unicode 表示形式。 该值在 SSMS 的默认 US 安装中不会正确呈现。|  
