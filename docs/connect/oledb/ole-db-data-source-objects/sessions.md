@@ -4,7 +4,7 @@ description: 了解如何使用 OLE DB Driver for SQL Server 连接到 SQL Serve
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0187f42ab9389f18d35d4f400c2ea494a6d6dcd4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 0edc091bf52dbb5113300b258e63f207b301f069
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862487"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755547"
 ---
 # <a name="sessions"></a>会话
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -187,7 +187,7 @@ EXIT:
  例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此，池维护代码将向需要会话的应用程序方法传递有效的 IDBCreateCommand 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
   
 > [!NOTE]  
->  在前面的示例中，使用 IDBCreateCommand**** 接口的原因在于 ICommand**** 接口实现 GetDBSession**** 方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
+>  在前面的示例中，使用 IDBCreateCommand 接口的原因在于 ICommand 接口实现 GetDBSession 方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据源对象 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

@@ -5,7 +5,7 @@ titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7e0a478430911d3007e0bb6a80ebca68dc2eb87
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 12ba95e2f19d85fd98c6e7cc90ec743b60772184
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161197"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754367"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>授予搜索属性列表权限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,17 +48,17 @@ GRANT permission [ ,...n ] ON
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- permission   
+ permission  
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON SEARCH PROPERTY LIST ::search_property_list_name    
- 指定要授予权限的搜索属性列表。 需要使用作用域限定符 ::  。  
+ ON SEARCH PROPERTY LIST ::search_property_list_name  
+ 指定要授予权限的搜索属性列表。 需要使用作用域限定符 ::。  
   
  **查看现有搜索属性列表**  
   
 -   [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
- database_principal   
+ database_principal  
  指定要向其授予权限的主体。 可以是下列主体之一：  
   
 -   数据库用户  
@@ -80,7 +80,7 @@ GRANT permission [ ,...n ] ON
  GRANT OPTION  
  指示该主体还可以向其他主体授予所指定的权限。  
   
- AS granting_principal   
+ AS granting_principal  
  指定一个主体，执行该查询的主体从该主体获得授予该权限的权利。 可以是下列主体之一：  
   
 -   数据库用户  
@@ -117,7 +117,7 @@ GRANT permission [ ,...n ] ON
   
  若要使用 AS 选项，还必须满足以下附加要求。  
   
-|AS granting_principal |所需的其他权限|  
+|AS granting_principal|所需的其他权限|  
 |------------------------------|------------------------------------|  
 |数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  
 |映射到 Windows 登录名的数据库用户|对用户的 IMPERSONATE 权限、db_securityadmin 固定数据库角色的成员身份、db_owner 固定数据库角色的成员身份或 sysadmin 固定服务器角色的成员身份。|  

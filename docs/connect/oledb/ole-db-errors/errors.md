@@ -4,7 +4,7 @@ description: 了解 OLE DB Driver for SQL Server 中如何返回错误，以及�
 ms.custom: ''
 ms.date: 05/06/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - OLE DB error handling
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f806ff605b8f35f112de4c16216e0da24d2df31c
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: eb30ffa542d584626f762c0d0eeb990426a5f152
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081996"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104741947"
 ---
 # <a name="errors"></a>错误
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

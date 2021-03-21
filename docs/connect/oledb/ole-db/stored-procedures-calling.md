@@ -4,7 +4,7 @@ description: 了解如何在 OLE DB Driver for SQL Server 中调用存储过程�
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3df02e0bee4a0e0f83851a913e0e09961e6320c6
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 4d9c375f32a9bb1dfa66c63bf1a8e23d37e54a08
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859114"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104736317"
 ---
 # <a name="stored-procedures---calling"></a>存储过程 - 调用
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
