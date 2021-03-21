@@ -4,7 +4,7 @@ description: 处理 Transact-SQL 分布式查询时，OLE DB Driver for SQL Serv
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 38571c97516309b3a90731f8e95f928dc0ad5591
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 700d5b770176f9aefdab1ac7dfd43eee21f78d91
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861805"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754157"
 ---
 # <a name="schema-rowset-support-ole-db"></a>架构行集支持 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

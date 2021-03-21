@@ -4,7 +4,7 @@ title: 将数据类型映射 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b659380d95adf9149ef22a47544446e1c1349e6b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 16da42413b38606b2e4b4e7bdaf1e13b1964c3d6
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97437936"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752737"
 ---
 # <a name="mapping-data-types-odbc"></a>映射数据类型 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
  如果用户使用 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)创建绑定，则驱动程序将读取元数据和数据。 然后，驱动程序将这些数据转换为在绑定中指定的适当 ODBC 类型。  
   
 ### <a name="sending-data-to-the-server"></a>将数据发送到服务器  
- **SQL_SS_VARIANT**，特定于 NATIVE Client ODBC 驱动程序的一种新数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于发送到 **sql_variant** 列的数据。 使用参数将数据发送到服务器时 (例如，插入 TableName 值 (?,? ) # A3， [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 用于指定参数信息，包括 C 类型和相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序会将 C 数据类型转换为相应的 **sql_variant** 子类型之一。  
+ **SQL_SS_VARIANT**，特定于 NATIVE Client ODBC 驱动程序的一种新数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于发送到 **sql_variant** 列的数据。 使用参数将数据发送到服务器时 (例如，?,? ) ) 中插入 TableName 值 (，则使用 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 指定参数信息，包括 C 类型和相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序会将 C 数据类型转换为相应的 **sql_variant** 子类型之一。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;ODBC&#41;处理结果 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
