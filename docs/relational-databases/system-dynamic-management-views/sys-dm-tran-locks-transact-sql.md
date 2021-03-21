@@ -4,7 +4,7 @@ title: sys.dm_tran_locks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95dfd0be129d7f6116ef92fbe54d7869af45fca1
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 92852653bb3be257d66a202c671a9d65e4ae3efd
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837964"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104753787"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "101837964"
 |资源类型|资源说明|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
 |DATABASE|表示数据库。|不适用|  
-|FILE|表示数据库文件。 此文件可以是数据文件，也可以是日志文件。|不适用|  
+|文件|表示数据库文件。 此文件可以是数据文件，也可以是日志文件。|不适用|  
 |OBJECT|表示数据库对象。 此对象可以是数据表、视图、存储过程、扩展存储过程或任何具有对象 ID 的对象。|对象 ID|  
 |PAGE|表示数据文件中的单页。|HoBt ID。 此值与 **sys.partitions.hobt_id** 相对应。 PAGE 资源并不总是有 HoBt ID，因为 HoBt ID 是可由调用方提供的额外信息，而有些调用方不能提供该信息。|  
 |KEY|表示索引中的一行。|HoBt ID。 此值与 **sys.partitions.hobt_id** 相对应。|  
@@ -201,7 +201,7 @@ ms.locfileid: "101837964"
 |资源|格式|说明|  
 |--------------|------------|-----------------|  
 |DATABASE|不适用|**resource_database_id** 列中已提供数据库 ID。|  
-|FILE|<file_id>|此资源所表示的文件 ID。|  
+|文件|<file_id>|此资源所表示的文件 ID。|  
 |OBJECT|<object_id>|此资源所表示的对象 ID。 此对象可以是 **sys.objects** 中列出的任何对象，不仅仅是表。|  
 |PAGE|<file_id>:<page_in_file>|表示此资源所表示的页的文件和页 ID。|  
 |KEY|<hash_value>|表示行中由此资源表示的键列的哈希。|  

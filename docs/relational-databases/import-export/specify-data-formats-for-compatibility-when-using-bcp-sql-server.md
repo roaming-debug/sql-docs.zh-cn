@@ -3,7 +3,7 @@ title: 利用 BCP 指定兼容性数据格式
 description: 对于使用 bcp 的 SQL Server 中的批量导出，数据格式可能与预期布局不兼容。 非 xml 格式化文件指定兼容性数据格式。
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: afdaa7a7243c87876b55cb79155e652ae029c495
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 41f983239a2cf946bb46e04315cff69ba3b2abc2
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351312"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751017"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>使用 BCP 时指定兼容性数据格式 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

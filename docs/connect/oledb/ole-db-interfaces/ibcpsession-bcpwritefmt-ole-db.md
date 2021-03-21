@@ -4,7 +4,7 @@ description: 使用 IBCPSession::BCPWriteFmt 以 xml 或文本格式保存格式
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPWriteFmt method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a11d1a1ad8d2522886a8b90b92e93c4c3a7bc3b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ed2dc5c46be7eba289308169363519c27dd2bc34
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99197776"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104746147"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

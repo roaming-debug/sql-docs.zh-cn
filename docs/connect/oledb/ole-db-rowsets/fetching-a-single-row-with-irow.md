@@ -4,7 +4,7 @@ description: IRow 允许直接访问单行对象的列。 OLE DB Driver for SQL 
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a305692bb544d9a9bbb0572cbd93449781aaabe9
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 389bbbfb6e01d962f4130f5b8a06c8f6ba534fe2
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862474"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104753067"
 ---
 # <a name="fetching-a-single-row-with-irow-ole-db-driver"></a>使用 IRow 提取单行（OLE DB 驱动程序）
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

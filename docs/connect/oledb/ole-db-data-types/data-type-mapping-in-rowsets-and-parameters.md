@@ -4,7 +4,7 @@ description: 了解 OLE DB Driver for SQL Server 如何使用 OLE DB 定义的�
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cbe23a1e1edce96997968bf40075b2fc3b13db49
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 466e379b2ce809f72fb39c4d7594a85ce85ebad5
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861601"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749157"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
