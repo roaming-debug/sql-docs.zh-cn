@@ -4,7 +4,7 @@ title: SQLGetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -15,19 +15,19 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5eb5e2ea9c7fc354ec414ecd95cd090f6cd406f1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dbdeb663a12d2536f20e4112c7aa9f6f5eab25bb
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485119"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749077"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   该表显示 **SQLGetInfo** 返回的值。 这些值可能根据连接服务器的版本号而有所不同。  
   
- Native Client 中的 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同于 ODBC 驱动程序中的 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( # A0) 在调用 **SQLGetInfo** 时使用 SQL_KEYWORDS 和0缓冲区长度。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序返回 SQL_SUCCESS，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序返回 SQL_SUCCESS_WITH_INFO。  但是，当使用小于 output 关键字字符串的非零缓冲区长度调用时，Native Client 中的 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 SQL_SUCCESS_WITH_INFO，SQLState 为01004。  
+ Native Client 中的 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 ODBC 驱动程序中的 **SQLGetInfo** 不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLSRV32.DLL) 当使用 SQL_KEYWORDS 调用 **SQLGetInfo** 时，为0缓冲区长度。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序返回 SQL_SUCCESS，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序返回 SQL_SUCCESS_WITH_INFO。  但是，当使用小于 output 关键字字符串的非零缓冲区长度调用时，Native Client 中的 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 SQL_SUCCESS_WITH_INFO，SQLState 为01004。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -36,10 +36,10 @@ ms.locfileid: "97485119"
 |SQL_ACTIVE_CONNECTIONS|连接数受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 限制。 对于此 **SQLGetInfo** 请求，驱动程序返回0。|  
 |SQL_ACTIVE_ENVIRONMENTS|环境数不受驱动程序限制。 对于此 **SQLGetInfo** 请求，驱动程序返回0。|  
 |SQL_ACTIVE_STATEMENTS|对于此 **SQLGetInfo** 请求，驱动程序返回1。 可用于应用程序的语句句柄数不受驱动程序限制，但默认执行某个语句句柄将阻止执行其他任何句柄。|  
-|SQL_ALTER_DOMAIN|FALSE|  
+|SQL_ALTER_DOMAIN|false|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
-|SQL_DATETIME_LITERALS|FALSE|  
+|SQL_DATETIME_LITERALS|false|  
 |SQL_ASYNC_MODE|SQL_AM_STATEMENT|  
 |SQL_BATCH_ROW_COUNT|SQL_BRC_EXPLICIT|  
 |SQL_BATCH_SUPPORT|SQL_BS_ROW_COUNT_EXPLICIT SQL_BS_ROW_COUNT_PROC SQL_BS_SELECT_EXPLICIT SQL_BS_SELECT_PROC|  
@@ -78,13 +78,13 @@ ms.locfileid: "97485119"
 |SQL_CONVERT_WLONGVARCHAR|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_WVARCHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
 |SQL_CORRELATION_NAME|SQL_CN_ANY|  
-|SQL_CREATE_ASSERTION|FALSE|  
-|SQL_CREATE_CHARACTER_SET|FALSE|  
-|SQL_CREATE_COLLATION|FALSE|  
-|SQL_CREATE_DOMAIN|FALSE|  
+|SQL_CREATE_ASSERTION|false|  
+|SQL_CREATE_CHARACTER_SET|false|  
+|SQL_CREATE_COLLATION|false|  
+|SQL_CREATE_DOMAIN|false|  
 |SQL_CREATE_SCHEMA|SQL_CS_AUTHORIZATION SQL_CS_CREATE_SCHEMA|  
 |SQL_CREATE_TABLE|SQL_CT_CREATE_TABLE|  
-|SQL_CREATE_TRANSLATION|FALSE|  
+|SQL_CREATE_TRANSLATION|false|  
 |SQL_CREATE_VIEW|SQL_CV_CHECK_OPTION SQL_CV_CREATE_VIEW|  
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
@@ -99,13 +99,13 @@ ms.locfileid: "97485119"
 |SQL_DRIVER_NAME|"sqlncli11.dll"|  
 |SQL_DRIVER_ODBC_VER|驱动程序的受支持 ODBC 版本。|  
 |SQL_DRIVER_VER|驱动程序的版本号。|  
-|SQL_DROP_ASSERTION|FALSE|  
-|SQL_DROP_CHARACTER_SET|FALSE|  
-|SQL_DROP_COLLATION|FALSE|  
-|SQL_DROP_DOMAIN|FALSE|  
+|SQL_DROP_ASSERTION|false|  
+|SQL_DROP_CHARACTER_SET|false|  
+|SQL_DROP_COLLATION|false|  
+|SQL_DROP_DOMAIN|false|  
 |SQL_DROP_SCHEMA|不支持 DROP SCHEMA。|  
 |SQL_DROP_TABLE|SQL_DT_DROP_TABLE|  
-|SQL_DROP_TRANSLATION|FALSE|  
+|SQL_DROP_TRANSLATION|false|  
 |SQL_DROP_VIEW|SQL_DV_DROP_VIEW|  
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BULK_ADD SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -183,11 +183,11 @@ ms.locfileid: "97485119"
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|连接的服务器名称。|  
 |SQL_SPECIAL_CHARACTERS|取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上安装的字符集。|  
-|SQL_SQL92_DATETIME_FUNCTIONS|FALSE|  
-|SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FALSE|  
-|SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FALSE|  
+|SQL_SQL92_DATETIME_FUNCTIONS|false|  
+|SQL_SQL92_FOREIGN_KEY_DELETE_RULE|false|  
+|SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|false|  
 |SQL_SQL92_GRANT|SQL_SG_WITH_GRANT_OPTION|  
-|SQL_SQL92_NUMERIC_VALUE_FUNCTIONS|FALSE|  
+|SQL_SQL92_NUMERIC_VALUE_FUNCTIONS|false|  
 |SQL_SQL92_PREDICATES|SQL_SP_EXISTS SQL_SP_ISNOTNULL SQL_SP_ISNULL SQL_SP_LIKE SQL_SP_IN SQL_SP_BETWEEN SQL_SP_UNIQUE|  
 |SQL_SQL92_RELATIONAL_JOIN_OPERATORS|SQL_SRJO_CROSS_JOIN SQL_SRJO_FULL_OUTER_JOIN SQL_SRJO_INNER_JOIN SQL_SRJO_LEFT_OUTER_JOIN SQL_SRJO_RIGHT_OUTER_JOIN SQL_SRJO_UNION_JOIN|  
 |SQL_SQL92_REVOKE|SQL_SR_GRANT_OPTION_FOR|  

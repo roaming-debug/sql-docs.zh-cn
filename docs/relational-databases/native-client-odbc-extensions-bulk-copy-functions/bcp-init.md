@@ -4,7 +4,7 @@ title: bcp_init |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e325b7e88b2958b8870151516f991f27ba79e44
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3ce9cdbff8e722e732ae8aaf9ced180d1c45eb12
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483338"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749537"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ Unicode 和 ANSI 名称：
 -  (ANSI) bcp_initA
 - bcp_initW (Unicode) 
 
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   

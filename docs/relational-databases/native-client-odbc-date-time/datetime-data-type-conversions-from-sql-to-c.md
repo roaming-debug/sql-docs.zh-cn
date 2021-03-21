@@ -4,7 +4,7 @@ title: 从 SQL 到 C 的转换 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -14,12 +14,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7434c34d2e39ae85ecc11ebf5603f825672a919
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 543e32480f1fcdfcca09390f26c733b838f3ba75
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438536"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104756097"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>由 SQL 到 C 的 datetime 数据类型转换
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "97438536"
 | - | ---------- | ---------- | --------------- | -------------- | ------------------------ | ------------ | ---------- | ----------- |
 | **SQL_CHAR** |2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
 | **SQL_WCHAR** |2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
-| **SQL_TYPE_DATE** |OK|12|13|12|13、23|14|16|16|  
-| **SQL_SS_TIME2** |12|8|15|OK|10，23|17|16|16|  
-| **SQL_TYPE_TIMESTAMP** |18|7、8|OK|7|23|19|16|16|  
-| **SQL_SS_TIMESTAMPOFFSET** |18、22|7、8、20|20|7、20|OK|21|16|16|  
+| **SQL_TYPE_DATE** |确定|12|13|12|13、23|14|16|16|  
+| **SQL_SS_TIME2** |12|8|15|确定|10，23|17|16|16|  
+| **SQL_TYPE_TIMESTAMP** |18|7、8|确定|7|23|19|16|16|  
+| **SQL_SS_TIMESTAMPOFFSET** |18、22|7、8、20|20|7、20|确定|21|16|16|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   

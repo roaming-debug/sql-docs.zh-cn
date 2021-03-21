@@ -4,7 +4,7 @@ description: 了解多重活动结果集支持如何简化了在内存中 OLTP �
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - MARS [SQL Server]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f9657fed2495ce5543c3fef776e6be3f0851dd88
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 73f0e06f497f4d95c6d3e82ade44596b55d29bf4
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860164"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751127"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用多个活动的结果集 (MARS)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

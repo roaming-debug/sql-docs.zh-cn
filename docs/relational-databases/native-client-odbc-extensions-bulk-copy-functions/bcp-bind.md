@@ -2,7 +2,7 @@
 description: bcp_bind
 title: bcp_bind |Microsoft Docs
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.technology: native-client
 ms.topic: reference
 apiname:
@@ -19,12 +19,12 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edff3154a4385ee87bf7686cf5e2954e026e495f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3d73f055a77bb120d8c56425426273d6a06412b0
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473658"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749637"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
@@ -47,7 +47,7 @@ RETCODE bcp_bind (
         INT idxServerCol);  
 ```  
   
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
@@ -68,7 +68,7 @@ typedef struct tagBCPBOUNDINT
     } BCPBOUNDINT;  
 ```  
   
- 在本例中， *pData* 参数将设置为结构的声明实例的地址，即 BCPBOUNDINT *iIndicator* 结构成员的地址。 *CbIndicator* 参数将设置为 (sizeof (int) # A3 的整数大小， *cbData* 参数将再次设置为 (sizeof (int) # A7 的整数大小。 若要向包含绑定列的 NULL 值的服务器大容量复制行，则应将实例的 *iIndicator* 成员的值设置为 SQL_NULL_DATA。  
+ 在本例中， *pData* 参数将设置为结构的声明实例的地址，即 BCPBOUNDINT *iIndicator* 结构成员的地址。 *CbIndicator* 参数将设置为 (sizeof (int) ) 整数的大小， *cbData* 参数将再次设置为 (sizeof (int) ) 的整数大小。 若要向包含绑定列的 NULL 值的服务器大容量复制行，则应将实例的 *iIndicator* 成员的值设置为 SQL_NULL_DATA。  
   
  *cbData*  
  程序变量中数据的字节计数，不包括任何长度/Null 指示符或终止符的长度。  
@@ -147,8 +147,8 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT4|int|  
 |SQLINT8|_int64|  
 |SQLINTN|cbIndicator<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
-|SQLFLT4|float|  
-|SQLFLT8|float|  
+|SQLFLT4|FLOAT|  
+|SQLFLT8|FLOAT|  
 |SQLFLTN|cbIndicator<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  

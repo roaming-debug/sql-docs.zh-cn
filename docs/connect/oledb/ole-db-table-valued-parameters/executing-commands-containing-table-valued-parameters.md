@@ -4,7 +4,7 @@ description: 了解在执行包含 OLE DB Driver for SQL Server 表值参数的�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - table-valued parameters, executing commands containing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0d02d68f2fcc2256dc346b9b14b6988547121501
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 9b6ea9f03f68fb9322adae1d95be431b74652d51
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859917"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750897"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>执行包含表值参数的命令
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

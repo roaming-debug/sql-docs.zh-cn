@@ -4,7 +4,7 @@ title: sys.dm_os_memory_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5df556aded925553d25974fc93e586188cb4d20
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 490d71cb9f7fda09180ef47dc6366655f4909baf
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837638"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750947"
 ---
 # <a name="sysdm_os_memory_pools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "101837638"
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|代表内存池的项的内存地址。 不可为 null。|  
 |**pool_id**|**int**|在一组池中的特定池的 ID。 不可为 null。|  
-|type|**nvarchar(60)**|对象池的类型。 不可为 null。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_os_memory_clerks ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
-|name|**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
+|type |**nvarchar(60)**|对象池的类型。 不可为 null。 有关详细信息，请参阅 [&#40;transact-sql&#41;sys.dm_os_memory_clerks ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|name |**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
 |**max_free_entries_count**|**bigint**|池可以拥有的最大可用项的个数。 不可为 null。|  
 |**free_entries_count**|**bigint**|池中当前可用项的个数。 不可为 null。|  
 |**removed_in_all_rounds_count**|**bigint**|自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启动以来从池中删除的项数。 不可为 null。|  

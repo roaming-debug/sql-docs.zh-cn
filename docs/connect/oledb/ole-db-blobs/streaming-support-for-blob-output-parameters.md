@@ -4,7 +4,7 @@ description: 了解 BLOB 输出参数的 OLE DB Driver for SQL Server 中的流�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf788cfe2e9d8917f0bbc3ad0295230c881724ca
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 0563785ddc9b6121f04553582cda71b219d4ac40
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862273"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104756387"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 输出参数的流支持
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

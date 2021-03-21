@@ -4,7 +4,7 @@ title: sys.securable_classes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92b4082fc8cfdf4771813d128eb3cbbac0d27321
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 14f23a8a24b1de0f62ad99f6b1b92b76332c60b5
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99194784"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748289"
 ---
 # <a name="syssecurable_classes-transact-sql"></a>sys.securable_classes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

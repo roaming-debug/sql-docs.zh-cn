@@ -4,7 +4,7 @@ title: bcp_gettypename |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3872736a1748dbd06e251a65d358522e7b92a630
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b8ac4f8233301f8c6b96f78a83fc5517a75eb888
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483369"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104749547"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ RETCODE bcp_gettypename (
         DBBOOL fIsMaxType);  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *token*  
  指示 BCP 类型标记的值。  
   
@@ -55,7 +55,7 @@ RETCODE bcp_gettypename (
   
  下表指定了可能的 BCP 类型、这些类型是否是 max 类型以及预期的输出。  
   
-|BCP 类型名称|MaxType|Output|  
+|BCP 类型名称|MaxType|输出|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|任一个|**decimal**|  
 |**SQLNUMERIC**|任一个|**numeric**|  
@@ -83,7 +83,7 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|任一个|**float-null**|  
 |**SQLAOPSUM**|任一个|**Sum**|  
 |**SQLAOPAVG**|任一个|**Avg**|  
-|**SQLAOPCNT**|任一个|**Count**|  
+|**SQLAOPCNT**|任一个|**计数**|  
 |**SQLAOPMIN**|任一个|**Min**|  
 |**SQLAOPMAX**|任一个|**Max**|  
 |**SQLDATETIM4**|任一个|**smalldatetime**|  

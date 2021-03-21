@@ -4,7 +4,7 @@ description: 了解 OLE DB Driver for SQL Server 中的 ICommand 接口，包括
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 715ab31652697643e473a6b7cd944c89c46037c8
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 5f06c5f47dfb0684381ea41ffd88f88636fa94db
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860148"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104744897"
 ---
 # <a name="commands"></a>命令
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

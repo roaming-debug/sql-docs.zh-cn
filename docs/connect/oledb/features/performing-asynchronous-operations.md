@@ -4,7 +4,7 @@ description: OLE DB Driver for SQL Server 支持异步数据库操作，从而�
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, asynchronous operations
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b9005314e248f5aff1f377944395143d67363fd
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: d71b9884b8a87ae05060073f9c2d47eb044387a5
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861329"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104742287"
 ---
 # <a name="performing-asynchronous-operations"></a>执行异步操作
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
