@@ -4,7 +4,7 @@ title: sys.external_data_sources (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -14,12 +14,12 @@ ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4854c6e7e7b02b127cd8622ecb3c089485da5464
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d5cd1f39c1d9970ac7bcb0d33987b374643c8574
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203841"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754937"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "99203841"
 |name|**sysname**|外部数据源的名称。||  
 |location|**nvarchar(4000)**|连接字符串，其中包括用于外部数据源的协议、IP 地址和端口。||  
 |type_desc|**nvarchar(255)**|以字符串形式显示的数据源类型。|HADOOP、RDBMS、SHARD_MAP_MANAGER、RemoteDataArchiveTypeExtDataSource|  
-|type|**tinyint**|以数字形式显示的数据源类型。|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
+|类型|**tinyint**|以数字形式显示的数据源类型。|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|对于类型 HADOOP，为 Hadoop 资源管理器的 IP 和端口位置。 这用于在 Hadoop 数据源上提交作业。<br /><br /> 对于其他类型的外部数据源为 NULL。||  
 |credential_id|**int**|用于连接到外部数据源的数据库范围凭据的对象 ID。||  
 |database_name|**sysname**|对于类型 RDBMS，为远程数据库的名称。 对于 "类型"，请 SHARD_MAP_MANAGER 分片映射管理器数据库的名称。 对于其他类型的外部数据源为 NULL。||  

@@ -4,7 +4,7 @@ title: 已准备好的执行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2fbc7fe209653a142ea887999fc95310f29e30b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8da07014b33b710a2036f5e411b3310180eaae02
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438350"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104752887"
 ---
 # <a name="prepared-execution"></a>准备好的执行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97438350"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还提供针对准备好的执行的本机支持。 执行计划建立在 **SQLPrepare** 上，并在调用 **SQLExecute** 时执行。 由于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **SQLPrepare** 上生成临时存储过程不是必需的，因此 **tempdb** 中的系统表不会产生额外的开销。  
   
- 出于性能方面的原因，语句准备会推迟到调用 **SQLExecute** 或元属性操作 (例如，在 ODBC) 中执行 [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) 或 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 。 这是默认行为。 正在准备的语句如有任何错误，需等到执行该语句或执行元属性操作后才会发现。 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的语句属性 SQL_SOPT_SS_DEFER_PREPARE 设置为 SQL_DP_OFF 可以关闭此默认行为。  
+ 出于性能方面的原因，语句准备会推迟到调用 **SQLExecute** 或元属性操作 (例如，在 ODBC) 中执行 [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) 或 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 。 此选项为默认行为。 正在准备的语句如有任何错误，需等到执行该语句或执行元属性操作后才会发现。 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的语句属性 SQL_SOPT_SS_DEFER_PREPARE 设置为 SQL_DP_OFF 可以关闭此默认行为。  
   
  在延迟准备的情况下，在调用 **SQLExecute** 之前调用 **SQLDescribeCol** 或 **SQLDescribeParam** 会生成到服务器的额外往返。 在 **SQLDescribeCol** 上，驱动程序从查询中删除 WHERE 子句，并将其发送到服务器，并将 FMTONLY 设置为 ON，以获取查询返回的第一个结果集中的列的说明。 在 **SQLDescribeParam** 上，驱动程序调用服务器来获取查询中任何参数标记所引用的表达式或列的说明。 此方法也存在一些限制，如无法解析子查询中的参数。  
   
