@@ -3,7 +3,7 @@ title: 利用 bcp 指定数据文件中的前缀长度
 description: 本文介绍前缀字段，该字段对字段的长度进行编码以提供紧凑的文件存储空间，以便使用本机格式批量导出到数据文件。
 ms.date: 07/28/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 81ac71e3e236209592087ffb0a11cde47cc6f18e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f57d14262410c3b469cc4576e35f2eb0d6c625f6
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481288"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104745727"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "97481288"
 |**varchar**|2|2|2|2|  
 |**nchar**|2|2|2|2|  
 |**nvarchar**|2|2|2|2|  
-|**text** _|4|4|4|4|  
-|_*ntext**_|4|4|4|4|  
-|_ *binary**|2|2|2|2|  
+|**text***|4|4|4|4|  
+|**ntext***|4|4|4|4|  
+|**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
-|**image** _|4|4|4|4|  
-|_ *datetime**|0|1|0|1|  
+|**image***|4|4|4|4|  
+|**datetime**|0|1|0|1|  
 |**smalldatetime**|0|1|0|1|  
 |**decimal**|1|1|1|1|  
 |**numeric**|1|1|1|1|  

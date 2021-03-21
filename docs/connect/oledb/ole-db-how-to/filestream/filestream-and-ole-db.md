@@ -4,18 +4,18 @@ description: 通过本节中的四个示例，了解如何将 OLE DB Driver for 
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf54843d4f033220ecada31291e83d3d39977c07
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: c924567422c9eff40c7f0c78d9270aeed9684e9a
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860596"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104741357"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream 和 OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
