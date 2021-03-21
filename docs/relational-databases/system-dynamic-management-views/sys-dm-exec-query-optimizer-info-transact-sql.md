@@ -4,7 +4,7 @@ title: sys.dm_exec_query_optimizer_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7ab67b6e9364f95156d9e13a9183ffd06384080
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: a3e769d427581ea888fc0f6a226f5072c93bc3e8
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837652"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750567"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "101837652"
   
 |名称|数据类型|说明|  
 |----------|---------------|-----------------|  
-|**对抗**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
+|**counter**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
 |**occurrence**|**bigint**|此计数器的优化事件的发生次数。|  
 |**value**|**float**|每次发生事件的平均属性值。|  
 |pdw_node_id|**int**|**适用** 于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
@@ -51,7 +51,7 @@ ms.locfileid: "101837652"
 ## <a name="remarks"></a>备注  
  **sys.dm_exec_query_optimizer_info** 包含 (计数器) 的下列属性。 出现的所有值将累积并在系统重新启动时设置为 0。 系统重新启动时，值字段的所有值都设置为 NULL。 指定平均值的所有“值-列”的值使用同一行中的出现次数值作为计算平均值的分母。 在确定对 dm_exec_query_optimizer_info 的更改时测量所有查询优化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，包括用户和系统生成的查询。  如果执行已缓存的计划，则不会更改 **dm_exec_query_optimizer_info** 中的值，只优化很重要。  
   
-|计数器|出现次数|“值”|  
+|计数器|出现次数|值|  
 |-------------|----------------|-----------|  
 |优化|总优化次数。|不适用|  
 |占用时间|总优化次数。|每次优化单个语句（查询）所用的平均时间（秒）。|  

@@ -3,7 +3,7 @@ title: 准备用于批量导出或导入的数据
 description: 本文介绍如何计划批量导入和批量导出操作，包括数据文件格式要求以及何时使用 bcp 实用工具。
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b900f0967dc276509cf47fd039ea8a10bbf14c83
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: b33c6d9587ddb06d5315d7198663e4a9da84b656
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99077145"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104737707"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>准备用于批量导出或导入的数据
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

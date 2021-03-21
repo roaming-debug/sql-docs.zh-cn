@@ -5,7 +5,7 @@ titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e5ec634f87010b012bcc05a17d0711415770383
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 81ac9fe4801aecf4f251f42791726bb2588d11d6
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99177768"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104744407"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>拒绝搜索属性列表权限 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,13 +47,13 @@ DENY permission [ ,...n ] ON
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>参数
- permission   
+ permission  
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
-ON SEARCH PROPERTY LIST ::search_property_list_name    
+ON SEARCH PROPERTY LIST ::search_property_list_name  
  指定要拒绝权限的搜索属性列表。 需要使用作用域限定符 ::。  
   
-database_principal   
+database_principal  
  指定要对其拒绝权限的主体。 可以是下列主体之一：  
   
 -   数据库用户  
@@ -68,7 +68,7 @@ database_principal
 CASCADE  
  指示要拒绝的权限也会被对此主体授予该权限的其他主体拒绝。  
   
-denying_principal   
+denying_principal  
  指定一个主体，执行该查询的主体从该主体获得拒绝授予该权限的权利。 可以是下列主体之一：  
   
 -   数据库用户  

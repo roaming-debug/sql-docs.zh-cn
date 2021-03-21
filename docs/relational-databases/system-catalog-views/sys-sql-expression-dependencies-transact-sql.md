@@ -4,7 +4,7 @@ title: sys.sql_expression_dependencies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34c88c909239e7f9d9fcb12e5b30677708d9cfbc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 96eb8bb58aca14dc2ca3eaeb4c2fc1be5f066d2a
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210331"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750337"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "99210331"
 |查看|是|是|  
 |筛选索引|是**|否|  
 |筛选统计信息|是**|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程 * * _|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|是|是|  
 |CLR 存储过程|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
 |CLR 用户定义函数|否|是|  
@@ -92,11 +92,11 @@ ms.locfileid: "99210331"
 |XML 架构集合|否|是|  
 |分区函数|否|是|  
   
- \_ 仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
+ \* 仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
   
  ** 筛选谓词中使用的每列都作为引用实体进行跟踪。  
   
- * * _ 整数值大于1的带编号的存储过程不会作为引用或被引用的实体进行跟踪。  
+ *** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
 ## <a name="permissions"></a>权限  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 sys.sql_expression_dependencies 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 db_owner 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
@@ -154,7 +154,7 @@ CREATE DATABASE db1;
 GO  
 USE db1;  
 GO  
-CREATE PROCEDURE p1 AS SELECT _ FROM db2.s1.t1;  
+CREATE PROCEDURE p1 AS SELECT * FROM db2.s1.t1;  
 GO  
 CREATE PROCEDURE p2 AS  
     UPDATE db3..t3  
