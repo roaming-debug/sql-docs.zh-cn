@@ -3,7 +3,7 @@ description: 'SQL Server Native Client (OLE DB 的转换) '
 title: 绑定和转换 (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8487fcbd6d24f28eb753ff47ad2625bcacc47e33
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d38e8edeff226fa38569ee12543e1ee6a4291278
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467648"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748407"
 ---
 # <a name="sql-server-native-client-conversions-ole-db"></a>SQL Server Native Client (OLE DB 的转换) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

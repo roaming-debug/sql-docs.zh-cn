@@ -4,7 +4,7 @@ title: sp_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f865969933b07d2021a96b0af39f86d7f47893
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7ef2d20ec911fc361ebbb7162853ee2e2cfe748c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99200820"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750237"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

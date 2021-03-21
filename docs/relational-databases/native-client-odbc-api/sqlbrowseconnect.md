@@ -4,7 +4,7 @@ title: SQLBrowseConnect |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14f106f534364c033f796aefe6ec5b46ca422a6c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ef7782ed2c0fb5f60d0ca51ff814f109116820d8
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473858"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751367"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "97473858"
   
  以下属性（通过调用 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置）确定由 **SQLBrowseConnect** 返回的结果集。  
   
-|Attribute|说明|  
+|特性|说明|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果将其设置为 SQL_MORE_INFO_YES，则 **SQLBrowseConnect** 将返回服务器属性的扩展字符串。<br /><br /> 下面是 **SQLBrowseConnect** 返回的扩展字符串示例：<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 在此字符串中，分号用于分隔与服务器有关的各部分信息， 逗号用于分隔不同的服务器实例。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定了服务器名称，则 **SQLBrowseConnect** 将返回指定服务器的信息。 如果 SQL_COPT_SS_BROWSE_SERVER 设置为 NULL，则 **SQLBrowseConnect** 将返回域中所有服务器的信息。<br /><br /> <br /><br /> 请注意，由于网络问题， **SQLBrowseConnect** 可能无法及时接收来自所有服务器的响应。 因此，每个请求所返回的服务器列表都可能不同。|  

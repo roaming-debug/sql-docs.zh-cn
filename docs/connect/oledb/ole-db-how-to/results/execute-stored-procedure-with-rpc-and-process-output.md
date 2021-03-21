@@ -4,7 +4,7 @@ description: 在本例中，了解如何使用 RPC 运行 SQL Server 存储过�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 27acbce6e1c8a93878c0f7d803264c568d9e46b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4e94e3fd4e6e67f440633fd422e63d77a2e613b8
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727078"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751467"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>使用 RPC 执行存储过程并处理输出
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

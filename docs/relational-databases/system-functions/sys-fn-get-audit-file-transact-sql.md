@@ -4,7 +4,7 @@ title: sys.fn_get_audit_file (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse
+ms.prod_service: database-engine, sql-database, synapse-analytics
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 013586570ce43b8270ae2613c05ced8bc9bdc48b
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: 1b45da9fa22e2c342258d8ee8ad665fd4f33cc30
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525211"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750617"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -44,7 +44,7 @@ fn_get_audit_file ( file_pattern,
     { default | audit_record_offset | NULL } )  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  *file_pattern*  
  指定要读取的审核文件集的目录（或路径）和文件名。 类型为 **nvarchar (260)**。 
  
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>返回的表  
  下表描述此函数可返回的审核文件内容。  
   
-| 列名称 | 类型 | 描述 |  
+| 列名称 | 类型 | 说明 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 操作的 ID。 不可为 Null。 |  
 | additional_information | **nvarchar(4000)** | 仅适用于单个事件的唯一信息，以 XML 的形式返回。 有少量的可审核操作包含此类信息。<br /><br /> 对于具有与操作相关联的 TSQL 堆栈的操作，将以 XML 格式显示一个级别的 TSQL 堆栈。 该 XML 格式如下：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 指示框架的当前嵌套级别。 模块名称表示为由三部分组成的格式（database_name、schema_name 和 object_name）。  模块名称将被解析为对无效的 xml 字符（如、、、）进行转义 `'\<'` `'>'` `'/'` `'_x'` 。 它们将被转义为 `_xHHHH\_` 。 HHHH 代表该字符对应的四位十六进制 UCS-2 代码。<br /><br /> 可以为 Null。 如果事件没有报告其他信息，则返回 NULL。 |

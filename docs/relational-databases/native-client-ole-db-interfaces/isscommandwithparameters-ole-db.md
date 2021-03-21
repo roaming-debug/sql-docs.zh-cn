@@ -4,7 +4,7 @@ title: 'ISSCommandWithParameters (Native Client OLE DB 提供程序) '
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7924ee21c5bbf6184654303328952afb93fc97cd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: af46c20c873feb845773aa2a4349771689d8e575
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469318"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104750127"
 ---
 # <a name="isscommandwithparameters-native-client-ole-db-provider"></a>ISSCommandWithParameters (Native Client OLE DB 提供程序) 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

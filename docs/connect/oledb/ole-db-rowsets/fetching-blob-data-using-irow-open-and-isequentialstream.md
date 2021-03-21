@@ -4,7 +4,7 @@ description: 通过此函数示例了解如何使用 OLE DB Driver for SQL Serve
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BLOBs, fetching
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5719b8e487b3ba48a61a006ec998c682178e20d
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b614d8c1f6ea17014ec312d37d46b3633628b16f
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859985"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755917"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

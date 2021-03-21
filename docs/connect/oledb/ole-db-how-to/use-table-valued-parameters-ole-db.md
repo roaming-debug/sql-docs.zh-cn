@@ -4,18 +4,18 @@ description: 在本例中了解如何在 OLE DB Driver for SQL Server 中创建�
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5692de25d703dbc1397315e7ed5d73fca4f522f3
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 694a2925a32972804665284feeef4ac7850b46be
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861577"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748767"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用表值参数 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

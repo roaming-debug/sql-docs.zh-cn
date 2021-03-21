@@ -3,7 +3,7 @@ title: 动态数据掩码 | Microsoft Docs
 description: 了解动态数据掩码，它通过对非特权用户屏蔽敏感数据来限制此类数据的公开。 它可极大地简化 SQL Server 中的安全保护。
 ms.date: 05/02/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse
+ms.prod_service: database-engine, sql-database, synapse-analytics
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61e964106acc57899b334e21592e3c6a3f57192b
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: 03ef32905fd9fcd79c296279095e089691625a86
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103574997"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751257"
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

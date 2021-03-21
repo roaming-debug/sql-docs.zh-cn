@@ -4,7 +4,7 @@ description: 了解对数据源调用存储过程的优点，以及 OLE DB Drive
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 244a5719285589b182b14e5214fd0b27050db2a0
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 50220deb329e29de6cc26524325c5bddd2dc6fa9
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88858838"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755717"
 ---
 # <a name="stored-procedures---running"></a>存储过程 - 运行
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

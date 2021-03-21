@@ -4,7 +4,7 @@ title: sp_set_session_context (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse
+ms.prod_service: database-engine, sql-database, synapse-analytics
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad470228567b26a618800ec004a2a45c5f5440e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ff9f50aa953b0a7388156a9793d3ab1cbe819dc7
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209286"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754627"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-sql) 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

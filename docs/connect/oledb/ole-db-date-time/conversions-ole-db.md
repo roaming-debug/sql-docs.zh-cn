@@ -4,7 +4,7 @@ description: 了解 OLE DB Driver for SQL Server 如何在 datetime 和 datetime
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -14,31 +14,31 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c8f2008feea82e29902ba77791915c849cae7271
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 2e87bcae399abd2b563f9c347f6752f49568a523
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860119"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755337"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本部分介绍了如何在 datetime**** 和 datetimeoffset**** 值之间进行转换。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
+  本部分介绍了如何在 datetime 和 datetimeoffset 值之间进行转换。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
   
  OLE DB 中时间和日期的文字和字符串的格式通常遵循 ISO，并且不依赖于客户端区域性。 但 DBTYPE_DATE 是个例外，它遵循的标准是 OLE 自动化。 不过，由于 OLE DB Driver for SQL Server 只在数据从客户端传输或传输到客户端时在两个类型之间转换，因此应用程序无法强制 OLE DB Driver for SQL Server 在 DBTYPE_DATE 和字符串格式之间转换。 否则，字符串使用以下格式（括号中的文本指示某一可选元素）：  
   
--   datetime**** 和 datetimeoffset**** 字符串的格式为：  
+-   datetime 和 datetimeoffset 字符串的格式为：  
   
      yyyy-mm-dd[ hh:mm:ss[.9999999][ ± hh:mm]]  
   
--   时间字符串的格式为****：  
+-   时间字符串的格式为：  
   
      hh:mm:ss[.9999999]     
   
--   date**** 字符串的格式为：  
+-   date 字符串的格式为：  
   
      yyyy-mm-dd    
   

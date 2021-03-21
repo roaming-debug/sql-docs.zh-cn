@@ -4,7 +4,7 @@ title: 查询处理体系结构指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 05f33d170224ee079b4d23598e88e1802bebfbbb
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 0d755b3e6d6cac04a2d6ba67b012e4b42c1aab3c
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237682"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755517"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -127,9 +127,9 @@ GO
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
-> -  **_[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)_* _，该计划是由查询优化器生成的已编译计划。        
-> -  _*_ [实际执行计划](../relational-databases/performance/display-an-actual-execution-plan.md) _*_ ，该计划与编译的计划及其执行上下文相同。 这包括在执行完成之后可用的运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
-> -  _*_ [实时查询统计信息](../relational-databases/performance/live-query-statistics.md) _*_ ，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
+> -  ***[估计的执行计划](../relational-databases/performance/display-the-estimated-execution-plan.md)***，该计划是已编译的计划，由查询优化器生成。        
+> -  ***[实际执行计划](../relational-databases/performance/display-an-actual-execution-plan.md)***，该计划与编译的计划及其执行上下文相同。 这包括在执行完成之后可用的运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
+> -  ***[实时查询统计信息](../relational-databases/performance/live-query-statistics.md)***，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
 
 ### <a name="processing-a-select-statement"></a>处理 SELECT 语句
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 处理单个 SELECT 语句的基本步骤包括如下内容： 
@@ -145,7 +145,7 @@ GO
 
 #### <a name="foldable-expressions"></a>可折叠表达式
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将常量折叠与下列类型的表达式配合使用：
-- 仅包含常量的算术表达式，如 1+1、5/3_2。
+- 仅包含常量的算术表达式，如 1+1、5/3*2。
 - 仅包含常量的逻辑表达式，如 1=1 和 1>2 AND 3>4。
 - 被 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 认为可折叠的内置函数包括 `CAST` 和 `CONVERT`。 通常，如果内部函数只与输入有关而与其他上下文信息（例如 SET 选项、语言设置、数据库选项和加密密钥）无关，则该内部函数是可折叠的。 不确定性函数是不可折叠的。 确定性内置函数是可折叠的，但也有例外情况。
 - CLR 用户定义类型的确定性方法和确定性的标量值 CLR 用户定义函数（从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始）。 有关详细信息，请参阅 [CLR 用户定义函数和方法的常量折叠](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)。

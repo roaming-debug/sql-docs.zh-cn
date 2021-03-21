@@ -4,7 +4,7 @@ title: SQLSetDescRec |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -14,12 +14,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce62781859e07eda250a6ea5d0c84016a0216163
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f4745fedbcba60d449d22c84e0e2a07b6728eeb2
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438680"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104754877"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "97438680"
   
 |参数|非表值参数类型的相关属性，包括表值参数列|表值参数的相关属性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*类型*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|类型|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*子类型*|忽略|对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录，请将它设置为 SQL_DESC_DATETIME_INTERVAL_CODE。|  
 |*时长*|SQL_DESC_OCTET_LENGTH|表值参数类型名称的长度。 如果类型名称是以 null 结束，则它可为 SQL_NTS；如果不需要表值参数类型名称，则为零。|  
 |*精度*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
@@ -47,7 +47,7 @@ ms.locfileid: "97438680"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec 对日期和时间增强功能的支持  
  日期/时间类型所允许的值如下所示：  
   
-| Attribute | *类型* | *子类型* | *时长* | *精度* | *缩放* |
+| 特性 | 类型 | *子类型* | *时长* | *精度* | *缩放* |
 | --------- | ------ | --------- | -------- | ----------- | ------- |
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

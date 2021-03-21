@@ -4,7 +4,7 @@ title: 行集和参数中的数据类型映射 (Native Client OLE DB 提供程�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -23,12 +23,12 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f99e4c0106817b0defdcc09fc045ce985634571e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: aa356a77c5dffca7565fe563eeea3a4bdc1e5055
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477948"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748477"
 ---
 # <a name="sql-server-native-client-data-type-mapping-in-rowsets-and-parameters"></a>SQL Server Native Client 行集和参数中的数据类型映射
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "97477948"
 ## <a name="ssprop_allownativevariant"></a>SSPROP_ALLOWNATIVEVARIANT  
  SSPROP_ALLOWNATIVEVARIANT 是一个会话属性，并且是 DBPROPSET_SQLSERVERSESSION 属性集的一部分。  
   
-|属性 ID|描述|  
+|属性 ID|说明|  
 |-|-|  
 |SSPROP_ALLOWNATIVEVARIANT|键入：VT_BOOL<br /><br /> R/W：读取/写入<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:确定提取的数据是作为 DBTYPE_VARIANT 还是作为 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：列类型作为 DBTYPE_SQLVARIANT 返回（这种情况下，缓冲区会保留 SSVARIANT 结构）。<br /><br /> VARIANT_FALSE：列类型作为 DBTYPE_VARIANT 返回，且缓冲区会保留 VARIANT 结构。|  
   

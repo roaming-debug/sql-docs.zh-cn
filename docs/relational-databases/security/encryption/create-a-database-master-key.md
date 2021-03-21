@@ -4,7 +4,7 @@ description: 使用 Transact-SQL 在 SQL Server 中创建数据库主密钥。 �
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
@@ -14,12 +14,12 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f97dbd4425b990cd2ec433afa817081683b38f45
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 4b7b6112aa855fdedbd1fd227bdcd2d8f81f09ad
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99251412"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104755227"
 ---
 # <a name="create-a-database-master-key"></a>创建数据库主密钥
 

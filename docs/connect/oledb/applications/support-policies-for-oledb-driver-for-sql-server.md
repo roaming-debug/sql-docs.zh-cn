@@ -3,19 +3,19 @@ title: 适用于 SQL Server 的 OLE DB 驱动程序的支持策略
 description: 了解用于 OLE DB Driver for SQL Server 的支持策略，以及可以与每个驱动程序版本配合使用的操作系统和 SQL 数据库版本。
 ms.date: 09/30/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa01dec4758bb91a4b05d65af372ee66c1c53672
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 97fc26029a7b74cc99b446ab42b96c50e022fed0
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506415"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751227"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的支持策略
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
