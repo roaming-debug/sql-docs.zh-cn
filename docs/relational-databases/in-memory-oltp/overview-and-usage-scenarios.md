@@ -12,12 +12,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: kevin-farlee
 ms.author: kfarlee
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8492183591b2069115e8da8d05d89759f5eee46d
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: d84282b089b8695b0fa325e10e7462ce2e70e93a
+ms.sourcegitcommit: bacd45c349d1b33abef66db47e5aa809218af4ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235257"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104793113"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 
@@ -29,7 +29,7 @@ ms.locfileid: "99235257"
 
 ## <a name="in-memory-oltp-overview"></a>内存中 OLTP 概述
 
-对于合适的工作负荷，In-Memory OLTP 可提供显著的性能增益。 客户 BWIN 充分利用内存中 OLTP，只通过一台运行 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 的计算机，便成功[实现每秒 120 万次的请求](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale)。 另一个客户 Quorum 也充分利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的内存中 OLTP，成功将其工作负荷翻倍，同时其[资源使用率减少 70%](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 虽然在某些情况下，客户可实现高达 30 倍的性能增益，但是增益的多少取决于工作负荷。
+对于合适的工作负荷，In-Memory OLTP 可提供显著的性能增益。 虽然在某些情况下，客户可实现高达 30 倍的性能增益，但是增益的多少取决于工作负荷。
 
 那么是如何实现性能增益的呢？ 本质上，内存中 OLTP 通过提高数据访问和事务执行的效率和移除并发执行事务间的锁闩连接，来提升事务处理的性能：不是因为在内存中速度才快；而是因为内存中的数据得以优化速度才快。 数据存储、访问和处理算法经完全重新设计，以此来充分利用内存中和高并发计算的最新增强功能。
 
