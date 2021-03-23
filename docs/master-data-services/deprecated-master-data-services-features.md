@@ -12,18 +12,18 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d8cded1c88278ca67426eaf40df7bdd87474312c
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3f7e92285692ed4227e0ed15d9d1ad5f3674c7f8
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350185"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833788"
 ---
 # <a name="deprecated-master-data-services-features"></a>弃用的 Master Data Services 功能
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
+  本主题介绍不推荐使用的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能。 按照计划，未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
 ## <a name="explicit-hierarchies-collections-and-related-components"></a>显式层次结构、集合和相关组件  
  已弃用显式层次结构、集合和相关组件。 之前已建模为合并成员类型（显式层次结构父项）和集合成员类型的成员将被建模为派生层次结构中的叶成员。 以下新功能使派生层次结构能够代替显式层次结构。  

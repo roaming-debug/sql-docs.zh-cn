@@ -1,21 +1,23 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 02/18/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 07bd68eaee05893174813ed43dc5358104016e4b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b62528c2ef43f2d5cbf860ad50bb94b2d81dc732
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100072714"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833725"
 ---
 ## <a name="custom-installation-of-r"></a>R 的自定义安装
 
+::: zone pivot="platform-linux-ubuntu"
 > [!NOTE]
 > 如果已在默认位置 /usr/lib/R 安装了 R，则可以跳过此部分，并转到[安装 Rcpp 包](#install-rcpp-package-linux)部分。
+::: zone-end
 
 ### <a name="update-the-environment-variables"></a>更新环境变量
 
@@ -31,7 +33,7 @@ ms.locfileid: "100072714"
 
     ```text
     [Service]
-    Environment="R_HOME=/path/to/installation/of/R"
+    Environment="R_HOME=<path to R>"
     ```
 
 1. 保存并关闭。
@@ -47,7 +49,7 @@ ms.locfileid: "100072714"
 1. 在打开的文件中，添加从自定义 R 安装到 libR.so 的路径。
 
     ```
-    /path/to/installation/of/R/lib
+    <path to the R lib>
     ```
 
 1. 保存新文件并关闭编辑器。
@@ -56,7 +58,7 @@ ms.locfileid: "100072714"
 
     ```bash
     sudo ldconfig
-    ldd /path/to/installation/of/R/lib/libR.so
+    ldd <path to the R lib>/libR.so
     ```
 
 ### <a name="grant-access-to-the-custom-r-installation-folder"></a>授权访问自定义 R 安装文件夹
@@ -64,7 +66,7 @@ ms.locfileid: "100072714"
 将 `/var/opt/mssql/mssql.conf` 文件的扩展性部分中的 `datadirectories` 选项设置为自定义 R 安装。
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/R
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <path to R>
 ```
 
 ### <a name="restart-mssql-launchpadd-service"></a>重启 mssql-launchpadd 服务
@@ -107,7 +109,7 @@ sudo systemctl restart mssql-launchpadd
 
     ```sql
     CREATE EXTERNAL LANGUAGE [myR]
-    FROM (CONTENT = N'/path/to/R-lang-extension-linux-release.zip', FILE_NAME = 'libRExtension.so.1.0');
+    FROM (CONTENT = N'/path/to/R-lang-extension-linux-release.zip', FILE_NAME = 'libRExtension.so.1.1');
     GO
     ```
 

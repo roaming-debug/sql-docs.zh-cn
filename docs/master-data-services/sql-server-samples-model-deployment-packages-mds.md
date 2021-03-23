@@ -14,12 +14,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 70375fd359e56081267f2478a582281d96c253eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3dbb973b72d2df5a3a23ea40684ad7da47c19777
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342373"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833713"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 示例：模型部署包 (MDS)
 
@@ -30,9 +30,9 @@ ms.locfileid: "88342373"
  有关如何部署示例模型包的说明，请参阅 [部署示例模型和数据](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)部署示例模型包。  
   
 > [!IMPORTANT]
->  **中的示例更新 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **中的示例更新 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]**  
 > 
->  示例包已更新为支持以下新功能。  
+>  示例包支持以下功能。  
 > 
 >  -   显示多对多关系。  
 > 

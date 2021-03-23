@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f550a109d5271a216614d0566ed6f3a4d87be056
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ab2eaf50f73ae59bdde5cb40c75050bb0bc8206f
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100336296"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833787"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>显示派生层次结构中的多对多关系 (Master Data Services)
 
@@ -25,25 +25,29 @@ ms.locfileid: "100336296"
   派生层次结构 (DH) 不仅可显示一对多关系，现在还可以显示多对多关系。  
   
 ## <a name="many-to-many-m2m-relationships"></a>多对多 (M2M) 关系  
- 两个实体之间的多对多 (M2M) 关系可通过使用第三实体进行建模，第三实体用于在这两个实体之间提供映射：  
+
+两个实体之间的多对多 (M2M) 关系可通过使用第三实体进行建模，第三实体用于在这两个实体之间提供映射：  
   
- ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
+![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
   
- 在上面的示例中， **Employee** 和 **TrainingClass** 实体之间存在 M2M 关系，由映射实体 **ClassRegistration** 提供。 一个员工可以在多个类中注册为学生，而每个类可以包含多个学生。  
+在上面的示例中， **Employee** 和 **TrainingClass** 实体之间存在 M2M 关系，由映射实体 **ClassRegistration** 提供。 一个员工可以在多个类中注册为学生，而每个类可以包含多个学生。  
   
- 在以前，派生层次结构无法创建 M2M 关系模型。 自 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]开始，现在可以创建如按类显示学生、或反转关系并显示按学生分组的类之类的派生层次结构。  
+您可以创建一个派生层次结构，该层次结构按类显示学生，或对关系进行反向显示，并显示按学生分组的类。  
+
+> [!NOTE]
+> [!INCLUDE [sssql16-md](../includes/sssql16-md.md)] 引入了 M2M 关系的派生层次结构。 此功能在该版本之前不可用。
   
- 首先，转到“派生层次结构”管理页并新建一个派生层次结构：  
+首先，请跳到 "派生层次结构" 管理页并创建新的派生层次结构：  
   
  ![mds_hierarchies_add_derived_hierarchy](../master-data-services/media/mds-hierarchies-add-derived-hierarchy.png "mds_hierarchies_add_derived_hierarchy")  
   
- 接下来，为新的派生层次结构添加级别（自下而上开始添加）。 在此示例中，我们想要显示按类分组的学生（员工）。 因此， **Employee** 实体将作为该层次结构中的叶级别并将作为第一个进行添加：  
+ 接下来，从自下而上开始向新的派生层次结构添加级别。 在此示例中，我们想要显示按类分组的学生（员工）。 因此， **Employee** 实体将作为该层次结构中的叶级别并将作为第一个进行添加：  
   
  ![mds_hierarchies_edit_derived_hierarchy_one](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-one.PNG "mds_hierarchies_edit_derived_hierarchy_one")  
   
- 请注意，在上面的屏幕截图中， **Employee** 实体显示在“当前级别”  下方的中间位置，作为唯一级别。 派生层次结构右侧的“预览”  只是显示了 **Employee** 实体的所有成员列表。 左侧的“可用级别”部分将显示除当前顶部级别 (**Employee**) 外可能会添加的级别。 大多数这些级别都是 **Employee** 实体上基于域的属性 (DBA)，包括 **Department** DBA。  
+ 请注意，在上面的屏幕截图中， **Employee** 实体显示在“当前级别”  下方的中间位置，作为唯一级别。 右侧的派生层次结构 **预览** 只显示 **Employee** 实体的所有成员的列表。 左侧的“可用级别”部分将显示除当前顶部级别 (**Employee**) 外可能会添加的级别。 大多数这些级别都是 **Employee** 实体上基于域的属性 (DBA)，包括 **Department** DBA。  
   
- 从 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如 **Class（通过 ClassRegistration.Student 映射）**。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
+ 从 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]开始，便提供了一种可用于创建 M2M 关系模型的新级别类型，例如 **Class（通过 ClassRegistration.Student 映射）**。 级别名称比其他名称更为详细，用以反映明确描述映射关系所需的额外信息。 将此级别拖放到“当前级别”部分中的 **Employee** 级别  ：  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -55,13 +59,13 @@ ms.locfileid: "100336296"
   
  同样，我们会看到子级在多个父级下的显示方式：定型类 **1 {Master Data Services 101}** 同时显示在 **6 {Hillman, Reinout N}** 和 **40 {Ford, Jeffrey L}** 下方。  
   
- 映射实体 **ClassRegistration** 的成员未在派生层次结构内的任何位置显示。 它们只用于定义层次结构中父级和子级成员之间的关系。  
+ 映射实体 **ClassRegistration** 的成员不会出现在派生层次结构中的任何位置。 它们只用于定义层次结构中父级和子级成员之间的关系。  
   
  可以通过修改映射实体成员来编辑 M2M 关系，具体做法是执行以下任一操作。 M2M 关系在“派生层次结构资源管理器”页为只读。  
   
 -   使用 Excel 中的 Master Data Services 外接程序或通过使用数据暂存修改“实体资源管理器”页上的映射实体成员。  
   
--   拖放“派生层次结构资源管理器” 页中各父级之间的子节点。  
+-   拖放 " **派生层次结构资源管理器** " 页中的父级之间的子节点。  
   
      此方法可修改现有的成员（如可能）并根据需要添加新成员。 将不会删除现有成员。  
   
@@ -69,9 +73,9 @@ ms.locfileid: "100336296"
   
      例如，如果映射实体除了包含用于定义父-子关系的两个属性之外还包含其他属性，则此过程可避免删除成员，以防止意外删除其他用户数据。 用户必须直接在映射实体上显式执行删除操作。  
   
- 新的 M2M 级别可以显示在允许基于域的属性 (DBA) 级别的派生层次结构中的任意位置。 如上述示例中一样，M2M 级别可以显示在顶部。 它还可以显示在 DBA 级别（包括递归级别）的上方和/或下方。 也可以显示在显式层次结构（已弃用）顶端级别下方。 多个 M2M 关系可以在同一个派生层次结构中链接在一起。  
+ 新的 M2M 级别可以出现在派生层次结构中的任何位置，该层次结构) 允许 (DBA 级别的基于域的属性。 如上述示例中一样，M2M 级别可以显示在顶部。 它还可以显示在 DBA 级别（包括递归级别）的上方和/或下方。 也可以显示在显式层次结构（已弃用）顶端级别下方。 多个 M2M 关系可以在同一个派生层次结构中链接在一起。  
   
- 正如其他派生层次结构级别一样，也可以隐藏 M2M 级别。  
+ 可以隐藏 M2M 级别，就像其他派生层次结构级别一样。  
    
 ### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> 示例模型中的 M2M 关系  
 有关 M2M 关系的演示，请查看 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]附带的 Customer 示例模型中的 Region Climate 派生层次结构。   
@@ -87,18 +91,18 @@ ms.locfileid: "100336296"
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
- 这是一种一对多的关系，因为每个员工都只属于一个部门，但每个部门可以有多个员工。 可以创建派生层次结构，用于显示按部门分组的员工：  
+ 这是一种一对多的关系，因为每个员工都只属于一个部门，但每个部门可以有多个员工。 可以创建一个派生层次结构，用于显示按部门分组的员工：  
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="member-security"></a><a name="bkmk_member_security"></a> 成员安全性  
  允许成员重复（允许成员具有多个父级）的层次结构不能用于分配成员安全权限。 例如：  
   
--   不能定位 null 递归（递归级别的每个成员都显示在根及其递归父级下）的递归派生层次结构 (RDH)。  
+-   递归派生层次结构 (RDH) ，该层次结构不定位 null 递归 (递归级别的每个成员都显示在根及其递归父级) 下。  
   
--   级别高于递归级别（递归级别的每个成员显示在其非递归父级及其递归父级下）的递归派生层次结构。  
+-    (递归级别的每个成员都显示在其非递归父级及其递归父级) 下，其级别高于递归级别的递归派生层次结构。  
   
--   具有 M2M 级别（子级可以映射到许多父级）的派生层次结构。  
+-    (子级别的派生层次结构可以映射到多个父) 。  
   
 ## <a name="collections"></a>集合  
  已弃用集合和显式层次结构。 转换存储过程 (udpConvertCollectionAndConsolidatedMembersToLeaf) 可将集合成员转换为叶成员，并创建多对多派生层次结构以捕获集合成员信息。  

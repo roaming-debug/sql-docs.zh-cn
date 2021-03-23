@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d3fa715de1823a67b9a47a89ed59c1dd13573e27
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1ddbda633eb54060ea63b8bdd5f17ca3142c4ec2
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811452"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833818"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概述 (MDS)
 
@@ -31,7 +31,7 @@ ms.locfileid: "85811452"
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 帮助管理组织的主数据集。 可以将数据整理到模型中，创建更新数据的规则，并控制由谁更新数据。 通过使用 Excel 可以和组织中的其他用户共享主数据集。 
   
- >  有关 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 体系结构的说明，请在 simple-talk.com 上参阅文章 [Master Data Services - 基础知识](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 。 有关中的新功能的信息 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ，请参阅[MASTER DATA SERVICES &#40;MDS 中的新增功能&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ >  有关 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 体系结构的说明，请在 simple-talk.com 上参阅文章 [Master Data Services - 基础知识](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 。 有关中的新功能的信息 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] ，请参阅 [MASTER DATA SERVICES &#40;MDS 中的新增功能&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **有关如何安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、设置数据库和网站以及部署示例模型的说明，请参阅** [Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
   
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型是你的主数据结构中的最高级别的容器。 创建一个模型来管理类似数据的组，例如管理联机产品数据。 模型包含一个或多个实体，而实体包含属于数据记录的成员。 实体类似于表。  
@@ -42,17 +42,17 @@ ms.locfileid: "85811452"
   
  模型还包含实体中定义的属性。 属性包含可帮助描述实体成员的值。 存在自由格式的属性和基于域的属性。  基于域的属性包含实体成员填充的值，并且可用作其他实体的属性值。  
   
- 例如，Product 实体可能具有针对 Cost 和 Weight 的自由格式的属性。 并且，对于颜色![编号 1](../master-data-services/media/mds-number1.png "编号 1") ，有一个基于域的属性，其中包含 color 实体成员填充的值。 此颜色主列表将用作 Product 实体![2](../master-data-services/media/mds-number2.png "编号 2")的属性值。  
+ 例如，Product 实体可能具有针对 Cost 和 Weight 的自由格式的属性。 并且，对于颜色 ![编号 1](../master-data-services/media/mds-number1.png "编号 1") ，有一个基于域的属性，其中包含 color 实体成员填充的值。 此颜色主列表将用作 Product 实体 ![2](../master-data-services/media/mds-number2.png "编号 2")的属性值。  
   
  ![用于颜色的基于域的属性](../master-data-services/media/mds-productentity-color-domainattribute.png "用于颜色的基于域的属性")  
   
- 派生的层次结构来自模型中各个实体之间的关系。 这些都是基于域的属性关系。 例如，在产品模型中，可以有一个颜色派生层次结构![编号 1](../master-data-services/media/mds-number1.png "编号 1") ，该层次结构来自第![2](../master-data-services/media/mds-number2.png "编号 2")级和第 3 product 第![3](../master-data-services/media/mds-number3.png "编号 3")层实体之间的关系。  
+ 派生的层次结构来自模型中各个实体之间的关系。 这些都是基于域的属性关系。 例如，在产品模型中，可以有一个颜色派生层次结构 ![编号 1](../master-data-services/media/mds-number1.png "编号 1") ，该层次结构来自第 ![2](../master-data-services/media/mds-number2.png "编号 2") 级和第 3 product 第 ![3](../master-data-services/media/mds-number3.png "编号 3") 层实体之间的关系。  
   
  ![颜色派生层次结构](../master-data-services/media/mds-derivedhierarchy.png "颜色派生层次结构")  
   
  在定义了数据的基本结构后，可以开始使用导入功能来添加数据记录（成员）。 将数据加载到临时表、使用业务规则验证数据并将数据加载到 MDS 表。  业务规则还可用于设置属性值。  
   
- 下表概述了关键 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 任务。 除非另有说明，否则，所有以下过程都要求您是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
+ 下表概述了关键 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 任务。 除非另有说明，否则，所有以下过程都要求您是模型管理员。 有关详细信息，请参阅 [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 > [!NOTE]  
 >  您最好在测试环境中完成以下任务并且使用在按照 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时提供的示例数据。 有关详细信息，请参阅[部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)。  

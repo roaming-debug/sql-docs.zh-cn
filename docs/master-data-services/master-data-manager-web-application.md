@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 99e82901a8d3dac593e60896fc663f03e8ec431a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 88ec07718e0945b3dfad4b8b974bd25965cc317e
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812929"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833933"
 ---
 # <a name="master-data-manager-web-application"></a>主数据管理器 Web 应用程序
 
@@ -25,7 +25,7 @@ ms.locfileid: "85812929"
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序主要由管理员用于执行管理任务。 例如，只有管理员才能创建模型、业务规则或数据版本。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]仅适用于 Internet Explorer （IE）9或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
+> [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
 > 
 > **无法创建 MDS 网站？**
 > >请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。

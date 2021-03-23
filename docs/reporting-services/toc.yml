@@ -439,6 +439,8 @@
       items:
         - name: 设置报表生成器的默认选项
           href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+        - name: 配置报表生成器访问权限
+          href: ../reporting-services/report-server/configure-report-builder-access.md
     - name: 报表设计视图
       href: ../reporting-services/report-builder/report-design-view-report-builder.md
       items:

@@ -1,8 +1,8 @@
 ---
 description: 'sys.query_store_wait_stats (Transact-sql) '
-title: sys.query_store_wait_stats (Transact-sql) |Microsoft Docs
+title: 'sys.query_store_wait_stats (Transact-sql) '
 ms.custom: ''
-ms.date: 11/19/2019
+ms.date: 03/22/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
-ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2517cd093bd840c8cf4cea34073acb8e03a98c8a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f8b5e578c5192114db39d4b3e4c24a75cf9a07a2
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171822"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833881"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-sql) 
 
@@ -55,15 +54,15 @@ ms.locfileid: "99171822"
   
 |整数值|等待类别|等待类型包括在类别中|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
-|**1**|CPU |SOS_SCHEDULER_YIELD|
+|**0**|**Unknown**|未知 |  
+|**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**工作线程**|THREADPOOL|
 |**3**|**Lock**|LCK_M_%|
 |**4**|**闩锁**|LATCH_%|
 |**5**|**缓冲区闩锁**|PAGELATCH_%|
 |**6**|**缓冲区 IO**|PAGEIOLATCH_%|
-|**7**|**编译** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|_ *8**|**SQL CLR**|CLR%，SQLCLR%|
+|**7**|**汇编***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|**8**|**SQL CLR**|CLR%，SQLCLR%|
 |**9**|**镜像**|DBMIRROR%|
 |**10**|**事务**|事务%，DTC%，TRAN_MARKLATCH_%，MSQL_XACT_%，TRANSACTION_MUTEX|
 |**11**|**时间**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
@@ -80,7 +79,7 @@ ms.locfileid: "99171822"
 |22 |**复制**|SE_REPL_%，REPL_%，HADR_% **(但不 HADR_THROTTLE_LOG_RATE_GOVERNOR**) PWAIT_HADR_、REPLICA_WRITES%、FCB_REPLICA_WRITE、FCB_REPLICA_READ、PWAIT_HADRSIM、|
 |23 |**日志速率调控器**|LOG_RATE_GOVERNOR、POOL_LOG_RATE_GOVERNOR、HADR_THROTTLE_LOG_RATE_GOVERNOR INSTANCE_LOG_RATE_GOVERNOR|
 
-当前不支持 **编译** 等待类别。
+\* 查询存储只跟踪查询 *执行* 期间的等待统计信息，而不会在查询 *编译* 期间进行跟踪。 这会限制查询存储跟踪编译等待统计信息的能力。
 
 ## <a name="permissions"></a>权限
 

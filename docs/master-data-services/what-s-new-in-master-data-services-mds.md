@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c5a436e6958d89f26ec0836b82850bd914d6c41
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: e57616613c37c568a72b20369acf3d3fd54521ed
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237143"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833869"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  本主题汇总了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]版本中的更改和更新。 
+  本主题概述了最新版本中的更改和更新 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 
   
  有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中组织数据的概述，请参阅 [Master Data Services 概述](../master-data-services/master-data-services-overview-mds.md)。 
   
@@ -32,7 +32,7 @@ ms.locfileid: "99237143"
   
 -   若要下载 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 。  
   
--   已经拥有 Azure 帐户？  然后转到 **[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
+-   已经拥有 Azure 帐户？  然后转到 **[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** 以启动已安装的虚拟机 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="improved-performance"></a>改进的性能  
   

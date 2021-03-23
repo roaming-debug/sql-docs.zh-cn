@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 630ee8396c3f4f64e7eee5335484299f5bebfd42
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1d12236bbfd3af474e883c23b975d357e0fd27a8
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350698"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833838"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -26,17 +26,17 @@ ms.locfileid: "100350698"
   
 > [!NOTE] 
 > 使用支持 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 的开发者版本时，可以在 Windows 10 系统的计算机安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。 
->>有关支持不同 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 版本的操作系统的详细信息，请参阅[安装 SQL Server 2016 的硬件和软件要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 
+>>有关不同版本的操作系统支持的详细信息，请 [SQL Server 2019：硬件和软件要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)。
 
 有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中组织数据的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。     
   
- 有关 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新增功能的信息，请参阅 [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)。  
+ 有关新功能的信息，请参阅 [Master Data Services &#40;MDS&#41;中的新增 ](../master-data-services/what-s-new-in-master-data-services-mds.md)功能。  
  
 有关可帮助你了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的视频以及其他培训资源的链接，请参阅 [了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
 > **下载**  
-> -   若要下载 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 。  
-> -   已经拥有 Azure 帐户？  然后转到[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)，启动已安装 SQL Server 的虚拟机。  
+> -   若要下载 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] ，请参阅 **[ [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 下载](https://www.microsoft.com/sql-server/sql-server-downloads)**。
+> -   已经拥有 Azure 帐户？  然后转到 **[快速入门：在 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] Azure 门户中的 Windows 虚拟机上创建](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart)** ，以加速已安装 SQL Server 的虚拟机。  
 > 
 > **无法创建 MDS 网站？**
 > >请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。
@@ -47,16 +47,16 @@ ms.locfileid: "100350698"
 - 在使用 Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果不具有所需版本的 Silverlight，则在导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示安装 Silverlight。 可以从[此处](https://www.microsoft.com/silverlight/)安装 Silverlight 5。
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 虚拟机上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-默认情况下，当你使用已安装的创建 Azure 虚拟机时 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 还将安装。 
+默认情况下，当你使用已安装的创建 Azure 虚拟机时 [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] ， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 还将安装。 
 
 下一步是安装 Internet 信息服务 (IIS)。 请参阅[安装和配置 IIS](#InstallIIS) 部分。 
 
-如果对更改 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 的安装感兴趣，可以在默认位置 `<drive>`:\SQLServer_13.0_Full 找到 setup.exe 文件。
+如果对更改 [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] 的安装感兴趣，可以在默认位置 `<drive>`:\SQLServer_13.0_Full 找到 setup.exe 文件。
   
 ## <a name="installing-master-data-services"></a><a name="InstallMDS"></a> 安装 Master Data Services  
  可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序安装向导或命令提示符来安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]。  
   
- **在 Windows Server 2012 R2 计算机上使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序在 Windows Server 计算机上安装**  
   
 1.  双击 Setup.exe，然后按照安装向导中的步骤进行操作。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "100350698"
 
     >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] 添加对 SQL Server 托管实例的支持。 将 **SQL Server 实例** 的值设置为托管实例的主机。 例如，`xxxxxx.xxxxxx.database.windows.net`。
 
-4. 选择 **身份验证类型** ，然后单击 " **测试连接** " 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”  。
+4. 选择 **身份验证类型** ，然后单击 " **测试连接** " 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。
 
     >对于 [!INCLUDE[sqlv15](../includes/sssql19-md.md)] ，若要连接到托管实例，请使用以下身份验证类型之一：
     >
@@ -142,11 +142,11 @@ ms.locfileid: "100350698"
     >在 SQL 托管实例中，用户必须是 `sysadmin` 固定服务器角色的成员。
 
     > [!NOTE]  
-    >  选择“当前用户 - 集成安全性”作为身份验证类型时，“用户名”框为只读，并且显示登录到计算机的 Windows 用户帐户的名称。 如果在 Azure 虚拟计算机 (VM) 上运行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，“用户名”框显示 VM 名称以及该 VM 上本地管理员帐户的用户名。 
+    >  选择“当前用户 - 集成安全性”作为身份验证类型时，“用户名”框为只读，并且显示登录到计算机的 Windows 用户帐户的名称。 如果在 Azure 虚拟计算机 (VM) 上运行 [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，“用户名”框显示 VM 名称以及该 VM 上本地管理员帐户的用户名。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击“下一步”  。
+4.  在“数据库名称”字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”。 单击“下一步”。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -207,7 +207,7 @@ ms.locfileid: "100350698"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 单击“应用”。 显示“配置完成”消息框。 在消息框中单击“确定”，启动 Web 应用程序。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
+15. 单击“应用”  。 显示“配置完成”消息框。 在消息框中单击“确定”，启动 Web 应用程序。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -227,7 +227,7 @@ ms.locfileid: "100350698"
   
  有关运行此工具的先决条件的信息，请参阅 [使用 MDSModelDeploy 部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
- 有关在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中更新数据以支持新功能的信息，请参阅 [SQL Server 示例：模型部署包 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
+ 有关在 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中更新数据以支持新功能的信息，请参阅 [SQL Server 示例：模型部署包 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
  **部署示例模型**  
   
