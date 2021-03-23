@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0df2acfa00507f42d3ee03a0a65ff2ae25aafbd1
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: c6960778fcbd7eb707b50e18ce4a0c70e477ff28
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837181"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575232"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 发行说明
 
@@ -60,7 +60,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | 添加了对 macOS Big Sur、Ubuntu 20.04、Ubuntu 20.10 和 Alpine 3.12 的支持。 | 有些需要 ODBC 驱动程序 17.5 或更高版本。 |
 | 删除了对 macOS High Sierra、Debian 8 和 Ubuntu 19.10 的支持。 | &nbsp; |
 | 支持 GB18030 区域设置。 | &nbsp; |
-| 扩展了 PDO errorinfo，以包括其他 odbc 消息（如果有）。 | &nbsp; |
+| 扩展了 PDO `errorinfo`，现包含其他 ODBC 消息（若有）。 | &nbsp; |
 | 对具有级别信息的数据分类的支持。 | 需要 SQL Server 2019 和 ODBC 驱动程序 17.4.2 或更高版本。 |
 | 添加了 Azure Active Directory 服务主体身份验证支持。 | 需要 ODBC 驱动程序 17.7 或更高版本。 |
 | 改善了将十进制数字作为输入或输出处理时的性能，并消除了数字值的不必要转换。 | &nbsp; |
@@ -247,7 +247,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 - 对 PHP 7.0 的支持  
 - 完整的 64 位支持
-- 支持 Ubuntu 15.04、Ubuntu 16.04 和 RedHat 7
+- 支持 Ubuntu 15.04、Ubuntu 16.04 和 Red Hat 7
 
 ## <a name="32"></a>3.2
 

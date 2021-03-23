@@ -1,8 +1,8 @@
 ---
 title: 迁移指南：从 DB2 迁移到 SQL Server
-description: 按照本指南的说明将 DB2 服务器迁移到 SQL Server。
+description: '本指南介绍如何使用适用于 DB2 的 SQL Server 迁移助手 (SSMA for DB2) 将 DB2 数据库迁移到 Microsoft SQL Server。 '
 ms.custom: ''
-ms.date: 08/17/2020
+ms.date: 03/19/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f07ae68309e78316ad7dc310ea5a0118e734f0c
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 390ef29255ecda2876fe3e4abb35d1c23b1e1cba
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100341639"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575259"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>迁移指南：从 DB2 迁移到 SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -146,9 +146,6 @@ ms.locfileid: "100341639"
 1. 运行验证测试：针对源和目标运行验证测试，然后分析结果。
 1. 运行性能测试：针对源和目标运行性能测试，然后分析和比较结果。
 
-   > [!NOTE]
-   > 为帮助开发和运行迁移后验证测试，请考虑使用合作伙伴 [QuerySurge](https://www.querysurge.com/company/partners/microsoft) 提供的数据质量解决方案。 
-
 ## <a name="migration-assets"></a>迁移资产 
 
 如需更多帮助，请参阅以下资源，这些资源是为支持实际迁移项目而开发的：
@@ -171,5 +168,4 @@ ms.locfileid: "100341639"
 有关其他迁移指南，请参阅[数据库迁移](https://datamigration.microsoft.com/)。 
 
 有关视频内容，请参阅：
-- [如何使用数据库迁移指南](https://azure.microsoft.com/resources/videos/how-to-use-the-azure-database-migration-guide/)
 - [迁移历程概述](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/)

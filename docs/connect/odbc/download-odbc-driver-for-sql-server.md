@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0f215b387cb772220fb56e504e1a5a8c19daa7d
-ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
+ms.openlocfilehash: c74f1d0d42b339a51254e582023d15a69d9891af
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "102770545"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575296"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下载 ODBC Driver for SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Microsoft ODBC Driver for SQL Server 是单个动态链接库 (DLL)，它包含对使用本机代码 API 连接到 SQL Server 的应用程序的运行时支持。 使用 Microsoft ODBC Driver 17 for SQL Server 创建新的应用程序或增强需利用 SQL Server 新增功能的现有应用程序。
 
@@ -38,7 +38,7 @@ Microsoft ODBC Driver for SQL Server 是单个动态链接库 (DLL)，它包含�
 - 发布日期：2021 年 3 月 10 日
 
 > [!Note]
-> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本]()。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
+> 如果你正从一个非英语的语言版本访问此页面并想要查看最新内容，请访问[此网站的英语（美国）版本](https://aka.ms/downloadmsodbcsqlenglish)。 可以通过选择[可用语言](#available-languages)从英语（美国）版本站点下载不同的语言。
 
 ## <a name="available-languages"></a>可用语言
 
@@ -85,11 +85,11 @@ Microsoft ODBC Driver 17.7.2 for SQL Server (x86)：
 - [Debian 8 .deb 包](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 - [Debian 8 .deb 包 (msodbcsql 13.x)](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
-### <a name="redhat"></a>RedHat
+### <a name="red-hat"></a>Red Hat
 
-- [RedHat 8 .rpm 包](https://packages.microsoft.com/rhel/8/prod/)
-- [RedHat 7 .rpm 包](https://packages.microsoft.com/rhel/7/prod/)
-- [RedHat 6 .rpm 包](https://packages.microsoft.com/rhel/6/prod/)
+- [Red Hat 8 .rpm 包](https://packages.microsoft.com/rhel/8/prod/)
+- [Red Hat 7 .rpm 包](https://packages.microsoft.com/rhel/7/prod/)
+- [Red Hat 6 .rpm 包](https://packages.microsoft.com/rhel/6/prod/)
 
 ### <a name="suse"></a>Suse
 

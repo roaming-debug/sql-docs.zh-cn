@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 655e35042c8b9cfd4d99f88fe8caea98ffbc7978
-ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
+ms.openlocfilehash: 3dbd2571eb468f0fcc5806a80b81828d803f2244
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "102770514"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575229"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
@@ -180,7 +180,7 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)
 
 **支持新分发**：在 macOS 上的 ODBC Driver 的第一个版本中支持 OS X 10.11 和 macOS 10.12。 现在还支持 Ubuntu 16.10、Red Hat 6、7 和 SUSE 12。 每个平台都有与平台相关的包（RPM 或 DEB），用于简化安装和配置。 有关详细信息，请参阅 [Linux ](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 和 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 的 ODBC 驱动程序安装说明。
 
-**unixODBC 驱动程序管理器 2.3.1 支持更改**：ODBC 驱动程序不再依赖于 unixODBC 驱动程序管理器的自定义打包（RedHat 6 除外），而是依赖于分发包管理器来解析分发程序库中的 UnixODBC 依赖项。
+**unixODBC 驱动程序管理器 2.3.1 支持变更**：ODBC 驱动程序不再依赖于 unixODBC 驱动程序管理器的自定义包（除非在 Red Hat 6 上），而是依靠分发包管理器来解析发行版的存储库中的 UnixODBC 依赖项。
 
 **BCP API 支持**：Linux 和 macOS ODBC 驱动程序现支持使用 [BCP API 函数（bcp_init  等）](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 

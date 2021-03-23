@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4e2ee02544955cab007d542bca75b8f14cfeeee
-ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
+ms.openlocfilehash: 7aee66b9b00763e441bd445688f6c7195e17a224
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "102770455"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575153"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>安装 Microsoft ODBC Driver for SQL Server (Linux)
 
@@ -82,15 +82,15 @@ curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/source
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql17
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y apt-get install mssql-tools
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo apt-get install unixodbc-dev
+sudo apt-get install -y unixodbc-dev
 # optional: kerberos library for debian-slim distributions
-sudo apt-get install libgssapi-krb5-2
+sudo apt-get install -y libgssapi-krb5-2
 ```
 
 > [!NOTE]
@@ -104,24 +104,24 @@ sudo su
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
-#RedHat Enterprise Server 6
+#Red Hat Enterprise Server 6
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 7 and Oracle Linux 7
+#Red Hat Enterprise Server 7 and Oracle Linux 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 8 and Oracle Linux 8
+#Red Hat Enterprise Server 8 and Oracle Linux 8
 curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql17
+sudo ACCEPT_EULA=Y yum install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y yum install mssql-tools
+sudo ACCEPT_EULA=Y yum install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo yum install unixODBC-devel
+sudo yum install -y unixODBC-devel
 ```
 
 ### <a name="suse-linux-enterprise-server"></a><a id="suse17"></a> SUSE Linux Enterprise Server
@@ -147,13 +147,13 @@ zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit
-sudo ACCEPT_EULA=Y zypper install msodbcsql17
+sudo ACCEPT_EULA=Y zypper install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y zypper install mssql-tools
+sudo ACCEPT_EULA=Y zypper install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo zypper install unixODBC-devel
+sudo zypper install -y unixODBC-devel
 ```
 
 ### <a name="ubuntu"></a><a id="ubuntu17"></a> Ubuntu
@@ -179,16 +179,17 @@ curl https://packages.microsoft.com/config/ubuntu/20.10/prod.list > /etc/apt/sou
 
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql17
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd
-sudo ACCEPT_EULA=Y apt-get install mssql-tools
+sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
-sudo apt-get install unixodbc-dev
+sudo apt-get install -y unixodbc-dev
 ```
 
 > [!NOTE]
+>
 > - Ubuntu 18.04 支持需要 17.2 或更高版本的驱动程序。
 > - Ubuntu 18.10 支持需要 17.3 或更高版本的驱动程序。
 
@@ -224,7 +225,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
+### <a name="red-hat-enterprise-server-6"></a>Red Hat Enterprise Server 6
 
 ```bash
 sudo su
@@ -240,7 +241,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
+### <a name="red-hat-enterprise-server-7"></a>Red Hat Enterprise Server 7
 
 ```bash
 sudo su
@@ -341,7 +342,7 @@ sudo apt-get install unixodbc-dev
 
 以下部分介绍了如何从用于不同 Linux 分发版本的 bash shell 安装 Microsoft ODBC 驱动程序 13。
 
-### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
+### <a name="red-hat-enterprise-server-6"></a>Red Hat Enterprise Server 6
 
 ```bash
 sudo su
@@ -356,7 +357,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
+### <a name="red-hat-enterprise-server-7"></a>Red Hat Enterprise Server 7
 
 ```bash
 sudo su
@@ -417,15 +418,16 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### <a name="offline-installation"></a>脱机安装
 
 如果希望/需要在未连接 Internet 的计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13，则需要手动解析包依赖项。 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 具有以下直接依赖项：
+
 - Ubuntu：libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
 - Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-所有这些包都具有自己的依赖项，这些依赖性可能会显示在系统上，也可能不会显示。 有关此问题的常规解决方案，请参阅发行版对应的包管理器文档：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 和 [SUSE](https://en.opensuse.org/Portal:Zypper)
+所有这些包都具有自己的依赖项，这些依赖性可能会显示在系统上，也可能不会显示。 有关此问题的常规解决方案，请查看发行版对应的包管理器文档：[Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 和 [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 还有一种常见做法是，手动下载所有相关包并将其一起放置在安装计算机上，然后依次手动安装每个包，最后安装 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 包。
 
-#### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
+#### <a name="red-hat-linux-enterprise-server-7"></a>Red Hat Linux Enterprise Server 7
 
 - 从 [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) 下载最新的 `msodbcsql` `.rpm` 。
 - 安装依赖项和驱动程序
@@ -511,7 +513,7 @@ Linux 上的 ODBC 驱动程序由以下组件构成：
 |组件|说明|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X 或 libmsodbcsql-13.X.so.X.X|包含该驱动程序所有功能的共享对象 (`so`) 动态库文件。 此文件安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/lib64/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/lib64/` 中。|  
-|`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/` 中| 
+|`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/` 中|
 |msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：** 无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/include/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/include/` 中。 |
 |LICENSE.txt|包含最终用户许可协议条款的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/share/doc/msodbcsql/` 中。|
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/share/doc/msodbcsql/` 中。|
