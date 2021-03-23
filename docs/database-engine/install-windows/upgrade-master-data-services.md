@@ -11,12 +11,12 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 89905788ffe1b5f62f2c5a49daeee52261e00e73
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 94935c3cbba73a9d628dabefabdd2188a00cbc27
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344938"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610965"
 ---
 # <a name="upgrade-master-data-services"></a>升级 Master Data Services
 
@@ -33,11 +33,10 @@ ms.locfileid: "100344938"
 -   [通过从备份还原数据库升级](../../database-engine/install-windows/upgrade-master-data-services.md#restore)  
   
 > [!IMPORTANT]  
-> -   不支持从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 版升级到 CTP2 版。  
 > -   在执行任何升级之前备份您的数据库。  
 > -   升级过程将重新创建存储过程并对 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]所使用的表进行升级。 您对这些组件中的任何一个所做的任何自定义内容可能会丢失。  
 > -   模型部署包只能在创建它们的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用。 不能将在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中创建的模型部署包部署到 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]中。  
-> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都将不再适用。 可以从[适用于 Microsoft Excel 的 Master Data Services 加载项](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)下载适用于 Excel 的 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Master Data Services 加载项。  
+> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 的最新版本后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都将不再适用。 可以从[适用于 Microsoft Excel 的 Master Data Services 加载项](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)下载适用于 Excel 的 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Master Data Services 加载项。  
   
 ##  <a name="file-location"></a><a name="fileLocation"></a> 文件位置  
   
@@ -96,7 +95,7 @@ ms.locfileid: "100344938"
         -   **“创建新站点”** 。 创建网站时，将自动创建新的 Web 应用程序。  
   
         > [!IMPORTANT]  
-        >  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版 Master Data Services 配置管理器中，可以选择 SQL Server 早期版本（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
+        >  在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版 Master Data Services 配置管理器中，可以选择 SQL Server 早期版本（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
         >   
         >  如果要为 MDS Web 应用程序使用与现有（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]）Web 应用程序相同的名字（别名），则必须首先从 IIS 中删除该 Web 应用程序和关联的应用程序池，然后使用 [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] 版 Master Data Services 配置管理器创建同名的 Web 应用程序。 有关从 IIS 删除 Web 应用程序和应用程序池的信息，请参阅 [删除应用程序 (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771205(v=ws.10)) 和 [删除应用程序池 (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772406(v=ws.10))。  
   

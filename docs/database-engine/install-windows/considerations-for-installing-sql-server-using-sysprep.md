@@ -11,12 +11,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: e5eeb7446542613eac7e1d3a78144f3ca165a47b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ff653258a42883d2942170f9b26d04f288fcb7f3
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100336370"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611109"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安装 SQL Server 的注意事项
 
@@ -61,9 +61,9 @@ ms.locfileid: "100336370"
     - 不能为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本的已准备实例指定产品 ID。  
   
 ## <a name="supported-ssnoversion-installations"></a>支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装  
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 SysPrep 支持所有功能，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的工具。  
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中的 SysPrep 支持所有功能，包括工具。  
   
-您可以为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或早期版本的并行安装准备多个实例。 这些实例的功能必须支持 SysPrep。  
+您可以为 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 或早期版本的并行安装准备多个实例。 这些实例的功能必须支持 SysPrep。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 在“准备映像”步骤结束时自动安装和完成。  
   

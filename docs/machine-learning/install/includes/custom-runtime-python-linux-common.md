@@ -5,12 +5,12 @@ ms.date: 02/08/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1303df98c60212c13a233d1e386c60109308e981
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a79f648631ade25b94c5f0af37bd493127d92eac
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100072857"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879607"
 ---
 ## <a name="custom-installation-of-python"></a>自定义 Python 安装
 
@@ -33,7 +33,7 @@ ms.locfileid: "100072857"
 
     ```
     [Service]
-    Environment="PYTHONHOME=/path/to/installation/of/python3.7"
+    Environment="PYTHONHOME=<path to the python3.7 lib>"
     ```
 
 1. 保存文件并关闭编辑器。
@@ -49,7 +49,7 @@ ms.locfileid: "100072857"
 1. 在打开的文件中，添加从自定义 Python 安装到 libpython3.7m.so.1.0 的路径。
 
     ```
-    /path/to/installation/of/python3.7/lib
+    <path to the python3.7 lib>
     ```
 
 1. 保存新文件并关闭编辑器。
@@ -58,7 +58,7 @@ ms.locfileid: "100072857"
 
     ```bash
     sudo ldconfig
-    ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
+    ldd <path to the python3.7 lib>/libpython3.7m.so.1.0
     ```
 
 ### <a name="grant-access-to-python-folder"></a>授权访问 Python 文件夹
@@ -66,7 +66,7 @@ ms.locfileid: "100072857"
 将 `/var/opt/mssql/mssql.conf` 文件的扩展性部分中的 `datadirectories` 选项设置为自定义 python 安装。
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/python3.7
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <path to python3.7>
 ```
 
 ### <a name="restart-mssql-launchpadd"></a>重启 mssql-launchpadd

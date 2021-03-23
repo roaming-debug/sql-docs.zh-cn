@@ -4,27 +4,31 @@ titleSuffix: ''
 description: 机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 Microsoft Python 和 R 包进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识以及如何开始使用该服务。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/10/2020
+ms.date: 03/17/2021
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 23206301c399449042380976e985ec3981933caa
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15'
+ms.openlocfilehash: 730dfb2421732f2a7e51cd5d99425c84953501d1
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340312"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610488"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>什么是 Python 和 R 的 SQL Server 机器学习服务？
-[!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL](../includes/applies-to-version/sqlserver2017.md)]
 
 机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 [Microsoft Python 包和 R 包](#packages)进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识以及如何开始使用该服务。
 
-有关其他 SQL 平台上的机器学习，请参阅 [SQL 机器学习文档](index.yml)。
-
+::: moniker range="=sql-server-2017"
+> [!NOTE]
+> 机器学习服务也在 [Azure SQL 托管实例](/azure/azure-sql/managed-instance/machine-learning-services-overview)中提供。 有关其他 SQL 平台上的机器学习，请参阅 [SQL 机器学习文档](index.yml)。
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
+> 机器学习服务也在 [Azure SQL 托管实例](/azure/azure-sql/managed-instance/machine-learning-services-overview)中提供。 有关其他 SQL 平台上的机器学习，请参阅 [SQL 机器学习文档](index.yml)。
+>
 > 要在 SQL Server 中执行 Java，请参阅 [Java 语言扩展文档](../language-extensions/java-overview.md)。
 ::: moniker-end
 
@@ -55,13 +59,6 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了 Microsoft �
    + [适用于 SQL 机器学习的 R 教程](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current"
-+ 编写你的第一个 Python 或 R 脚本。
-
-   + [适用于 SQL 机器学习的 Python 教程](tutorials/python-tutorials.md)
-   + [适用于 SQL 机器学习的 R 教程](tutorials/r-tutorials.md)
-::: moniker-end
-
 ::: moniker range="=sql-server-2017"
 1. [在 Windows 上安装 SQL Server 机器学习服务](install/sql-machine-learning-services-windows-install.md)。
 
@@ -79,10 +76,11 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了 Microsoft �
 
 下面列出了机器学习服务中包含的 Python 和 R 版本。
 
-| SQL Server 版本 | Python 版本 | R 版本 |
-|-|-|-|
-| SQL Server 2017 | 3.5.2 | 3.3.3 |
-| SQL Server 2019 | 3.7.3 | 3.5.2 |
+| SQL Server 版本 | 累计更新 | Python 运行时版本 | R 运行时版本 |
+|-|-|-|-|
+| SQL Server 2019 | RTM 及更高版本 | 3.7.1 | 3.5.2 |
+| SQL Server 2017 | CU22 及更高版本 | 3.5.2 和 3.7.2 | 3.3.3 和 3.5.2 |
+| SQL Server 2017 | RTM - CU21 | 3.5.2 | 3.3.3 |
 
 有关 SQL Server 2016 中的 R 版本，请参阅[“什么是 R 服务？”中的“R 版本”部分](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version)
 

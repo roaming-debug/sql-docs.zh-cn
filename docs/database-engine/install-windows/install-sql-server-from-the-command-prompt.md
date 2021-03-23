@@ -85,12 +85,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/07/2020
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: fa6e0857fb374d24dfe5ebe73ea8397c6d2f318b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 559bb922735dd6cd56a417bc09964f47297ab0ca
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348393"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611074"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -380,7 +380,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
   
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 组件|参数|说明|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> **升级**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> **EditionUpgrade** 值用于将现有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到另一版本。 有关支持的版本升级的详细信息，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> **升级**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> **EditionUpgrade** 值用于将现有版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 升级到另一版本。 有关支持的版本升级的详细信息，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 SQL Server。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安装程序控件|/*UpdateEnabled*<br /><br /> **可选**|指定 SQL Server 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，SQL Server 安装程序将包含找到的更新。|  
@@ -868,7 +868,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||SDK 中 IsInRole 中的声明|安装软件开发工具包。|  
 ||LocalDB**|安装 LocalDB，它是面向程序开发人员的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 执行模式。|  
 
-*[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 现在是独立于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序的独立安装程序。 有关详细信息，请参阅[安装 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
+*[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 现在是独立于 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装程序的独立安装程序。 有关详细信息，请参阅[安装 SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 ### <a name="feature-parameter-examples"></a>功能参数示例：
   
@@ -893,7 +893,7 @@ AllFeatures_WithDefaults 角色是各版本 [!INCLUDE[ssExpress](../../includes/
 |AllFeatures_WithDefaults|安装当前版本中提供的所有功能。<br /><br /> 将当前用户添加到 SQL Server **sysadmin** 固定服务器角色。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中，当操作系统不是域控制器时， [!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认为使用 NTAUTHORITY\NETWORK SERVICE 帐户，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 默认为使用 NTAUTHORITY\NETWORK SERVICE 帐户。<br /><br /> 默认情况下在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的版本中启用此角色。 对于所有其他版本，不启用此角色，但可以通过 UI 或使用命令行参数指定此角色。|对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的各版本，只安装相应版本中提供的那些功能。 对于其他版本，安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。<br /><br /> **AllFeatures_WithDefaults** 参数可以与其他替代 **AllFeatures_WithDefaults** 参数设置的参数结合使用。 例如，使用 **AllFeatures_WithDefaults** 参数和 **/Features=RS** 参数会覆盖用于安装所有功能的命令，而只安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，但建议选择 **AllFeatures_WithDefaults** 参数以便将默认服务帐户用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。<br /><br /> 当将 **AllFeatures_WithDefaults** 参数与 **/ADDCURRENTUSERASSQLADMIN=FALSE** 结合使用时，当前用户不会自动填充设置对话框。 添加 **/AGTSVCACCOUNT** 和 **/AGTSVCPASSWORD** ，以便为 SQL Server 代理指定服务帐户和密码。|
 
 ## <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> 使用 /FAILOVERCLUSTERROLLOWNERSHIP 参数控制故障转移行为  
-若要将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则必须从被动节点开始逐个在每个故障转移群集节点上运行安装程序。 安装程序根据故障转移群集实例中的节点总数以及已经升级的节点数来确定何时故障转移到已升级的节点。 如果有一半或更多节点已经升级，则默认情况下，安装程序将导致故障转移到已升级的节点。
+若要升级 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 故障转移群集，则必须从被动节点开始逐个在每个故障转移群集节点上运行安装程序。 安装程序根据故障转移群集实例中的节点总数以及已经升级的节点数来确定何时故障转移到已升级的节点。 如果有一半或更多节点已经升级，则默认情况下，安装程序将导致故障转移到已升级的节点。
 
 若要控制升级过程中群集节点的故障转移行为，请从命令提示符运行升级操作，并使用 /FAILOVERCLUSTERROLLOWNERSHIP 参数控制升级操作使节点脱机之前的故障转移行为。 此参数的用法如下所示：
 

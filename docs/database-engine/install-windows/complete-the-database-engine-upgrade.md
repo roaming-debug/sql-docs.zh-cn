@@ -11,12 +11,12 @@ ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 5e4d727666ad2e3c013aacdabee93517389059bd
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f9c9848bdfdd9aa9cb951b0a7b419353ea32a6f6
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347835"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611098"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成数据库引擎升级
 
@@ -32,7 +32,7 @@ ms.locfileid: "100347835"
   
 - **Integration Services：**  
   
-     将 Integration Services 包迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 格式。 有关详细信息，请参阅 [升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
+     将 Integration Services 包迁移到最新格式。 有关详细信息，请参阅 [升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
 - **Reporting Services：** 对于新安装升级，请还原 Reporting Services 加密密钥。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   

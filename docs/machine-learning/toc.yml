@@ -210,10 +210,6 @@ items:
             href: ../machine-learning/tutorials/demo-data-iris-in-sql.md
           - name: 纽约市出租车数据集
             href: ../machine-learning/tutorials/demo-data-nyctaxi-in-sql.md
-  - name: 示例 >>
-    href: 'https://github.com/Microsoft/sql-server-samples'
-  - name: 解决方案
-    href: ../machine-learning/tutorials/data-science-scenarios-and-solution-templates.md
   - name: 概念
     items:
       - name: 可扩展性框架

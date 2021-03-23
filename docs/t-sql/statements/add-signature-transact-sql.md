@@ -17,13 +17,13 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 06/10/2020
-ms.openlocfilehash: 86513345502531da670b870b5ecf70de9270f18f
-ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
+ms.date: 03/16/2021
+ms.openlocfilehash: c33f34611db384dfcafabefeb2e9c1eee1b135f5
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102474901"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611234"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
@@ -102,7 +102,9 @@ module_class
 -   对 ProcForAlice 进行签名本身并不会起作用，因为在调用 ProcSelectT1 时，此签名将丢失。  
   
 然而，通过使用用于对 ProcForAlice 进行签名的相同证书来对 ProcSelectT1进行副署，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在整个调用链中保留此签名，并允许访问 T1。 如果 Alice 试图直接调用 ProcSelectT1，她将无法访问 T1，因为副署不授予任何权限。 下面的示例 C 显示了此示例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
-  
+
+:::image type="content" source="media/signing-and-countersignature.png" alt-text="签名示例":::
+
 ## <a name="permissions"></a>权限  
 
 需要对对象拥有 ALTER 权限，并且对证书或非对称密钥拥有 CONTROL 权限。 如果关联的私钥受密码保护，则用户还必须具有相应的密码。  

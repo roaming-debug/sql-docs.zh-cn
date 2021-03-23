@@ -6,154 +6,183 @@ metadata:
   title: Azure 数据库迁移指南 | Microsoft Docs
   description: 关于现代化数据资产的分步指导。
   ms.topic: hub-page
-  ms.openlocfilehash: 86398df9a3f1c2deeec590589d31fc183bd2970e
-  ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+  ms.openlocfilehash: c08abfbcb0e43a00319190153d169083b2da9395
+  ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 02/13/2021
-  ms.locfileid: "100336497"
+  ms.lasthandoff: 03/19/2021
+  ms.locfileid: "104610583"
 conceptualContent:
   items:
   - title: SQL Server 到
     links:
-    - text: SQL Server 版本（新版本）
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: architecture
+    - text: SQL Server（升级）
+      url: /sql/database-engine/install-windows/upgrade-sql-server
+      itemType: how-to-guide
     - text: Azure SQL 数据库
-      url: ssms/tutorials/connect-query-sql-server.md
-      itemType: concept
+      url: /azure/azure-sql/migration-guides/database/sql-server-to-sql-database-overview
+      itemType: how-to-guide
     - text: Azure SQL 托管实例
-      url: t-sql/tutorial-writing-transact-sql-statements.md
-      itemType: deploy
+      url: /azure/azure-sql/migration-guides/managed-instance/sql-server-to-managed-instance-overview
+      itemType: how-to-guide
     - text: Azure VM 上的 SQL Server
-      url: linux/quickstart-install-connect-docker.md
-      itemType: download
+      url: /azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide
+      itemType: how-to-guide
+    - text: Azure Synapse Analytics
+      url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
+      itemType: how-to-guide
   - title: Oracle 到
     links:
     - text: SQL Server
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: get-started
+      url: /sql/sql-server/migrate/guides/oracle-to-sql-server
+      itemType: how-to-guide
     - text: Azure SQL 数据库
-      url: ssms/tutorials/connect-query-sql-server.md
+      url: /azure/azure-sql/migration-guides/database/oracle-to-sql-database-guide
       itemType: how-to-guide
     - text: Azure SQL 托管实例
-      url: t-sql/tutorial-writing-transact-sql-statements.md
-      itemType: video
+      url: /azure/azure-sql/migration-guides/managed-instance/oracle-to-managed-instance-guide
+      itemType: how-to-guide
     - text: Azure VM 上的 SQL Server
-      url: linux/quickstart-install-connect-docker.md
-      itemType: whats-new
+      url: /azure/azure-sql/migration-guides/virtual-machines/oracle-to-sql-on-azure-vm-guide
+      itemType: how-to-guide
+    - text: Azure Database for PostgreSQL
+      url: /azure/postgresql/howto-migrate-from-oracle
+      itemType: how-to-guide
+    - text: Azure Synapse Analytics
+      url: /azure/synapse-analytics/migration-guides/migrate-to-synapse-analytics-guide
+      itemType: how-to-guide
   - title: DB2 到
     links:
     - text: SQL Server
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
+      url: /sql/sql-server/migrate/guides/db2-to-sql-server
+      itemType: how-to-guide
     - text: Azure SQL 数据库
-      url: ssms/tutorials/connect-query-sql-server.md
-      itemType: quickstart
+      url: /azure/azure-sql/migration-guides/database/db2-to-sql-database-guide
+      itemType: how-to-guide
     - text: Azure SQL 托管实例
-      url: t-sql/tutorial-writing-transact-sql-statements.md
-      itemType: quickstart
+      url: /azure/azure-sql/migration-guides/managed-instance/db2-to-managed-instance-guide
+      itemType: how-to-guide
     - text: Azure VM 上的 SQL Server
-      url: linux/quickstart-install-connect-docker.md
-      itemType: quickstart
-  - title: MySQL 到
-    links:
-    - text: SQL Server
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
-    - text: Azure SQL 数据库
-      url: ssms/tutorials/connect-query-sql-server.md
-      itemType: quickstart
-    - text: Azure SQL 托管实例
-      url: t-sql/tutorial-writing-transact-sql-statements.md
-      itemType: quickstart
-    - text: Azure VM 上的 SQL Server
-      url: linux/quickstart-install-connect-docker.md
-      itemType: quickstart
-  - title: PostgreSQL 到
-    links:
-    - text: Azure Database for PostgreSQL
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
-  - title: MongoDB 到
-    links:
-    - text: Azure CosmosDB
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
-  - title: Cassandra 到
-    links:
-    - text: Azure CosmosDB
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
-  - title: MariaDB 到
-    links:
-    - text: Azure Database for MariaDB
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
+      url: /azure/azure-sql/migration-guides/virtual-machines/db2-to-sql-on-azure-vm-guide
+      itemType: how-to-guide
   - title: Access 到
     links:
     - text: SQL Server
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
+      url: /sql/sql-server/migrate/guides/access-to-sql-server
+      itemType: how-to-guide
     - text: Azure SQL 数据库
-      url: ssms/tutorials/connect-query-sql-server.md
-      itemType: quickstart
-    - text: Azure SQL 托管实例
-      url: t-sql/tutorial-writing-transact-sql-statements.md
-      itemType: quickstart
-    - text: Azure VM 上的 SQL Server
-      url: linux/quickstart-install-connect-docker.md
-      itemType: quickstart
+      url: /azure/azure-sql/migration-guides/database/access-to-sql-database-guide
+      itemType: how-to-guide
+  - title: MySQL 到
+    links:
+    - text: SQL Server
+      url: /sql/sql-server/migrate/guides/mysql-to-sql-server
+      itemType: how-to-guide
+    - text: Azure SQL 数据库
+      url: /azure/azure-sql/migration-guides/database/mysql-to-sql-database-guide
+      itemType: how-to-guide
+    - text: Azure Database for MySQL
+      url: /azure/mysql/concepts-migrate-import-export
+      itemType: how-to-guide
   - title: SAP ASE 到
     links:
-    - text: SQL Server 版本（新版本）
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
+    - text: SQL Server
+      url: /sql/sql-server/migrate/guides/sap-ase-to-sql-server
+      itemType: how-to-guide
     - text: Azure SQL 数据库
-      url: ssms/tutorials/connect-query-sql-server.md
-      itemType: quickstart
-    - text: Azure SQL 托管实例
-      url: t-sql/tutorial-writing-transact-sql-statements.md
-      itemType: quickstart
-    - text: Azure VM 上的 SQL Server
-      url: linux/quickstart-install-connect-docker.md
-      itemType: quickstart
-  - title: Microsoft Azure 表存储到
+      url: /azure/azure-sql/migration-guides/database/sap-ase-to-sql-database
+      itemType: how-to-guide
+  - title: 开源
     links:
-    - text: Azure CosmosDB
-      url: azure-data-studio/quickstart-sql-server.md
-      itemType: quickstart
+    - text: MariaDB 到 Azure Database for MariaDB
+      url: /azure/mariadb/howto-migrate-dump-restore
+      itemType: how-to-guide
+    - text: MySQL 到 Azure Database for MySQL
+      url: /azure/mysql/concepts-migrate-import-export
+      itemType: how-to-guide
+    - text: PostgreSQL 到 Azure Database for PostgreSQL
+      url: /azure/postgresql/howto-migrate-using-dump-and-restore
+      itemType: how-to-guide
+  - title: NoSQL
+    links:
+    - text: MongoDB 到 Azure Cosmos DB
+      url: /azure/dms/tutorial-mongodb-cosmos-db?toc=/azure/cosmos-db/toc.json&bc=/azure/cosmos-db/breadcrumb/toc.json
+      itemType: how-to-guide
+    - text: Cassandra 到 Azure Cosmos DB
+      url: /azure/cosmos-db/cassandra-import-data
+      itemType: how-to-guide
+    - text: Microsoft Azure 表存储到 Azure Cosmos DB
+      url: /azure/cosmos-db/table-import
+      itemType: how-to-guide
+  - title: 资源
+    links:
+    - text: 迁移合作伙伴资源
+      url: https://www.microsoft.com/azure/partners/advspec?filters=windows-server-and-sql-server-migration-to-azure
+      itemType: reference
+    - text: 云经济
+      url: https://azure.microsoft.com/en-gb/overview/cloud-economics
+      itemType: reference
+    - text: 总拥有成本计算器
+      url: https://azure.microsoft.com/pricing/tco/calculator/
+      itemType: reference
+    - text: Azure 混合权益
+      url: https://azure.microsoft.com/pricing/hybrid-benefit/
+      itemType: reference
+    - text: 浏览 Azure 体系结构
+      url: https://docs.microsoft.com/azure/architecture/browse/?azure_categories=migration
+      itemType: reference
+    - text: 适用于 Azure 的 Microsoft 云采用框架
+      url: https://azure.microsoft.com/cloud-adoption-framework/#cloud-adoption-journey
+      itemType: reference
+    - text: 浏览客户案例
+      url: https://customers.microsoft.com/en-us/search?sq=&ff=&p=0&so=story_publish_date%20desc
+      itemType: reference
 tools:
-  title: 语言和工具
+  title: 迁移工具
   items:
   - title: Azure Migrate
-    imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
-    url: /azure/developer/python/
-  - title: Azure 数据库迁移服务
-    imageSrc: ./media/index/net-logo.svg
-    url: /dotnet/azure/
+    imageSrc: media/index/azure-migrate-symbol.svg
+    url: /azure/migrate/
+  - title: Azure 数据库迁移服务 (DMS)
+    imageSrc: media/index/migration-service-symbol.svg
+    url: /azure/dms/
   - title: 数据迁移助手 (DMA)
-    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
-    url: /azure/developer/javascript/
-  - title: SQL Server Migration Assistant
-    imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
-    url: /azure/developer/java/
+    imageSrc: media/index/database-migration-assistant-symbol.svg
+    url: /sql/dma/dma-overview
+  - title: SQL Server 迁移助手 (SSMA)
+    imageSrc: media/index/sql-server-migration-assistant-symbol.svg
+    url: /sql/ssma/sql-server-migration-assistant
+  - title: Azure Synapse Pathway
+    imageSrc: media/index/azure-synapse-pathway-symbol.svg
+    url: /sql/tools/synapse-pathway/azure-synapse-pathway-overview
 additionalContent:
   sections:
-  - title: 案例研究
+  - title: 最近的客户案例研究
     items:
-    - title: Capita
-      summary: 适用于美国政府机构及其合作伙伴的专用云。
-      url: azure-government/index.yml
-    - title: Willis Towers Watson
-      summary: 符合德语数据处理法规的专用云。
-      url: germany/index.yml
-    - title: Innovative Systems
-      summary: 位于中国并由世纪互联运营的专用云。
-      url: /azure/china/
-    - title: Geekwire
-      summary: 位于中国并由世纪互联运营的专用云。
-      url: /azure/china/
-    - title: Vipps
-      summary: 位于中国并由世纪互联运营的专用云。
-      url: /azure/china/
+    - title: Ferguson（美国）
+      summary: 最大的美国管道批发商使用 Azure Arc SQL 托管实例扩展本地 Azure 服务。
+      url: https://customers.microsoft.com/story/844232-ferguson-enterprises-retailers-azure-arc
+    - title: Clearsale（巴西）
+      summary: ClearSale 使用 Azure SQL 数据库超大规模服务层迁移到 Azure，从而为增长和创新奠定基础。
+      url: https://customers.microsoft.com/story/773410-clearsale-partner-professional-services-azure
+    - title: Willis Towers Watson（英国）
+      summary: Willis Towers Watson 通过迁移到 Azure SQL 数据库，实现了云中的无缝可伸缩性。
+      url: https://customers.microsoft.com/story/willis-towers-watson-partner-professional-services-azure
+    - title: Paychex（美国）
+      summary: Paychex 依赖于 Azure SQL 数据库弹性池处理爆炸性增长。
+      url: https://customers.microsoft.com/story/paychex-azure-sql-database-us
+    - title: Innovative Systems（美国）
+      summary: Innovative Systems 通过使用 Azure 数据库迁移服务进行迁移来结合云中分布广泛的数据库。
+      url: https://customers.microsoft.com/story/innovative-systems-partner-professional-services-azure-sql-database
+    - title: Capita Group（英国）
+      summary: Capita Reading Cloud 迁移 10,000 个数据库，并通过 Azure 查找新的可伸缩性。
+      url: https://customers.microsoft.com/story/724217-capita-uk-professional-services-azure-sql-database
+    - title: Intershop（美国）
+      summary: Intershop 是一位电子商务领导者，从 Oracle 迁移到 SQL Server 和 Azure SQL 数据库，提高产品性能并打开市场。
+      url: https://customers.microsoft.com/story/intershop-partner-professional-services-azure-sql-database
+    - title: Minecraft Realms（美国）
+      summary: Minecraft Realms 从 AWS 迁移到 Azure，将对用户群的干扰降到最小。
+      url: https://developer.microsoft.com/games/blog/migrating-minecraft-realms-from-aws-to-azure/
+    - title: CCC Marketing（日本）
+      summary: CCC Marketing 将其数据分析基础结构从 Oracle 切换到 Microsoft Azure。
+      url: https://customers.microsoft.com/story/843276-ccc-marketing-professional-services-azure-en-japan

@@ -19,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ccca2b8dc74759e1b4a1dc4d2e9485bf2fbcca7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7fcefb597fe97e90bfda78fe934c83646414c23f
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480188"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611177"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
 
@@ -160,7 +160,7 @@ GO
   
 -   **广度优先**  
   
-     广度优先将层次结构中每个级别的各行存储在一起。 例如，同一经理直属的各雇员的记录存储在相邻位置。  
+     广度优先索引将层次结构中每个级别的各行存储在一起。 例如，同一经理直属的各雇员的记录存储在相邻位置。  
   
      在广度优先索引中，一个节点的所有直属子级存储在一起。 因此，广度优先索引在响应有关直属子级的查询方面效率很高，“查找此经理直属的所有雇员”就属于这类查询。  
   

@@ -2,7 +2,7 @@
 title: SQL Server Service Broker | Microsoft Docs
 description: 了解 Service Broker。 了解它如何为 SQL Server 数据库引擎和 Azure SQL 托管实例中的消息提供本机支持。
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/17/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: cf37305f773f4b417ed3cac1bc5a31ad8d910505
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 287e3c0abfc083607b96598da5e83cd5ab0b58dd
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465698"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611167"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -101,15 +101,25 @@ FROM ExpenseQueue;
  有关 [概念以及开发和管理任务，请参阅](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) 以前发布的文档 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 由于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 中的更改数量少，因此未在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]文档中重新生成该文档。  
   
 ## <a name="whats-new-in-service-broker"></a>Service Broker 新增功能  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]未引入任何重大更改。  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入了以下更改。  
 
 ### <a name="service-broker-and-azure-sql-managed-instance"></a>Service Broker 和 Azure SQL 托管实例
 
-- 不支持跨实例 Service Broker 
- - `sys.routes` -先决条件：通过 sys.routes 选择地址。 在每个路由上，地址必须是本地的。 请参阅 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)。
- - `CREATE ROUTE` - 不能使用除 `LOCAL` 以外的 `ADDRESS` 执行 `CREATE ROUTE`。 请参阅 [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md)。
- - `ALTER ROUTE` 不能结合使用 `ALTER ROUTE` 和 `ADDRESS`（`LOCAL` 除外）。 请参阅 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)。  
-  
+仅在 Azure SQL 托管实例之间支持跨实例 Service Broker 消息交换：
+
+- `CREATE ROUTE`：不能结合使用 CREATE ROUTE 和 ADDRESS（另一个 SQL 托管实例的 LOCAL 或 DNS 名称除外）。 指定的端口必须是 4022。 请参阅 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)。
+- `ALTER ROUTE`：不能结合使用 ALTER ROUTE 和 ADDRESS（另一个 SQL 托管实例的 LOCAL 或 DNS 名称除外）。 指定的端口必须是 4022。 请参阅 [ALTER ROUTE](https://docs.microsoft.com/sql/t-sql/statements/alter-route-transact-sql)。
+
+支持传输安全性，不支持对话安全性：
+
+- 不支持 `CREATE REMOTE SERVICE BINDING`。
+
+Service Broker 默认处于启用状态，并且无法禁用。 不支持以下 ALTER DATABASE 选项：
+
+- `ENABLE_BROKER`
+- `DISABLE_BROKER`
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中未引入任何重大更改。  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入了以下更改。 
+
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>可以将消息发送到多个目标服务（多播）  
  通过支持多个会话句柄，扩展了 [SEND (Transact-SQL)](../../t-sql/statements/send-transact-sql.md) 语句的语法以启用多播。  
   

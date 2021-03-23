@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d78e229bcbf2a088d42431abdf02bec3f9e51eab
-ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
+ms.openlocfilehash: 918dd8e746984d9bdc6a619cc2692bdfbab158a0
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231495"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104610788"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>在 OpenShift 本地和 Azure Red Hat OpenShift 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -70,10 +70,11 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
    oc new-project <namespaceName>
    ```
 
-4. 将自定义 SCC 分配给部署 BDC 的命名空间中用户的服务帐户：
+4. 将自定义 SCC 与部署 BDC 的命名空间中的服务帐户绑定在一起：
 
    ```console
-   oc create rolebinding bdc-rbac --clusterrole=system:scc:bdc-scc --group=system:serviceaccounts:<namespace>
+   oc create clusterrole bdc-role --verb=use --resource=scc --resource-name=bdc-scc -n <namespaceName>
+   oc create rolebinding bdc-rbac --clusterrole=bdc-role --group=system:serviceaccounts:mssql-bdc
    ```
 
 5. 向部署 BDC 的用户分配适当的权限。 执行下列操作之一： 
@@ -83,7 +84,7 @@ SQL Server 2019 CU5 引入了对 OpenShift 上 SQL Server 大数据群集的支�
    - 如果部署 BDC 的用户是命名空间管理员，请为创建的命名空间分配用户群集管理员本地角色。 这是用户部署和管理大数据群集以获得命名空间级别管理员权限的首选选项。
 
    ```console
-   oc adm policy add-role-to-user cluster-admin <deployingUser> -n <namespaceName>
+   oc create rolebinding bdc-user-rbac --clusterrole=cluster-admin --user=<userName> -n <namespaceName>
    ```
 
    然后，部署大数据群集的用户必须登录到 OpenShift 控制台：

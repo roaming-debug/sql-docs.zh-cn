@@ -13,17 +13,17 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 5019205027168dc2ebd1e429087924c59f7a17d0
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 417ff500b69535dbddcefae40c2895aea88a473c
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353829"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611217"
 ---
 # <a name="upgrade-sql-server"></a>升级 SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
- 可以将 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ss2016](../../includes/sssql16-md.md)] 或 [!INCLUDE[ss2017](../../includes/sssql17-md.md)] 的实例直接升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，需要执行并行升级或迁移，以移动到 SQL Server 2019，因为受支持的主流操作系统之间没有共同的重叠部分。 在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序以升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，请先查看以下有关升级过程和发行说明的文章。  
+ 可以将 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ss2016](../../includes/sssql16-md.md)] 或 [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 的实例直接升级到 [!INCLUDE[sssql19](../../includes/sssql19-md.md)]。 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，需要执行并行升级或迁移，以移动到 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]，因为受支持的主流操作系统之间没有共同的重叠部分。 在运行安装程序进行升级之前，请先查看以下有关升级过程和发行说明的文章。  
   
    - 有关从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级的详细信息，请参阅 [是否正在从 SQL Server 2005 进行升级？](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)。  
    - [SQL Server 2016 发行说明](../../sql-server/sql-server-2016-release-notes.md) 
