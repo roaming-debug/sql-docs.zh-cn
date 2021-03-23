@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2365440fd87789a30e67c8c5effcbf0e85b8bc24
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 1f02a50bf9fa7082c05a9e0c4149d0a699d133b6
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638990"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890704"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  必须重新生成系统数据库才能修复 [master](../../relational-databases/databases/master-database.md)、 [mode](../../relational-databases/databases/model-database.md)l、 [msdb](../../relational-databases/databases/msdb-database.md)或 [resource](../../relational-databases/databases/resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重新生成系统数据库的分步说明。  
+  必须重新生成系统数据库才能修复 [master](../../relational-databases/databases/master-database.md)、 [mode](../../relational-databases/databases/model-database.md)l、 [msdb](../../relational-databases/databases/msdb-database.md)或 [resource](../../relational-databases/databases/resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中重新生成系统数据库的分步说明。  
   
  **本主题内容**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "92638990"
   
 #### <a name="to-rebuild-system-databases-for-an-instance-of-sql-server"></a>重新生成 SQL Server 实例的系统数据库：  
   
-1.  将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装介质插入到磁盘驱动器中，或者在本地服务器上，从命令提示符处将目录更改为 setup.exe 文件的位置。 在服务器上的默认位置为 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\SQLServer2016。  
+1.  将 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装介质插入到磁盘驱动器中，或者在本地服务器上，从命令提示符处将目录更改为 setup.exe 文件的位置。 在服务器上的默认位置为 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\SQLServer2016。  
   
 2.  在命令提示符窗口中，输入以下命令。 方括号用来指示可选参数。 不要输入括号。 在使用 Windows 操作系统且启用了用户帐户控制 (UAC) 时，运行安装程序需要提升特权。 必须以管理员身份运行命令提示符。  
   
@@ -107,10 +107,10 @@ ms.locfileid: "92638990"
     |--------------------|-----------------|  
     |/QUIET 或 /Q|指定在没有任何用户界面的情况下运行安装程序。|  
     |/ACTION=REBUILDDATABASE|指定安装程序将重新创建系统数据库。|  
-    |/INSTANCENAME= *InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
-    |/SQLSYSADMINACCOUNTS= *accounts*|指定要添加到 **sysadmin** 固定服务器角色中的 Windows 组或单个帐户。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser** 。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入 **NT AUTHORITY\SYSTEM** 。|  
-    |[ /SAPWD= *StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明 \*\*** **sa** 帐户是广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 因此，为 **sa** 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
-    |[ /SQLCOLLATION= *CollationName* ]|指定新的服务器级排序规则。 此参数是可选的。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要事项 \*\*** 更改服务器级排序规则不会更改现有用户数据库的排序。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
+    |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|指定要添加到 **sysadmin** 固定服务器角色中的 Windows 组或单个帐户。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser**。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入 **NT AUTHORITY\SYSTEM**。|  
+    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SA 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明 \*\*** **sa** 帐户是广为人知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并且经常成为恶意用户的攻击目标。 因此，为 **sa** 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
+    |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数是可选的。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要事项 \*\*** 更改服务器级排序规则不会更改现有用户数据库的排序。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 数据文件的数目。 此值可以增加至 8 或内核数，以较大者为准。<br /><br /> 默认值：8 或内核数量，以较低者为准。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每个 tempdb 数据文件的初始大小 (MB)。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每个 tempdb 数据文件的文件增长增量 (MB)。 值为 0 时表明自动增长被设置为关闭，不允许增加空间。 安装程序允许的大小最大为 1024 MB。<br /><br /> 默认值：64|  
@@ -147,7 +147,7 @@ ms.locfileid: "92638990"
   
 #### <a name="to-rebuild-the-resource-system-database"></a>重新生成 resource 系统数据库：  
   
-1.  从分发介质中启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序 (setup.exe)。  
+1.  从分发介质中启动 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安装程序 (setup.exe)。  
   
 2.  在左侧导航区域中单击 **“维护”** ，然后单击 **“修复”** 。  
   

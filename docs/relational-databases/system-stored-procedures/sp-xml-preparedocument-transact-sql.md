@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8fc47f280e0c6f32e41cd7a0f7db34ff22ac98f1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 29377edf5fa911c47b4e3a34fa1be58046c3e915
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99201785"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890768"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "99201785"
  **sp_xml_preparedocument** 返回一个句柄，该句柄可用于访问新创建的 xml 文档的内部表示形式。 此句柄在会话的持续时间内有效，或在通过执行 **sp_xml_removedocument** 来使句柄失效之前。  
   
 > [!NOTE]  
->  分析后的文档存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部缓存中。 MSXML 分析器占用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用总内存的八分之一。 若要避免内存不足，请运行 **sp_xml_removedocument** 以释放内存。  
+>  分析后的文档存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部缓存中。 MSXML 分析器可使用可用的总内存的八分之一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 若要避免内存不足，请在不再需要文档时立即运行 **sp_xml_removedocument** 以释放内存。 在许多情况下，节点 () 方法可能是更好的替代方法，有助于避免过多的内存使用。
   
 > [!NOTE]  
->  为实现向后兼容性， **sp_xml_preparedocument** 会将 CR (char (13) # A3 和 LF (char (个字符，即使实体化这些字符也是如此。  
+>  为实现向后兼容性， **sp_xml_preparedocument** 会将 CR (char (13) ) 和 LF (char (个字符，即使这些字符实体化也是如此。  
   
 > [!NOTE]  
 >  **Sp_xml_preparedocument** 调用的 XML 分析器可以分析内部 dtd 和实体声明。 由于恶意构造的 Dtd 和实体声明可用于执行拒绝服务攻击，因此强烈建议用户不要直接将来自不受信任的源的 XML 文档传递到 **sp_xml_preparedocument**。  
@@ -158,6 +158,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[ (Transact-sql) 系统存储过程 ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML (Transact-sql) ](../../t-sql/functions/openxml-transact-sql.md)
  <br>[sys.dm_exec_xml_handles (Transact-sql) ](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
- <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-sql) ](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[nodes() 方法（xml 数据类型）](../../t-sql/xml/nodes-method-xml-data-type.md)
   
   
