@@ -34,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8502271ba3b04e66fd6fcc0b2723e0c8e4533f96
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88412843"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890655"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -194,7 +194,7 @@ ms.locfileid: "88412843"
   
  此外，如果原始服务器实例和目标服务器示例具有不同版本的 [断字符和词干分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 组件或 [全文搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md) 组件，则全文索引和查询的行为可能有所不同。 此外， [同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 存储在特定于实例的文件中。 您必须将这些文件的副本传输到目标服务器实例上的相同位置，或者在新的实例上重新创建这些文件。  
   
-> **注意：** 当将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的情况相同。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
+> **注意：** 当将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 服务器实例上时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的情况相同。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
   
  有关详细信息，请参阅：  
   

@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6be7ab989d06f807f33342bbe7e9978a23f809ad
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115723"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890646"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>通过备份和还原来复制数据库
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过还原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本创建的用户数据库备份来创建新数据库。 但是， **无法还原使用**早期版本创建的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]备份。 此外，任何早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都无法还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份。  
+  在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中，可以通过还原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本创建的用户数据库备份来创建新数据库。 但是， **无法还原使用** 早期版本创建的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]备份。 此外，任何早期版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 都无法还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份。  
   
 > [!IMPORTANT]
 > SQL Server 2016 使用与早期版本不同的默认路径。 因此，若要还原在早期版本的默认位置中创建的数据库备份，必须使用 MOVE 选项。 有关新的默认路径的信息，请参阅 [SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。 有关移动数据库文件的详细信息，请参阅本主题中后面的“移动数据库文件”。  

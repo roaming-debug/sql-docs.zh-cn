@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3a8068945e91b56537a16ddf87cebfc9aa27fb3c
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756187"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890639"
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85756187"
  通过从列表中进行选择来指定数据库的所有者。  
   
  **使用全文索引**  
- 由于全文检索在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中始终处于启用状态，因此该复选框处于选中状态并被禁用。 有关详细信息，请参阅 [全文搜索](../../relational-databases/search/full-text-search.md)。  
+ 由于全文检索在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]中始终处于启用状态，因此该复选框处于选中状态并被禁用。 有关详细信息，请参阅 [全文搜索](../../relational-databases/search/full-text-search.md)。  
   
  **数据库文件**  
  添加、查看、修改或移除相关联数据库的数据库文件。 数据库文件具有以下属性：  

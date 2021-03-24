@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cf2c73cc1d9c3bed3b54ff0c1a71acf22462889a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: ffa25f98d738b2cac2ec4d796bb946e9bac9e03b
+ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192387"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104890708"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>数据库分离和附加 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "92192387"
 3.  再次分离数据库。  
   
 ##  <a name="attaching-a-database"></a><a name="AttachDb"></a> 附加数据库  
-您可以附加复制的或分离的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 当将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的情况相同。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
+您可以附加复制的或分离的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 当将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 服务器实例上时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的情况相同。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
   
 附加数据库时，所有数据文件（MDF 文件和 NDF 文件）都必须可用。 如果任何数据文件的路径不同于首次创建数据库或上次附加数据库时的路径，则必须指定文件的当前路径。  
   
