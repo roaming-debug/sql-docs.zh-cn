@@ -24,12 +24,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 287e3c0abfc083607b96598da5e83cd5ab0b58dd
-ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
+ms.openlocfilehash: 0eab287319fdfa263cbf5cba44546ab3b792bdad
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/19/2021
-ms.locfileid: "104611167"
+ms.locfileid: "104673783"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ FROM ExpenseQueue;
   处理队列中的所有消息之后，应使用 [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact-SQL 语句关闭对话。
 
 ## <a name="where-is-the-documentation-for-service-broker"></a>Service Broker 文档在哪里？  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的参考文档位于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 文档中。 本参考文档包含以下各节：  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的参考文档位于 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 文档中。 本参考文档包含以下各节：  
   
 -   适用于 CREATE, ALTER 和 DROP 语句的[数据定义语言 (DDL) 语句 (Transact-SQL)](../../t-sql/statements/statements.md)  
   
@@ -98,7 +98,7 @@ FROM ExpenseQueue;
   
 -   [ssbdiagnose 实用工具 (Service Broker)](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- 有关 [概念以及开发和管理任务，请参阅](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) 以前发布的文档 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 由于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 中的更改数量少，因此未在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]文档中重新生成该文档。  
+ 有关 [概念以及开发和管理任务，请参阅](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) 以前发布的文档 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 由于最近 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 中的更改数量少，因此未在 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 文档中重新生成该文档。  
   
 ## <a name="whats-new-in-service-broker"></a>Service Broker 新增功能  
 
