@@ -1,23 +1,24 @@
 ---
-title: 将 Oracle 迁移到 SQL Server
+title: 从 Oracle 迁移到 SQL Server：迁移指南
 description: '本指南介绍如何使用适用于 Oracle 的 SQL Server 迁移助手 (SSMA for Oracle) 将 Oracle 架构迁移到 Microsoft SQL Server。 '
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
 ms.custom: ''
 ms.devlang: ''
-ms.topic: conceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: 7ab329891001a8ce71d77a97ced85f2ef63ad002
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: 675086012398d03e3ed93fbe179de62e0a955cb6
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103603308"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673468"
 ---
-# <a name="migration-guide-migrate-oracle-to-sql-server"></a>迁移指南：将 Oracle 迁移到 SQL Server
+# <a name="migration-guide-oracle-to-sql-server"></a>迁移指南：从 Oracle 迁移到 SQL Server
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 本指南介绍如何使用适用于 Oracle 的 SQL Server 迁移助手将 Oracle 数据库迁移到 SQL Server。 
 
@@ -51,15 +52,45 @@ ms.locfileid: "103603308"
 
 1. 打开 [MAP 工具包](https://go.microsoft.com/fwlink/?LinkID=316883)。
 1. 选择“创建/选择数据库”。
+
+   ![选择数据库](./media/oracle-to-sql-server/select-database.png)
+
 1. 选择“创建清单数据库”，输入要创建的新的清单数据库的名称，提供简短说明，然后选择“确定” 。 
+
+   :::image type="content" source="media/oracle-to-sql-server/create-inventory-database.png" alt-text="创建库存数据库":::
+
 1. 选择“收集清单数据”，打开清单和评估向导 。 
+
+   :::image type="content" source="media/oracle-to-sql-server/collect-inventory-data.png" alt-text="收集库存数据":::
+
 1. 在“清单和评估向导”中，选择“Oracle”，然后选择“下一步”  。 
+
+   ![选择 Oracle](./media/oracle-to-sql-server/choose-oracle.png)
+
 1. 选择最适合你的业务需求和环境的计算机搜索选项，然后选择“下一步”： 
+
+   ![选择最适合业务需求的计算机搜索选项](./media/oracle-to-sql-server/choose-search-option.png)
+
 1. 为要浏览的系统输入凭据或创建新凭据，然后选择“下一步”。
+
+    ![输入凭据](./media/oracle-to-sql-server/choose-credentials.png)
+
 1. 设置凭据的顺序，然后选择“下一步”。 
+
+   ![设置凭据顺序](./media/oracle-to-sql-server/set-credential-order.png)  
+
 1. 为要发现的每台计算机指定凭据。 可对每台计算机/机器使用唯一凭据，也可选择使用“所有计算机凭据”列表。  
+
+   ![为要发现的每台计算机指定凭据](./media/oracle-to-sql-server/specify-credentials-for-each-computer.png)
+
 1. 验证你的选择内容摘要，然后选择“完成”。
+
+   ![查看摘要](./media/oracle-to-sql-server/review-summary.png)
+
 1. 扫描完成后，查看“数据收集”摘要报表。 扫描需要几分钟时间，具体取决于数据库的数量。 完成后，选择“关闭”。 
+
+   ![收集摘要报表](./media/oracle-to-sql-server/collection-summary-report.png)
+
 1. 选择“选项”，生成有关 Oracle 评估和数据库详细信息的报表。 （逐一）选择两个选项来生成报表。
 
 
@@ -74,8 +105,20 @@ ms.locfileid: "103603308"
 1. 打开[适用于 Oracle 的 SQL Server 迁移助手 (SSMA)](https://www.microsoft.com/download/details.aspx?id=54258)。 
 1. 选择“文件”，然后选择“新建项目”。 
 1. 提供项目名称和项目的保存位置，然后从下拉列表中选择 SQL Server 迁移目标。 选择“确定”。 
+
+   ![新建项目](./media/oracle-to-sql-server/new-project.png)
+
 1. 在“连接到 Oracle”对话框上，为 Oracle 连接详细信息输入相应的值。
-1. 在 Oracle 元数据资源管理器，选择 Oracle 架构，然后选择“创建报表”，生成包含转换统计信息和错误/警告（若有）的 HTML 报表 。
+
+   ![连接到 Oracle](./media/oracle-to-sql-server/connect-to-oracle.png)
+
+   选择要迁移的 Oracle 架构：
+
+   ![选择要加载的架构](./media/oracle-to-sql-server/select-schema.png)
+
+1. 在 Oracle 元数据资源管理器 中，选择 Oracle 架构，然后选择“创建报表”，生成包含转换统计信息和错误/警告（若有）的 HTML 报表 。
+
+   ![创建报表](./media/oracle-to-sql-server/create-report.png)
 
 1. 在 HTML 报表中查看转换统计信息以及错误和警告。 分析报表，了解转换问题和解决方法。
 
@@ -85,6 +128,8 @@ ms.locfileid: "103603308"
 
     然后在 Excel 中打开它，来获取 Oracle 对象的清单和执行架构转换所需的工作量。
 
+   ![转换报表](./media/oracle-to-sql-server/conversion-report.png)
+
 
 ### <a name="validate-data-types"></a>验证数据类型
 
@@ -93,6 +138,9 @@ ms.locfileid: "103603308"
 1. 在菜单中，选择“工具”。 
 1. 选择“项目设置”。 
 1. 选择“类型映射”选项卡。 
+
+   ![类型映射](./media/oracle-to-sql-server/type-mappings.png)
+
 1. 可在 Oracle 元数据资源管理器中选择表，来更改每个表的类型映射。 
 
 
@@ -103,8 +151,22 @@ ms.locfileid: "103603308"
 
 1. （可选）若要转换动态或即席查询，请右键单击节点，然后选择“添加语句”。
 1. 从顶行导航栏中选择“连接到 SQL Server”，并提供 SQL Server 的连接详细信息。 可选择连接到现有数据库，也可提供新的名称。若是后者，则会在目标服务器上创建一个数据库。
+
+   ![连接到 SQL](./media/oracle-to-sql-server/connect-to-sql.png)
+
 1. 右键单击架构，然后选择“转换架构”。
+
+   ![转换架构](./media/oracle-to-sql-server/convert-schema.png)
+
 1. 完成架构转换后，比较并查看架构的结构来确定潜在问题。
+
+   将转换后的对象与原始对象进行比较： 
+
+   ![转换架构，比较和查看对象代码](./media/oracle-to-sql-server/table-mapping.png)
+
+   将转换后的过程与原始过程进行比较： 
+
+   ![查看转换后的过程](./media/oracle-to-sql-server/procedure-comparison.png)
 
    可在本地保存此项目供离线架构修正练习使用。 为此，可从“文件”菜单中选择“保存项目” 。 这样，你就有机会在可将架构发布到 SQL Server 之前，对源和目标架构进行脱机评估并执行相应修正。
 
@@ -117,10 +179,26 @@ ms.locfileid: "103603308"
 若要发布架构并迁移数据，请执行以下步骤： 
 
 1. 从 SQL Server 元数据资源管理器中右键单击数据库，然后选择“与数据库同步” 。 此操作会将 Oracle 架构发布到 SQL Server。 
+
+   ![与数据库同步](./media/oracle-to-sql-server/synchronize-database.png)
+
+   查看与数据库的同步：
+
+   ![与数据库同步 - 查看映射](./media/oracle-to-sql-server/synchronize-database-review.png)
+
 1. 从 Oracle 元数据资源管理器中右键单击 Oracle 架构，然后选择“迁移数据” 。 或者，可从顶行导航中选择“迁移数据”。
+
+   ![迁移数据](./media/oracle-to-sql-server/migrate-data.png)
+
 1. 在对话框中提供 Oracle 和 SQL Server 的连接详细信息。
 1. 迁移完成后，查看数据迁移报表：
+
+    ![数据迁移报表](./media/oracle-to-sql-server/data-migration-report.png)
+
 1. 使用 [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) 连接到 SQL Server，来查看 SQL Server 实例上的数据和架构。 
+
+   ![在 SSMA 中验证](./media/oracle-to-sql-server/validate-in-ssms.png)
+
 
 除了使用 SSMA，还可使用 SQL Server Integration Services (SSIS) 来迁移数据。 若要了解更多信息，请参阅以下文章： 
 - 博客 [SQL Server 迁移助手：如何评估数据并将其从非 Microsoft 数据平台迁移到 SQL Server](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/)。

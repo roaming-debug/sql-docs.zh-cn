@@ -1,21 +1,21 @@
 ---
-title: 迁移指南：从 Access 迁移到 SQL Server
+title: 从 Access 迁移到 SQL Server：迁移指南
 description: '本指南介绍如何使用适用于 Access 的 SQL Server 迁移助手 (SSMA for Access) 将 Microsoft Access 数据库迁移到 Microsoft SQL Server。 '
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
 ms.custom: ''
 ms.devlang: ''
-ms.topic: conceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: 3e49909b26d845c0edfaf9e5d50528b077fb2593
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: 467519e23ada08a1b14682720aa350e8df113318
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103603290"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673525"
 ---
 # <a name="migration-guide-access-to-sql-server"></a>迁移指南：从 Access 迁移到 SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,18 +45,61 @@ ms.locfileid: "103603290"
 要创建评估，请执行以下步骤：
 
 1. 打开[适用于 Access 的 SQL Server 迁移助手](https://www.microsoft.com/download/details.aspx?id=54255)。 
-1. 选择“文件”，然后选择“新建项目”。 为迁移项目提供一个名称。 
+1. 选择“文件”，然后选择“新建项目”。 选择迁移目标，并为迁移项目提供一个名称。 
+
+   ![新建项目](./media/access-to-sql-server/new-project.png)
+
 1. 选择“添加数据库”，然后选择要添加到项目中的数据库。 
+
+   ![添加数据库](./media/access-to-sql-server/add-databases.png)
+
 1. 在 Access 元数据资源管理器中，右键单击要评估的数据库，然后选择“创建报表” 。 
+
+   ![创建报表](./media/access-to-sql-server/create-report.png)
+
 1. 查看评估报表。 例如： 
+
+   ![示例报表](./media/access-to-sql-server/sample-report.png)
+
+### <a name="validate-data-types"></a>验证数据类型
+
+验证默认的数据类型映射，并根据需要对其进行更改（如有必要）。 为此，请执行下列步骤： 
+
+1. 在菜单中，选择“工具”。 
+1. 选择“项目设置”。 
+1. 选择“类型映射”选项卡。 
+
+   ![类型映射](./media/access-to-sql-server/type-mappings.png)
+
+1. 可在 Oracle 元数据资源管理器中选择表，来更改每个表的类型映射。 
+
+
 
 ### <a name="convert"></a>转换 
 
 若要转换数据库对象，请执行以下步骤： 
 
-1. 选择“连接到 Azure SQL 数据库”并提供连接详细信息。 
-1. 在 Access 元数据资源管理器中右键单击该数据库，然后选择“转换架构” 。  
+1. 选择“连接到 SQL Server”并提供连接详细信息。 
+
+
+   ![连接到 SQL Server](./media/access-to-sql-server/connect-to-sql-server.png)
+
+1. 在 Access 元数据资源管理器中右键单击该数据库，然后选择“转换架构” 。 或者，可以在选择数据库后，从顶行的导航栏中选择“转换架构”。 
+
+   ![转换架构](./media/access-to-sql-server/convert-schema.png)
+
+   将转换后的查询与原始查询进行比较： 
+
+   ![比较转换后的查询 ](./media/access-to-sql-server/query-comparison.png)
+
+   将转换后的对象与原始对象进行比较： 
+
+   ![查看转换后的对象](./media/access-to-sql-server/table-comparison.png)
+
 1. （可选）若要转换单个对象，请右键单击该对象，再选择“转换架构”。 已转换的对象以粗体形式显示在 Access 元数据资源管理器中： 
+
+   ![元数据资源管理器中的粗体对象已经过转换](./media/access-to-sql-server/converted-items-bold.png)
+ 
 1. 在“输出”窗格中选择“查看结果”，然后在“错误列表”窗格中查看错误 。 
 
 
@@ -67,10 +110,29 @@ ms.locfileid: "103603290"
 若要使用 SSMA for Access 迁移数据，请执行以下步骤： 
 
 1. 如果尚未连接，请选择“连接到 SQL Server”并提供连接详细信息。 
-1. 在 Azure SQL 数据库元数据资源管理器中右键单击数据库，然后选择“与数据库同步” 。 此操作会将 MySQL 架构发布到 Azure SQL 数据库。
+
+1. 从 SQL Server 元数据资源管理器中右键单击数据库，然后选择“与数据库同步” 。 此操作会将 MySQL 架构发布到 SQL Server。
+
+   ![与数据库同步](./media/access-to-sql-server/synchronize-with-database.png)
+
+   查看与数据库的同步： 
+
+   ![查看与数据库的同步](./media/access-to-sql-server/synchronize-with-database-review.png)
+
 1. 使用 Access 元数据资源管理器勾选要迁移的项目旁边的框。 如果要迁移整个数据库，请选中该数据库旁边的框。 
 1. 右键单击要迁移的数据库或对象，然后选择“迁移数据”。 
    若要迁移整个数据库的数据，请选中数据库名称旁边的复选框。 若要从单个表中迁移数据，请展开数据库，展开表，然后选中表旁边的复选框。 若要忽略单个表中的数据，请清除对应的复选框。
+
+   ![迁移数据](./media/access-to-sql-server/migrate-data.png)
+
+   查看迁移的数据： 
+
+   ![迁移数据，查看](./media/access-to-sql-server/migrate-data-review.png)
+
+1. 使用 [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) 连接到 SQL Server，来查看 SQL Server 实例上的数据和架构。 
+
+   ![在 SSMA 中验证](./media/access-to-sql-server/validate-in-ssms.png)
+
 
 
 ## <a name="post-migration"></a>迁移后 

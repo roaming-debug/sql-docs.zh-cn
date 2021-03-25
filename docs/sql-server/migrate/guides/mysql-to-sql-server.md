@@ -1,23 +1,24 @@
 ---
-title: 将 MySQL 迁移到 SQL Server
+title: 从 MySQL 迁移到 SQL Server：迁移指南
 description: '本指南介绍如何使用适用于 MySQL 的 SQL Server 迁移助手 (SSMA for MySQL) 将 MySQL 数据库迁移到 Microsoft SQL Server。 '
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
 ms.custom: ''
 ms.devlang: ''
-ms.topic: conceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: f944cca6674abf9488729c945dbd4a53aee9ef27
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: 454466e2f387f7bc11d80660eb0534f67aecb7a8
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103603288"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751577"
 ---
 # <a name="migration-guide-mysql-to-sql-server"></a>迁移指南：从 MySQL 迁移到 SQL Server
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 本指南可帮助你将 MySQL 数据库迁移到 SQL Server。 
 
@@ -33,22 +34,24 @@ ms.locfileid: "103603288"
 ## <a name="pre-migration"></a>迁移前 
 
 满足先决条件后，就可发现 MySQL 环境和评估迁移的可行性了。
-在使用 SSMA 开始迁移之前，你必须：
-
-1.  创建新项目。  
-2.  连接到 MySQL 数据库。
-3.  成功连接后，MySQL 架构将出现在 MySQL 元数据资源管理器中。 在 MySQL 元数据资源管理器中右键单击对象，来执行创建报表以评估到 SQL Server 的转换等任务。
 
 ### <a name="assess"></a>评估 
-
 
 若要使用 [SSMA for MySQL](https://aka.ms/ssmaformysql) 创建评估，请执行以下步骤： 
 
 1. 打开适用于 MySQL 的 SQL Server 迁移助手。 
-1. 选择“文件”，然后选择“新建项目” 。 提供项目名称、项目的保存位置和迁移目标。
-1. 在“迁移到”选项中选择“SQL Server” 。 
+1. 选择“文件”，然后选择“新建项目” 。 提供项目名称、项目的保存位置和迁移目标。 在“迁移到”选项中选择“SQL Server” 。 
+
+   ![新建项目](./media/mysql-to-sql-server/new-project.png)
+
 1. 在“连接到 MySQL”对话框中提供连接详细信息，然后连接到 MySQL 服务器。 
+
+   ![连接到 MySQL](./media/mysql-to-sql-server/connect-to-mysql.png)
+
 1. 在 MySQL 元数据资源管理器中右键单击 MySQL 架构，然后选择“创建报表” 。 或者，可从顶行导航栏中选择“创建报表”。 
+
+   ![创建报表](./media/mysql-to-sql-server/create-report.png)
+
 1. 查看包含转换统计信息、错误和警告的 HTML 报表。 分析此报表，了解转换问题及其解决方案。 
 
    还可从 SSMA 项目文件夹访问此报表，如第一个屏幕中所选。 在上例中，从以下位置找到 report.xml 文件：
@@ -57,11 +60,22 @@ ms.locfileid: "103603288"
  
    在 Excel 中打开它，来获取 MySQL 对象的清单和执行架构转换所需的工作量。
 
+   ![转换报表](./media/mysql-to-sql-server/conversion-report.png)
+
 ### <a name="validate-type-mappings"></a>验证类型映射
 
-执行架构转换之前，请验证默认数据类型映射，或者根据要求更改这些映射。 为此，可导航到“工具”菜单并选择“项目设置”；你也可在 MySQL 元数据资源管理器中选择表，来更改每个表的类型映射  。
+验证默认的数据类型映射，并根据需要对其进行更改（如有必要）。 为此，请执行下列步骤： 
 
-若要详细了解 SSMA 中的转换设置，请查看[项目设置](../../../ssma/mysql/project-settings-conversion-mysqltosql.md)
+1. 在菜单中，选择“工具”。 
+1. 选择“项目设置”。 
+1. 选择“类型映射”选项卡。 
+
+   ![类型映射](./media/mysql-to-sql-server/type-mappings.png)
+
+1. 可以通过在“MySQL 元数据资源管理器”中选择表来更改每个表的类型映射。 
+
+
+若要详细了解 SSMA 中的转换设置，请参阅[项目设置](../../../ssma/mysql/project-settings-conversion-mysqltosql.md)。
 
 ### <a name="convert-schema"></a>转换架构
 
@@ -73,12 +87,27 @@ ms.locfileid: "103603288"
 
 1. （可选）若要转换动态或即席查询，请右键单击节点，然后选择“添加语句”。 
 1. 在顶行导航栏中选择“连接到 SQL Server”，并提供 SQL Server 详细信息。 可选择连接到现有数据库，也可提供新的名称。若是后者，则会在目标服务器上创建一个数据库。
+
+   ![连接到 SQL](./media/mysql-to-sql-server/connect-to-sql-server.png)
+
 1. 在 MySQL 元数据资源管理器中右键单击 MySQL 架构，然后选择“转换架构” 。 或者，可从顶行导航栏中选择“转换架构”。 
+
+   ![转换架构](./media/mysql-to-sql-server/convert-schema.png)
+
 1. 比较并查看架构的结构来确定潜在问题。 
 
-   架构转换后，你可在本地保存此项目供离线架构修正练习使用。 在“文件”菜单中选择“保存项目”。 这样，你就有机会在可将架构发布到 SQL Server 之前，对源和目标架构进行脱机评估并执行相应修正。
+   将转换后的对象与原始对象进行比较： 
 
-若要了解详细信息，请查看[转换 MySQL 数据库](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md)
+   ![比较和查看对象](./media/mysql-to-sql-server/table-comparison.png)
+
+   将转换后的视图与原始视图进行比较： 
+
+   ![比较和查看转换后的代码](./media/mysql-to-sql-server/procedure-comparison.png)
+   
+   
+   在“文件”菜单中选择“保存项目”。 这样，你就有机会在可将架构发布到 SQL Server 之前，对源和目标架构进行脱机评估并执行相应修正。
+
+若要了解详细信息，请参阅[转换 MySQL 数据库](../../../ssma/mysql/converting-mysql-databases-mysqltosql.md)。
 
 ## <a name="migration"></a>迁移 
 
@@ -104,9 +133,26 @@ ms.locfileid: "103603288"
 若要发布架构并迁移数据，请执行以下步骤： 
 
 1. 右键单击 SQL Server 元数据资源管理器中的数据库，然后选择“与数据库同步” 。  此操作会将 MySQL 架构发布到 SQL Server 实例。
-1. 在 MySQL 元数据资源管理器中右键单击 MySQL 架构，然后选择“迁移数据” 。  或者，可从顶行导航栏中选择“迁移数据”。  
+
+   ![与数据库同步](./media/mysql-to-sql-server/synchronize-database.png)
+
+   查看与数据库的同步：
+
+   ![与数据库同步 - 查看](./media/mysql-to-sql-server/synchronize-database-review.png)
+
+1. 在 MySQL 元数据资源管理器中右键单击 MySQL 架构，然后选择“迁移数据” 。  或者，可从顶行导航栏中选择“迁移数据”。 
+
+   ![迁移数据](./media/mysql-to-sql-server/migrate-data.png)
+
 1. 迁移完成后，查看数据迁移报表： 
+
+   ![数据迁移报表](./media/mysql-to-sql-server/migration-report.png)
+
 1. 使用 SQL Server Management Studio (SSMS) 评审 SQL Server 实例上的数据和架构，从而验证迁移。
+
+   ![在 SSMA 中验证](./media/mysql-to-sql-server/validate-in-ssms.png)
+
+
 
 ## <a name="post-migration"></a>迁移后 
 
@@ -148,7 +194,7 @@ ms.locfileid: "103603288"
 
 ## <a name="next-steps"></a>后续步骤
 
-- 若要详细了解如何将 MySQL 数据库迁移到 SQL Server，请查看[适用于 MySQL 的 SSMA 文档](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)
+- 若要详细了解如何将 MySQL 数据库迁移到 SQL Server，请参阅[适用于 MySQL 的 SSMA 文档](../../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)。
 
 - 如需在执行各种数据库和数据迁移方案及专门任务时可为你提供帮助的 Microsoft 与第三方服务和工具的矩阵，请查看[数据迁移服务和工具](https://docs.microsoft.com/azure/dms/dms-tools-matrix)一文。
 

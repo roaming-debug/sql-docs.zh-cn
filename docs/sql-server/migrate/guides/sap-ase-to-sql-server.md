@@ -1,21 +1,21 @@
 ---
-title: 从 SAP ASE 迁移到 SQL Server - 迁移指南
+title: 从 SAP ASE 迁移到 SQL Server：迁移指南
 description: '本指南介绍如何使用适用于 SAP ASE 的 SQL Server 迁移助手 (SSMA for SAP ASE) 将 SAP ASE 数据库迁移到 Microsoft SQL Server。 '
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: migration-guide
 ms.custom: ''
 ms.devlang: ''
-ms.topic: conceptual
+ms.topic: how-to
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/19/2021
-ms.openlocfilehash: fb297b72e1eeb3d614a00a9ef574f0097f9d0f75
-ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
+ms.openlocfilehash: a549b0e28da092bc1320f621c29307772fc5d69b
+ms.sourcegitcommit: bf7577b3448b7cb0e336808f1112c44fa18c6f33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103603289"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104611028"
 ---
 # <a name="migration-guide-sap-ase-to-sql-server"></a>迁移指南：从 SAP ASE 迁移到 SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "103603289"
 
 1. 打开 **SSMA for Sybase**。 
 1. 选择“文件”，然后选择“新建项目”。 
-1. 提供项目名称和项目的保存位置，然后从下拉列表中选择 SQL Server 作为迁移目标。 选择“确定” 。
+1. 提供项目名称和项目的保存位置，然后从下拉列表中选择 SQL Server 作为迁移目标。 选择“确定”。
 1. 在“连接到 Sybase”对话框上，为 SAP 连接详细信息输入相应的值。 
 1. 右键单击要迁移的 SAP 数据库，然后选择“创建报表”。 这会生成一个 HTML 报表。
 1. 查看 HTML 报表，了解转换统计信息以及任何错误或警告。 另外，还可在 Excel 中打开报表，来获取 AP ASE 对象的清单和执行架构转换所需的工作量。 报表的默认位置在 SSMAProjects 内的报表文件夹中。
