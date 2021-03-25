@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e7e36e4e229cea43c1a144d2bd0424657d2b164
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 6b7c7e5b915e6c7ad138154e1615decead642699
+ms.sourcegitcommit: 17f05be5c08cf9a503a72b739da5ad8be15baea5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067544"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105103724"
 ---
 # <a name="server-level-roles"></a>服务器级别角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "100067544"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九种固定服务器角色。 无法更改授予固定服务器角色（public 角色除外）的权限。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]开始，您可以创建用户定义的服务器角色，并将服务器级权限添加到用户定义的服务器角色。  
   
- 可以将服务器级别主体（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名、Windows 帐户和 Windows 组）添加到服务器级别角色。 固定服务器角色的每个成员都可以将其他登录名添加到该同一角色。 用户定义的服务器角色的成员则无法将其他服务器主体添加到角色。  
+ 你可以将服务器级主体（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名、Windows 帐户和 Windows 组）添加到服务器级角色。 固定服务器角色的每个成员都可以将其他登录名添加到该同一角色。 用户定义的服务器角色的成员则无法将其他服务器主体添加到角色。  
 > [!NOTE]
 >  服务器级权限不适用于 SQL 数据库或 Azure Synapse Analytics。 有关 SQL 数据库的详细信息，请参阅[控制和授予数据库访问权限](/azure/sql-database/sql-database-manage-logins)。
   
