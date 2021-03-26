@@ -14,18 +14,33 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8f7e74a44b489f22827c42bab2bd5ee60a7658a
+ms.sourcegitcommit: 038a3a730cf088a64d55501d9605f2f6b31d573d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727756"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105616666"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 
 本文列出了每个版本的数据迁移助手中的新增内容。
 
+## <a name="data-migration-assistant-v-53"></a>数据迁移助手 v 5。3
+
+数据迁移助手的5.3 版本提供对的支持：
+- 命令行中的外部应用程序即席查询评估。 
+- 用户在 Dma.exe.config 配置文件中自定义命令超时参数。
+- 评估配置示例文件和 PowerShell 示例脚本，说明如何使用配置文件来运行 DMA 命令行。
+- 本地迁移中的备份和还原操作没有超时限制。
+
+此外，此版本的数据迁移助手已更新到 .NET 4.8，并为以下问题提供 bug 修复：
+- 如果迁移阶段中没有 sysadmin 权限，则无法运行评估或连接到 Azure SQL 数据库。
+- 如果没有对 RDS assesments 的 sysadmin 权限，用户将无法运行评估。
+- 用户在将 JSON 评估报表上载到 Azure Migrate 时遇到问题。
+- 无法迁移包含中文字符的对象。
+
 ## <a name="data-migration-assistant-v-52"></a>数据迁移助手 v 5。2
+
 数据迁移助手的5.2 版本提供对以下内容的支持：
 - 将评估上传到 Azure Migrate，并支持 Azure 政府和国内云 (主权) 。  此功能可用于评估迁移到 Azure SQL 的 SQL Server 数据空间的准备情况。
 - 支持对 Azure 政府和国内云的 Azure Migrate 上传评估的命令行。  现在，你可以将评估完全自动上载到 Azure 迁移项目，以获取合并的 Azure SQL 就绪状态报告。 
