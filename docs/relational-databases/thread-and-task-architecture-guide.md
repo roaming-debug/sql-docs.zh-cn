@@ -23,12 +23,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3eb9fd5897029fedb0e53378ecbe5f6c12f635ef
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: ec3a20e10fd625b588c4bae79f73265a8c292324
+ms.sourcegitcommit: bacd45c349d1b33abef66db47e5aa809218af4ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237654"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104793125"
 ---
 # <a name="thread-and-task-architecture-guide"></a>线程和任务体系结构指南
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "99237654"
 
 > [!NOTE]
 > 请参考以下方案：   
-> -  辅助进程 1 是一项长时间运行的任务，例如对基于内存的表使用预读的读取查询。 辅助进程 1 会发现其所需的数据页已在缓冲池中，因此不必暂停以等待 I/O 操作，而可以在暂停之前使用其整个量程。   
+> -  辅助进程 1 是一项长时间运行的任务，例如对基于磁盘的表使用预读的读取查询。 辅助进程 1 会发现其所需的数据页已在缓冲池中，因此不必暂停以等待 I/O 操作，而可以在暂停之前使用其整个量程。   
 > -  辅助进程 2 执行不足 1 毫秒的短时间运行任务，因此需要在其完整量程用尽之前暂停。     
 >
 > 在这种情况下，直到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，辅助进程 1 都可以通过拥有更多的总量程时间来独占计划程序。   

@@ -16,16 +16,16 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: fa497fc004393388e34b3afbbe913a5915bbb120
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 90dcdcc2f6f7224718a9f2069e112b6f9a7a77e5
+ms.sourcegitcommit: bacd45c349d1b33abef66db47e5aa809218af4ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100350799"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104793103"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>为 Always On 可用性组配置侦听程序
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍了如何通过在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 为 AlwaysOn 可用性组创建或配置单个“可用性组侦听程序”  。  
+  本主题介绍了如何通过在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 为 AlwaysOn 可用性组创建或配置单个“可用性组侦听程序”。  
   
 > [!IMPORTANT]  
 >  若要创建某个可用性组的第一个可用性组侦听器，我们强烈建议你使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell。 除非必要情况，例如创建附加侦听器，否则，应避免直接在 WSFC 群集中创建侦听器。  
@@ -68,8 +68,8 @@ ms.locfileid: "100350799"
   
 |权限|链接|  
 |-----------------|----------|  
-|托管可用性组的 WSFC 群集的群集对象名称 (CNO) 必须具有“创建计算机对象”  权限。<br /><br /> 在 Active Directory 中，CNO 默认不具有显式“创建计算机对象”  权限，并且可以创建 10 个虚拟计算机对象 (VCO)。 在创建了 10 个 VCO 后，再创建 VCO 将失败。 可通过将权限显式授予 WSFC 群集的 CNO，避免发生此情况。 请注意，您已删除的可用性组的 VCO 并不自动在 Active Directory 中删除，因此，在手动删除它们之前，10 个 VCO 的默认数目限制仍会将其计算在内。<br /><br /> 注意：在某些组织中，安全策略禁止向单独用户帐户授予“创建计算机对象”权限  。|为安装此群集的人员配置帐户的步骤（位于[故障转移群集分步指南  ：在 Active Directory 中配置帐户](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)中）<br /><br /> 预配置群集名称帐户的步骤（位于[故障转移群集分步指南  ：在 Active Directory 中配置帐户](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)中）|  
-|如果你的组织要求你为侦听器虚拟网络名称预配置计算机帐户，则你需要具有  “帐户操作员”组的成员资格或域管理员的帮助。|为群集服务或应用程序预配置帐户的步骤（位于[故障转移群集分步指南  ：在 Active Directory 中配置帐户](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)中）。|  
+|托管可用性组的 WSFC 群集的群集名称对象 (CNO) 必须具有“创建计算机对象”权限。<br /><br /> 在 Active Directory 中，CNO 默认不具有显式“创建计算机对象”权限，并且可以创建 10 个虚拟计算机对象 (VCO)。 在创建了 10 个 VCO 后，再创建 VCO 将失败。 可通过将权限显式授予 WSFC 群集的 CNO，避免发生此情况。 请注意，您已删除的可用性组的 VCO 并不自动在 Active Directory 中删除，因此，在手动删除它们之前，10 个 VCO 的默认数目限制仍会将其计算在内。<br /><br /> 在某些组织中，安全策略禁止向单独用户帐户授予  “创建计算机对象”权限。|[故障转移群集分步指南：在 Active Directory 中配置帐户](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)中的 *为安装此群集的人员配置帐户的步骤*<br /><br /> [故障转移群集分步指南：在 Active Directory 中配置帐户](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)中的 *预配置群集名称帐户的步骤*|  
+|如果你的组织要求你为侦听器虚拟网络名称预配置计算机帐户，则你需要具有  “帐户操作员”组的成员资格或域管理员的帮助。|*故障转移群集分步指南：在 Active Directory 中配置帐户* 中的 [为群集服务或应用程序预配置帐户的步骤](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)。|  
   
 > [!TIP]  
 >  一般情况下，最简单的方法是不为侦听器虚拟网络名称预配置计算机帐户。 如果可以，请在运行 WSFC 高可用性向导时自动创建并配置该帐户。  
@@ -84,19 +84,19 @@ ms.locfileid: "100350799"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!TIP]  
->  [“新建可用性组”向导 ](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 支持为新可用性组创建侦听程序。  
+>  [“新建可用性组”向导](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 支持为新可用性组创建侦听器。  
   
  **创建和配置可用性组侦听器**  
   
 1.  在对象资源管理器中，连接到承载可用性组的主副本的服务器实例，然后单击此服务器名称以展开服务器树。  
   
-2.  依次展开“Always On 高可用性”  节点和“可用性组”  节点。  
+2.  依次展开“Always On 高可用性”节点和“可用性组”节点。  
   
 3.  单击您要配置其侦听器的可用性组，然后选择以下备选方法之一：  
   
-    -   若要创建一个侦听程序，请右键单击“可用性组侦听程序”  节点，然后选择“新建侦听程序”  命令。 这将打开 **“新建可用性组侦听器”** 对话框。 有关详细信息，请参阅本主题后面的[添加可用性组侦听程序（对话框）](#AddAgListenerDialog)。  
+    -   若要创建一个侦听程序，请右键单击“可用性组侦听程序”节点，然后选择“新建侦听程序”命令。 这将打开 **“新建可用性组侦听器”** 对话框。 有关详细信息，请参阅本主题后面的[添加可用性组侦听程序（对话框）](#AddAgListenerDialog)。  
   
-    -   若要更改现有侦听程序的端口号，请展开“可用性组侦听程序”  节点，右键单击此侦听程序，然后选择“属性”  命令。 在 **“端口”** 字段中输入新的端口号，然后单击 **“确定”** 。  
+    -   若要更改现有侦听程序的端口号，请展开“可用性组侦听程序”节点，右键单击此侦听程序，然后选择“属性”命令。 在 **“端口”** 字段中输入新的端口号，然后单击 **“确定”**。  
   
 ###  <a name="new-availability-group-listener-dialog-box"></a><a name="AddAgListenerDialog"></a> 新建可用性组（对话框）  
  **侦听器 DNS 名称**  
@@ -104,7 +104,7 @@ ms.locfileid: "100350799"
   
  有关详细信息，请参阅本主题前面的 [可用性组侦听器的 DNS 名称的要求](#DNSnameReqs)。  
   
- 端口   
+ 端口  
  该侦听器使用的 TCP 端口。  
   
  **网络模式**  
@@ -211,7 +211,7 @@ ms.locfileid: "100350799"
   
 -   [Active Directory 配额](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> 后续任务：创建可用性组侦听程序后  
+##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> 跟进：在创建可用性组侦听器之后  
   
 ###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a> MultiSubnetFailover 关键字和相关功能  
  **MultiSubnetFailover** 是 SQL Server 2012 中用于允许使用 AlwaysOn 可用性组和 AlwaysOn 故障转移群集实例进行更快故障转移的新连接字符串关键字。 在连接字符串中设置 `MultiSubnetFailover=True` 时，将启用以下三个子功能：  
@@ -228,7 +228,7 @@ ms.locfileid: "100350799"
   
  **NET Framework 3.5 或 OLEDB 不支持 MultiSubnetFailover=True**  
   
- **问题：** 如果你的可用性组或故障转移群集实例具有取决于不同子网的多个 IP 地址的侦听程序名称（在 WSFC 群集管理器中称作网络名称或客户端访问点），并且你在将 ADO.NET 用于 .NET Framework 3.5SP1 或 SQL Native Client 11.0 OLEDB，则可能你对可用性组侦听程序的 50% 的客户端连接请求都将遇到连接超时。  
+ **问题：** 如果你的可用性组或故障转移群集实例具有取决于不同子网中多个 IP 地址的侦听程序名称（在 WSFC 群集管理器中称为网络名称或客户端接入点），并且你将 ADO.NET 用于 .NET Framework 3.5 SP1 或 SQL Native Client 11.0 OLEDB，则在你对可用性组侦听程序发出的客户端连接请求中可能有 50% 请求发生连接超时。  
   
  **解决方法：** 我们建议你执行以下任务之一。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "100350799"
   
      优点  ：无需增加客户端连接超时值。  
   
-     缺点  ：如果跨子网故障转移发生，则客户端恢复时间可能为 15 分钟或更长，具体时间取决于 HostRecordTTL 设置以及跨站点 DNS/AD 复制计划的设置  。  
+     **缺点：** 如果发生跨子网故障转移，则客户端恢复时间可能为 15 分钟或更长，具体取决于 **HostRecordTTL** 设置以及你的跨站点 DNS/AD 复制计划的设置。  
   
 ###  <a name="registerallprovidersip-setting"></a><a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP 设置  
  在使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 PowerShell 创建可用性组侦听程序时，将在 WSFC 中创建客户端访问点，其 **RegisterAllProvidersIP** 属性设为 1 (true)。 此属性值的影响取决于客户端连接字符串，如下所示：  
@@ -262,13 +262,13 @@ ms.locfileid: "100350799"
   
 -   未将 **MultiSubnetFailover** 设置为 true 的连接字符串  
   
-     在 `RegisterAllProvidersIP = 1`时，其连接字符串未使用 `MultiSubnetFailover = True`的任何客户端都将会经历高延迟的连接。 发生这种情况的原因是这些客户端将按顺序尝试与所有 IP 的连接。 相反，如果将 **RegisterAllProvidersIP** 更改为 0，将在 WSFC 群集中的客户端接入点注册活动 IP 地址，从而缩短旧客户端的延迟时间。 因此，如果具有需要连接到某一可用性组侦听器并且不能使用 MultiSubnetFailover 属性的旧客户端，建议将 RegisterAllProvidersIP 更改为 0   。  
+     在 `RegisterAllProvidersIP = 1`时，其连接字符串未使用 `MultiSubnetFailover = True`的任何客户端都将会经历高延迟的连接。 发生这种情况的原因是这些客户端将按顺序尝试与所有 IP 的连接。 相反，如果将 **RegisterAllProvidersIP** 更改为 0，将在 WSFC 群集中的客户端接入点注册活动 IP 地址，从而缩短旧客户端的延迟时间。 因此，如果具有需要连接到某一可用性组侦听器并且不能使用 MultiSubnetFailover 属性的旧客户端，建议将 RegisterAllProvidersIP 更改为 0。  
   
     > [!IMPORTANT]  
     >  在你通过 WSFC 群集（故障转移群集管理器 GUI）创建可用性组侦听程序时， **RegisterAllProvidersIP** 默认情况下将为 0 (false)。  
   
 ###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> HostRecordTTL 设置  
- 默认情况下，客户端缓存 20 分钟的群集 DNS 记录。  通过缩短缓存记录的 **HostRecordTTL**（生存时间 (TTL)），旧客户端重新连接速度可能更快。  但是，减低 HostRecordTTL 设置也可能导致到 DNS 服务器的流量增加  。  
+ 默认情况下，客户端缓存 20 分钟的群集 DNS 记录。  通过缩短缓存记录的 **HostRecordTTL**（生存时间 (TTL)），旧客户端重新连接速度可能更快。  但是，减低 HostRecordTTL 设置也可能导致到 DNS 服务器的流量增加。  
   
 ###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> 用于禁用 RegisterAllProvidersIP 和减少 TTL 的示例 PowerShell 脚本  
  下面的 PowerShell 示例演示如何为侦听器资源配置 **RegisterAllProvidersIP** 和 **HostRecordTTL** 群集参数。  DNS 记录将缓存 5 分钟，而不是默认的 20 分钟。  同时修改两个群集参数可以缩短无法使用 **MultiSubnetFailover** 参数的旧客户端在故障转移后连接到正确 IP 地址的时间。  使用您要更改的侦听器名称替换 `yourListenerName` 。  
@@ -306,7 +306,7 @@ Start-Clustergroup yourListenerGroupName
   
         3.  向 WSFC 可用性组资源添加一个依赖项。  
   
-         有关故障转移群集管理器的对话框和选项卡的信息，请参阅[用户界面：故障转移群集管理器管理单元](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11))。  
+         有关故障转移群集管理器的对话框和选项卡的信息，请参阅 [用户界面：故障转移群集管理器管理单元](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11))。  
   
     -   **将 Windows PowerShell 用于故障转移群集：**  
   

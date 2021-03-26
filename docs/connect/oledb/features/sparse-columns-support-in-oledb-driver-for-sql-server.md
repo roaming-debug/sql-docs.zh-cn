@@ -4,7 +4,7 @@ description: 了解 OLE DB Driver for SQL Server 支持稀疏列的方式，并�
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1397d69f72cfc1362decf84959046d581befea5b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b6af363b6879a892170dc0f4c96e7ca176b4c788
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862283"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104751137"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的稀疏列支持
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88862283"
   
  对于 queryout 操作，在处理显式引用的列的方式上没有变化  。 column_set 列具有与 XML 列相同的行为，并且稀疏性对于命名稀疏列的处理没有影响  。  
   
- 但是，如果 queryout 用于导出并且引用的稀疏列属于按名称的稀疏列集的成员，则不能执行向类似结构表的直接导入  。 这是因为 BCP 使用与 select 操作一致的元数据进行导入，并且无法将 column_set 成员列与此元数据进行匹配 **\***  。 若要单独导入 column_set 成员列，必须对引用所需 column_set 列的表定义一个视图，并且必须使用该视图执行导入操作   。  
+ 但是，如果 queryout 用于导出并且引用的稀疏列属于按名称的稀疏列集的成员，则不能执行向类似结构表的直接导入  。 这是因为 BCP 使用与 select \* ***_操作一致的元数据进行导入，并且无法将 column_set _*** 成员列与此元数据进行匹配。 若要单独导入 column_set 成员列，必须对引用所需 column_set 列的表定义一个视图，并且必须使用该视图执行导入操作   。  
   
 ## <a name="see-also"></a>另请参阅  
  [适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/oledb-driver-for-sql-server.md)  

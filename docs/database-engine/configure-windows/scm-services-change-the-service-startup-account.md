@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b37f62d12063cdd609f09184832ed49d77d1f4b0
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 2b438af8f1dd5d05b2692dfef2c0dc71ce865270
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99232496"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673888"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM 服务 - 更改服务启动帐户
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动选项，以及更改由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的服务帐户。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell。 有关如何选择适合的服务帐户的详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动选项，以及如何通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 PowerShell 更改由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的服务帐户。 有关如何选择适合的服务帐户的详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 > [!IMPORTANT]  
 >  更改 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服务启动帐户后，必须重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（ [!INCLUDE[ssDE](../../includes/ssde-md.md)]）才能使更改生效。 重新启动此服务时，所有与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例关联的数据库在此服务成功重新启动后才能使用。 如果必须更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的服务启动帐户，请确保在定期计划维护期间或者数据库可以脱机（不中断日常操作）时执行此操作。  
@@ -47,7 +47,7 @@ ms.locfileid: "99232496"
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>更改 SQL Server 服务启动帐户  
   
-1.  在 **“开始”** 菜单中，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
+1.  在“开始”菜单中，依次指向“所有程序”、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]、“配置工具”，然后单击“[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 配置管理器”。  
   
     > [!NOTE]  
     >  因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器在新版本的 Windows 中不显示为一个应用程序。  

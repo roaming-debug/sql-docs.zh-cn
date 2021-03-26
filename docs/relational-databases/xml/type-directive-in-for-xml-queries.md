@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0117b075a821a7e18732675ed432aafab5fafc60
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729844"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104734718"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 查询中的 TYPE 指令
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)，这样便可以选择通过指定 TYPE 指令请求将 FOR XML 查询结果作为 **xml** 数据类型返回。 这样您便可以在服务器上处理 FOR XML 查询的结果。 例如，可以对其指定 Xquery，将结果分配给 **xml** 类型变量，或编写 [嵌套 FOR XML 查询](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md) 数据类型，这样便可以选择通过指定 TYPE 指令请求将 FOR XML 查询结果作为 xml 数据类型返回。 这样您便可以在服务器上处理 FOR XML 查询的结果。 例如，可以对其指定 Xquery，将结果分配给 **xml** 类型变量，或编写 [嵌套 FOR XML 查询](../../relational-databases/xml/use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 XML 数据类型实例数据作为不同服务器构造（如使用 TYPE 指令的 FOR XML 查询，或在其中使用 **xml** 数据类型返回 SQL 表列和输出参数中的 XML 实例数据值的 FOR XML 查询）的结果返回到客户端。 在客户端应用程序代码中，ADO.NET 提供程序请求从服务器以二进制编码发送此 XML 数据类型信息。 但是，如果使用的是不带 TYPE 指令的 FOR XML，则 XML 数据将以字符串类型返回。 在任何情况下，客户端访问接口都始终能够处理其中任一种形式的 XML 内容。 请注意，不带 TYPE 指令的顶级 FOR XML 不能与游标一起使用。  

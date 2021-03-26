@@ -1,6 +1,6 @@
 ---
-description: 数据源向导屏幕 2 (ODBC Driver for SQL Server)
-title: 数据源向导屏幕 2 (ODBC Driver for SQL Server) | Microsoft Docs
+description: 了解如何在数据源向导中选择身份验证方法，以创建与 SQL Server 的新 ODBC 连接。
+title: 数据源向导屏幕 2 (ODBC Driver for SQL Server)
 ms.custom: ''
 ms.date: 01/29/2021
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 74e061e4ac66da2dfdc165e66338f3ffb70387ea
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 7db7d1d8e01929f9c43b78cd4d74e63dcc1b6e12
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837284"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673381"
 ---
 # <a name="data-source-wizard-screen-2"></a>数据源向导屏幕 2
 
@@ -54,7 +54,6 @@ ms.locfileid: "101837284"
 
 指定驱动程序使用 Azure Active Directory 服务主体向 SQL Server 进行身份验证。
 
-
 ### <a name="login-id"></a>登录 ID
 
 如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”或“使用用户输入的登录 ID 进行 Active Directory 交互身份验证”，则指定驱动程序连接到 SQL Server 时使用的登录 ID。 如果选择“使用托管标识身份验证”，请指定托管标识的对象 ID 或保留为空以使用默认标识。 此字段仅适用于为确定服务器默认设置建立的连接；除非使用托管身份验证，否则它不适用于创建数据源之后使用该数据源建立的后续连接。
@@ -75,7 +74,5 @@ ms.locfileid: "101837284"
 
 ## <a name="next-steps"></a>后续步骤
 
-[数据源向导屏幕 1](../../../connect/odbc/windows/dsn-wizard-1.md)
-
-[数据源向导屏幕 3](../../../connect/odbc/windows/dsn-wizard-3.md)
-
+[数据源向导屏幕 1](dsn-wizard-1.md)  
+[数据源向导屏幕 3](dsn-wizard-3.md)  

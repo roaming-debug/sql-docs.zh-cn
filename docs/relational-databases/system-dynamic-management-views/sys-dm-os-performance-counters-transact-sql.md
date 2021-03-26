@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_performance_counters (Transact-SQL)
-title: sys.dm_os_performance_counters (Transact-sql) |Microsoft Docs
+title: sys.dm_os_performance_counters (Transact-SQL)
 ms.custom: ''
 ms.date: 03/22/2021
 ms.prod: sql
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_performance_counters dynamic management view
-ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bece57b97ce2a7e20b2800fb45a831674960012
-ms.sourcegitcommit: c09ef164007879a904a376eb508004985ba06cf0
+ms.openlocfilehash: 62489b131eea77ed67b1207a7606056cea39066d
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104890789"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551625"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "104890789"
   为服务器维护的每个性能计数器返回一行。 有关每个性能计数器的信息，请参阅 [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 **sys.dm_pdw_nodes_os_performance_counters**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称 `sys.dm_pdw_nodes_os_performance_counters` 。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -62,6 +61,8 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
 
 如果性能计数器的 `cntr_type` 列值为1073874176，则显示平均处理的项数，作为项处理次数的比率。 例如，计数器将 `Locks:Average Wait Time (ms)` 每秒的锁等待数和每秒锁请求数进行比较，以显示导致等待的每个锁请求的平均等待时间（以毫秒为单位) ） (。 因此，若要只获取最后一秒的快照，只需将当前值与基值之间的增量 (分母) 两者之间的差异进行比较。 对应的基值是性能计数器， `Locks:Average Wait Time Base` 其中 `cntr_type` 列值为1073939712。
 
+`sys.dm_os_performance_counters`数据库引擎重新启动后，DMV 中的数据不会持久保存。 使用 `sqlserver_start_time` [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) 中的列查找上次数据库引擎启动时间。   
+
 ## <a name="permission"></a>权限
 
 在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
@@ -79,3 +80,4 @@ WHERE cntr_type = 65792 OR cntr_type = 272696320 OR cntr_type = 537003264;
 ## <a name="see-also"></a>另请参阅  
   [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.sysperfinfo (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
+ [sys.dm_os_sys_info &#40;Transact-sql&#41;](sys-dm-os-sys-info-transact-sql.md)

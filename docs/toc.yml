@@ -4931,7 +4931,7 @@ items:
         items:
           - name: 从 Access
             href: sql-server/migrate/guides/access-to-sql-server.md
-          - name: 从 DB2
+          - name: 从 Db2
             href: sql-server/migrate/guides/db2-to-sql-server.md
           - name: 从 MySQL
             href: sql-server/migrate/guides/mysql-to-sql-server.md
@@ -5575,7 +5575,7 @@ items:
                     items:
                       - name: Oracle
                         href: relational-databases/replication/non-sql/oracle-subscribers.md
-                      - name: IBM DB2
+                      - name: IBM Db2
                         href: relational-databases/replication/non-sql/ibm-db2-subscribers.md
                       - name: 其他非 SQL 订阅服务器
                         href: relational-databases/replication/non-sql/other-non-sql-server-subscribers.md

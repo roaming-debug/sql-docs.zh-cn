@@ -1,7 +1,7 @@
 ---
 title: PolyBase 错误和可行解决方案
 description: PolyBase 错误和建议解决方案参考。
-ms.date: 02/17/2021
+ms.date: 03/22/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -17,12 +17,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
-ms.openlocfilehash: 463b54aefd36e74318331c90cf2c944734f8a5cc
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 46f56288382c1b1928e6ad3081a8eea41e23bb5f
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873325"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833795"
 ---
 # <a name="polybase-errors-and-possible-solutions"></a>PolyBase 错误和可行解决方案
 
@@ -37,6 +37,11 @@ ms.locfileid: "101873325"
 
 ## <a name="error-messages-and-possible-solutions"></a>错误消息和可能的解决方案
 
+### <a name="error-100001failed-to-generate-query-plan"></a>错误：“100001;无法生成查询计划”
+
+SQL Server 数据库引擎至少已修补至累积更新 8 (15.0.4073)，而 PolyBase 功能尚未更新到同一内部版本时，系统可能会出现“无法生成查询计划”错误。 将 PolyBase 功能添加到现有 SQL Server 实例时，可能会发生这种情况。 有关详细信息，请参阅 [PolyBase 错误 -“100001;无法生成查询计划”](https://techcommunity.microsoft.com/t5/sql-server-support/polybase-error-100001-failed-to-generate-query-plan/ba-p/2174693)。
+
+在安装 PolyBase 功能之后，务必要将新功能引入到相同版本级别。 根据需要安装服务包 (SP)、累积更新 (CU) 和/或常规分发版本 (GDR)。 要确定 PolyBase 的版本，请参阅[确定 SQL Server 及其组件的版本、版本类别和更新级别](/troubleshoot/sql/general/determine-version-edition-update-level#polybase)。
 
 ### <a name="service-account-change"></a>更改服务帐户
 

@@ -1,17 +1,19 @@
 ---
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 03/18/2021
 ms.topic: include
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 588fbd33a0fb65f3de1c2bee54ce3d927960661a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: f6ec3bbcc720fe472cc7146d59c30f0f3fc65ab0
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100072715"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833726"
 ---
++ RExtension 需要 GLIBCXX_3.4.20。 请确保 Red Hat Enterprise Linux (RHEL) 上安装的 libstdc++.so.6 版本提供它。
+
 ## <a name="install-language-extensions"></a>安装语言扩展
 
 > [!NOTE]
@@ -34,4 +36,8 @@ sudo yum install mssql-server-extensibility
     sudo yum erase microsoft-r-open-mro-3.5.2
     ```
 
-1. 安装用于 Red Hat Enterprise Linux (RHEL) 的 [R（3.3 或更高版本）](https://www.r-project.org/)。 默认情况下，R 安装在 /usr/lib/R 中。 此路径是 R_HOME。 如果在其他位置安装 R，请记下该路径作为你的 R_HOME。
+1. 安装用于 Red Hat Enterprise Linux (RHEL) 的 [R（3.3 或更高版本）](https://www.r-project.org/)。 默认情况下，R 安装在 /usr/lib64/R 中。 此路径是 R_HOME。 如果在其他位置安装 R，请记下该路径作为你的 R_HOME。
+
+    ```bash
+    sudo yum install -y R
+    ```

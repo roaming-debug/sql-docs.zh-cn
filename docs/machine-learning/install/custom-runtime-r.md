@@ -3,19 +3,19 @@ title: 安装 R 自定义运行时
 description: 了解如何使用语言扩展为 SQL Server 安装 R 自定义运行时。 Python 自定义运行时可以运行机器学习脚本。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/08/2021
+ms.date: 03/16/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 zone_pivot_groups: sqlml-platforms
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 17e4a885281cf428e8a5051b4060199b2824bd90
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5130a45eafbc9fa7b5fb684686fe9e0ea15c649b
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100072711"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833727"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>为 SQL Server 安装 R 自定义运行时
 
@@ -26,7 +26,7 @@ ms.locfileid: "100072711"
 + Windows
 + Ubuntu Linux
 + Red Hat Enterprise Linux (RHEL)
-+ SUSE Linux Enterprise Server (SLES)
++ SUSE Linux Enterprise Server (SLES) 版本 12
 
 自定义运行时可以运行机器学习脚本，并使用 [SQL Server 语言扩展](../../language-extensions/language-extensions-overview.md)。
 
@@ -73,7 +73,7 @@ RECONFIGURE WITH OVERRIDE;
 
 ## <a name="verify-installation"></a>验证安装
 
-使用以下 SQL 脚本验证 Python 自定义运行时的安装和功能。
+使用以下 SQL 脚本验证 R 自定义运行时的安装和功能。
 
 ```sql
 EXEC sp_execute_external_script
@@ -84,6 +84,10 @@ print(file.path(R.home("bin"), "R"));
 print(R.version);
 print("Hello RExtension!");'
 ```
+
+::: zone pivot="platform-linux-rhel"
+[!INCLUDE [R custom runtime - Linux - RHEL known issues](includes/custom-runtime-r-linux-known-issues-rhel.md)]
+::: zone-end
 
 ## <a name="next-steps"></a>后续步骤
 

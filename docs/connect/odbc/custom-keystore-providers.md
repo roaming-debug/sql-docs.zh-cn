@@ -11,14 +11,15 @@ ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: f1f075c7ea2e80ec1760012c33ed9f719837c036
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 90eadc72e631ee59b0773dc47fe1199668484b65
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837426"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673131"
 ---
 # <a name="custom-keystore-providers"></a>自定义密钥存储提供程序
+
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>概述
@@ -27,7 +28,7 @@ SQL Server 2016 的列加密功能要求客户端检索存储在服务器上的�
 
 每个密钥存储提供程序都包含并管理一个或多个 CMK，这些 CMK 通过密钥路径（提供程序定义的格式的字符串）标识。 此 CMK 与加密算法（也是提供程序定义的字符串）一同可用于执行 CEK 加密和 ECEK 解密。 此算法与提供程序的 ECEK 和名称一同存储在数据库的加密元数据中。 有关详细信息，请参阅 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 和 [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)。 因此，密钥管理的两个基本操作是：
 
-```
+```cpp
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
 
 -and-
@@ -37,13 +38,13 @@ ECEK = EncryptViaCEKeystoreProvider(CEKeyStoreProvider_name, Key_path, Key_algor
 
 其中 `CEKeystoreProvider_name` 用于标识特定的列加密密钥存储提供程序 (CEKeystoreProvider)，另一个参数由 CEKeystoreProvider 使用以加密/解密 (E)CEK。 名称和密钥路径由 CMK 元数据提供，而算法和 ECEK 值则由 CEK 元数据提供。 多个密钥存储提供程序可能与默认内置提供程序一起显示。 执行需要 CEK 的操作后，驱动程序就会使用 CMK 元数据按名称查找相应的密钥存储提供程序，并执行它的解密操作，此操作可表示为：
 
-```
+```cpp
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
 ```
 
 尽管驱动程序不需要加密 CEK，但为了实现诸如 CMK 创建和轮换之类的操作，密钥管理工具可能需要这样做。 这些操作需要执行反运算：
 
-```
+```cpp
 ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
 ```
 
@@ -55,7 +56,7 @@ ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
 
 `CEKeystoreProvider` 结构定义单个密钥存储提供程序的入口点：
 
-```
+```cpp
 typedef struct CEKeystoreProvider {
     wchar_t *Name;
     int (*Init)(CEKEYSTORECONTEXT *ctx, errFunc *onError);
@@ -91,11 +92,12 @@ typedef struct CEKeystoreProvider {
 |`EncryptCEK`|CEK 加密函数。 驱动程序不调用此函数，但提供此函数是为了让密钥管理工具创建对 ECEK 的编程访问。 如果不需要，可以为 null。|
 |`Free`|终止函数。 如果不需要，可以为 null。|
 
-除 Free 之外，该接口中的函数均具有一对参数 ctx  和 onError  。 前者标识调用函数的上下文，而后者则用于报告错误。 有关详细信息，请参阅下面的[上下文](#context-association)和[错误处理](#error-handling)。
+除 Free 之外，此接口中的函数均具有 ctx 和 onError 这一对参数。 前者标识调用函数的上下文，而后者则用于报告错误。 有关详细信息，请参阅下面的[上下文](#context-association)和[错误处理](#error-handling)。
 
-```
+```cpp
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
+
 提供程序定义的初始化函数的占位符名称。 在加载提供程序之后，但在第一次驱动程序需要提供程序执行 ECEK 解密或 Read()/Write() 请求之前，驱动程序会立即调用此函数。 使用此函数执行所需的任何初始化。
 
 |参数|说明|
@@ -104,36 +106,38 @@ int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 |`onError`|[输入] 错误报告函数。|
 |`Return Value`|返回非零表示成功，返回零则表示失败。|
 
-```
+```cpp
 int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len);
 ```
 
-提供程序定义的通信函数的占位符名称。 当应用程序请求使用 SQL_COPT_SS_CEKEYSTOREDATA 连接属性从（先前写入的）提供程序读取数据时，驱动程序将调用此函数，从而允许应用程序从提供程序读取任意数据。 有关详细信息，请参阅[与密钥存储提供程序通信](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)。
+提供程序定义的通信函数的占位符名称。 当应用程序请求使用 SQL_COPT_SS_CEKEYSTOREDATA 连接属性从（先前写入的）提供程序读取数据时，驱动程序将调用此函数，从而允许应用程序从提供程序读取任意数据。 有关详细信息，请参阅[与密钥存储提供程序通信](using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)。
 
 |参数|说明|
 |:--|:--|
 |`ctx`|[输入] 操作上下文。|
 |`onError`|[输入] 错误报告函数。|
 |`data`|[输出] 指向特定缓冲区的指针，提供程序在该缓冲区中写入要由应用程序读取的数据。 此缓冲区对应于 CEKEYSTOREDATA 结构的数据字段。|
-|`len`|[输入输出] 指向长度值的指针；输入后，这是数据缓冲区的最大长度，并且提供程序写入的字节数不得超过 *len 个字节。 返回后，提供程序应使用写入的字节数来更新 *len。|
+|`len`|[输入输出] 指向长度值的指针；输入后，此值是数据缓冲区的最大长度，并且提供程序写入的字节数不得超过 `*len` 个字节。 返回后，提供程序应使用写入的字节数来更新 `*len`。|
 |`Return Value`|返回非零表示成功，返回零则表示失败。|
 
-```
+```cpp
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
-提供程序定义的通信函数的占位符名称。 当应用程序请求使用 SQL_COPT_SS_CEKEYSTOREDATA 连接属性将数据写入提供程序时，驱动程序将调用此函数，从而允许应用程序将任意数据写入提供程序。 有关详细信息，请参阅[与密钥存储提供程序通信](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)。
+
+提供程序定义的通信函数的占位符名称。 当应用程序请求使用 SQL_COPT_SS_CEKEYSTOREDATA 连接属性将数据写入提供程序时，驱动程序将调用此函数，从而允许应用程序将任意数据写入提供程序。 有关详细信息，请参阅[与密钥存储提供程序通信](using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)。
 
 |参数|说明|
 |:--|:--|
 |`ctx`|[输入] 操作上下文。|
 |`onError`|[输入] 错误报告函数。|
 |`data`|[输入] 指向特定缓冲区的指针，该缓冲区包含提供程序要读取的数据。 此缓冲区对应于 CEKEYSTOREDATA 结构的数据字段。 提供程序不得从此缓冲区读取超过 len 个字节。|
-|`len`|[输入] 数据中的可用字节数。 这对应于 CEKEYSTOREDATA 结构的 dataSize 字段。|
+|`len`|[输入] 数据中的可用字节数。 此值对应于 CEKEYSTOREDATA 结构的 dataSize 字段。|
 |`Return Value`|返回非零表示成功，返回零则表示失败。|
 
-```
+```cpp
 int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen);
 ```
+
 提供程序定义的 ECEK 解密函数的占位符名称。 驱动程序调用此函数以将由与此提供程序关联的 CMK 加密的 ECEK 解密为 CEK。
 
 |参数|说明|
@@ -148,16 +152,17 @@ int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 |`cekLen`|[输出] 提供程序应将其已写入 **cekOut 的解密 ECEK 的长度写入 cekLen 指向的地址。|
 |`Return Value`|返回非零表示成功，返回零则表示失败。|
 
-```
+```cpp
 int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *cek,unsigned short cekLen, unsigned char **ecekOut, unsigned short *ecekLen);
 ```
+
 提供程序定义的 CEK 加密函数的占位符名称。 驱动程序不调用此函数，也不通过 ODBC 接口公开其功能，但提供此函数是为了让密钥管理工具创建对 ECEK 的编程访问。
 
 |参数|说明|
 |:--|:--|
 |`ctx`|[输入] 操作上下文。|
 |`onError`|[输入] 错误报告函数。|
-|`keyPath`|[输入] 给定 ECEK 引用的 CMK 的 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) 元数据属性的值。 以 Null 结尾的宽字符*字符串。 这旨在标识此提供程序处理的 CMK。|
+|`keyPath`|[输入] 给定 ECEK 引用的 CMK 的 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) 元数据属性的值。 以 Null 结尾的宽字符*字符串。 此值旨在标识由此提供程序处理的 CMK。|
 |`alg`|[输入] 给定 ECEK 的 [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 元数据属性的值。 以 Null 结尾的宽字符*字符串。 此值旨在标识用于加密给定 ECEK 的加密算法。|
 |`cek`|[输入] 指向要加密的 CEK 的指针。|
 |`cekLen`|[输入] CEK 的长度。|
@@ -165,14 +170,14 @@ int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 |`ecekLen`|[输出] 提供程序应将其已写入 **ecekOut 的加密 CEK 的长度写入 ecekLen 指向的地址。|
 |`Return Value`|返回非零表示成功，返回零则表示失败。|
 
-```
+```cpp
 void (*Free)();
 ```
+
 提供程序定义的终止函数的占位符名称。 在正常终止进程后，驱动程序可以调用此函数。
 
 > [!NOTE]
 > *根据 SQL Server 存储字符串方式，宽字符字符串为 2 字节字符 (UTF-16)。*
-
 
 ### <a name="error-handling"></a>错误处理
 
@@ -192,7 +197,7 @@ onError  参数指向具有以下原型的错误报告功能：
 
 为了报告错误发生的时间，提供程序调用 onError，提供由驱动程序传递给提供程序函数的上下文参数，并提供一个错误消息，其中包含要格式化的其他可选参数。 提供程序可以多次调用此函数，以在一个提供程序函数调用中连续发布多个错误消息。 例如：
 
-```
+```cpp
     if (!doSomething(...))
     {
         onError(ctx, L"An error occurred in doSomething.");
@@ -200,7 +205,6 @@ onError  参数指向具有以下原型的错误报告功能：
         return 0;
     }
 ```
-
 
 `msg` 参数通常是一个宽字符字符串，但是可以使用其他扩展：
 
@@ -210,12 +214,11 @@ onError  参数指向具有以下原型的错误报告功能：
 
 为了让驱动程序能够识别错误，提供程序函数必须返回失败。 在 ODBC 操作的上下文中出现失败时，可以通过标准 ODBC 诊断机制（`SQLError`、`SQLGetDiagRec` 和 `SQLGetDiagField`）在连接或语句句柄上访问所发布的错误。
 
-
 ### <a name="context-association"></a>上下文关联
 
 除了为错误回叫提供上下文外，`CEKEYSTORECONTEXT` 结构还可以用于确定在其中执行提供程序操作的 ODBC 上下文。 此上下文允许提供程序将数据与这些上下文中的每一个相关联（例如，用于实现每连接配置）。 为了这个目的，此结构包含三个与环境、连接和语句上下文对应的不透明指针：
 
-```
+```cpp
 typedef struct CEKeystoreContext
 {
 void *envCtx;
@@ -230,8 +233,7 @@ void *stmtCtx;
 |`dbcCtx`|连接上下文。|
 |`stmtCtx`|语句上下文。|
 
-其中每个上下文都是一个不透明值，尽管与相应的 ODBC 句柄不同，但可以用作句柄的唯一标识符：如果句柄 X  与上下文值 Y  关联，那么与 X  同时存在的其他环境、连接或语句句柄都不会有上下文值 Y  ，且其他任何上下文值都不会与句柄 X  关联。如果完成的提供程序操作缺少特定的句柄上下文（例如，用于加载和配置提供程序的 SQLSetConnectAttr 调用没有语句句柄），则结构中的相应上下文值为 null。
-
+其中每个上下文都是一个不透明值，尽管与相应的 ODBC 句柄不同，但可以用作句柄的唯一标识符：如果句柄 X 与上下文值 Y 关联，那么与 X 同时存在的其他环境、连接或语句句柄都不会有上下文值 Y，且其他任何上下文值都不会与句柄 X 关联。如果完成的提供程序操作缺少特定的句柄上下文（例如，用于加载和配置提供程序的 SQLSetConnectAttr 调用没有语句句柄），则结构中的相应上下文值为 null。
 
 ## <a name="example"></a>示例
 
@@ -239,7 +241,7 @@ void *stmtCtx;
 
 以下代码是最小密钥存储提供程序实现的示例。
 
-```
+```cpp
 /* Custom Keystore Provider Example
 
 Windows:   compile with cl MyKSP.c /LD /MD /link /out:MyKSP.dll
@@ -364,7 +366,7 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
 
 以下代码是使用上面的密钥存储提供程序的演示应用程序。 运行它时，请确保提供程序库与应用程序二进制文件位于同一目录中，且连接字符串指定 `ColumnEncryption=Enabled` 设置（或指定包含此设置的 DSN）。
 
-```
+```cpp
 /*
  Example application for demonstration of custom keystore provider usage
 
@@ -637,4 +639,4 @@ FoundProv:
 
 ## <a name="see-also"></a>另请参阅
 
-[对 ODBC 驱动程序使用 Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+[对 ODBC 驱动程序使用 Always Encrypted](using-always-encrypted-with-the-odbc-driver.md)

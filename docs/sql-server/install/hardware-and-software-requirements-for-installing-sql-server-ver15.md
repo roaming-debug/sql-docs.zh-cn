@@ -45,21 +45,21 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: chadam
 author: cawrites
-ms.openlocfilehash: 52c29a7de29a324d7bda2fba4cb52073cf62d752
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b7def7a7f58d3fe2124545171c5858a012e4642b
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100352432"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673981"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019：硬件和软件要求
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-本文列出了在 Windows 操作系统上安装和运行 SQL Server 2019 至少需要满足的硬件和软件要求。
+本文列出了在 Windows 操作系统上安装和运行 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 至少需要满足的硬件和软件要求。
 
-有关其他版本的 SQL Server 的硬件和软件要求，请参阅：
-- [SQL Server 2016 和 2017](hardware-and-software-requirements-for-installing-sql-server.md)
-- [Linux 上的 SQL Server](../../linux/sql-server-linux-setup.md#system)
+有关其他版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的硬件和软件要求，请参阅：
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 和 2017](hardware-and-software-requirements-for-installing-sql-server.md)
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Linux 版](../../linux/sql-server-linux-setup.md#system)
 - [大数据群集](../../big-data-cluster/deployment-guidance.md)
 
 ##  <a name="hardware-requirements"></a><a name="pmosr"></a> 硬件要求  
@@ -100,12 +100,12 @@ ms.locfileid: "100352432"
 > 对于 PolyBase 功能还有其他硬件和软件要求。 有关详细信息，请参阅 [PolyBase 入门](../../relational-databases/polybase/polybase-guide.md)。  
   
 
-##  <a name="operating-system-support"></a><a name="TOP_Principal"></a> 操作系统支持 
+## <a name="operating-system-support"></a>操作系统支持
 
-下表显示了与各版本的 Windows 兼容的 SQL Server 2019 版本：  
+下表显示了哪些版本的 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 与哪些版本的 Windows 兼容：  
   
 
-| SQL Server 版本：               | Enterprise | 开发人员 | Standard | Web | Express |  
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本：               | Enterprise | 开发人员 | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    是     |    是    |    是   | 是 |   是   |
 | Windows Server 2019 Standard      |    是     |    是    |    是   | 是 |   是   |
@@ -121,7 +121,7 @@ ms.locfileid: "100352432"
 
 ### <a name="server-core-support"></a>Server Core 支持
 
-以下 Windows Server 版本支持在 Server Core 模式上安装 SQL Server 2019：
+以下 Windows Server 版本支持在 Server Core 模式上安装 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] ：
 
 :::row:::
     :::column:::
@@ -138,11 +138,11 @@ ms.locfileid: "100352432"
     :::column-end:::
 :::row-end:::
 
-有关如何在 Server Core 上安装 SQL Server 的详细信息，请参阅[在 Server Core 上安装 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。 
+若要详细了解如何在 Server Core 上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[在 Server Core 上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-on-server-core.md)。 
 
 
 ##  <a name="cross-language-support"></a><a name="CrossLanguageSupport"></a> 跨语言支持  
- 有关跨语言支持和以本地化语言安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的注意事项的详细信息，请参阅 [SQL Server 中的本地语言版本](../../sql-server/install/local-language-versions-in-sql-server.md)。  
+ 有关跨语言支持和以本地化语言安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的注意事项的详细信息，请参阅 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的本地语言版本](../../sql-server/install/local-language-versions-in-sql-server.md)。  
   
 ##  <a name="disk-space-requirements"></a><a name="HardDiskSpace"></a> 磁盘空间要求  
  在安装 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]的过程中，Windows Installer 会在系统驱动器中创建临时文件。 在运行安装程序以安装或升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，请检查系统驱动器中是否有至少 6.0 GB 的可用磁盘空间用来存储这些文件。 即使在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件安装到非默认驱动器中时，此项要求也适用。  
@@ -173,13 +173,13 @@ ms.locfileid: "100352432"
  支持的数据文件存储类型包括：  
   
 - 本地磁盘 
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前支持标准本机扇区大小为 512 字节和 4 KB 的磁盘驱动器。  扇区大小大于 4 KB 的硬盘在尝试存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件时可能会导致错误。  要详细了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的硬盘扇区大小支持，请参阅 [SQL Server 中的硬盘驱动器扇区大小支持边界](https://support.microsoft.com/kb/926930) 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前支持标准本机扇区大小为 512 字节和 4 KB 的磁盘驱动器。  扇区大小大于 4 KB 的硬盘在尝试存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件时可能会导致错误。  若要详细了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的硬盘扇区大小支持，请参阅 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的硬盘驱动器扇区大小支持边界](https://support.microsoft.com/kb/926930) 
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装只支持使用本地磁盘安装 tempdb 文件。 确保为 tempdb 数据和日志文件指定的路径在所有群集节点上均有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源将无法联机。
 - 共享存储  
 - [存储空间直通 \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 - SMB 文件共享  
     - 无论是独立安装还是群集安装， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件均不支持 SMB 存储。 请改用直接连接的存储、存储区域网络或 S2D。 
-    - SMB 存储可由 Windows 文件服务器或第三方 SMB 存储设备承载。 如果使用 Windows 文件服务器，该 Windows 文件服务器版本应为 2008 或更高。 有关将 SMB 文件共享作为存储选项安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [SMB 文件共享用作存储选项时安装 SQL Server](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
+    - SMB 存储可由 Windows 文件服务器或第三方 SMB 存储设备承载。 如果使用 Windows 文件服务器，该 Windows 文件服务器版本应为 2008 或更高。 有关将 SMB 文件共享作为存储选项安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅[在将 SMB 文件共享用作存储选项时安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
   
   
   
@@ -197,12 +197,12 @@ ms.locfileid: "100352432"
 
 可以从以下位置获取相关安装介质： 
   
-- [SQL Server 评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
+- [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019)
 - [最新累积更新](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
-你也可以创建一个[已运行 SQL Server 的 Azure 虚拟机](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal)，不过由于虚拟化的开销，虚拟机上的 SQL Server 比本地运行的速度要慢。
+你也可以创建一个[已运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Azure 虚拟机](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal)，不过由于虚拟化的开销，虚拟机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 比本地运行的速度要慢。
 
 
 ## <a name="next-steps"></a>后续步骤
 
-查看安装 SQL Server 的硬件和软件要求后，即可开始[规划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)或查看 [SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。
+查看安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的硬件和软件要求后，即可开始[规划 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装](../../sql-server/install/planning-a-sql-server-installation.md)或查看 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。

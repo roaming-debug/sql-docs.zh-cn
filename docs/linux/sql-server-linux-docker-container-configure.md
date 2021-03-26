@@ -5,18 +5,18 @@ author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
 ms.custom: contperf-fy21q1
-ms.date: 09/07/2020
+ms.date: 03/22/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 2fa5cc3b5fe8ecc5a2b3ed87444474f1de54b022
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 9d3fa1989b44bcdf53b8f80dedc1aa3bba5bfedb
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100273068"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833918"
 ---
 # <a name="configure-and-customize-sql-server-docker-containers"></a>配置和自定义 SQL Server Docker 容器
 
@@ -44,6 +44,9 @@ ms.locfileid: "100273068"
 ### <a name="mount-a-host-directory-as-data-volume"></a>将主机目录作为数据卷装载
 
 第一种方法是在主机上将目录作为容器中的数据卷装载。 为此，请将 `docker run` 命令与 `-v <host directory>:/var/opt/mssql` 标志配合使用。 这允许在容器执行之间还原数据。
+
+> [!NOTE]
+> SQL Server 2019 容器自动以非根用户的身份启动，而 SQL Server 2017 容器在默认情况下以根用户的身份启动。 有关以非根用户的身份运行 SQL Server 容器的详细信息，请参阅[配置安全性](sql-server-linux-docker-container-security.md)。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

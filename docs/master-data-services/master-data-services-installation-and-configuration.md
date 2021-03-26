@@ -1,22 +1,19 @@
 ---
 title: 安装和配置
 description: 了解如何在 Windows Server 2012 R2 计算机上安装 Master Data Services，配置 MDS 数据库和网站，以及部署示例模型和数据。
-ms.custom: ''
-ms.date: 07/01/2020
+ms.date: 03/24/2021
 ms.prod: sql
 ms.prod_service: mds
-ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: quickstart
-ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1d12236bbfd3af474e883c23b975d357e0fd27a8
-ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
+ms.openlocfilehash: 80e4952dbc6af15a4a54a5f56e3b9080f07dbb9d
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104833838"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551641"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -30,7 +27,7 @@ ms.locfileid: "104833838"
 
 有关如何在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中组织数据的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)。     
   
- 有关新功能的信息，请参阅 [Master Data Services &#40;MDS&#41;中的新增 ](../master-data-services/what-s-new-in-master-data-services-mds.md)功能。  
+有关新功能的信息，请参阅 [Master Data Services &#40;MDS&#41;中的新增 ](../master-data-services/what-s-new-in-master-data-services-mds.md)功能。  
  
 有关可帮助你了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的视频以及其他培训资源的链接，请参阅 [了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
@@ -44,7 +41,8 @@ ms.locfileid: "104833838"
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer 和 Silverlight
 - 在 Windows Server 2012 计算机上安装 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 时，可能必须配置 Internet Explorer 增强安全性以允许为 Web 应用程序站点编写脚本。 否则，浏览到服务器计算机上的站点将失败。
-- 在使用 Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果不具有所需版本的 Silverlight，则在导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示安装 Silverlight。 可以从[此处](https://www.microsoft.com/silverlight/)安装 Silverlight 5。
+- 在之前 [!INCLUDE[sqlv15](../includes/sssql19-md.md)] ，若要在 Web 应用程序中工作，则必须在客户端计算机上安装 Silverlight 5。 如果不具有所需版本的 Silverlight，则在导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示安装 Silverlight。 可以从[此处](https://www.microsoft.com/silverlight/)安装 Silverlight 5。
+- 从开始 [!INCLUDE[sqlv15](../includes/sssql19-md.md)] ，HTML 控件替换所有以前的 silverlight 组件，因此移除了 silverlight 依赖项。 更多浏览器（包括 Chrome 和 Edge）现在可用于访问 Master Data Services web 应用。
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 虚拟机上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 默认情况下，当你使用已安装的创建 Azure 虚拟机时 [!INCLUDE[ssnoversion_md](../includes/ssnoversion-md.md)] ， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 还将安装。 
@@ -74,7 +72,7 @@ ms.locfileid: "104833838"
   
      ![Windows Server 2012 任务栏中服务器管理器的图标](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Windows Server 2012 任务栏中服务器管理器的图标")  
   
-5.  在“服务器管理器”中，单击“管理”菜单中的“添加角色和功能”。  
+5.  在“服务器管理器”中的“管理”菜单上，单击“添加角色和功能”。
    
      ![在服务器管理中，"添加角色和功能" 菜单命令](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "在服务器管理中，"添加角色和功能" 菜单命令")  
   
@@ -90,7 +88,7 @@ ms.locfileid: "104833838"
    
 9. 在“功能”页，确认选中以下功能，然后单击“下一步”。 [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] 上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 需要这些功能。
   
-    |功能|功能|  
+    |特征|特征|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -123,6 +121,7 @@ ms.locfileid: "104833838"
 > 
 > 浏览器要求
 > >[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 应用程序仅适用于 Internet Explorer (IE) 9 或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。    
+> 从开始 [!INCLUDE[sqlv15](../includes/sssql19-md.md)] ，HTML 控件替换所有以前的 silverlight 组件，因此移除了 silverlight 依赖项。 更多浏览器（包括 Chrome 和 Edge）现在适用于 Master Data Services web 应用。
   
 1.  启动 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]，然后单击左窗格中的“数据库配置”。  
   
@@ -207,7 +206,7 @@ ms.locfileid: "104833838"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 单击“应用”  。 显示“配置完成”消息框。 在消息框中单击“确定”，启动 Web 应用程序。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
+15. 单击“应用”。 显示“配置完成”消息框。 在消息框中单击“确定”，启动 Web 应用程序。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

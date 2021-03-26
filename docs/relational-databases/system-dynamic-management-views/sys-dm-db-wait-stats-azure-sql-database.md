@@ -1,8 +1,8 @@
 ---
 description: sys.dm_db_wait_stats（Azure SQL 数据库）
-title: Azure SQL Database (sys.dm_db_wait_stats) |Microsoft Docs
+title: sys.dm_db_wait_stats（Azure SQL 数据库）
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/12/2021
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: reference
@@ -16,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
-ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 9787c91301678463ee324b6c6fa473b03af61a80
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6819bba097963249e68d61941e4dc4e704a2b7a7
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99109138"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551608"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats（Azure SQL 数据库）
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -58,7 +57,9 @@ ms.locfileid: "99109138"
   
     -   外部进程完成。  
   
--   这些统计信息在 SQL Database 故障转移事件间不能持续存在，所有数据均为自上次重置统计信息以来累积的数据。  
+
+> [!NOTE]
+> 在 SQL 数据库故障转移事件后，这些统计信息不会保留，并且自上次重置统计信息或启动数据库引擎后，所有数据都是累积的。 使用 `sqlserver_start_time` [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) 中的列查找上次数据库引擎启动时间。   
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
@@ -91,7 +92,7 @@ ms.locfileid: "99109138"
 |AUDIT_ON_DEMAND_TARGET_LOCK|当等待用于确保扩展事件目标相关审核的单一初始化的锁时出现。|  
 |AUDIT_XE_SESSION_MGR|当等待用于同步扩展事件会话相关审核的启动和停止的锁时出现。|  
 |BACKUP|当任务作为备份处理的一部分被阻止时出现。|  
-|BACKUP_OPERATOR|当任务正在等待磁带装入时出现。 若要查看磁带状态，请查询 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)。 如果装入操作没有挂起，则该等待类型可能指示磁带机发生硬件问题。|  
+|BACKUP_OPERATOR|当任务正在等待磁带装入时出现。|  
 |BACKUPBUFFER|在备份任务等待数据或等待用来存储数据的缓冲区时发生。 此类型不常见，只有当任务等待装入磁带时才会出现。|  
 |BACKUPIO|在备份任务等待数据或等待用来存储数据的缓冲区时发生。 此类型不常见，只有当任务等待装入磁带时才会出现。|  
 |BACKUPTHREAD|当某任务正在等待备份任务完成时出现。 等待时间可能较长，从几分钟到几个小时。 如果被等待的任务正处于 I/O 进程中，则该类型不指示发生问题。|  
@@ -134,8 +135,8 @@ ms.locfileid: "99109138"
 |DBMIRROR_SEND|当某任务正在等待清除网络层的通信积压以便能够发送消息时出现。 指示通信层正在开始重载并影响数据库镜像数据吞吐量。|  
 |DBMIRROR_WORKER_QUEUE|指示数据库镜像工作线程任务正在等待更多的工作。|  
 |DBMIRRORING_CMD|当某任务正在等待日志记录刷新到磁盘时出现。 该等待状态应当保留较长的时间。|  
-|DEADLOCK_ENUM_MUTEX|在死锁监视器和 sys.dm_os_waiting_tasks 尝试确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同时运行多个死锁搜索时出现。|  
-|DEADLOCK_TASK_SEARCH|长时间等待此资源指示服务器正在 sys.dm_os_waiting_tasks 之上执行查询，并且这些查询正在阻止死锁监视器运行死锁搜索。 该等待类型仅供死锁监视器使用。 sys.dm_os_waiting_tasks 之上的查询使用 DEADLOCK_ENUM_MUTEX。|  
+|DEADLOCK_ENUM_MUTEX|在死锁监视器和 `sys.dm_os_waiting_tasks` 尝试确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同时运行多个死锁搜索时出现。|  
+|DEADLOCK_TASK_SEARCH|长时间等待此资源指示服务器正在 `sys.dm_os_waiting_tasks` 之上执行查询，并且这些查询正在阻止死锁监视器运行死锁搜索。 该等待类型仅供死锁监视器使用。 在 `sys.dm_os_waiting_tasks` 之上执行的查询使用 DEADLOCK_ENUM_MUTEX。|  
 |DEBUG|在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR 调试内部同步期间出现。|  
 |DISABLE_VERSIONING|当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轮询版本事务管理器，以查看最早的活动事务的时间戳是否晚于状态开始更改时的时间戳时出现。 如果是，则所有在 ALTER DATABASE 语句运行之前启动的快照事务都已完成。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 ALTER DATABASE 语句禁用版本控制时使用该等待状态。|  
 |DISKIO_SUSPEND|当某任务正在等待访问文件（外部备份处于活动状态）时出现。 针对每个正在等待的用户进程报告该状态。 每个用户进程大于五的计数可能指示外部备份需要太长时间才能完成。|  
@@ -186,12 +187,12 @@ ms.locfileid: "99109138"
 |KTM_ENLISTMENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_MANAGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_RESOLUTION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_DT|等待 DT（破坏）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 sys.dm_os_latch_stats 中提供了 LATCH_* waits 的列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
-|LATCH_EX|等待 EX（排他）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 sys.dm_os_latch_stats 中提供了 LATCH_* waits 的列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
-|LATCH_KP|等待 KP（保持）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 sys.dm_os_latch_stats 中提供了 LATCH_* waits 的列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
+|LATCH_DT|等待 DT（破坏）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 在 `sys.dm_os_latch_stats` 中提供 LATCH_* 等待列表。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
+|LATCH_EX|等待 EX（排他）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 在 `sys.dm_os_latch_stats` 中提供 LATCH_* 等待列表。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
+|LATCH_KP|等待 KP（保持）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 在 `sys.dm_os_latch_stats` 中提供 LATCH_* 等待列表。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
 |LATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_SH|等待 SH（共享）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 sys.dm_os_latch_stats 中提供了 LATCH_* waits 的列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
-|LATCH_UP|等待 UP（更新）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 sys.dm_os_latch_stats 中提供了 LATCH_* waits 的列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
+|LATCH_SH|等待 SH（共享）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 在 `sys.dm_os_latch_stats` 中提供 LATCH_* 等待列表。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
+|LATCH_UP|等待 UP（更新）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 在 `sys.dm_os_latch_stats` 中提供 LATCH_* 等待列表。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。|  
 |LAZYWRITER_SLEEP|当惰性编写器被挂起时出现。 正在等待的后台任务所用时间的度量值。 在查找用户阻隔点所时不要考虑该状态。|  
 |LCK_M_BU|当某任务正在等待获取大容量更新 (BU) 锁时出现。 有关锁兼容性矩阵，请参阅 [&#40;transact-sql&#41;sys.dm_tran_locks ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
 |LCK_M_IS|当某任务正在等待获取意向共享 (IS) 锁时出现。 有关锁兼容性矩阵，请参阅 [&#40;transact-sql&#41;sys.dm_tran_locks ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。|  
@@ -293,9 +294,9 @@ ms.locfileid: "99109138"
 |RESOURCE_SEMAPHORE_QUERY_COMPILE|在并发查询编译的数量达到中止限制时出现。 等待时间较长或等待次数较多可能指示编译、重新编辑或不可缓存的计划过多。|  
 |RESOURCE_SEMAPHORE_SMALL_QUERY|当由于存在其他并发查询而无法立即批准较小查询的内存请求时出现。 等待时间不应超过几秒钟，因为如果服务器无法在几秒钟内给予请求的内存，则会将请求传输到主查询内存池中。 等待时间较长可能指示当主内存池被等待的查询阻塞时并发小查询的数量过多。|  
 |SE_REPL_CATCHUP_THROTTLE|在事务等待其中一个辅助数据库取得进展时发生。|  
-|SE_REPL_COMMIT_ACK|当事务等待从辅助副本收到仲裁提交确认时发生。|  
-|SE_REPL_COMMIT_TURN|当事务等待在收到仲裁提交确认后提交时发生。|  
-|SE_REPL_ROLLBACK_ACK|当事务等待从辅助副本收到仲裁回滚确认时发生。|  
+|SE_REPL_COMMIT_ACK|当事务正在等待来自辅助副本的仲裁提交确认时发生。|  
+|SE_REPL_COMMIT_TURN|在收到仲裁提交确认后事务正在等待提交时发生。|  
+|SE_REPL_ROLLBACK_ACK|当事务正在等待来自辅助副本的仲裁回滚确认时发生。|  
 |SE_REPL_SLOW_SECONDARY_THROTTLE|当线程等待其中一个数据库辅助副本时发生。|  
 |SEC_DROP_TEMP_KEY|在尝试删除临时安全密钥失败之后并在重试之前出现。|  
 |SECURITY_MUTEX|当等待互斥体时出现，这些互斥体控制对可扩展的密钥管理 (EKM) 加密提供程序的全局列表以及 EKM 会话的会话作用域列表的访问。|  
@@ -363,7 +364,7 @@ ms.locfileid: "99109138"
 |WAIT_FOR_RESULTS|在等待查询通知触发时出现。|  
 |WAITFOR|显示为 WAITFOR [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的结果。 等待持续时间由此语句的参数确定。 它是用户启动的等待。|  
 |WAITFOR_TASKSHUTDOWN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|WAITSTAT_MUTEX|在同步访问用于填充 sys.dm_os_wait_stats 的统计信息集期间出现。|  
+|WAITSTAT_MUTEX|在同步访问用于填充 `sys.dm_os_wait_stats` 的统计信息集期间出现。|  
 |WCC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |WORKTBL_DROP|在删除出现故障的工作表之后，重试之前的暂停期间出现。|  
 |WRITE_COMPLETION|当正在进行写操作时出现。|  
@@ -388,3 +389,8 @@ ms.locfileid: "99109138"
 |FT_MASTER_MERGE|全文正在等待主合并操作。 记录为仅供参考。 不支持。 不保证以后的兼容性。|  
   
   
+## <a name="see-also"></a>另请参阅
+
+ [sys.dm_os_sys_info &#40;Transact-sql&#41;](sys-dm-os-sys-info-transact-sql.md)    
+ [sys.dm_tran_locks (Transact-SQL)](sys-dm-tran-locks-transact-sql.md)    
+ [sys.dm_os_waiting_tasks &#40;Transact-sql&#41;](sys-dm-os-waiting-tasks-transact-sql.md)    

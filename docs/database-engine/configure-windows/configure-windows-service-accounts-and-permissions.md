@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e68604e7805342c9c1d0302c0f99d88d8d9fbf07
-ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
+ms.openlocfilehash: 525f08bada39e02a3dfc4f834f5106be18571e36
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98924733"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673968"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 
@@ -249,7 +249,7 @@ ms.locfileid: "98924733"
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> 服务配置和访问控制
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 会为其每项服务启用 Per-service SID，以提供深层服务隔离与防御。 Per-service SID 从服务名称派生得到，对该服务是唯一的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务的命名实例的服务 SID 名称可能是 NT Service\MSSQL$\<InstanceName>。 通过服务隔离，可直接访问特定的对象，而无需运行高特权帐户，也不会削弱为对象提供的安全保护水平。 通过使用包含服务 SID 的访问控制项， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务可限制对其资源的访问。
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 会为其每项服务启用 Per-service SID，以提供深层服务隔离与防御。 Per-service SID 从服务名称派生得到，对该服务是唯一的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务的命名实例的服务 SID 名称可能是 NT Service\MSSQL$\<InstanceName>。 通过服务隔离，可直接访问特定的对象，而无需运行高特权帐户，也不会削弱为对象提供的安全保护水平。 通过使用包含服务 SID 的访问控制项， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务可限制对其资源的访问。
 
 > [!NOTE]
 > 在 Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2（及更高版本）上，Per-service SID 可以是服务使用的虚拟帐户。
@@ -529,8 +529,8 @@ SQL WMI 提供程序需要以下最低权限：
 
 此部分介绍在从先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]升级的过程中进行的更改。
 
-- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 要求 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 SP1、Windows Server 2012、Windows 8.0、Windows Server 2012 R2 或 Windows 8.1。 任何在更低操作系统版本上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 先前版本在升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，都必须升级操作系统。
-- 在将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的过程中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将按以下方式配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
+- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 需要受支持的[操作系统](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md#operating-system-support)。 任何在更低操作系统版本上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 先前版本在升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，都必须升级操作系统。
+- 在将 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] 的过程中，安装程序会按以下方式配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例：
 
   - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用 Per-service SID 的安全上下文运行。 将向 Per-service SID 授予针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的文件夹（如 DATA）和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册表项的访问权限。
   - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 Per-service SID 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中设置为 **sysadmin** 固定服务器角色的成员。

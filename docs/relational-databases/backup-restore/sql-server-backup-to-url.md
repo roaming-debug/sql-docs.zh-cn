@@ -2,7 +2,7 @@
 title: SQL Server 备份到 URL | Microsoft Docs
 description: 了解 SQL Server 使用 Microsoft Azure Blob 存储作为备份目标所需的概念、要求和组件。
 ms.custom: ''
-ms.date: 03/25/2019
+ms.date: 03/19/2021
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e2652320875d3bf22f5a7557dc7c1deba9a93376
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 9dfb774bf9176c315cb5f77a8567503d12dba4e5
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100349045"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673660"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 
@@ -97,6 +97,9 @@ Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob�
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求将 Azure 帐户名称和访问密钥身份验证或共享访问签名和访问令牌存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据中。 在执行备份或还原操作时，将使用此信息对 Azure 帐户进行身份验证。  
+
+    > [!WARNING]
+    > Azure 存储支持对存储帐户[禁用](https://docs.microsoft.com/azure/storage/common/shared-key-authorization-prevent)共享密钥授权。 禁用共享密钥授权后，“SQL Server 备份到 URL”功能将不起作用。
   
 - 用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”权限的 **db_backup 操作员** 数据库角色。   
 

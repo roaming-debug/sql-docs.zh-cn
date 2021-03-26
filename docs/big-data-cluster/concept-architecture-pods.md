@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 20f31d6cbf4bcdbbdc666b50dea626f79e298db1
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: a3428763808e4bf2928c66ff42911b44cc74361d
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343937"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551582"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>使用大数据群集部署的资源
 
@@ -188,5 +188,5 @@ kubectl get pods -n <namespace>
 若要了解有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的详细信息，请参阅以下资源：
 
 - [什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]？](big-data-cluster-overview.md)
-- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/microsoft/sqlworkshops-bdc)
 - [如何在 Kubernetes 上部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md#configfile)

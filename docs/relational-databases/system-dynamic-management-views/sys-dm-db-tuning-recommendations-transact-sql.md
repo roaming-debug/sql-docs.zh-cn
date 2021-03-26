@@ -1,8 +1,8 @@
 ---
-title: sys.dm_db_tuning_recommendations (Transact-sql) |Microsoft Docs
+title: 'sys.dm_db_tuning_recommendations (Transact-sql) '
 description: 了解如何在 SQL Server 和 Azure SQL 数据库中查找潜在的性能问题和建议的修补程序
 ms.custom: ''
-ms.date: 07/20/2017
+ms.date: 03/12/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - database tuning recommendations feature [SQL Server], sys.dm_db_tuning_recommendations dynamic management view
 - sys.dm_db_tuning_recommendations dynamic management view
-ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 401636f25e34c3c76faed1cc73fc54b9e2b911bf
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: 44c4b9bbc975074d1852f0e7a0f074e3c3acc979
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489341"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551638"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>sys.dm \_ db \_ 优化 \_ 建议 (transact-sql) 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "100489341"
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。
 
-| **列名** | **数据类型** | **说明** |
+| **列名** | **Data type** | **说明** |
 | --- | --- | --- |
-| name  | **nvarchar(4000)** | 建议的唯一名称。 |
-| type  | **nvarchar(4000)** | 生成建议的自动优化选项的名称，例如 `FORCE_LAST_GOOD_PLAN` |
+| **name** | **nvarchar(4000)** | 建议的唯一名称。 |
+| type | **nvarchar(4000)** | 生成建议的自动优化选项的名称，例如 `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | 提供此建议的原因。 |
 | **有效 \_ 时间** | **datetime2** | 第一次生成此建议时。 |
 | **上次 \_ 刷新时间** | **datetime2** | 上次生成此建议的时间。 |
@@ -58,9 +57,9 @@ ms.locfileid: "100489341"
 | **详细** | **nvarchar(max)** | 包含有关建议的更多详细信息的 JSON 文档。 可用字段如下：<br /><br />`planForceDetails`<br />-    `queryId` - \_ 回归查询的查询 id。<br />-    `regressedPlanId` -回归计划的 plan_id。<br />-   `regressedPlanExecutionCount` -检测到回归之前，执行具有回归计划的查询的次数。<br />-    `regressedPlanAbortedCount` -执行回归计划期间检测到的错误数。<br />-    `regressedPlanCpuTimeAverage` -检测到回归之前，回归查询使用的平均 CPU 时间 (（微秒）) 。<br />-    `regressedPlanCpuTimeStddev` -检测到回归之前，回归查询占用的 CPU 时间的标准偏差。<br />-    `recommendedPlanId` -应强制执行的计划 plan_id。<br />-   `recommendedPlanExecutionCount`-在检测到回归之前应强制执行的查询的执行次数。<br />-    `recommendedPlanAbortedCount` -执行应强制执行的计划期间检测到的错误数。<br />-    `recommendedPlanCpuTimeAverage` - (用计划执行的查询所使用的平均 CPU 时间) ，该查询使用的是在检测到回归之前应强制 (计算的计划) 。<br />-    `recommendedPlanCpuTimeStddev` 检测到回归之前，回归查询占用的 CPU 时间的标准偏差。<br /><br />`implementationDetails`<br />-  `method` -应该用于更正回归的方法。 值始终为 `TSql` 。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 为了强制建议的计划而应执行的脚本。 |
   
 ## <a name="remarks"></a>备注  
- `sys.dm_db_tuning_recommendations`当数据库引擎识别潜在的查询性能回归时，将更新返回的信息，并且不会保留。 建议仅在重启后才会保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果数据库管理员要在服务器回收后保留这些建议，则应该定期制作优化建议的备份副本。 
+ `sys.dm_db_tuning_recommendations`当数据库引擎识别潜在的查询性能回归时，将更新返回的信息，并且不会保留。 建议仅在数据库引擎重新启动后保留。 使用 `sqlserver_start_time` [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) 中的列查找上次数据库引擎启动时间。  如果数据库管理员要在服务器回收后保留这些建议，则应该定期制作优化建议的备份副本。   
 
- `currentValue` 列中的字段 `state` 可能包含以下值：
+ `currentValue`列中的字段 `state` 可能包含以下值：
  
  | 状态 | 说明 |
  |--------|-------------|
@@ -77,7 +76,7 @@ ms.locfileid: "100489341"
 | `SchemaChanged` | 建议过期，因为引用的表的架构已更改。 如果在新架构上检测到新的查询计划回归，则将创建新的建议。 |
 | `StatisticsChanged`| 由于所引用表的统计信息发生变化，建议过期。 如果基于新统计信息检测到新的查询计划回归，则将创建新的建议。 |
 | `ForcingFailed` | 不能对查询强制执行建议的计划。 `last_force_failure_reason`在[sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)视图中找到，查找失败的原因。 |
-| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` 在验证过程中，用户禁用了选项。 `FORCE_LAST_GOOD_PLAN`使用[ALTER DATABASE SET AUTOMATIC_TUNING &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)语句启用选项，或使用 "在列中编写脚本" 手动强制执行计划 `[details]` 。 |
+| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` 在验证过程中，用户禁用了选项。 `FORCE_LAST_GOOD_PLAN`使用[ALTER DATABASE SET AUTOMATIC_TUNING &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)语句启用选项，或使用列中的脚本手动强制执行计划 `details` 。 |
 | `UnsupportedStatementType` | 无法对查询强制执行计划。 不受支持的查询的示例包括游标和 `INSERT BULK` 语句。 |
 | `LastGoodPlanForced` | 已成功应用建议。 |
 | `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 已识别潜在的性能回归，但 `FORCE_LAST_GOOD_PLAN` 未启用选项-请参阅 [ALTER DATABASE SET AUTOMATIC_TUNING &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 手动应用建议或启用 `FORCE_LAST_GOOD_PLAN` 选项。 |
@@ -88,7 +87,7 @@ ms.locfileid: "100489341"
 | `UserForcedDifferentPlan` | 用户使用 [sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) 过程手动强制执行不同的计划。 如果用户显式决定强制实施某个计划，则数据库引擎将不应用建议。 |
 | `TempTableChanged` | 在计划中使用的临时表已更改。 |
 
- "详细信息" 列中的统计信息不显示运行时计划统计信息 (例如，当前 CPU 时间) 。 建议的详细信息是在回归检测时进行的，并描述为何 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 发现性能回归。 使用 `regressedPlanId` 和 `recommendedPlanId` 查询 [查询存储目录视图](../../relational-databases/performance/how-query-store-collects-data.md) 以查找确切的运行时计划统计信息。
+ 列中的统计信息 `details` 不显示运行时计划统计信息 (例如，当前 CPU 时间) 。 建议的详细信息是在回归检测时进行的，并描述为何 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 发现性能回归。 使用 `regressedPlanId` 和 `recommendedPlanId` 查询 [查询存储目录视图](../../relational-databases/performance/how-query-store-collects-data.md) 以查找确切的运行时计划统计信息。
 
 ## <a name="examples-of-using-tuning-recommendations-information"></a>使用优化建议信息的示例  
 
@@ -101,7 +100,7 @@ SELECT name, reason, score,
     details.* 
 FROM sys.dm_db_tuning_recommendations
 CROSS APPLY OPENJSON(details, '$.planForceDetails')
-    WITH (  [query_id] int '$.queryId',
+    WITH (    [query_id] int '$.queryId',
             regressed_plan_id int '$.regressedPlanId',
             last_good_plan_id int '$.recommendedPlanId') AS details
 WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
@@ -184,4 +183,4 @@ INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_
  [自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON 支持](../json/json-data-sql-server.md)
+ [](../json/json-data-sql-server.md) [&#40;Transact-sql 的 JSON 支持 sys.dm_os_sys_info&#41;](sys-dm-os-sys-info-transact-sql.md)    

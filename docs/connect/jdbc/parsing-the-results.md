@@ -1,6 +1,6 @@
 ---
-description: 分析结果
-title: 分析结果 | Microsoft Docs
+description: 了解如何全面处理 JDBC 驱动程序执行查询所产生的结果，其中包括多个结果集。
+title: 分析结果
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 7b56223594d1126c373b4fd8b24dabc1e81dab67
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 1605fd65414a81acc0912d774a24ff4ae10a1c9c
+ms.sourcegitcommit: bacd45c349d1b33abef66db47e5aa809218af4ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837076"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "104793028"
 ---
 # <a name="parsing-the-results"></a>分析结果
 
@@ -27,9 +27,10 @@ ms.locfileid: "101837076"
 
 ## <a name="update-counts-and-result-sets"></a>更新计数和结果集
 
-本节将讨论从 SQL Server 返回的两个最常见的结果：Update Count 和 ResultSet。 通常，用户执行的任何查询都将导致返回其中的一个结果，在处理结果时，用户应同时处理这两种结果。
+本节将讨论从 SQL Server 返回的两个最常见的结果：Update Count 和 ResultSet。 通常，用户执行的任何查询都会导致其中一种结果返回。 处理结果时，用户应同时处理这两种结果。
 
 下面的代码示例说明用户如何循环访问来自服务器的所有结果：
+
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -49,7 +50,8 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 ```
 
 ## <a name="exceptions"></a>例外
-在执行导致错误或信息性消息的语句时，SQL Server 的响应方式将有所不同，具体取决于它是否可以生成执行计划。 在执行语句后可能会立即引发错误消息，也可能需要单独的结果集才能引发。 在后一种情况下，应用程序需要分析结果集以检索异常。
+
+执行会引发错误或信息性消息的语句时，SQL Server 可能会提供不同的响应。 例如，如果它无法生成执行计划，则会在 `execute()` 执行后立即引发错误消息。 如果错误与语句处理有关，应用程序需要分析结果集，以查看异常。
 
 如果 SQL Server 无法生成执行计划，将立即引发异常。
 
@@ -100,7 +102,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-在 `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";` 情况下，会立即在 `execute()` 时引发异常，并且完全不会执行 `SELECT 1`。
+例如，`String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";` 会在 `execute()` 执行后立即引发异常，并且根本不执行 `SELECT 1`。
 
 如果来自 SQL Server 的错误严重性级别为 `9` 到 `0`，则将其视为信息性消息并作为 `SQLWarning` 返回。
 
@@ -115,4 +117,4 @@ try (Statement statement = connection.createStatement();) {
 
 ## <a name="see-also"></a>另请参阅
 
-[JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[JDBC 驱动程序概述](overview-of-the-jdbc-driver.md)

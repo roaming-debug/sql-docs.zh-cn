@@ -2,7 +2,7 @@
 description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: contperf-fy21q3
-ms.date: 02/10/2021
+ms.date: 03/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5412b2c572bf9766123cf5aec6b92f08db1f7c9
-ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
+ms.openlocfilehash: 4ea6295e78f7d0e7df4fe2d0e4266e565c1278c6
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104750247"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551468"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "104750247"
 返回执行的线程所遇到的所有等待的相关信息。 可以使用此聚合视图来诊断 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及特定查询和批处理的性能问题。 [sys.dm_exec_session_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 按会话提供类似的信息。  
   
 > [!NOTE] 
-> 若要从 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 或** 调用此，请使用名称 **sys.dm_pdw_nodes_os_wait_stats**。  
+> 若要从 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 或** 调用此，请使用名称 `sys.dm_pdw_nodes_os_wait_stats` 。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "104750247"
   
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作线程正在等待外部事件（如扩展存储过程调用或链接服务器查询）完成时，会发生外部等待。 当诊断有妨碍的问题时，请记住，外部等待不会始终表示工作线程处于空闲状态，因为工作线程可能处于活动状态且正在运行某些外部代码。  
   
- `sys.dm_os_wait_stats` 显示已完成的等待时间。 此动态管理视图不显示当前等待。  
+ 此动态管理视图显示已完成的等待的时间。 此动态管理视图不显示当前等待。  
   
  如果出现下列任一情况，则不认为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作线程处于等待状态：  
   
@@ -72,24 +72,23 @@ ms.locfileid: "104750247"
   
  执行查询期间的特定等待时间类型可以说明查询中存在瓶颈或失效点。 同样，如果服务器级的等待时间较长或等待计数较多，说明服务器实例内交互查询交互中存在瓶颈或热点。 例如，锁等待指示查询争用数据；页 IO 闩锁等待指示 IO 响应时间较慢；页闩锁更新指示表示文件布局不正确。  
   
- 此动态管理视图的内容可通过运行以下命令来重置：  
-  
+ 此动态管理视图的内容可以重置。 此 T-sql 命令将所有计数器重置为0：  
 ```sql  
 DBCC SQLPERF ('sys.dm_os_wait_stats', CLEAR);  
 GO  
 ```  
   
-该命令将所有计数器重置为 0。  
+
   
 > [!NOTE]
-> 这些统计信息在每次重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时都不能持续存在，并且所有的数据均为自上次重置统计信息或启动服务器以来累积的数据。  
+> 在数据库引擎重新启动之后，这些统计信息不会持久保存，并且在上次重置统计信息或数据库引擎启动后，所有数据都是累计的。 使用 `sqlserver_start_time` [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) 中的列查找上次数据库引擎启动时间。   
   
  下表列出各任务所遇到的等待类型。  
 
-|类型 |说明| 
+|Wait 类型 |说明| 
 |-------------------------- |--------------------------| 
-|ABR |标识为仅供参考。 不支持。 不保证以后的兼容性。| | 
-|AM_INDBUILD_ALLOCATION |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|ABR |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
+|AM_INDBUILD_ALLOCATION |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。|
 |AM_SCHEMAMGR_UNSHARED_CACHE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |ASSEMBLY_FILTER_HASHTABLE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 
 |ASSEMBLY_LOAD |在以独占的方式访问程序集加载时出现。| 
@@ -105,7 +104,7 @@ GO
 |AUDIT_ON_DEMAND_TARGET_LOCK |当等待用于确保扩展事件目标相关审核的单一初始化的锁时出现。| 
 |AUDIT_XE_SESSION_MGR |当等待用于同步扩展事件会话相关审核的启动和停止的锁时出现。| 
 |BACKUP |当任务作为备份处理的一部分被阻止时出现。| 
-|BACKUP_OPERATOR |当任务正在等待磁带装入时出现。 若要查看磁带状态，请查询 sys.dm_io_backup_tapes。 如果装入操作没有挂起，则该等待类型可能指示磁带机发生硬件问题。| 
+|BACKUP_OPERATOR |当任务正在等待磁带装入时出现。 若要查看磁带状态，请查询 `sys.dm_io_backup_tapes` 。 如果装入操作没有挂起，则该等待类型可能指示磁带机发生硬件问题。| 
 |BACKUPBUFFER |在备份任务等待数据或等待用来存储数据的缓冲区时发生。 此类型不常见，只有当任务等待装入磁带时才会出现。| 
 |BACKUPIO |在备份任务等待数据或等待用来存储数据的缓冲区时发生。 此类型不常见，只有当任务等待装入磁带时才会出现。| 
 |BACKUPTHREAD |当某任务正在等待备份任务完成时出现。 等待时间可能较长，从几分钟到几个小时。 如果被等待的任务正处于 I/O 进程中，则该类型不指示发生问题。| 
@@ -135,7 +134,7 @@ GO
 |BROKER_TRANSMISSION_OBJECT |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |BROKER_TRANSMISSION_TABLE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |BROKER_TRANSMISSION_WORK |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|BROKER_TRANSMITTER |Service Broker 发送器正在等待工作时出现。 Service Broker 具有一个称为发送器的组件，该组件可在一个或多个连接终结点上计划通过网络发送多个对话框中的消息。 发射器有2个专用线程用于实现此目的。 当这些发送器线程等待使用传输连接发送对话消息时，将对此等待类型收费。 此等待类型的高 waiting_tasks_count 值为这些发送器线程的间歇性工作，并且不会指示任何性能问题。 如果根本不使用 service broker，则对于2个发送器线程，waiting_tasks_count 应为 2 () 并且 wait_time_ms 应为自实例启动后的持续时间的两倍。 请参阅 [Service broker 等待统计](/archive/blogs/sql_service_broker/service-broker-wait-types)信息。|
+|BROKER_TRANSMITTER |Service Broker 发送器正在等待工作时出现。 Service Broker 具有一个称为发送器的组件，该组件可在一个或多个连接终结点上计划通过网络发送多个对话框中的消息。 发射器有2个专用线程用于实现此目的。 当这些发送器线程等待使用传输连接发送对话消息时，将对此等待类型收费。 此等待类型的较高值为 `waiting_tasks_count` 这些发送器线程的间歇性工作，并且不会指示任何性能问题。 如果根本不使用 service broker，则 `waiting_tasks_count` 对于2个发送器线程) 应为2个 (，wait_time_ms 应为自实例启动后的持续时间的两倍。 请参阅 [Service broker 等待统计](/archive/blogs/sql_service_broker/service-broker-wait-types)信息。|
 |BUILTIN_HASHKEY_MUTEX |可能在实例启动之后而在初始化内部数据结构时出现。 数据结构初始化之后将不会再次出现。| 
 |CHANGE_TRACKING_WAITFORCHANGES |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |CHECK_PRINT_RECORD |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
@@ -180,8 +179,8 @@ GO
 |DBMIRRORING_CMD |当某任务正在等待日志记录刷新到磁盘时出现。 该等待状态应当保留较长的时间。| 
 |DBSEEDING_FLOWCONTROL |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |DBSEEDING_OPERATION |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
-|DEADLOCK_ENUM_MUTEX |在死锁监视器和 sys.dm_os_waiting_tasks 尝试确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同时运行多个死锁搜索时出现。| 
-|DEADLOCK_TASK_SEARCH |长时间等待此资源指示服务器正在 sys.dm_os_waiting_tasks 之上执行查询，并且这些查询正在阻止死锁监视器运行死锁搜索。 该等待类型仅供死锁监视器使用。 sys.dm_os_waiting_tasks 之上的查询使用 DEADLOCK_ENUM_MUTEX。| 
+|DEADLOCK_ENUM_MUTEX |在死锁监视器和 `sys.dm_os_waiting_tasks` 尝试确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同时运行多个死锁搜索时出现。| 
+|DEADLOCK_TASK_SEARCH |长时间等待此资源指示服务器正在 `sys.dm_os_waiting_tasks` 之上执行查询，并且这些查询正在阻止死锁监视器运行死锁搜索。 该等待类型仅供死锁监视器使用。 在 `sys.dm_os_waiting_tasks` 之上执行的查询使用 DEADLOCK_ENUM_MUTEX。| 
 |DEBUG |在 Transact-sql 和 CLR 调试内部同步期间出现。| 
 |DIRECTLOGCONSUMER_LIST |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 
 |DIRTY_PAGE_POLL |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -330,7 +329,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |后台任务正在等待处理 Windows Server 故障转移群集通知的后台任务完成启动。 仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |后台任务正在等待处理 Windows Server 故障转移群集通知的后台任务终止。 仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_PARTNER_SYNC |对伙伴列表的并发控制等待。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
-|HADR_READ_ALL_NETWORKS |等待获取对 WSFC 网络列表的读取或写入访问。 仅限内部使用。 注意：引擎保留在动态管理视图中使用的 WSFC 网络列表， (例如 sys.dm_hadr_cluster_networks) 或验证引用 WSFC 网络信息的 Always On Transact-sql 语句。 此列表将在引擎启动、WSFC 相关通知和内部 Always On restart (进行更新，例如，丢失和重新获得 WSFC 仲裁) 。 在该列表中的更新正在进行时，任务通常会被阻止。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
+|HADR_READ_ALL_NETWORKS |等待获取对 WSFC 网络列表的读取或写入访问。 仅限内部使用。 注意：引擎保留在动态管理视图中使用的 WSFC 网络列表， (例如 `sys.dm_hadr_cluster_networks`) 或验证引用 WSFC 网络信息 Always On transact-sql 语句。 此列表将在引擎启动、WSFC 相关通知和内部 Always On restart (进行更新，例如，丢失和重新获得 WSFC 仲裁) 。 在该列表中的更新正在进行时，任务通常会被阻止。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |正在等待辅助数据库在运行恢复之前连接到主数据库。 这是预期的等待，如果与主数据库的连接的建立速度比较慢，则此等待可能会延长。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |数据库恢复正在等待辅助数据库完成恢复和初始化阶段以便恢复到主数据库的公共日志点。 这是故障转移后的预期等待。 可以通过 Windows 系统监视器 (perfmon.exe) 和动态管理视图跟踪撤消进度。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |HADR_REPLICAINFO_SYNC |正在等待并发控制更新当前副本状态。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -380,12 +379,12 @@ GO
 |KTM_ENLISTMENT |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
 |KTM_RECOVERY_MANAGER |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
 |KTM_RECOVERY_RESOLUTION |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
-|LATCH_DT |等待 DT（破坏）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 \_ \* Sys.dm_os_latch_stats 中提供了闩锁等待列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
-|LATCH_EX |等待 EX（排他）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 \_ \* Sys.dm_os_latch_stats 中提供了闩锁等待列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
-|LATCH_KP |等待 KP（保持）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 \_ \* Sys.dm_os_latch_stats 中提供了闩锁等待列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
+|LATCH_DT |等待 DT（破坏）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 闩锁等待列表 \_ \* 在中提供 `sys.dm_os_latch_stats` 。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
+|LATCH_EX |等待 EX（排他）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 闩锁等待列表 \_ \* 在中提供 `sys.dm_os_latch_stats` 。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
+|LATCH_KP |等待 KP（保持）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 闩锁等待列表 \_ \* 在中提供 `sys.dm_os_latch_stats` 。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
 |LATCH_NL |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
-|LATCH_SH |等待 SH（共享）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 \_ \* Sys.dm_os_latch_stats 中提供了闩锁等待列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
-|LATCH_UP |等待 UP（更新）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 \_ \* Sys.dm_os_latch_stats 中提供了闩锁等待列表。 请注意，sys.dm_os_latch_stats 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
+|LATCH_SH |等待 SH（共享）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 闩锁等待列表 \_ \* 在中提供 `sys.dm_os_latch_stats` 。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
+|LATCH_UP |等待 UP（更新）闩锁时出现。 它不包括缓冲区闩锁或事务标记闩锁。 闩锁等待列表 \_ \* 在中提供 `sys.dm_os_latch_stats` 。 请注意，`sys.dm_os_latch_stats` 将 LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX 以及 LATCH_DT 等待分到一组。| 
 |LAZYWRITER_SLEEP |挂起惰性编写器任务时发生。 正在等待的后台任务所用时间的度量值。 在查找用户阻隔点所时不要考虑该状态。| 
 |LCK_M_BU |当某任务正在等待获取大容量更新 (BU) 锁时出现。 有关详细信息，请参阅[批量更新锁](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update)| 
 |LCK_M_BU_ABORT_BLOCKERS |在任务等待获取使用中止阻塞程序的大容量更新 (BU) 锁时发生。 与 ALTER TABLE 和 ALTER INDEX) 的低优先级等待选项 (相关。 有关详细信息，请参阅[批量更新锁](../sql-server-transaction-locking-and-row-versioning-guide.md#bulk_update) <br /><br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
@@ -959,7 +958,7 @@ GO
 |WAITFOR |作为 WAITFOR Transact-sql 语句的结果发生。 等待持续时间由此语句的参数确定。 它是用户启动的等待。| 
 |WAITFOR_PER_QUEUE |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |WAITFOR_TASKSHUTDOWN |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
-|WAITSTAT_MUTEX |在同步访问用于填充 sys.dm_os_wait_stats 的统计信息集期间出现。| 
+|WAITSTAT_MUTEX |在同步访问用于填充 `sys.dm_os_wait_stats` 的统计信息集期间出现。| 
 |WCC |标识为仅供参考。 不支持。 不保证以后的兼容性。| 
 |WINDOW_AGGREGATES_MULTIPASS |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 及更高版本。| 
 |WINFAB_API_CALL |仅限内部使用。 <br /><br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
@@ -1025,8 +1024,9 @@ GO
   
  有关锁兼容性矩阵，请参阅 [&#40;transact-sql&#41;sys.dm_tran_locks ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
     
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [Azure SQL Database &#40;sys.dm_db_wait_stats&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
+ [Azure SQL Database &#40;sys.dm_db_wait_stats&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)    
+ [sys.dm_os_sys_info &#40;Transact-sql&#41;](sys-dm-os-sys-info-transact-sql.md)    

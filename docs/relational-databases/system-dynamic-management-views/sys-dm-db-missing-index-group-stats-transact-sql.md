@@ -2,7 +2,7 @@
 description: sys.dm_db_missing_index_group_stats (Transact-SQL)
 title: sys.dm_db_missing_index_group_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 02/09/2021
+ms.date: 03/12/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52ad665528cf331c2244c7c0fadbfebc3b78c285
-ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
+ms.openlocfilehash: d2271f7b1b90f34d25370ed156348892b0a4ddb5
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100530824"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551475"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "100530824"
     
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**int**|标识缺失索引组。 此标识符在服务器中是唯一的。<br /><br /> 其他列提供有关组中的索引被视为缺失的所有查询的信息。<br /><br /> 一个索引组仅包含一个索引。<BR><BR>可以联接到 [sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)中的 **index_group_handle** 。|  
+|**group_handle**|**int**|标识缺失索引组。 此标识符在服务器中是唯一的。<br /><br /> 其他列提供有关组中的索引被视为缺失的所有查询的信息。<br /><br /> 一个索引组仅包含一个索引。<BR><BR>`index_group_handle`在[sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)中，可以联接到。|  
 |**unique_compiles**|**bigint**|将从该缺失索引组受益的编译和重新编译数。 许多不同查询的编译和重新编译可影响该列值。|  
 |**user_seeks**|**bigint**|由可能使用了组中建议索引的用户查询所导致的查找次数。|  
 |**user_scans**|**bigint**|由可能使用了组中建议索引的用户查询所导致的扫描次数。|  
@@ -53,7 +53,7 @@ ms.locfileid: "100530824"
 |**avg_system_impact**|**float**|实现此缺失索引组后，系统查询可能获得的平均百分比收益。 该值表示如果实现此缺失索引组，则查询成本将按此百分比平均下降。|  
   
 ## <a name="remarks"></a>备注  
- 将根据每个查询执行，而不是根据每个查询编译或重新编译来更新由 **sys.dm_db_missing_index_group_stats** 返回的信息。 使用情况统计信息不会持久保留，并且只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留使用情况统计信息，则应该定期制作缺失索引信息的备份副本。  
+ 返回的信息 `sys.dm_db_missing_index_group_stats` 由每次查询执行更新，而不是每次查询编译或重新编译更新。 使用情况统计信息不会持久保存，而只会在重新启动数据库引擎之前保存。 如果数据库管理员要在服务器回收后保留使用情况统计信息，则应该定期制作缺失索引信息的备份副本。 使用 `sqlserver_start_time` [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md) 中的列查找上次数据库引擎启动时间。   
 
   >[!NOTE]
   >此 DMV 的结果集限制为600行。 每一行都包含一个缺失索引。 如果缺少超过600个索引，则应该解决现有的缺失索引，以便可以查看更新的索引。
@@ -64,7 +64,7 @@ ms.locfileid: "100530824"
  若要查询此动态管理视图，必须授予用户 VIEW SERVER STATE 权限或隐含 VIEW SERVER STATE 权限的任何权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例阐释了如何使用 **sys.dm_db_missing_index_group_stats** 动态管理视图。  
+ 下面的示例演示如何使用 `sys.dm_db_missing_index_group_stats` 动态管理视图。  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. A. 查找十个具有最高用户查询预期提高的缺失索引  
  下面的查询确定了将生成最高预期累计提高的十个缺失索引，按降序排列。  
@@ -76,7 +76,7 @@ ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;
 ```  
   
 ### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>B. 查找特定缺失索引组的单个缺失索引及其列详细信息  
- 下面的查询确定哪些缺失索引构成特定缺失索引组，并显示其列详细信息。 针对此示例，缺失索引组句柄为 24。  
+ 下面的查询确定哪些缺失索引构成特定缺失索引组，并显示其列详细信息。 就本示例来说，缺少的索引 `group_handle` 为24。  
   
 ```sql
 SELECT migs.group_handle, mid.*  
@@ -96,5 +96,5 @@ WHERE migs.group_handle = 24;
  [sys.dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [sys.dm_db_missing_index_group_stats_query &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
-  
+ [sys.dm_os_sys_info &#40;Transact-sql&#41;](sys-dm-os-sys-info-transact-sql.md)  
   

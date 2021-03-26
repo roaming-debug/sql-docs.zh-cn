@@ -4,7 +4,7 @@ title: COUNT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -24,12 +24,12 @@ ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad8aa2f0f24dda5f2c67c813df08291fe6bca432
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d061173f0898345c9ebdef3b9208be3dddfccc53
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184174"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104748027"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ COUNT (DISTINCT expression) 计算组中每行的 expression，然后返回独�
   
 对于超出 2 ^31-1 的返回值，`COUNT` 会返回错误。 对于这些情况，请改为使用 `COUNT_BIG`。
   
-`COUNT` 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性。 请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)获取详细信息。
+`COUNT` 不与 OVER 和 ORDER BY 子句配合使用时为确定性函数。 与 OVER 和 ORDER BY 子句一同指定时，它具有不确定性_*。 请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)获取详细信息。
   
 ## <a name="examples"></a>示例  
   
@@ -101,7 +101,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count_"></a>B. 使用 COUNT(\_)  
+### <a name="b-using-count"></a>B. 使用 COUNT(\*)  
 此示例返回 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 员工的总数。
   
 ```sql

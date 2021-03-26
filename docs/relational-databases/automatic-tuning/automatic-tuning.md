@@ -1,8 +1,8 @@
 ---
-title: 自动优化 |Microsoft Docs
+title: 自动优化
 description: 了解 SQL Server 和 Azure SQL 数据库中的自动优化
 ms.custom: fasttrack-edit
-ms.date: 09/28/2020
+ms.date: 03/12/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,29 +14,28 @@ helpviewer_keywords:
 - aprc
 - automatic plan regression correction
 - last known good plan
-ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c01a9e02576d666c39df13dc6e7e01f6d622a7d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 6ea61597a7f9874b7438392167380c5f01b11527
+ms.sourcegitcommit: c242f423cc3b776c20268483cfab0f4be54460d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169869"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551636"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 自动优化是一种数据库功能，提供对潜在查询性能问题的深入了解、提出建议解决方案并自动解决已标识的问题。
 
-自动优化（在中引入 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ）会在检测到潜在性能问题时通知你，并允许你应用纠正措施，或让你能够 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 自动修复性能问题。 利用自动优化， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以确定并修复由 **查询执行计划选择回归** 导致的性能问题。 自动优化 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 还会创建必要的索引并删除未使用的索引。 有关查询执行计划的详细信息，请参阅 [执行计划](../../relational-databases/performance/execution-plans.md)。
+自动优化（在中引入 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] ）会在检测到潜在性能问题时通知你，并允许你应用纠正措施，或让你能够 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 自动修复性能问题。 利用自动优化， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以确定并修复由 **查询执行计划选择回归** 导致的性能问题。 自动优化 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 还会创建必要的索引并删除未使用的索引。 有关查询执行计划的详细信息，请参阅 [执行计划](../../relational-databases/performance/execution-plans.md)。
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]监视在数据库上执行的查询，并自动提高工作负荷的性能。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]具有内置的智能机制，可通过动态调整数据库以适应工作负荷，自动优化和提高查询的性能。 有两种自动优化功能可用：
 
--   **自动计划更正** ：标识有问题的查询执行计划（如 [参数敏感性或参数探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) 问题），并通过在回归发生之前强制执行最后一个已知良好的计划来修复与查询执行计划相关的性能问题。 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+-    **自动计划更正** ：标识有问题的查询执行计划（如 [参数敏感性或参数探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) 问题），并通过在回归发生之前强制执行最后一个已知良好的计划来修复与查询执行计划相关的性能问题。 **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
--   **自动索引管理** 标识应在数据库中添加的索引以及应删除的索引。 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+-    **自动索引管理** 标识应在数据库中添加的索引以及应删除的索引。 适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>为什么启用自动优化？
 
@@ -63,7 +62,7 @@ ms.locfileid: "98169869"
 
  ![查询执行计划选择回归](media/plan-choice-regression.png "查询执行计划选择回归") 
 
-每当你注意到计划选择回归发生时，你应找到上一个良好的计划，并强制其使用而不是当前计划。 这可以通过使用过程来完成 `sp_query_store_force_plan` 。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]中的 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 提供了有关回归计划和建议的纠正措施的信息。 此外， [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 还可让你完全自动执行此过程，并 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 修复发现的与计划更改相关的任何问题。
+每当你注意到计划选择回归发生时，你应找到上一个良好的计划，并强制其使用而不是当前计划。 这可以通过使用过程来完成 `sp_query_store_force_plan` 。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]中的 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 提供了有关回归计划和建议的纠正措施的信息。 此外， [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 还可让你完全自动执行此过程，并 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 修复发现的与计划更改相关的任何问题。
 
 > [!IMPORTANT]
 > 在捕获基线后，应在数据库兼容级别升级的范围内使用自动计划更正，以自动降低工作负荷升级风险。 有关此用例的详细信息，请参阅在 [升级到更高 SQL Server 版本的过程中保持性能稳定性](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)。 
@@ -99,7 +98,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供在查询存储中监视性能和解决问题所需的所有必要的视图和过程。
 
-在中 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] ，可以使用查询存储系统视图查找计划选择回归。 从开始 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] ，将 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 检测并显示潜在的计划选择回归和建议的操作，这些操作应在 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中应用。 DMV 显示了有关问题的信息、问题的重要性，以及详细信息，如标识的查询、回归计划的 ID、用作比较基线的计划的 ID 以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可以执行以修复问题的语句。
+在中 [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] ，可以使用查询存储系统视图查找计划选择回归。 从开始 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] ，将 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 检测并显示潜在的计划选择回归和建议的操作，这些操作应在 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV 中应用。 DMV 显示了有关问题的信息、问题的重要性，以及详细信息，如标识的查询、回归计划的 ID、用作比较基线的计划的 ID 以及 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 可以执行以修复问题的语句。
 
 | type | description | datetime | score | 详细信息 | ... |
 | --- | --- | --- | --- | --- | --- |
@@ -147,7 +146,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 尽管 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供了标识计划选择回归所需的所有信息，但持续监视和修复性能问题可能会变得枯燥乏味。 自动优化可使此过程变得更加容易。
 
 > [!NOTE]
-> DMV 中的数据 `sys.dm_db_tuning_recommendations` 不会在实例重新启动之间保留 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
+> `sys.dm_db_tuning_recommendations`重新启动数据库引擎后，DMV 中的数据不会保留。 使用 `sqlserver_start_time` [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 中的列查找上次数据库引擎启动时间。   
 
 ## <a name="automatic-index-management"></a>自动索引管理
 
@@ -190,9 +189,10 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
  [sp_query_store_force_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [sys.database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.dm_os_sys_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
  [JSON 函数](../json/json-data-sql-server.md)    
  [执行计划](../../relational-databases/performance/execution-plans.md)    
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [性能监视和优化工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [查询优化助手](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)
+ [查询优化助手](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)    

@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/4/2020
-ms.openlocfilehash: ffd92afe2a5e57b4c039ead2dd5fee6e2a23be0a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8e1518b1ebd264a28b94933c332315042df49aae
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100060922"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833623"
 ---
 # <a name="sqlpackage-script-parameters-and-properties"></a>SqlPackage 脚本的参数和属性
 SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本可更新目标数据库的架构以匹配源数据库的架构。 
@@ -93,14 +93,14 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DoNotAlterReplicatedObjects=(BOOLEAN 'True')|指定是否在验证过程中标识重复的对象。
 |**/p:**|DoNotDropObjectType=(STRING)|当 DropObjectsNotInSource 为 True 时不应删除的对象类型。 有效的对象类型名称为 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
 |**/p:**|DoNotDropObjectTypes=(STRING)|当 DropObjectsNotInSource 为 True 时不应删除的以分号分隔的对象类型列表。 有效的对象类型名称为 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
-|**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|指定当发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的约束。|
-|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|指定当发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的 DML 触发器。|
+|**/p:**|DropConstraintsNotInSource=(BOOLEAN 'True')|指定当您发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的约束。|
+|**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|指定当您发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的 DML 触发器。|
 |**/p:**|DropExtendedPropertiesNotInSource=(BOOLEAN 'True')|指定在发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的扩展属性。|
-|**/p:**|DropIndexesNotInSource=(BOOLEAN 'True')|指定当发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的索引。|
-|**/p:**|DropObjectsNotInSource=(BOOLEAN)|指定当发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的对象。 此值优先于 DropExtendedProperties。|
+|**/p:**|DropIndexesNotInSource=(BOOLEAN 'True')|指定当您发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的索引。|
+|**/p:**|DropObjectsNotInSource=(BOOLEAN)|指定当你发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的对象。 此值优先于 DropExtendedProperties。|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|指定当您更新到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的权限。|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|指定当您更新到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中未定义的角色成员。|
-|**/p:**|DropStatisticsNotInSource=(BOOLEAN 'True')|指定当发布到数据库时，是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的统计信息。|
+|**/p:**|DropStatisticsNotInSource=(BOOLEAN 'True')|指定在发布到数据库时是否将从目标数据库中删除数据库快照 (.dacpac) 文件中不存在的统计信息。|
 |**/p:**|ExcludeObjectType=(STRING)|应在部署期间忽略的对象类型。 有效的对象类型名称为 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
 |**/p:**|ExcludeObjectTypes=(STRING)|在部署期间应忽略的以分号分隔的对象类型列表。 有效的对象类型名称为 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
 |**/p:**|GenerateSmartDefaults=(BOOLEAN)|在使用一个不允许 Null 值的列更新一个包含数据的表时，自动提供默认值。

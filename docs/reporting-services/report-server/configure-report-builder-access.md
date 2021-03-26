@@ -1,44 +1,39 @@
 ---
 title: 配置报表生成器访问权限 | Microsoft Docs
-description: 配置报表生成器 - 随 SQL Server Reporting Services Report Server 安装的报告工具。 它使用本机或 SharePoint 集成模式。
+description: 配置报表生成器，一种与 SQL Server Reporting Services 报表服务器一起使用的报表设计工具。 它使用本机或 SharePoint 集成模式。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/06/2019
-ms.openlocfilehash: 168e8897743e113ae1a40df5ad8d35c66289fde0
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.date: 03/07/2021
+ms.openlocfilehash: 6940a6c5b46861ebb745fb3965167a4d19173446
+ms.sourcegitcommit: efce0ed7d1c0ab36a4a9b88585111636134c0fbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548079"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104833844"
 ---
 # <a name="configure-report-builder-access"></a>配置报表生成器访问权限
-报表生成器是一个特别报告生成工具，该工具随为本机模式或 SharePoint 集成模式配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器一起安装。  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+Microsoft 报表生成器是一个特别报告生成工具，该工具可与为本机模式或 SharePoint 集成模式配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器一起使用。  
 
 报表生成器的访问权限取决于以下因素：  
 
-- 服务器属性，确定报表生成器是否可以在报表服务器上使用。  
-
 - 角色分配或权限，它们使报表生成器可用于单个用户或组。  
 
-- 身份验证设置，用于确定用户凭据是否可以传递到报表服务器或者是否对应用程序文件配置匿名访问权。
+- 身份验证设置，它们决定用户凭据是否可以传递到报表服务器。
 
 ## <a name="prerequisites"></a>先决条件
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均不提供报表生成器。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 各个版本支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
-
-客户端计算机必须分别为 SSRS 2016 和 2017 安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 或 4.6.1。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供运行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 应用程序的基础结构。  
-
-必须使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 或更高版本或其他新式浏览器。  
-
-报表生成器始终在完全信任模式下运行；不能将其配置为在部分信任模式下运行。 在以前的版本中，可以在部分信任模式下运行报表生成器，但是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中不支持该选项。  
+客户端计算机必须已安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 或更高版本。
 
 ## <a name="enabling-and-disabling-report-builder"></a>启用和禁用报表生成器  
 
-默认情况下，将启用报表生成器。 报表服务器管理员可以视需要将报表服务器系统属性 ShowDownloadMenu 设置为 false，以禁用报表生成器功能。 设置此属性将会禁用该报表服务器的报表生成器、移动报表发布服务器和 Power BI 移动版下载功能。  
+默认情况下，通过门户下载报表生成器功能已启用。 报表服务器管理员可以视需要将报表服务器系统属性 ShowDownloadMenu 设置为 false，以禁用报表生成器下载功能。 设置此属性将会禁用该报表服务器的报表生成器、移动报表发布服务器、Power BI Desktop 和 Power BI 移动版下载功能。  
 
  若要设置报表服务器系统属性，可以使用 Management Studio 或脚本：   
 
@@ -50,7 +45,7 @@ ms.locfileid: "84548079"
 
 在本机模式报表服务器上，创建包括使用报表生成器的任务的用户角色分配。 您必须是内容管理员和系统管理员，才能在项级和站点级创建或修改角色定义和角色分配。  
 
-以下说明假定您使用的是预定义角色。 如果您修改了角色定义或者从 SQL Server 2000 进行了升级，则对角色进行检查以验证其是否包含必需的任务。 若要详细了解如何创建角色分配，请参阅[向用户授予对报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)。
+以下说明假定您使用的是预定义角色。 如果修改了角色定义，请检查角色，验证它们是否包含所需的任务。 若要详细了解如何创建角色分配，请参阅[向用户授予对报表服务器的访问权限](../../reporting-services/security/grant-user-access-to-a-report-server.md)。
 
 创建角色分配之后，用户将拥有执行以下操作的权限：  
 
@@ -143,8 +138,6 @@ ms.locfileid: "84548079"
 ## <a name="authentication-considerations-and-credential-reuse"></a>身份验证注意事项和凭据重用  
 
 - 报表生成器将打开其自己的与报表服务器的连接。 如果您未将 Windows 集成安全性用于单一登录，则用户必须为报表生成器与报表服务器的连接重新键入其凭据。  
-
-下表描述报表服务器支持的身份验证类型，以及访问报表生成器是否需要附加配置。  
 
 ## <a name="see-also"></a>另请参阅  
 

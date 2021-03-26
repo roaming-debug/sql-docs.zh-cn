@@ -5,7 +5,7 @@ titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, synapse-analytics, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: reference
@@ -23,12 +23,12 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c69fbf1900de88da7faf08e477eb4775187b964
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 7530d9c705a63054a36fdb73ed50994bee8937ec
+ms.sourcegitcommit: 0310fdb22916df013eef86fee44e660dbf39ad21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100339803"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104753397"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \]（通配符 - 要匹配的字符）(Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "100339803"
 
  
 ## <a name="examples"></a>示例  
-### <a name="a-simple-example"></a>A:简单示例   
+### <a name="a-simple-example"></a>A：简单示例   
 以下示例返回以 `m` 字母开头的名称。 `[n-z]` 指定第二个字母必须是 `n` 到 `z` 范围内的某个字母。 百分号通配符 `%` 允许任何或不包含以 3 个字符开头的字符。 `model` 数据库和 `msdb` 数据库均符合此条件。 `master` 数据库不符合条件，并被排除在结果集外。
  
 ```sql
@@ -77,7 +77,7 @@ EmployeeID      FirstName      LastName      PostalCode
 290             Lynn           Tsoflias      3000  
 ```  
 
-### <a name="c-using-a-set-that-combines-ranges-and-single-characters"></a>C:使用组合了范围和单字符的集
+### <a name="c-using-a-set-that-combines-ranges-and-single-characters"></a>C: 使用组合了范围和单字符的集
 
 通配符集可包含单字符和范围。 以下示例使用 [] 运算符查找以数字或一系列特殊字符开头的字符串。
 

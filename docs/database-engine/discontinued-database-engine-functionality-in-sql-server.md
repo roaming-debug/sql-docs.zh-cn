@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016'
-ms.openlocfilehash: 2b735e98bd49e06057008a714a868cec6c9f5282
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e1c5f8b15d40ff26cf1a164e806f7fa735b28319
+ms.sourcegitcommit: 00af0b6448ba58e3685530f40bc622453d3545ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347882"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104673431"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server中弃用的数据库引擎功能
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,15 +69,17 @@ ms.locfileid: "100347882"
 
 - ActiveX 子系统已停止使用。 请改用命令行或 PowerShell 脚本。
 
-- 启动参数 -h  和 -g  。 有关详细信息，请参阅 [Database Engine Service Startup Options](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014&preserve-view=true)。
+- 启动参数 -h 和 -g。 有关详细信息，请参阅 [Database Engine Service Startup Options](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014&preserve-view=true)。
 
 - 安全套接字层 (SSL) 加密已中断。 请改用传输层安全性 (TLS)。 有关详细信息，请参阅[启用数据库引擎的加密连接](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。
 
-## <a name="previous-versions"></a>以前的版本
+- 自 SQL Server 2008 起，已弃用 `precompute rank` 服务器配置选项。 相关文章已从文档中删除。
 
-- [SQL Server 2014 中废止的数据库引擎功能](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)
+## <a name="previous-versions"></a>早期版本
 
-### <a name="see-also"></a>另请参阅
+- [SQL Server 2014 中已停用的数据库引擎功能](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true)
+
+### <a name="see-also"></a>请参阅
 
 - [SQL Server 2019 中弃用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-version-15.md)
 - [SQL Server 2017 中弃用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-2017.md)
