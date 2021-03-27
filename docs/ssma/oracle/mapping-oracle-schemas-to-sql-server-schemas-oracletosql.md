@@ -11,12 +11,12 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 16c4de0bdf08be3bfdbc8644ae61d300284a0c25
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: dc144017c6bf45a21721fe647dbf5affa486f8ef
+ms.sourcegitcommit: 524a0f0cc9533188f4b14d2e78ba1cfe816b3b9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100080768"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105632906"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>将 Oracle 架构映射到 SQL Server 架构 (OracleToSQL)
 在 Oracle 中，每个数据库都有一个或多个架构。 默认情况下，SSMA 将 Oracle 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的数据库的架构。 但是，你可以自定义 Oracle 架构和数据库之间的映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -24,7 +24,7 @@ ms.locfileid: "100080768"
 ## <a name="oracle-and-sql-server-schemas"></a>Oracle 和 SQL Server 架构  
 Oracle 数据库包含架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含多个数据库，每个数据库都可以有多个架构。  
   
-架构的 Oracle 概念映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的概念及其架构。 例如，Oracle 可能有一个名为 **HR** 的架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能有一个名为 **HR** 的数据库，该数据库中的数据库是架构。 一个架构是 **dbo** (或数据库所有者) 架构。 默认情况下，Oracle schema **hr** 将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，架构 **hr. dbo**。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
+架构的 Oracle 概念映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的概念及其架构。 例如，Oracle 可能有一个名为 **HR** 的架构。 的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能有一个名为 **sampledatabase.mdf** 的数据库，该数据库中包含多个架构。 默认情况下，Oracle schema **HR** 将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库和架构 **SampleDatabase.HR**。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
   
 您可以修改 Oracle 和架构之间的映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
