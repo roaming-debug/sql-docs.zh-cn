@@ -60,7 +60,7 @@ ms.locfileid: "97403176"
 ## <a name="ddl-trigger-scope"></a>DDL 触发器作用域  
  在响应当前数据库或服务器上处理的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事件时，可以触发 DDL 触发器。 触发器的作用域取决于事件。 例如，每当数据库中或服务器实例上发生 CREATE_TABLE 事件时，都会激发为响应 CREATE_TABLE 事件创建的 DDL 触发器。 仅当服务器实例上发生 CREATE_LOGIN 事件时，才能激发为响应 CREATE_LOGIN 事件创建的 DDL 触发器。  
   
- 在下面的示例中，每当数据库中发生 `safety` 或 `DROP_TABLE` 事件时，都会激发 DDL 触发器 `ALTER_TABLE` 。  
+ 在下面的示例中，每当数据库中发生 `DROP_TABLE` 或 `ALTER_TABLE` 事件时，都会激发 DDL 触发器 `safety` 。  
   
 ```  
 CREATE TRIGGER safety   
